@@ -108,3 +108,7 @@
 18179	18594	1696176326160889743	/home/comfi/esp/low-power-dashboard/build/bootloader/.bin_timestamp	e5ad2c3b13cef29e
 18594	18740	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	43f8d7017bef6a39
 18594	18740	0	/home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	43f8d7017bef6a39
+19	142	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	43f8d7017bef6a39
+19	142	0	/home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	43f8d7017bef6a39
+44	351	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	43f8d7017bef6a39
+44	351	0	/home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	43f8d7017bef6a39

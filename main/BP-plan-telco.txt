@@ -1,0 +1,31 @@
+Časový plán:
+- rozchození ESP toolchainu a portování knihovny EINKu (hotovo)
+- rozchození ethernetu/wifi a propojení s databází dat (4 týdny)
+- vytvoření celého GUI (4 týdny - do nového roku)
+
+- práce na textové části (5 týdnů - půlka února)
+- vytvoření "finálního výrobku", tedy vlastní DPS s EINKem bez STMka a ytvoření opravdu low power zařízení napájeného z knoflíkových baterií/kalkulačkového soláru apod. (do státnic) <- tento bod pouze zda se bude stíhat, nicméně celé bakalářce by přidal právě tu přidanou hodnotu
+- https://www.waveshare.com/product/displays/e-paper/epaper-2/4.2inch-e-paper-b.htm nebo klidně i větší uhlopřícku
+
+Co probrat:
+- změna z ESP8266 () na ESP32 WROOM/WROVER (modul si sám seženeš, zdroják je 100% kompatibilní)
+  - spotřeba v active módu nikoho nezajimá protože většinu času procesor bude deep sleepu (srovnání: https://www.digikey.com/en/maker/blogs/2023/how-to-reduce-the-power-consumption-of-smart-home-projects)
+  - ESP8266 nemá dost GPIO jen jeden použitelný UART a je to starý jako metuzalém
+  - ESP32 je navíc 2jádro který běží na 240MHz (výkonnej počítač)
+  - ESP8266:
+    - active mode: 120-400mA v závislosti na periferiích WiFi apod.
+    - deep sleep: 8-20uA
+    - Node MCUdeska: www uvádí 8-20mA v deep sleepu, takže je ten kit uplně nepoužitelný :D :D :D https://emariete.com/en/espeasy-deep-sleep-esp8266-low-consumption/
+  - ESP32:
+    - normal mode: 30-68mA (240mA špičkově pokud bude vysílat přes WiFi)
+    - hibernation: 5uA (deepsleep: 10uA)
+- drátový ethernet???
+  - ESP8266: https://github.com/nopnop2002/esp8266_ethernet
+  - ESP32: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-ethernet-kit.html
+- co přidat za funkce?
+  - nějaká interní telotní/vlhkostní čidlo?
+  - měření napětí baterie?
+  - hodiny? (žravé)
+  - konfigurace GUI přes tlačítka:
+    - volba Wifi (poměrně složité)?
+    - nastaveí refreshe dat?
