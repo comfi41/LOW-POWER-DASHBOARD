@@ -32,6 +32,10 @@ define controll GPIO
 #define EINK_RESET_ON() gpio_set_level(EINK_RESET_GPIO, 1) //macros for eink reset pin controling
 #define EINK_RESET_OFF() gpio_set_level(EINK_RESET_GPIO, 0) 
 
+#define UART_NUM_DEV UART_NUM_2
+#define UART2_TEST_TXD  (GPIO_NUM_17)
+#define UART2_TEST_RXD  (GPIO_NUM_16)
+
 
 
 #define    CMD_SIZE                           512	

@@ -43,7 +43,6 @@ private function
 static void _putchars(const unsigned char * ptr, int n);
 static unsigned char _verify(const void * ptr, int n);
 
-
 void epd_init(void)
 {
 	uart_config_t uart_config = {
@@ -53,8 +52,9 @@ void epd_init(void)
         .stop_bits = UART_STOP_BITS_1,
         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
     };
-    uart_param_config(UART_NUM_0, &uart_config);
-    uart_driver_install(UART_NUM_0, BUF_SIZE * 2, 0, 0, NULL, 0);
+    uart_driver_install(UART_NUM_DEV, BUF_SIZE * 2, 0, 0, NULL, 0);
+    uart_param_config(UART_NUM_DEV, &uart_config);
+    uart_set_pin(UART_NUM_DEV, UART2_TEST_TXD, UART2_TEST_RXD, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
 
 	EINK_WAKE_OFF();
 	EINK_RESET_OFF();
@@ -95,7 +95,7 @@ void epd_set_memory(unsigned char mode)
 
 static void _putchars(const unsigned char * ptr, int n)
 {
-	uart_write_bytes(UART_NUM_0, (const char *) ptr, n);
+	uart_write_bytes(UART_NUM_DEV, (const char *) ptr, n);
 	
 }
 
