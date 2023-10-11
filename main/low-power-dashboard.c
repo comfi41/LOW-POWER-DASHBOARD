@@ -8,7 +8,7 @@
 #include "esp_spi_flash.h"
 #include "epd.h"
 #include "driver/uart.h"
-
+#include "sdcard.h"
 
 void base_draw(void)
 {
@@ -123,6 +123,8 @@ void draw_text_demo(void)
 
 void app_main()
 {
+    const char *sdcard_file = MOUNT_POINT"/config.txt";
+    sdcard_read_file(sdcard_file);
 
     gpio_set_direction(EINK_RESET_GPIO, GPIO_MODE_OUTPUT); //Set the GPIO as a push/pull output
     gpio_set_direction(EINK_WAKE_GPIO, GPIO_MODE_OUTPUT); //Set the GPIO as a push/pull output
