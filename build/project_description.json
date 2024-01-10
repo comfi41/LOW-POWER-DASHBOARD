@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "low-power-dashboard",
-    "project_version":    "8d04f68-dirty",
+    "project_version":    "8b5b58a-dirty",
     "project_path":       "/home/comfi/esp/low-power-dashboard",
     "idf_path":           "/home/comfi/esp/esp-idf",
     "build_dir":          "/home/comfi/esp/low-power-dashboard/build",
@@ -805,7 +805,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/comfi/esp/low-power-dashboard/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c", "/home/comfi/esp/low-power-dashboard/main/epd.c", "/home/comfi/esp/low-power-dashboard/main/sdcard.c", "/home/comfi/esp/low-power-dashboard/main/NV_storage.c", "/home/comfi/esp/low-power-dashboard/main/EPD_4in01f.c" ],
+            "sources": [ "/home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c", "/home/comfi/esp/low-power-dashboard/main/epd.c", "/home/comfi/esp/low-power-dashboard/main/sdcard.c", "/home/comfi/esp/low-power-dashboard/main/NV_storage.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
