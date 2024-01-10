@@ -1,0 +1,2158 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  4 2023 21:11:25[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2fbf0h (195568) map[0m
+[0;32mI (176) esp_image: segment 1: paddr=0003fc18 vaddr=3ffb0000 size=00400h (  1024) load[0m
+[0;32mI (177) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=1be80h (114304) map[0m
+[0;32mI (223) esp_image: segment 3: paddr=0005bea8 vaddr=3ffb0400 size=01ed4h (  7892) load[0m
+[0;32mI (227) esp_image: segment 4: paddr=0005dd84 vaddr=40080000 size=0e554h ( 58708) load[0m
+[0;32mI (261) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (261) boot: Disabling RNG early entropy source...[0m
+[0;32mI (272) cpu_start: Multicore app[0m
+[0;32mI (273) cpu_start: Pro cpu up.[0m
+[0;32mI (273) cpu_start: Starting app cpu, entry point is 0x40081160[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (291) cpu_start: Pro cpu start user code[0m
+[0;32mI (291) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (291) cpu_start: Application information:[0m
+[0;32mI (296) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (302) cpu_start: App version:      8d04f68-dirty[0m
+[0;32mI (307) cpu_start: Compile time:     Dec  9 2023 12:26:30[0m
+[0;32mI (313) cpu_start: ELF file SHA256:  ee4cf2b4b...[0m
+[0;32mI (318) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (325) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (330) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (335) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (339) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (347) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (352) heap_init: At 3FFB2D78 len 0002D288 (180 KiB): DRAM[0m
+[0;32mI (359) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (365) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (372) heap_init: At 4008E554 len 00011AAC (70 KiB): IRAM[0m
+[0;32mI (379) spi_flash: detected chip: gd[0m
+[0;32mI (382) spi_flash: flash io: dio[0m
+[0;33mW (386) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (399) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (408) app_start: Starting scheduler on CPU0[0m
+[0;32mI (412) app_start: Starting scheduler on CPU1[0m
+[0;32mI (412) main_task: Started on CPU0[0m
+[0;32mI (422) main_task: Calling app_main()[0m
+Init spi
+reset 
+BUsyhigh-splneno:1
+eink spi
+cleared 
+odesilani obrazku
+odeslan radek obrazku: 0
+odeslan radek obrazku: 1
+odeslan radek obrazku: 2
+odeslan radek obrazku: 3
+odeslan radek obrazku: 4
+odeslan radek obrazku: 5
+odeslan radek obrazku: 6
+odeslan radek obrazku: 7
+odeslan radek obrazku: 8
+odeslan radek obrazku: 9
+odeslan radek obrazku: 10
+odeslan radek obrazku: 11
+odeslan radek obrazku: 12
+odeslan radek obrazku: 13
+odeslan radek obrazku: 14
+odeslan radek obrazku: 15
+odeslan radek obrazku: 16
+odeslan radek obrazku: 17
+odeslan radek obrazku: 18
+odeslan radek obrazku: 19
+odeslan radek obrazku: 20
+odeslan radek obrazku: 21
+odeslan radek obrazku: 22
+odeslan radek obrazku: 23
+odeslan radek obrazku: 24
+odeslan radek obrazku: 25
+odeslan radek obrazku: 26
+odeslan radek obrazku: 27
+odeslan radek obrazku: 28
+odeslan radek obrazku: 29
+odeslan radek obrazku: 30
+odeslan radek obrazku: 31
+odeslan radek obrazku: 32
+odeslan radek obrazku: 33
+odeslan radek obrazku: 34
+odeslan radek obrazku: 35
+odeslan radek obrazku: 36
+odeslan radek obrazku: 37
+odeslan radek obrazku: 38
+odeslan radek obrazku: 39
+odeslan radek obrazku: 40
+odeslan radek obrazku: 41
+odeslan radek obrazku: 42
+odeslan radek obrazku: 43
+odeslan radek obrazku: 44
+odeslan radek obrazku: 45
+odeslan radek obrazku: 46
+odeslan radek obrazku: 47
+odeslan radek obrazku: 48
+odeslan radek obrazku: 49
+odeslan radek obrazku: 50
+odeslan radek obrazku: 51
+odeslan radek obrazku: 52
+odeslan radek obrazku: 53
+odeslan radek obrazku: 54
+odeslan radek obrazku: 55
+odeslan radek obrazku: 56
+odeslan radek obrazku: 57
+odeslan radek obrazku: 58
+odeslan radek obrazku: 59
+odeslan radek obrazku: 60
+odeslan radek obrazku: 61
+odeslan radek obrazku: 62
+odeslan radek obrazku: 63
+odeslan radek obrazku: 64
+odeslan radek obrazku: 65
+odeslan radek obrazku: 66
+odeslan radek obrazku: 67
+odeslan radek obrazku: 68
+odeslan radek obrazku: 69
+odeslan radek obrazku: 70
+odeslan radek obrazku: 71
+odeslan radek obrazku: 72
+odeslan radek obrazku: 73
+odeslan radek obrazku: 74
+odeslan radek obrazku: 75
+odeslan radek obrazku: 76
+odeslan radek obrazku: 77
+odeslan radek obrazku: 78
+odeslan radek obrazku: 79
+odeslan radek obrazku: 80
+odeslan radek obrazku: 81
+odeslan radek obrazku: 82
+odeslan radek obrazku: 83
+odeslan radek obrazku: 84
+odeslan radek obrazku: 85
+odeslan radek obrazku: 86
+odeslan radek obrazku: 87
+odeslan radek obrazku: 88
+odeslan radek obrazku: 89
+odeslan radek obrazku: 90
+odeslan radek obrazku: 91
+odeslan radek obrazku: 92
+odeslan radek obrazku: 93
+odeslan radek obrazku: 94
+odeslan radek obrazku: 95
+odeslan radek obrazku: 96
+odeslan radek obrazku: 97
+odeslan radek obrazku: 98
+odeslan radek obrazku: 99
+odeslan radek obrazku: 100
+odeslan radek obrazku: 101
+odeslan radek obrazku: 102
+odeslan radek obrazku: 103
+odeslan radek obrazku: 104
+odeslan radek obrazku: 105
+odeslan radek obrazku: 106
+odeslan radek obrazku: 107
+odeslan radek obrazku: 108
+odeslan radek obrazku: 109
+odeslan radek obrazku: 110
+odeslan radek obrazku: 111
+odeslan radek obrazku: 112
+odeslan radek obrazku: 113
+odeslan radek obrazku: 114
+odeslan radek obrazku: 115
+odeslan radek obrazku: 116
+odeslan radek obrazku: 117
+odeslan radek obrazku: 118
+odeslan radek obrazku: 119
+odeslan radek obrazku: 120
+odeslan radek obrazku: 121
+odeslan radek obrazku: 122
+odeslan radek obrazku: 123
+odeslan radek obrazku: 124
+odeslan radek obrazku: 125
+odeslan radek obrazku: 126
+odeslan radek obrazku: 127
+odeslan radek obrazku: 128
+odeslan radek obrazku: 129
+odeslan radek obrazku: 130
+odeslan radek obrazku: 131
+odeslan radek obrazku: 132
+odeslan radek obrazku: 133
+odeslan radek obrazku: 134
+odeslan radek obrazku: 135
+odeslan radek obrazku: 136
+odeslan radek obrazku: 137
+odeslan radek obrazku: 138
+odeslan radek obrazku: 139
+odeslan radek obrazku: 140
+odeslan radek obrazku: 141
+odeslan radek obrazku: 142
+odeslan radek obrazku: 143
+odeslan radek obrazku: 144
+odeslan radek obrazku: 145
+odeslan radek obrazku: 146
+odeslan radek obrazku: 147
+odeslan radek obrazku: 148
+odeslan radek obrazku: 149
+odeslan radek obrazku: 150
+odeslan radek obrazku: 151
+odeslan radek obrazku: 152
+odeslan radek obrazku: 153
+odeslan radek obrazku: 154
+odeslan radek obrazku: 155
+odeslan radek obrazku: 156
+odeslan radek obrazku: 157
+odeslan radek obrazku: 158
+odeslan radek obrazku: 159
+odeslan radek obrazku: 160
+odeslan radek obrazku: 161
+odeslan radek obrazku: 162
+odeslan radek obrazku: 163
+odeslan radek obrazku: 164
+odeslan radek obrazku: 165
+odeslan radek obrazku: 166
+odeslan radek obrazku: 167
+odeslan radek obrazku: 168
+odeslan radek obrazku: 169
+odeslan radek obrazku: 170
+odeslan radek obrazku: 171
+odeslan radek obrazku: 172
+odeslan radek obrazku: 173
+odeslan radek obrazku: 174
+odeslan radek obrazku: 175
+odeslan radek obrazku: 176
+odeslan radek obrazku: 177
+odeslan radek obrazku: 178
+odeslan radek obrazku: 179
+odeslan radek obrazku: 180
+odeslan radek obrazku: 181
+odeslan radek obrazku: 182
+odeslan radek obrazku: 183
+odeslan radek obrazku: 184
+odeslan radek obrazku: 185
+odeslan radek obrazku: 186
+odeslan radek obrazku: 187
+odeslan radek obrazku: 188
+odeslan radek obrazku: 189
+odeslan radek obrazku: 190
+odeslan radek obrazku: 191
+odeslan radek obrazku: 192
+odeslan radek obrazku: 193
+odeslan radek obrazku: 194
+odeslan radek obrazku: 195
+odeslan radek obrazku: 196
+odeslan radek obrazku: 197
+odeslan radek obrazku: 198
+odeslan radek obrazku: 199
+odeslan radek obrazku: 200
+odeslan radek obrazku: 201
+odeslan radek obrazku: 202
+odeslan radek obrazku: 203
+odeslan radek obrazku: 204
+odeslan radek obrazku: 205
+odeslan radek obrazku: 206
+odeslan radek obrazku: 207
+odeslan radek obrazku: 208
+odeslan radek obrazku: 209
+odeslan radek obrazku: 210
+odeslan radek obrazku: 211
+odeslan radek obrazku: 212
+odeslan radek obrazku: 213
+odeslan radek obrazku: 214
+odeslan radek obrazku: 215
+odeslan radek obrazku: 216
+odeslan radek obrazku: 217
+odeslan radek obrazku: 218
+odeslan radek obrazku: 219
+odeslan radek obrazku: 220
+odeslan radek obrazku: 221
+odeslan radek obrazku: 222
+odeslan radek obrazku: 223
+odeslan radek obrazku: 224
+odeslan radek obrazku: 225
+odeslan radek obrazku: 226
+odeslan radek obrazku: 227
+odeslan radek obrazku: 228
+odeslan radek obrazku: 229
+odeslan radek obrazku: 230
+odeslan radek obrazku: 231
+odeslan radek obrazku: 232
+odeslan radek obrazku: 233
+odeslan radek obrazku: 234
+odeslan radek obrazku: 235
+odeslan radek obrazku: 236
+odeslan radek obrazku: 237
+odeslan radek obrazku: 238
+odeslan radek obrazku: 239
+odeslan radek obrazku: 240
+odeslan radek obrazku: 241
+odeslan radek obrazku: 242
+odeslan radek obrazku: 243
+odeslan radek obrazku: 244
+odeslan radek obrazku: 245
+odeslan radek obrazku: 246
+odeslan radek obrazku: 247
+odeslan radek obrazku: 248
+odeslan radek obrazku: 249
+odeslan radek obrazku: 250
+odeslan radek obrazku: 251
+odeslan radek obrazku: 252
+odeslan radek obrazku: 253
+odeslan radek obrazku: 254
+odeslan radek obrazku: 255
+odeslan radek obrazku: 256
+odeslan radek obrazku: 257
+odeslan radek obrazku: 258
+odeslan radek obrazku: 259
+odeslan radek obrazku: 260
+odeslan radek obrazku: 261
+odeslan radek obrazku: 262
+odeslan radek obrazku: 263
+odeslan radek obrazku: 264
+odeslan radek obrazku: 265
+odeslan radek obrazku: 266
+odeslan radek obrazku: 267
+odeslan radek obrazku: 268
+odeslan radek obrazku: 269
+odeslan radek obrazku: 270
+odeslan radek obrazku: 271
+odeslan radek obrazku: 272
+odeslan radek obrazku: 273
+odeslan radek obrazku: 274
+odeslan radek obrazku: 275
+odeslan radek obrazku: 276
+odeslan radek obrazku: 277
+odeslan radek obrazku: 278
+odeslan radek obrazku: 279
+odeslan radek obrazku: 280
+odeslan radek obrazku: 281
+odeslan radek obrazku: 282
+odeslan radek obrazku: 283
+odeslan radek obrazku: 284
+odeslan radek obrazku: 285
+odeslan radek obrazku: 286
+odeslan radek obrazku: 287
+odeslan radek obrazku: 288
+odeslan radek obrazku: 289
+odeslan radek obrazku: 290
+odeslan radek obrazku: 291
+odeslan radek obrazku: 292
+odeslan radek obrazku: 293
+odeslan radek obrazku: 294
+odeslan radek obrazku: 295
+odeslan radek obrazku: 296
+odeslan radek obrazku: 297
+odeslan radek obrazku: 298
+odeslan radek obrazku: 299
+odeslan radek obrazku: 300
+odeslan radek obrazku: 301
+odeslan radek obrazku: 302
+odeslan radek obrazku: 303
+odeslan radek obrazku: 304
+odeslan radek obrazku: 305
+odeslan radek obrazku: 306
+odeslan radek obrazku: 307
+odeslan radek obrazku: 308
+odeslan radek obrazku: 309
+odeslan radek obrazku: 310
+odeslan radek obrazku: 311
+odeslan radek obrazku: 312
+odeslan radek obrazku: 313
+odeslan radek obrazku: 314
+odeslan radek obrazku: 315
+odeslan radek obrazku: 316
+odeslan radek obrazku: 317
+odeslan radek obrazku: 318
+odeslan radek obrazku: 319
+odeslan radek obrazku: 320
+odeslan radek obrazku: 321
+odeslan radek obrazku: 322
+odeslan radek obrazku: 323
+odeslan radek obrazku: 324
+odeslan radek obrazku: 325
+odeslan radek obrazku: 326
+odeslan radek obrazku: 327
+odeslan radek obrazku: 328
+odeslan radek obrazku: 329
+odeslan radek obrazku: 330
+odeslan radek obrazku: 331
+odeslan radek obrazku: 332
+odeslan radek obrazku: 333
+odeslan radek obrazku: 334
+odeslan radek obrazku: 335
+odeslan radek obrazku: 336
+odeslan radek obrazku: 337
+odeslan radek obrazku: 338
+odeslan radek obrazku: 339
+odeslan radek obrazku: 340
+odeslan radek obrazku: 341
+odeslan radek obrazku: 342
+odeslan radek obrazku: 343
+odeslan radek obrazku: 344
+odeslan radek obrazku: 345
+odeslan radek obrazku: 346
+odeslan radek obrazku: 347
+odeslan radek obrazku: 348
+odeslan radek obrazku: 349
+odeslan radek obrazku: 350
+odeslan radek obrazku: 351
+odeslan radek obrazku: 352
+odeslan radek obrazku: 353
+odeslan radek obrazku: 354
+odeslan radek obrazku: 355
+odeslan radek obrazku: 356
+odeslan radek obrazku: 357
+odeslan radek obrazku: 358
+odeslan radek obrazku: 359
+odeslan radek obrazku: 360
+odeslan radek obrazku: 361
+odeslan radek obrazku: 362
+odeslan radek obrazku: 363
+odeslan radek obrazku: 364
+odeslan radek obrazku: 365
+odeslan radek obrazku: 366
+odeslan radek obrazku: 367
+odeslan radek obrazku: 368
+odeslan radek obrazku: 369
+odeslan radek obrazku: 370
+odeslan radek obrazku: 371
+odeslan radek obrazku: 372
+odeslan radek obrazku: 373
+odeslan radek obrazku: 374
+odeslan radek obrazku: 375
+odeslan radek obrazku: 376
+odeslan radek obrazku: 377
+odeslan radek obrazku: 378
+odeslan radek obrazku: 379
+odeslan radek obrazku: 380
+odeslan radek obrazku: 381
+odeslan radek obrazku: 382
+odeslan radek obrazku: 383
+odeslan radek obrazku: 384
+odeslan radek obrazku: 385
+odeslan radek obrazku: 386
+odeslan radek obrazku: 387
+odeslan radek obrazku: 388
+odeslan radek obrazku: 389
+odeslan radek obrazku: 390
+odeslan radek obrazku: 391
+odeslan radek obrazku: 392
+odeslan radek obrazku: 393
+odeslan radek obrazku: 394
+odeslan radek obrazku: 395
+odeslan radek obrazku: 396
+odeslan radek obrazku: 397
+odeslan radek obrazku: 398
+odeslan radek obrazku: 399
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::1
+BUsyhigh-splneno:1
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+[0;31mE (12112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (12112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (12112) task_wdt: Tasks currently running:[0m
+[0;31mE (12112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (12112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (12112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+[0;31mE (17112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (17112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (17112) task_wdt: Tasks currently running:[0m
+[0;31mE (17112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (17112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (17112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+[0;31mE (22112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (22112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (22112) task_wdt: Tasks currently running:[0m
+[0;31mE (22112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (22112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (22112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+[0;31mE (27112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (27112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (27112) task_wdt: Tasks currently running:[0m
+[0;31mE (27112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (27112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (27112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+[0;31mE (32112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (32112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (32112) task_wdt: Tasks currently running:[0m
+[0;31mE (32112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (32112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (32112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::0
+BUsyHIGh::1
+BUsyhigh-splneno:1
+BUsylow-splneno:0
+[0;31mE (35012) task_wdt: esp_task_wdt_deinit(726): Tasks/users still subscribed[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:ssid
+ PASS:pass TIME:10
+Save to NVS: 0
+[0;32mI (35032) main_task: Returned from app_main()[0m
+[0;31mE (37112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (37112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (37112) task_wdt: Tasks currently running:[0m
+[0;31mE (37112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (37112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (37112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (42112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (42112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (42112) task_wdt: Tasks currently running:[0m
+[0;31mE (42112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (42112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (42112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (47112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (47112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (47112) task_wdt: Tasks currently running:[0m
+[0;31mE (47112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (47112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (47112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (52112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (52112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (52112) task_wdt: Tasks currently running:[0m
+[0;31mE (52112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (52112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (52112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (57112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (57112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (57112) task_wdt: Tasks currently running:[0m
+[0;31mE (57112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (57112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (57112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (62112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (62112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (62112) task_wdt: Tasks currently running:[0m
+[0;31mE (62112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (62112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (62112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (67112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (67112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (67112) task_wdt: Tasks currently running:[0m
+[0;31mE (67112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (67112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (67112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (72112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (72112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (72112) task_wdt: Tasks currently running:[0m
+[0;31mE (72112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (72112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (72112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (77112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (77112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (77112) task_wdt: Tasks currently running:[0m
+[0;31mE (77112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (77112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (77112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (82112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (82112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (82112) task_wdt: Tasks currently running:[0m
+[0;31mE (82112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (82112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (82112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (87112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (87112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (87112) task_wdt: Tasks currently running:[0m
+[0;31mE (87112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (87112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (87112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (92112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (92112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (92112) task_wdt: Tasks currently running:[0m
+[0;31mE (92112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (92112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (92112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (97112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (97112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (97112) task_wdt: Tasks currently running:[0m
+[0;31mE (97112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (97112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (97112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (102112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (102112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (102112) task_wdt: Tasks currently running:[0m
+[0;31mE (102112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (102112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (102112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (107112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (107112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (107112) task_wdt: Tasks currently running:[0m
+[0;31mE (107112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (107112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (107112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (112112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (112112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (112112) task_wdt: Tasks currently running:[0m
+[0;31mE (112112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (112112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (112112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (117112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (117112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (117112) task_wdt: Tasks currently running:[0m
+[0;31mE (117112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (117112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (117112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (122112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (122112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (122112) task_wdt: Tasks currently running:[0m
+[0;31mE (122112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (122112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (122112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (127112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (127112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (127112) task_wdt: Tasks currently running:[0m
+[0;31mE (127112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (127112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (127112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (132112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (132112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (132112) task_wdt: Tasks currently running:[0m
+[0;31mE (132112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (132112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (132112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (137112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (137112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (137112) task_wdt: Tasks currently running:[0m
+[0;31mE (137112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (137112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (137112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (142112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (142112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (142112) task_wdt: Tasks currently running:[0m
+[0;31mE (142112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (142112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (142112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (147112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (147112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (147112) task_wdt: Tasks currently running:[0m
+[0;31mE (147112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (147112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (147112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (152112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (152112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (152112) task_wdt: Tasks currently running:[0m
+[0;31mE (152112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (152112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (152112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+
+[0;31mE (157112) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (157112) task_wdt:  - main (CPU 0)[0m
+[0;31mE (157112) task_wdt: Tasks currently running:[0m
+[0;31mE (157112) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (157112) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (157112) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DA47B:0x3FFB0DB0 0x400DA602:0x3FFB0DD0 0x400830C1:0x3FFB0DF0 0x40085C7B:0x3FFB5640 0x400D276F:0x3FFB5660 0x40087C0E:0x3FFB5680 0x4008949D:0x3FFB56A0
+

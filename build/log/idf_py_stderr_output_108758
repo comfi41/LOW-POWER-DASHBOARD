@@ -1,0 +1,2369 @@
+[0;33m--- esp-idf-monitor 1.2.1 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400810d8: call_start_cpu1 at /home/comfi/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d9e83: task_wdt_timeout_handling at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400da00a: task_wdt_isr at /home/comfi/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40083039: _xt_lowint1 at /home/comfi/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d5c09: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:216
+[0m
+[0;33m0x400eadc8: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x40088b1d: v
