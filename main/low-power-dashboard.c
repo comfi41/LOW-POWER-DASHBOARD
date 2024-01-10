@@ -14,6 +14,8 @@
 #include "NV_storage.h"
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
+#include "sleep.h"
+#include "wifi_ap.h"
 
 
 
@@ -26,7 +28,8 @@
     #define ADC_BAT_MEAS ADC1_CHANNEL_4
 
   
-
+    
+    
     static esp_adc_cal_characteristics_t adc1_chars;
     struct NVS_Data nvs_struct;
 
@@ -170,21 +173,27 @@ void app_main()
     adc1_config_width(ADC_WIDTH_BIT_DEFAULT);
     adc1_config_channel_atten(ADC_BAT_MEAS, ADC_ATTEN_DB_11);
 
+    vTaskDelay(2000 / portTICK_PERIOD_MS); //cas pro inicializaci disleje
 
     epd_init();
     epd_wakeup();
     epd_set_memory(MEM_NAND);
+    EINK_WAKE_ON();
     //base_draw();
     //draw_text_demo();
 
     printf("Ini NVS: %d\n", nvs_flash_ini());
     printf("Load data: %d\n", nvs_load());
     printf("WIFI SSID:%s\n PASS:%s TIME:%d\n", nvs_struct.wifi_ssid,  nvs_struct.wifi_pass, nvs_struct.refresh_time);
-    printf("Save to NVS: %d\n", nvs_save());
+   
+    //printf("Save to NVS: %d\n", nvs_save());
+    low_pwr_deepsleep(nvs_struct.refresh_time);
 
-
- //   epd_set_color(BLACK, WHITE);
- //   epd_clear();
+    epd_set_color(BLACK, WHITE);
+    epd_clear();
+    epd_set_en_font(ASCII32);
+    epd_disp_string("STISKNI OK PRO ZAPNUTI WIFI", 0, 0);
+    epd_udpate(); 
 
 //while(1)
 //{
