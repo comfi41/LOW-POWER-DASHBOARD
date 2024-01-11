@@ -13,6 +13,7 @@
 #include "driver/rtc_io.h"
 #include "soc/rtc.h"
 #include "sleep.h"
+#include "epd.h"
 #include "wifi_ap.h"
 
 
@@ -59,7 +60,7 @@ void low_pwr_deepsleep(int refresh_time)
     rtc_gpio_isolate(GPIO_NUM_12);
 
     printf("Entering deep sleep\n");
-
+    epd_enter_stopmode();
     esp_deep_sleep_start();
 
     vTaskDelay(1000 / portTICK_PERIOD_MS); //toto smazat, pouze pro debug

@@ -120,6 +120,7 @@ void epd_set_memory(unsigned char mode);
 void epd_draw_pixel(int x0, int y0);
 void epd_clear(void);
 void epd_udpate(void);
+void epd_enter_stopmode(void);
 
 void epd_draw_line(int x0, int y0, int x1, int y1);
 void epd_set_color(unsigned char color, unsigned char bkcolor);
@@ -140,7 +141,7 @@ void epd_handshake(void);
 void epd_set_baud(long baud);
 void epd_read_baud(void);
 
-void epd_enter_stopmode(void);
+
 
 void epd_screen_rotation(unsigned char mode);
 void epd_load_font(void);

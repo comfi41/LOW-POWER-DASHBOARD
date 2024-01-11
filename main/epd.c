@@ -28,7 +28,7 @@ command define
 */
 //static const unsigned char _cmd_handshake[8] = {0xA5, 0x00, 0x09, CMD_HANDSHAKE, 0xCC, 0x33, 0xC3, 0x3C};               //CMD_HANDSHAKE
 //static const unsigned char _cmd_read_baud[8] = {0xA5, 0x00, 0x09, CMD_READ_BAUD, 0xCC, 0x33, 0xC3, 0x3C};               //CMD_READ_BAUD
-//static const unsigned char _cmd_stopmode[8] = {0xA5, 0x00, 0x09, CMD_STOPMODE, 0xCC, 0x33, 0xC3, 0x3C};                 //CMD_STOPMODE
+static const unsigned char _cmd_stopmode[8] = {0xA5, 0x00, 0x09, CMD_STOPMODE, 0xCC, 0x33, 0xC3, 0x3C};                 //CMD_STOPMODE
 static const unsigned char _cmd_update[8] = {0xA5, 0x00, 0x09, CMD_UPDATE, 0xCC, 0x33, 0xC3, 0x3C};                     //CMD_UPDATE
 //static const unsigned char _cmd_load_font[8] = {0xA5, 0x00, 0x09, CMD_LOAD_FONT, 0xCC, 0x33, 0xC3, 0x3C};               //CMD_LOAD_FONT
 //static const unsigned char _cmd_load_pic[8] = {0xA5, 0x00, 0x09, CMD_LOAD_PIC, 0xCC, 0x33, 0xC3, 0x3C};                 //CMD_LOAD_PIC
@@ -139,6 +139,14 @@ void epd_draw_pixel(int x0, int y0)
 void epd_udpate(void)
 {
 	memcpy(_cmd_buff, _cmd_update, 8);
+	_cmd_buff[8] = _verify(_cmd_buff, 8);
+	
+	_putchars(_cmd_buff, 9);
+}
+
+void epd_enter_stopmode(void)
+{
+	memcpy(_cmd_buff, _cmd_stopmode, 8);
 	_cmd_buff[8] = _verify(_cmd_buff, 8);
 	
 	_putchars(_cmd_buff, 9);

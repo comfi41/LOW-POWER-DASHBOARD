@@ -180,6 +180,11 @@ void app_main()
     epd_set_memory(MEM_NAND);
     EINK_WAKE_ON();
     //base_draw();
+    epd_set_color(BLACK, WHITE);
+    epd_clear();
+    epd_set_en_font(ASCII32);
+    epd_disp_string("STISKNI OK PRO ZAPNUTI WIFI", 0, 0);
+    epd_udpate(); 
     //draw_text_demo();
 
     printf("Ini NVS: %d\n", nvs_flash_ini());
@@ -188,12 +193,11 @@ void app_main()
    
     //printf("Save to NVS: %d\n", nvs_save());
     low_pwr_deepsleep(nvs_struct.refresh_time);
-
-    epd_set_color(BLACK, WHITE);
     epd_clear();
     epd_set_en_font(ASCII32);
-    epd_disp_string("STISKNI OK PRO ZAPNUTI WIFI", 0, 0);
+    epd_disp_string("WIFI ZAPNUTA :)", 0, 0);
     epd_udpate(); 
+    
 
 //while(1)
 //{
