@@ -72,6 +72,20 @@ char html_page[] = "<!DOCTYPE HTML><html>\n"
                    "</body>\n"
                    "</html>";
 
+
+char alert_html_page [] = "<!DOCTYPE HTML><html>\n"
+                          "<body>\n"
+                          "<script> alert(\"Values saved! Device will be rebooted!\");</script>\n"
+                          "</body>\n"
+                          "</html>\n";
+
+char error_html_page [] = "<!DOCTYPE HTML><html>\n"
+                          "<head><meta http-equiv= \"refresh\" content=\"1;url=http://192.168.4.1\"></head>\n"
+                          "<body>\n"
+                          "<script> alert(\"ERROR! WRONG ENTRY!!!! Please open url: 192.168.4.1\"); </script>\n"
+                          "</body>\n"
+                          "</html>\n";
+
 static void wifi_event_handler(void* arg, esp_event_base_t event_base,
                                     int32_t event_id, void* event_data)
 {
@@ -120,11 +134,19 @@ httpd_uri_t uri_get = {
     .handler = get_req_handler,
     .user_ctx = NULL};
 
+/*Handler for /get (set_temp form)*/    
+httpd_uri_t uri_get_param = {
+    .uri = "/get",
+    .method = HTTP_GET,
+    .handler = get_param_req_handler,
+    .user_ctx = NULL};
+
 /*Start web server*/
 httpd_handle_t setup_server(void)
 {
     httpd_config_t config = HTTPD_DEFAULT_CONFIG(); //default configuration of webserver
     config.stack_size = 8192;
+    config.max_resp_headers=50;
     httpd_handle_t server = NULL;
 
     if (httpd_start(&server, &config) == ESP_OK) //start web server
@@ -132,7 +154,7 @@ httpd_handle_t setup_server(void)
         
         httpd_register_uri_handler(server, &uri_get); //create handlers for uri events
         //httpd_register_uri_handler(server, &uri_mem); //create handlers for uri events
-        //httpd_register_uri_handler(server, &uri_get_param);
+        httpd_register_uri_handler(server, &uri_get_param);
         
     }
 
@@ -152,11 +174,62 @@ esp_err_t send_web_page(httpd_req_t *req)
     return response;
 }
 
+esp_err_t send_alert_page(httpd_req_t *req)
+{
+    int response;
+    char response_data[sizeof(alert_html_page) + 50]; //create array for webpage and variables
+    memset(response_data, 0, sizeof(response_data)); //allocate of memory
+    sprintf(response_data, alert_html_page);
+    response = httpd_resp_send(req, response_data, HTTPD_RESP_USE_STRLEN); //send to client
+
+    return response;
+}
+
+esp_err_t send_error_page(httpd_req_t *req)
+{
+    int response;
+    char response_data[sizeof(error_html_page) + 50]; //create array for webpage and variables
+    memset(response_data, 0, sizeof(response_data)); //allocate of memory
+    sprintf(response_data, error_html_page);
+    response = httpd_resp_send(req, response_data, HTTPD_RESP_USE_STRLEN); //send to client
+
+    return response;
+}
+
 /*Default web handler*/
 esp_err_t get_req_handler(httpd_req_t *req)
 {
     return send_web_page(req); //send webpage to client
 }
 
+esp_err_t get_param_req_handler(httpd_req_t *req)
+{
+    printf( "Input: %s\n", req->uri );
 
+    //int temp;
+    int counter_pass=0;
+    for (char *p = strtok(req->uri,"&"); p != NULL; p = strtok(NULL, "&"))
+    {
+     printf( "parse: %s\n", p );
+    if (sscanf(p, "/get?input1=%s",nvs_struct.wifi_ssid)) counter_pass++;
+    if (sscanf(p, "input2=%s",nvs_struct.wifi_pass)) counter_pass+=2;
+    if (sscanf(p, "input3=%s",nvs_struct.auth_grant_type)) counter_pass+=3;
+    if (sscanf(p, "input4=%s",nvs_struct.auth_client_id)) counter_pass+=4;
+    if (sscanf(p, "input5=%s",nvs_struct.auth_client_secret)) counter_pass+=5;
+    if (sscanf(p, "input6=%s",nvs_struct.auth_scope)) counter_pass+=6;
+    if (sscanf(p, "input7=%s",nvs_struct.auth_url)) counter_pass+=7;
+    if (sscanf(p, "input8=%s",nvs_struct.cloud_url)) counter_pass+=8;
+    if (sscanf(p, "input9=%d",&nvs_struct.refresh_time)) counter_pass+=9;
+    }
+
+    if (counter_pass==45)
+    {
+        printf( "ALL inputs are valid!\n");
+        printf("Save to NVS: %d\n", nvs_save());
+        send_alert_page(req);
+        vTaskDelay(2000 / portTICK_PERIOD_MS); //cas pro odeslání stránky
+        esp_restart();
+            }   
+            else   return send_error_page(req); //send webpage to client (refresh)
+}
 

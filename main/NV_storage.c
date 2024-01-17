@@ -34,21 +34,9 @@ esp_err_t nvs_save(void)
 {
     nvs_handle_t my_handle;
     esp_err_t err;
-   //inicializace struktury nahrani :D, cely odstavec nize smazat!!!
     size_t required_size = 0; 
-    sprintf(nvs_struct.wifi_ssid,"ssid");   
-    sprintf(nvs_struct.wifi_pass,"pass");
-    sprintf(nvs_struct.auth_grant_type,"grant");
-    sprintf(nvs_struct.auth_client_id,"ID");
-    sprintf(nvs_struct.auth_client_secret,"secret");
-    sprintf(nvs_struct.auth_scope,"scope");
-    sprintf(nvs_struct.auth_url,"Aurl");
-    sprintf(nvs_struct.cloud_url,"Curl");
-    nvs_struct.refresh_time=10;
-
-
-
-    // Open
+   
+       // Open
     err = nvs_open(STORAGE_NAMESPACE, NVS_READWRITE, &my_handle);
     if (err != ESP_OK) return err;
     //Size of data
