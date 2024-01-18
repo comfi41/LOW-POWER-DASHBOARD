@@ -69,22 +69,12 @@ char html_page[] = "<!DOCTYPE HTML><html>\n"
                    "        <a href=\"/mem\"><button>SAVE SETTINGS</button></a><br><p></p>\n"
                    "    </div>\n"
                    "  </div>\n"
+                   "%s\n"
                    "</body>\n"
                    "</html>";
 
 
-char alert_html_page [] = "<!DOCTYPE HTML><html>\n"
-                          "<body>\n"
-                          "<script> alert(\"Values saved! Device will be rebooted!\");</script>\n"
-                          "</body>\n"
-                          "</html>\n";
 
-char error_html_page [] = "<!DOCTYPE HTML><html>\n"
-                          "<head><meta http-equiv= \"refresh\" content=\"1;url=http://192.168.4.1\"></head>\n"
-                          "<body>\n"
-                          "<script> alert(\"ERROR! WRONG ENTRY!!!! Please open url: 192.168.4.1\"); </script>\n"
-                          "</body>\n"
-                          "</html>\n";
 
 static void wifi_event_handler(void* arg, esp_event_base_t event_base,
                                     int32_t event_id, void* event_data)
@@ -163,34 +153,12 @@ httpd_handle_t setup_server(void)
 
 
 /*A function to send a web page to a client.*/
-esp_err_t send_web_page(httpd_req_t *req)
+esp_err_t send_web_page(httpd_req_t *req,char alert[])
 {
     int response;
-    char response_data[sizeof(html_page) + 50]; //create array for webpage and variables
+    char response_data[sizeof(html_page) + 500]; //create array for webpage and variables
     memset(response_data, 0, sizeof(response_data)); //allocate of memory
-    sprintf(response_data, html_page,nvs_struct.wifi_ssid,nvs_struct.wifi_pass,nvs_struct.auth_grant_type,nvs_struct.auth_client_id,nvs_struct.auth_client_secret,nvs_struct.auth_scope,nvs_struct.auth_url,nvs_struct.cloud_url,nvs_struct.refresh_time); //join webpage and variables
-    response = httpd_resp_send(req, response_data, HTTPD_RESP_USE_STRLEN); //send to client
-
-    return response;
-}
-
-esp_err_t send_alert_page(httpd_req_t *req)
-{
-    int response;
-    char response_data[sizeof(alert_html_page) + 50]; //create array for webpage and variables
-    memset(response_data, 0, sizeof(response_data)); //allocate of memory
-    sprintf(response_data, alert_html_page);
-    response = httpd_resp_send(req, response_data, HTTPD_RESP_USE_STRLEN); //send to client
-
-    return response;
-}
-
-esp_err_t send_error_page(httpd_req_t *req)
-{
-    int response;
-    char response_data[sizeof(error_html_page) + 50]; //create array for webpage and variables
-    memset(response_data, 0, sizeof(response_data)); //allocate of memory
-    sprintf(response_data, error_html_page);
+    sprintf(response_data, html_page,nvs_struct.wifi_ssid,nvs_struct.wifi_pass,nvs_struct.auth_grant_type,nvs_struct.auth_client_id,nvs_struct.auth_client_secret,nvs_struct.auth_scope,nvs_struct.auth_url,nvs_struct.cloud_url,nvs_struct.refresh_time,alert); //join webpage and variables
     response = httpd_resp_send(req, response_data, HTTPD_RESP_USE_STRLEN); //send to client
 
     return response;
@@ -199,7 +167,7 @@ esp_err_t send_error_page(httpd_req_t *req)
 /*Default web handler*/
 esp_err_t get_req_handler(httpd_req_t *req)
 {
-    return send_web_page(req); //send webpage to client
+    return send_web_page(req,ALERT_OK); //send webpage to client
 }
 
 esp_err_t get_param_req_handler(httpd_req_t *req)
@@ -226,10 +194,10 @@ esp_err_t get_param_req_handler(httpd_req_t *req)
     {
         printf( "ALL inputs are valid!\n");
         printf("Save to NVS: %d\n", nvs_save());
-        send_alert_page(req);
+        send_web_page(req,ALERT_VALID);
         vTaskDelay(2000 / portTICK_PERIOD_MS); //cas pro odeslání stránky
         esp_restart();
             }   
-            else   return send_error_page(req); //send webpage to client (refresh)
+            else   return send_web_page(req,ALERT_ERROR); //send webpage to client (refresh)
 }
 

@@ -17,14 +17,16 @@
 #define CONFIG_HTTPD_MAX_REQ_HDR_LEN 2048
 #undef HTTPD_MAX_REQ_HDR_LEN
 #define HTTPD_MAX_REQ_HDR_LEN 1024
+#define ALERT_VALID "<script> alert(\"Values saved! Device will be rebooted!\");</script>\n"
+#define ALERT_ERROR "<script> alert(\"ERROR! WRONG ENTRY!!!!\"); </script>\n"
+#define ALERT_OK ""
+
 
 extern struct NVS_Data nvs_struct;
 
 static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
 void wifi_init_softap(void);
 httpd_handle_t setup_server(void);
-esp_err_t send_web_page(httpd_req_t *req);
+esp_err_t send_web_page(httpd_req_t *req,char alert[]);
 esp_err_t get_req_handler(httpd_req_t *req);
 esp_err_t get_param_req_handler(httpd_req_t *req);
-esp_err_t send_alert_page(httpd_req_t *req);
-esp_err_t send_error_page(httpd_req_t *req);
