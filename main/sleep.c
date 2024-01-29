@@ -15,7 +15,7 @@
 #include "sleep.h"
 #include "epd.h"
 #include "wifi_ap.h"
-
+#include "wifi_sta.h"
 
 void low_pwr_deepsleep(int refresh_time)
 {
@@ -35,12 +35,16 @@ void low_pwr_deepsleep(int refresh_time)
 
         case ESP_SLEEP_WAKEUP_TIMER: {
             printf("Wake up from timer.\n");
+            printf("ESP_WIFI_MODE_STA\n");
+            wifi_init_sta();
             break;
         }
 
         case ESP_SLEEP_WAKEUP_UNDEFINED:
         default:
             printf("Not a deep sleep reset\n");
+            printf("ESP_WIFI_MODE_STA\n");
+            wifi_init_sta();
     }
 
     if(reset_enable)

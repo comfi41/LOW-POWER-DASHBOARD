@@ -16,6 +16,7 @@
 #include "esp_adc_cal.h"
 #include "sleep.h"
 #include "wifi_ap.h"
+#include "wifi_sta.h"
 
 
 
@@ -34,116 +35,6 @@
     struct NVS_Data nvs_struct;
 
     spi_device_handle_t spi2;
-
-void base_draw(void)
-{
-    int i, j;
-    
-    
-    /*
-    draw pixel
-    */
-    epd_clear();
-    for(j = 0; j < 600; j += 50)
-    {
-        for(i = 0; i < 800; i += 50)
-        {
-            epd_draw_pixel(i, j);
-            epd_draw_pixel(i, j + 1);
-            epd_draw_pixel(i + 1, j);
-            epd_draw_pixel(i + 1, j + 1);
-        }
-    }
-    epd_udpate();
-    vTaskDelay(3000 / portTICK_PERIOD_MS);
-    
-  /*
-    draw line
-  */    
-    epd_clear();
-    for(i = 0; i < 800; i += 100)
-    {
-        epd_draw_line(0, 0, i, 599);
-        epd_draw_line(799, 0, i, 599);
-    }
-    epd_udpate();
-    vTaskDelay(3000 / portTICK_PERIOD_MS);    
-    
-    /*
-    fill rect
-    */
-    epd_clear();
-    epd_set_color(BLACK, WHITE);
-    epd_fill_rect(10, 10, 100, 100);
-    
-    epd_set_color(DARK_GRAY, WHITE);
-    epd_fill_rect(110, 10, 200, 100);
-    
-    epd_set_color(GRAY, WHITE);
-    epd_fill_rect(210, 10, 300, 100);   
-    
-    epd_udpate();
-    vTaskDelay(3000 / portTICK_PERIOD_MS);        
-    
-    /*
-    draw circle
-    */
-    epd_set_color(BLACK, WHITE);
-    epd_clear();
-    for(i = 0; i < 300; i += 40)
-    {
-        epd_draw_circle(399, 299, i);
-    }
-    epd_udpate();
-    vTaskDelay(3000 / portTICK_PERIOD_MS);
-    
-    /*
-    fill circle
-    */
-    epd_clear();
-    for(j = 0; j < 6; j++)
-    {
-        for(i = 0; i < 8; i++)
-        {
-            epd_fill_circle(50 + i * 100, 50 + j * 100, 50);
-        }
-    }
-    epd_udpate();
-    vTaskDelay(3000 / portTICK_PERIOD_MS);
-
-  /*
-    draw triangle
-    */
-    epd_clear();
-    for(i = 1; i < 5; i++)
-    {
-        epd_draw_triangle(399, 249 - i * 50, 349 - i * 50, 349 + i * 50, 449 + i * 50, 349 + i * 50);
-    }
-    epd_udpate();
-    vTaskDelay(3000 / portTICK_PERIOD_MS);    
-}
-
-
-void draw_text_demo(void)
-{
-    epd_set_color(BLACK, WHITE);
-    epd_clear();
-    epd_set_ch_font(GBK32);
-    epd_disp_string("£Ç£Â£Ë£³£²£ºÄãºÃÊÀ½ç", 0, 50);
-    epd_set_ch_font(GBK48);
-    epd_disp_string("£Ç£Â£Ë£´£¸£ºÄãºÃÊÀ½ç", 0, 100);
-    epd_set_ch_font(GBK64);
-    epd_disp_string("£Ç£Â£Ë£¶£´£ºÄãºÃÊÀ½ç", 0, 160);
-    
-    epd_set_en_font(ASCII32);
-    epd_disp_string("ASCII32: Hello, World!", 0, 300);
-    epd_set_en_font(ASCII48);
-    epd_disp_string("ASCII48: Hello, World!", 0, 350);  
-    epd_set_en_font(ASCII64);
-    epd_disp_string("BUDU BC. TOMAS FISER!!!!", 0, 450);
-    epd_udpate();   
-    vTaskDelay(3000 / portTICK_PERIOD_MS);   
-}
 
 
 void app_main()
@@ -183,8 +74,7 @@ void app_main()
     epd_set_color(BLACK, WHITE);
     epd_clear();
     epd_set_en_font(ASCII32);
-    epd_disp_string("STISKNI OK PRO ZAPNUTI WIFI", 0, 0);
-    epd_udpate(); 
+    
     //draw_text_demo();
 
     printf("Ini NVS: %d\n", nvs_flash_ini());
@@ -193,10 +83,6 @@ void app_main()
    
     //printf("Save to NVS: %d\n", nvs_save());
     low_pwr_deepsleep(nvs_struct.refresh_time);
-    epd_clear();
-    epd_set_en_font(ASCII32);
-    epd_disp_string("WIFI ZAPNUTA :)", 0, 0);
-    epd_udpate(); 
     
 
 //while(1)

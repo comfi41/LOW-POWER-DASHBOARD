@@ -20,6 +20,7 @@
 #include <esp_http_server.h>
 #include "NV_storage.h"
 #include "wifi_ap.h"
+#include "epd.h"
 
 
 /*content of web page*/
@@ -90,6 +91,7 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base,
 
 void wifi_init_softap(void)
 {
+    char buff[100];
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     esp_netif_create_default_wifi_ap();
@@ -114,6 +116,11 @@ void wifi_init_softap(void)
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
     printf("Wifi AP started. SSID:%s\n", WIFI_SSID);
+    sprintf(buff,"Configuration mode");
+    epd_disp_string(buff, 0, 150);
+    sprintf(buff,"Connect to WiFi: %s, open: 192.168.4.1",WIFI_SSID);
+    epd_disp_string(buff, 0, 250);
+    epd_udpate();
     setup_server();
 }
 
@@ -172,6 +179,7 @@ esp_err_t get_req_handler(httpd_req_t *req)
 
 esp_err_t get_param_req_handler(httpd_req_t *req)
 {
+    char buff[30];
     printf( "Input: %s\n", req->uri );
 
     //int temp;
@@ -194,6 +202,9 @@ esp_err_t get_param_req_handler(httpd_req_t *req)
     {
         printf( "ALL inputs are valid!\n");
         printf("Save to NVS: %d\n", nvs_save());
+        sprintf(buff,"NEW CONFIGURATION SAVED");
+        epd_disp_string(buff, 0, 250);
+        epd_udpate();
         send_web_page(req,ALERT_VALID);
         vTaskDelay(2000 / portTICK_PERIOD_MS); //cas pro odeslání stránky
         esp_restart();

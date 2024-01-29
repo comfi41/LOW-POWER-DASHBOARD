@@ -12,6 +12,7 @@
 #include "driver/adc.h"
 #include "driver/rtc_io.h"
 #include "soc/rtc.h"
-
+#include "wifi_ap.h"
+#include "wifi_sta.h"
 
 void low_pwr_deepsleep(int refresh_time);
