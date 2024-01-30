@@ -37,6 +37,7 @@ void low_pwr_deepsleep(int refresh_time)
             printf("Wake up from timer.\n");
             printf("ESP_WIFI_MODE_STA\n");
             wifi_init_sta();
+            
             break;
         }
 
@@ -45,10 +46,12 @@ void low_pwr_deepsleep(int refresh_time)
             printf("Not a deep sleep reset\n");
             printf("ESP_WIFI_MODE_STA\n");
             wifi_init_sta();
+            
     }
 
     if(reset_enable)
     {
+    
     const int wakeup_time_sec = refresh_time;
     printf("Enabling timer wakeup, %ds\n", wakeup_time_sec);
     esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000);
@@ -64,7 +67,7 @@ void low_pwr_deepsleep(int refresh_time)
     rtc_gpio_isolate(GPIO_NUM_12);
 
     printf("Entering deep sleep\n");
-    epd_enter_stopmode();
+    epd_enter_stopmode();   
     esp_deep_sleep_start();
 
     vTaskDelay(1000 / portTICK_PERIOD_MS); //toto smazat, pouze pro debug

@@ -82,31 +82,36 @@ void wifi_init_sta(void)
 
     /* xEventGroupWaitBits() returns the bits before the call returned, hence we can test which event actually
      * happened. */
+    epd_clear();
     if (bits & WIFI_CONNECTED_BIT) {
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
+        
         sprintf(buff,"WiFi connected to:%s",nvs_struct.wifi_ssid);
-        epd_disp_string(buff, 0, 150);
-        epd_udpate(); 
+        epd_disp_string(buff, 0, 100);
         client_get_function();
     } else if (bits & WIFI_FAIL_BIT) {
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
         sprintf(buff,"WiFi connection error!");
         epd_disp_string(buff, 0, 150);
+        sprintf(buff,"Press OK button to WEB configuration");
+        epd_disp_string(buff, 0, 200);
+        epd_udpate();
     } else {
         ESP_LOGE(TAG, "UNEXPECTED EVENT");
         sprintf(buff,"WiFi connection error!");
         epd_disp_string(buff, 0, 150);
         sprintf(buff,"Press OK button to WEB configuration");
         epd_disp_string(buff, 0, 200);
+        epd_udpate();
     }
-    epd_udpate();
 
     /* The event will not be processed after unregister */
     ESP_ERROR_CHECK(esp_event_handler_instance_unregister(IP_EVENT, IP_EVENT_STA_GOT_IP, instance_got_ip));
     ESP_ERROR_CHECK(esp_event_handler_instance_unregister(WIFI_EVENT, ESP_EVENT_ANY_ID, instance_any_id));
     vEventGroupDelete(s_wifi_event_group);
+    esp_wifi_disconnect();
 
 }
 
@@ -122,7 +127,8 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
         epd_disp_string(buff, 0, 150);
         sprintf(buff,"stage6.api.logimic.online/alive/alive");
         epd_disp_string(buff, 0, 200);
-        sprintf(buff,"Response: %.*s\n", evt->data_len, (char *)evt->data);
+        sprintf(buff,"Response: %.*s", evt->data_len, (char *)evt->data);
+        printf("HTTP_EVENT_ON_DATA: %s\n", buff);
         epd_disp_string(buff, 0, 250);
         epd_udpate();
         break;

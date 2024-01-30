@@ -202,6 +202,7 @@ esp_err_t get_param_req_handler(httpd_req_t *req)
     {
         printf( "ALL inputs are valid!\n");
         printf("Save to NVS: %d\n", nvs_save());
+        epd_clear();
         sprintf(buff,"NEW CONFIGURATION SAVED");
         epd_disp_string(buff, 0, 250);
         epd_udpate();

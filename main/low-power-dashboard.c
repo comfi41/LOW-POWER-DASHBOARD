@@ -64,8 +64,6 @@ void app_main()
     adc1_config_width(ADC_WIDTH_BIT_DEFAULT);
     adc1_config_channel_atten(ADC_BAT_MEAS, ADC_ATTEN_DB_11);
 
-    vTaskDelay(2000 / portTICK_PERIOD_MS); //cas pro inicializaci disleje
-
     epd_init();
     epd_wakeup();
     epd_set_memory(MEM_NAND);
@@ -74,7 +72,6 @@ void app_main()
     epd_set_color(BLACK, WHITE);
     epd_clear();
     epd_set_en_font(ASCII32);
-    
     //draw_text_demo();
 
     printf("Ini NVS: %d\n", nvs_flash_ini());
