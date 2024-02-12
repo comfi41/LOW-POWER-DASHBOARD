@@ -99,6 +99,7 @@ void wifi_init_sta(void)
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
         value_plus_info();
+        line_chart_visual();
         epd_udpate();
     } else {
         header();

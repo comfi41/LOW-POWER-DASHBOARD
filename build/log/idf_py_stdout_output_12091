@@ -1,0 +1,189 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/comfi/esp/low-power-dashboard/sdkconfig
+-- Compiler supported targets: xtensa-esp32-elf
+-- App "low-power-dashboard" version: dbdd6c8-dirty
+-- Adding linker script /home/comfi/esp/low-power-dashboard/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/comfi/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/comfi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/comfi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/comfi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/comfi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/comfi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/comfi/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/comfi/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/comfi/esp/esp-idf/components/app_trace /home/comfi/esp/esp-idf/components/app_update /home/comfi/esp/esp-idf/components/bootloader /home/comfi/esp/esp-idf/components/bootloader_support /home/comfi/esp/esp-idf/components/bt /home/comfi/esp/esp-idf/components/cmock /home/comfi/esp/esp-idf/components/console /home/comfi/esp/esp-idf/components/cxx /home/comfi/esp/esp-idf/components/driver /home/comfi/esp/esp-idf/components/efuse /home/comfi/esp/esp-idf/components/esp-tls /home/comfi/esp/esp-idf/components/esp_adc /home/comfi/esp/esp-idf/components/esp_app_format /home/comfi/esp/esp-idf/components/esp_bootloader_format /home/comfi/esp/esp-idf/components/esp_coex /home/comfi/esp/esp-idf/components/esp_common /home/comfi/esp/esp-idf/components/esp_eth /home/comfi/esp/esp-idf/components/esp_event /home/comfi/esp/esp-idf/components/esp_gdbstub /home/comfi/esp/esp-idf/components/esp_hid /home/comfi/esp/esp-idf/components/esp_http_client /home/comfi/esp/esp-idf/components/esp_http_server /home/comfi/esp/esp-idf/components/esp_https_ota /home/comfi/esp/esp-idf/components/esp_https_server /home/comfi/esp/esp-idf/components/esp_hw_support /home/comfi/esp/esp-idf/components/esp_lcd /home/comfi/esp/esp-idf/components/esp_local_ctrl /home/comfi/esp/esp-idf/components/esp_mm /home/comfi/esp/esp-idf/components/esp_netif /home/comfi/esp/esp-idf/components/esp_netif_stack /home/comfi/esp/esp-idf/components/esp_partition /home/comfi/esp/esp-idf/components/esp_phy /home/comfi/esp/esp-idf/components/esp_pm /home/comfi/esp/esp-idf/components/esp_psram /home/comfi/esp/esp-idf/components/esp_ringbuf /home/comfi/esp/esp-idf/components/esp_rom /home/comfi/esp/esp-idf/components/esp_system /home/comfi/esp/esp-idf/components/esp_timer /home/comfi/esp/esp-idf/components/esp_wifi /home/comfi/esp/esp-idf/components/espcoredump /home/comfi/esp/esp-idf/components/esptool_py /home/comfi/esp/esp-idf/components/fatfs /home/comfi/esp/esp-idf/components/freertos /home/comfi/esp/esp-idf/components/hal /home/comfi/esp/esp-idf/components/heap /home/comfi/esp/esp-idf/components/http_parser /home/comfi/esp/esp-idf/components/idf_test /home/comfi/esp/esp-idf/components/ieee802154 /home/comfi/esp/esp-idf/components/json /home/comfi/esp/esp-idf/components/log /home/comfi/esp/esp-idf/components/lwip /home/comfi/esp/low-power-dashboard/main /home/comfi/esp/esp-idf/components/mbedtls /home/comfi/esp/esp-idf/components/mqtt /home/comfi/esp/esp-idf/components/newlib /home/comfi/esp/esp-idf/components/nvs_flash /home/comfi/esp/esp-idf/components/nvs_sec_provider /home/comfi/esp/esp-idf/components/openthread /home/comfi/esp/esp-idf/components/partition_table /home/comfi/esp/esp-idf/components/perfmon /home/comfi/esp/esp-idf/components/protobuf-c /home/comfi/esp/esp-idf/components/protocomm /home/comfi/esp/esp-idf/components/pthread /home/comfi/esp/esp-idf/components/sdmmc /home/comfi/esp/esp-idf/components/soc /home/comfi/esp/esp-idf/components/spi_flash /home/comfi/esp/esp-idf/components/spiffs /home/comfi/esp/esp-idf/components/tcp_transport /home/comfi/esp/esp-idf/components/ulp /home/comfi/esp/esp-idf/components/unity /home/comfi/esp/esp-idf/components/usb /home/comfi/esp/esp-idf/components/vfs /home/comfi/esp/esp-idf/components/wear_levelling /home/comfi/esp/esp-idf/components/wifi_provisioning /home/comfi/esp/esp-idf/components/wpa_supplicant /home/comfi/esp/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/comfi/esp/low-power-dashboard/build
+[1/14] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[2/14] Performing build step for 'bootloader'
+[1/1] cd /home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/comfi/esp/low-power-dashboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
+[3/14] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[4/14] No install step for 'bootloader'
+[5/14] Completed 'bootloader'
+[6/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:17:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:18:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c: In function 'value_plus_info':
+/home/comfi/esp/low-power-dashboard/main/visual.c:141:8: warning: variable 'valid' set but not used [-Wunused-but-set-variable]
+  141 |   bool valid = true;
+      |        ^~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c: In function 'get_scale':
+/home/comfi/esp/low-power-dashboard/main/visual.c:229:10: warning: unused variable 'zero_bottom' [-Wunused-variable]
+  229 |     bool zero_bottom = true;
+      |          ^~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c:235:12: warning: unused variable 'zero_top' [-Wunused-variable]
+  235 |       bool zero_top = true;
+      |            ^~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c:239:12: warning: unused variable 'zero_midd' [-Wunused-variable]
+  239 |       bool zero_midd = true;
+      |            ^~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c:214:8: warning: unused variable 'zero_top' [-Wunused-variable]
+  214 |   bool zero_top = false;
+      |        ^~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c:210:10: warning: unused variable 'diff' [-Wunused-variable]
+  210 |   double diff;
+      |          ^~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18,
+                 from /home/comfi/esp/low-power-dashboard/main/visual.c:19:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h: At top level:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:25:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   25 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:27:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   27 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+[7/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_sta.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:17:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:18:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+[8/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_ap.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:20,
+                 from /home/comfi/esp/low-power-dashboard/main/wifi_ap.c:24:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:21:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c: In function 'wifi_init_softap':
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:95:10: warning: unused variable 'buff' [-Wunused-variable]
+   95 |     char buff[100];
+      |          ^~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c: In function 'get_param_req_handler':
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:186:30: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  186 |     for (char *p = strtok(req->uri,"&"); p != NULL; p = strtok(NULL, "&"))
+      |                           ~~~^~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_ap.c:9:
+/home/comfi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h: At top level:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:25:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   25 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:27:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   27 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+[9/14] Linking C static library esp-idf/main/libmain.a
+[10/14] Generating ld/sections.ld
+[11/14] Linking CXX executable low-power-dashboard.elf
+[12/14] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+[13/14] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+low-power-dashboard.bin binary size 0xfd2c0 bytes. Smallest app partition is 0x100000 bytes. 0x2d40 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
+[13/14] cd /home/comfi/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/comfi/esp/esp-idf -D "SERIAL_TOOL=/home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/comfi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/comfi/esp/low-power-dashboard/build -P /home/comfi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 low-power-dashboard.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:9a:2e:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26912 bytes to 16879...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a5... (100 %)
+Wrote 26912 bytes (16879 compressed) at 0x00001000 in 0.8 seconds (effective 282.8 kbit/s)...
+Hash of data verified.
+Compressed 1036992 bytes to 671439...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001892e... (4 %)
+Writing at 0x0001d510... (7 %)
+Writing at 0x0002296d... (9 %)
+Writing at 0x00029db8... (12 %)
+Writing at 0x00032ab2... (14 %)
+Writing at 0x00038298... (17 %)
+Writing at 0x000424aa... (19 %)
+Writing at 0x0004e481... (21 %)
+Writing at 0x00053f35... (24 %)
+Writing at 0x00059b4d... (26 %)
+Writing at 0x0005f707... (29 %)
+Writing at 0x0006513c... (31 %)
+Writing at 0x0006abb1... (34 %)
+Writing at 0x0007041c... (36 %)
+Writing at 0x00076547... (39 %)
+Writing at 0x0007c13d... (41 %)
+Writing at 0x00081a3b... (43 %)
+Writing at 0x00086f0c... (46 %)
+Writing at 0x0008c261... (48 %)
+Writing at 0x000916f3... (51 %)
+Writing at 0x00096a3e... (53 %)
+Writing at 0x0009c111... (56 %)
+Writing at 0x000a1890... (58 %)
+Writing at 0x000a7827... (60 %)
+Writing at 0x000ad0a9... (63 %)
+Writing at 0x000b25e1... (65 %)
+Writing at 0x000b7de1... (68 %)
+Writing at 0x000bd887... (70 %)
+Writing at 0x000c2efe... (73 %)
+Writing at 0x000c88dc... (75 %)
+Writing at 0x000ce682... (78 %)
+Writing at 0x000d471b... (80 %)
+Writing at 0x000d9e87... (82 %)
+Writing at 0x000e093d... (85 %)
+Writing at 0x000e908b... (87 %)
+Writing at 0x000f0dea... (90 %)
+Writing at 0x000f6afb... (92 %)
+Writing at 0x000fc899... (95 %)
+Writing at 0x00102588... (97 %)
+Writing at 0x00107d09... (100 %)
+Wrote 1036992 bytes (671439 compressed) at 0x00010000 in 16.7 seconds (effective 497.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 525.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
