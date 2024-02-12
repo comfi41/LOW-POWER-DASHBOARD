@@ -21,6 +21,7 @@
 #include "NV_storage.h"
 #include "wifi_ap.h"
 #include "epd.h"
+#include "visual.h"
 
 
 /*content of web page*/
@@ -116,10 +117,8 @@ void wifi_init_softap(void)
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
     ESP_ERROR_CHECK(esp_wifi_start());
     printf("Wifi AP started. SSID:%s\n", WIFI_SSID);
-    sprintf(buff,"Configuration mode");
-    epd_disp_string(buff, 0, 150);
-    sprintf(buff,"Connect to WiFi: %s, open: 192.168.4.1",WIFI_SSID);
-    epd_disp_string(buff, 0, 250);
+    header();
+    conf_mode();
     epd_udpate();
     setup_server();
 }

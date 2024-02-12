@@ -17,6 +17,9 @@ char auth_scope[50];
 char auth_url[50];
 char cloud_url[50];
 int refresh_time;
+//add last update time
+//add chosen sensor
+//add number of chosen visualization type
 };
 extern struct NVS_Data nvs_struct;
 

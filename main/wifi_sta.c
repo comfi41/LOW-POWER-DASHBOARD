@@ -14,6 +14,9 @@
 #include "NV_storage.h"
 #include "wifi_sta.h"
 #include "esp_crt_bundle.h"
+#include "driver/adc.h"
+#include "esp_adc_cal.h"
+#include "visual.h"
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
@@ -84,6 +87,7 @@ void wifi_init_sta(void)
      * happened. */
     epd_clear();
     if (bits & WIFI_CONNECTED_BIT) {
+        header();
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
         
@@ -91,14 +95,13 @@ void wifi_init_sta(void)
         epd_disp_string(buff, 0, 100);
         client_get_function();
     } else if (bits & WIFI_FAIL_BIT) {
+        header();
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
-        sprintf(buff,"WiFi connection error!");
-        epd_disp_string(buff, 0, 150);
-        sprintf(buff,"Press OK button to WEB configuration");
-        epd_disp_string(buff, 0, 200);
+        value_plus_info();
         epd_udpate();
     } else {
+        header();
         ESP_LOGE(TAG, "UNEXPECTED EVENT");
         sprintf(buff,"WiFi connection error!");
         epd_disp_string(buff, 0, 150);

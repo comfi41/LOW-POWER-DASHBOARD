@@ -1,0 +1,251 @@
+#include <string.h>
+#include <stdlib.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/event_groups.h"
+#include "esp_system.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "esp_log.h"
+#include "nvs_flash.h"
+#include "esp_http_client.h"
+#include "epd.h"
+#include "lwip/err.h"
+#include "lwip/sys.h"
+#include "wifi_sta.h"
+#include "esp_crt_bundle.h"
+#include "driver/adc.h"
+#include "esp_adc_cal.h"
+#include "visual.h"
+
+char buff[100];
+static esp_adc_cal_characteristics_t adc1_chars;
+void header(void)
+{
+  // header visual
+  // Last update info 
+  sprintf(buff,"Last update:");
+  epd_disp_string(buff, 10, 10);
+  sprintf(buff,"01.01.2025 10:00");
+  epd_disp_string(buff, 170, 10);
+        
+  // Battery diagram
+  epd_draw_line(698, 15, 780, 15);
+  epd_draw_line(698, 45, 780, 45);
+        
+  epd_draw_line(698, 15, 698, 45);
+  epd_draw_line(780, 15, 780, 45);
+        
+  epd_draw_line(689, 20, 698, 20);
+  epd_draw_line(689, 40, 698, 40);
+        
+  epd_draw_line(689, 20, 689, 40);
+        
+  //ADC init
+  esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_DEFAULT, 0, &adc1_chars);
+  adc1_config_width(ADC_WIDTH_BIT_DEFAULT);
+  adc1_config_channel_atten(ADC_BAT_MEAS, ADC_ATTEN_DB_11);
+        
+  double voltage = esp_adc_cal_raw_to_voltage(adc1_get_raw(ADC_BAT_MEAS), &adc1_chars);
+  voltage=voltage*2;
+  // 100 % - 66 % battery level
+  if ((BATTERY_FULL - voltage) <= OVER_66_PER) {
+    epd_fill_rect(702, 18, 724, 41);
+    epd_fill_rect(728, 18, 750, 41);
+    epd_fill_rect(754, 18, 776, 41);
+  }
+  // 65 % - 33 % battery level
+  else if ((BATTERY_FULL - voltage) <= OVER_33_PER) {
+    epd_fill_rect(728, 18, 750, 41);
+    epd_fill_rect(754, 18, 776, 41);
+  }
+  // 32 % - cca 5 % battery level
+  else if ((BATTERY_FULL - voltage) <= OVER_5_PER) {
+    epd_fill_rect(754, 18, 776, 41);
+  }
+  // Very low battery level
+  else {
+    epd_set_color(WHITE, BLACK);
+    epd_draw_line(725, 15, 752, 15);
+    epd_draw_line(730, 45, 747, 45);
+    epd_set_color(BLACK, WHITE);
+    epd_draw_triangle(730, 10, 747, 10, 738, 47);
+    epd_fill_rect(737, 51, 740, 54);
+  }
+}
+
+void wifi_error(void)
+{
+  epd_set_en_font(ASCII64);
+  sprintf(buff,"Wi-Fi");
+  epd_disp_string(buff, 330, 200);
+  error();
+}
+
+void cloud_error(void){
+  epd_set_en_font(ASCII64);
+  sprintf(buff,"CLOUD");
+  epd_disp_string(buff, 318, 200);
+  error();
+}
+
+void error(void)
+{
+  epd_set_en_font(ASCII48);
+  sprintf(buff,"ERROR");
+  epd_disp_string(buff, 341, 270);
+  epd_set_en_font(ASCII32);
+  epd_set_color(DARK_GRAY, WHITE);
+  sprintf(buff,"Press");
+  epd_disp_string(buff, 240, 420);
+  epd_set_color(BLACK, WHITE);
+  sprintf(buff,"'OK'");
+  epd_disp_string(buff, 320, 420);
+  epd_set_color(DARK_GRAY, WHITE);
+  sprintf(buff,"for configuration");
+  epd_disp_string(buff, 380, 420);
+}
+
+void conf_mode(void)
+{
+  epd_set_en_font(ASCII64);
+  sprintf(buff,"CONFIGURATION");
+  epd_disp_string(buff, 195, 120);
+  sprintf(buff,"MODE");
+  epd_disp_string(buff, 335, 190);
+  
+  epd_set_en_font(ASCII32);
+  epd_set_color(DARK_GRAY, WHITE);
+  sprintf(buff,"AP SSID:");
+  epd_disp_string(buff, 345, 330);
+  
+  epd_set_color(BLACK, WHITE);
+  sprintf(buff,"Low_power_dashboard");
+  epd_disp_string(buff, 265, 370);
+  
+  epd_set_color(DARK_GRAY, WHITE);
+  sprintf(buff,"Configurator address:");
+  epd_disp_string(buff, 275, 430);
+  
+  epd_set_color(BLACK, WHITE);
+  sprintf(buff,"192.168.4.1");
+  epd_disp_string(buff, 330, 470);
+}
+
+
+void value_plus_info(void)
+{
+  char value[] = "-8";
+  int value_length = strlen(value);
+  double spec_char = 0.0;
+  bool valid = true;
+  for (int i = 0; value[i] != '\0'; i++)
+  {
+    if (value[i] == '.')
+    {
+      spec_char -= 18.666;
+    }
+    if (value[i] == '-'){
+      spec_char += 3.0;
+    }
+    if (value[i] == '1'){
+      spec_char -= 9.33;
+    }
+  }
+  if (value_length > 5)
+  {
+    epd_set_en_font(ASCII64);
+    sprintf(buff, "OUT OF RANGE");
+    epd_disp_string(buff, 50, 120);
+    valid = false;
+  }
+  else 
+  {
+    epd_set_en_font(ASCII64);
+    sprintf(buff, "%s", value);
+    epd_disp_string(buff, 100, 120);
+    epd_set_en_font(ASCII32);
+    sprintf(buff, "o");
+    int position = 110 + (value_length * 28) + spec_char;
+    epd_disp_string(buff, position, 117);
+    
+    epd_set_en_font(ASCII48);
+    sprintf(buff, "C");
+    epd_disp_string(buff, position + 19, 120);
+  }
+  
+  epd_set_en_font(ASCII32);
+  epd_set_color(DARK_GRAY, WHITE);
+  sprintf(buff, "Device ID:");
+  epd_disp_string(buff, 400, 120);
+  
+  epd_set_color(BLACK, WHITE);
+  sprintf(buff, "123456789");
+  epd_disp_string(buff, 528, 120);
+  
+  epd_set_en_font(ASCII32);
+  epd_set_color(DARK_GRAY, WHITE);
+  sprintf(buff, "Device name:");
+  epd_disp_string(buff, 400, 150);
+  
+  epd_set_color(BLACK, WHITE);
+  sprintf(buff, "senzor 1");
+  epd_disp_string(buff, 568.327, 150); 
+  
+  epd_set_en_font(ASCII32);
+  epd_set_color(DARK_GRAY, WHITE);
+  sprintf(buff, "Battery:");
+  epd_disp_string(buff, 400, 180);
+  
+  epd_set_color(BLACK, WHITE);
+  sprintf(buff, "50 %%");
+  epd_disp_string(buff, 499.9065, 180); 
+}
+
+void get_scale(void){
+  double values[] = {-7.5, -11.1, 5.2, 8.0};
+  int length = sizeof(values) / sizeof(values[0]);
+  double max = values[0];
+  double min = values[0];
+  double diff;
+  
+  bool zero_midd = false;
+  bool zero_bottom = false;
+  bool zero_top = false;
+  
+  for (int i = 0; i < length; i++)
+  {
+    if (max < values[i])
+    {
+      max = values[i];
+    }
+    if (min > values[i])
+    {
+      min = values[i];
+    }
+  }
+  if (min > 0.0)
+  {
+    bool zero_bottom = true;
+  }
+  else
+  {
+    if (max < 0.0)
+    {
+      bool zero_top = true;
+    }
+    else
+    {
+      bool zero_midd = true;
+    }
+  }
+  if (zero_midd || zero_bottom)
+  {
+    epd_draw_line(55, 55, 752, 15);
+  }
+}
+
+//void line_chart_visual(void)
+//{
+//}
+

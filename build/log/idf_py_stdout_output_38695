@@ -1,0 +1,108 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/comfi/esp/low-power-dashboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:16:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:17:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:17,
+                 from /home/comfi/esp/low-power-dashboard/main/visual.c:18:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:25:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   25 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:27:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   27 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable low-power-dashboard.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+[9/10] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+low-power-dashboard.bin binary size 0xfcf80 bytes. Smallest app partition is 0x100000 bytes. 0x3080 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
+[9/10] cd /home/comfi/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/comfi/esp/esp-idf -D "SERIAL_TOOL=/home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/comfi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/comfi/esp/low-power-dashboard/build -P /home/comfi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 low-power-dashboard.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:9a:2e:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26912 bytes to 16879...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a5... (100 %)
+Wrote 26912 bytes (16879 compressed) at 0x00001000 in 0.7 seconds (effective 287.6 kbit/s)...
+Hash of data verified.
+Compressed 1036160 bytes to 670808...
+Writing at 0x00010000... (2 %)
+Writing at 0x000188eb... (4 %)
+Writing at 0x0001d4e9... (7 %)
+Writing at 0x0002292e... (9 %)
+Writing at 0x00029e37... (12 %)
+Writing at 0x00032a65... (14 %)
+Writing at 0x00038238... (17 %)
+Writing at 0x000424f1... (19 %)
+Writing at 0x0004e49d... (21 %)
+Writing at 0x00053ef3... (24 %)
+Writing at 0x00059ba6... (26 %)
+Writing at 0x0005f76a... (29 %)
+Writing at 0x00065146... (31 %)
+Writing at 0x0006abc7... (34 %)
+Writing at 0x00070486... (36 %)
+Writing at 0x000765c0... (39 %)
+Writing at 0x0007c14a... (41 %)
+Writing at 0x00081a4c... (43 %)
+Writing at 0x00086ed1... (46 %)
+Writing at 0x0008c285... (48 %)
+Writing at 0x000916fa... (51 %)
+Writing at 0x00096a5c... (53 %)
+Writing at 0x0009c141... (56 %)
+Writing at 0x000a18c6... (58 %)
+Writing at 0x000a787c... (60 %)
+Writing at 0x000ad0c8... (63 %)
+Writing at 0x000b25d0... (65 %)
+Writing at 0x000b7e03... (68 %)
+Writing at 0x000bd890... (70 %)
+Writing at 0x000c2efc... (73 %)
+Writing at 0x000c88da... (75 %)
+Writing at 0x000ce7ed... (78 %)
+Writing at 0x000d477c... (80 %)
+Writing at 0x000d9e49... (82 %)
+Writing at 0x000e0e07... (85 %)
+Writing at 0x000e9114... (87 %)
+Writing at 0x000f0e2c... (90 %)
+Writing at 0x000f6b46... (92 %)
+Writing at 0x000fc8ff... (95 %)
+Writing at 0x00102656... (97 %)
+Writing at 0x00107d29... (100 %)
+Wrote 1036160 bytes (670808 compressed) at 0x00010000 in 16.6 seconds (effective 498.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 520.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
