@@ -29,6 +29,9 @@
 #define OVER_33_PER 600
 #define OVER_5_PER 800
 
+#define LINE_CHART 1
+#define COLUMN_CHART 2
+
 typedef struct {
     double scale;
     int type; //zero_midd -> 1, zero_bottom -> 2, zero_top -> 3
@@ -36,9 +39,9 @@ typedef struct {
 
 void header(void);
 
-void line_chart_visual(void);
 Helper get_scale();
-//void column_chart_visual(void);
+void line_chart_visual(void);
+void column_chart_visual(void);
 //void scatter_plot_visual(void);
 
 //void table_visual(void);

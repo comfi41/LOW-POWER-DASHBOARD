@@ -18,6 +18,9 @@
 #include "esp_adc_cal.h"
 #include "visual.h"
 
+#define MAX_DATETIME_LENGTH 17
+#define MAX_DATE_LENGTH 11
+
 char buff[100];
 static esp_adc_cal_characteristics_t adc1_chars;
 void header(void)
@@ -161,138 +164,257 @@ void value_plus_info(void)
   {
     epd_set_en_font(ASCII64);
     sprintf(buff, "%s", value);
-    epd_disp_string(buff, 100, 80);
+    epd_disp_string(buff, 100, 70);
     epd_set_en_font(ASCII32);
     sprintf(buff, "o");
     int position = 110 + (value_length * 28) + spec_char;
-    epd_disp_string(buff, position, 77);
+    epd_disp_string(buff, position, 67);
     
     epd_set_en_font(ASCII48);
     sprintf(buff, "C");
-    epd_disp_string(buff, position + 19, 80);
+    epd_disp_string(buff, position + 19, 70);
   }
   
   epd_set_en_font(ASCII32);
   epd_set_color(DARK_GRAY, WHITE);
   sprintf(buff, "Device ID:");
-  epd_disp_string(buff, 400, 80);
+  epd_disp_string(buff, 400, 60);
   
   epd_set_color(BLACK, WHITE);
   sprintf(buff, "123456789");
-  epd_disp_string(buff, 528, 80);
+  epd_disp_string(buff, 528, 60);
   
   epd_set_en_font(ASCII32);
   epd_set_color(DARK_GRAY, WHITE);
   sprintf(buff, "Device name:");
-  epd_disp_string(buff, 400, 110);
+  epd_disp_string(buff, 400, 90);
   
   epd_set_color(BLACK, WHITE);
-  sprintf(buff, "senzor 1");
-  epd_disp_string(buff, 568.327, 110); 
+  sprintf(buff, "sensor 1");
+  epd_disp_string(buff, 568.327, 90); 
   
   epd_set_en_font(ASCII32);
   epd_set_color(DARK_GRAY, WHITE);
   sprintf(buff, "Battery:");
-  epd_disp_string(buff, 400, 140);
+  epd_disp_string(buff, 400, 120);
   
   epd_set_color(BLACK, WHITE);
   sprintf(buff, "50 %%");
-  epd_disp_string(buff, 499.9065, 140);
+  epd_disp_string(buff, 499.9065, 120);
 }
 
+//Function that creates and renders line chart
 void line_chart_visual(void)
 {
   //double values[] = {-7.5, -11.1, 5.2, 8.0, 42}; //test values
-  //double values[] = {1.2, 4.3, 5.2, 8.0, 2.6};
-  //double values[] = {-1.2, -4.3, -5.2, -8.0};
-  double values[] = {-1.2, -4.3, -5.2, -8.0, 11.1, 5.2, 8.0, 42, 1.2, 4.3};
+  //double values[] = {1.2, 4.3, 5.2, 8.0, 1.2};
+  double values[] = {-1.2, -4.3, -5.2, -8.0, -1.2};
+  char *X_values[][MAX_DATETIME_LENGTH] = {{"01.01.2024", "10:00"}, {"01.01.2024", "12:00"}, {"01.01.2024", "14:00"}, {"01.01.2024", "16:00"}, {"01.01.2024", "18:00"}};
+  
+  //char *X_values[][MAX_DATETIME_LENGTH] = {{"01.01.2024", "10:00"}, {"01.01.2024", "12:00"}, {"01.01.2024", "14:00"}, {"01.01.2024", "16:00"}, {"01.01.2024", "18:00"}, {"01.01.2024", "20:00"}, {"01.01.2024", "22:00"}, {"02.01.2024", "00:00"}, {"02.01.2024", "02:00"}, {"02.01.2024", "04:00"}};
+  //double values[] = {-1.2, -4.3, -5.2, -8.0, 11.1, 5.2, 8.0, 42, 1.2, 4.3};
+  
+  int X_value_length = sizeof(X_values) / sizeof(X_values[0]);
   int length = sizeof(values) / sizeof(values[0]);
-  Helper helper_struct = get_scale(values, length);
-  double X_scale = 670 / (length - 1);
-  epd_draw_line(70, 540, 70, 550);
+  
+  char unique_X_values[X_value_length][MAX_DATE_LENGTH];
+  int unique_values_count = 1;
+  strcpy(unique_X_values[0], X_values[0][0]);
+
+  for (int i = 1; i < X_value_length; i++) 
+  {
+    if (strcmp(X_values[i][0], X_values[i - 1][0]) != 0) 
+    {
+      strcpy(unique_X_values[unique_values_count], X_values[i][0]);
+      unique_values_count++;
+    }
+  }
+  
+  if (unique_values_count >= 2)
+  {
+    epd_draw_line(0, 172, 455, 172);
+    sprintf(buff, "Data from: %s -> %s", unique_X_values[0], unique_X_values[unique_values_count-1]);
+    epd_disp_string(buff, 0, 175);
+  }
+  else
+  {
+    epd_draw_line(0, 172, 279, 172);
+    sprintf(buff, "Data from: %s", unique_X_values[0]);
+    epd_disp_string(buff, 0, 175);
+  }
+  
+  if (X_value_length == length)
+  {
+    Helper helper_struct = get_scale(values, length, LINE_CHART);
+    
+    double X_scale = 670 / (length - 1);
+    epd_draw_line(70, 540, 70, 550);
+    
+    for (int i = 0; i < length; i++)
+    {
+      epd_draw_line(70 + ((i + 1) * X_scale), 540, 70 + ((i + 1) * X_scale), 550);
+      sprintf(buff, "%s", X_values[i][1]);
+      epd_disp_string(buff, 40 + ((i) * X_scale), 560);    
+      switch(helper_struct.type)
+      {
+        case 1:
+          if ((length - 1) == i)
+          {
+            epd_set_color(BLACK, WHITE);
+            sprintf(buff, "%.1f", values[i]);
+            epd_disp_string(buff, 70 + (i * X_scale) - 16, 395 - (values[i] / helper_struct.scale) - 45);
+            epd_fill_circle((70 + (i * X_scale)), 395 - (values[i] / helper_struct.scale), 4);
+          }
+          else
+          {
+            epd_set_color(BLACK, WHITE);
+            sprintf(buff, "%.1f", values[i]);
+            if (i == 0)
+            {
+              epd_disp_string(buff, 70 + (i * X_scale) + 7, 395 - (values[i] / helper_struct.scale) - 45);
+            }
+            else
+            {
+              epd_disp_string(buff, 70 + (i * X_scale) - 16, 395 - (values[i] / helper_struct.scale) - 45);
+            }
+            epd_draw_line(70 + (i * X_scale), 395 - (values[i] / helper_struct.scale), 70 + ((i + 1) * X_scale), 395 - (values[i+1] / helper_struct.scale));
+            epd_fill_circle((70 + (i * X_scale)), 395 - (values[i] / helper_struct.scale), 4);
+          }
+          break;
+        case 2:
+          if ((length - 1) == i)
+          {
+            epd_set_color(BLACK, WHITE);
+            sprintf(buff, "%.1f", values[i]);
+            epd_disp_string(buff, 70 + (i * X_scale) - 16, 545 - (values[i] / helper_struct.scale) - 45);
+            epd_fill_circle((70 + (i * X_scale)), 545 - (values[i] / helper_struct.scale), 4);
+          }
+          else
+          {
+            epd_set_color(BLACK, WHITE);
+            sprintf(buff, "%.1f", values[i]);
+            if (i == 0)
+            {
+              epd_disp_string(buff, 70 + (i * X_scale) + 7, 545 - (values[i] / helper_struct.scale) - 45);
+            }
+            else
+            {
+              epd_disp_string(buff, 70 + (i * X_scale) - 16, 545 - (values[i] / helper_struct.scale) - 45);
+            }
+            epd_draw_line(70 + (i * X_scale), 545 - (values[i] / helper_struct.scale), 70 + ((i + 1) * X_scale), 545 - (values[i+1] / helper_struct.scale));
+            epd_fill_circle((70 + (i * X_scale)), 545 - (values[i] / helper_struct.scale), 4);
+          }
+          break;
+        case 3:
+          if ((length - 1) == i)
+          {
+            epd_set_color(BLACK, WHITE);
+            sprintf(buff, "%.1f", values[i]);
+            epd_disp_string(buff, 70 + (i * X_scale) - 16, 245 + (values[i] / helper_struct.scale) - 45);
+            epd_fill_circle((70 + (i * X_scale)), 245 + (values[i] / helper_struct.scale), 4);
+          }
+          else
+          {
+            epd_set_color(BLACK, WHITE);
+            sprintf(buff, "%.1f", values[i]);
+            if (i == 0)
+            {
+              epd_disp_string(buff, 70 + (i * X_scale) + 7, 245 + (values[i] / helper_struct.scale) - 45);
+            }
+            else
+            {
+              epd_disp_string(buff, 70 + (i * X_scale) - 16, 245 + (values[i] / helper_struct.scale) - 45);
+            }
+            epd_draw_line(70 + (i * X_scale), 245 + (values[i] / helper_struct.scale), 70 + ((i + 1) * X_scale), 245 + (values[i+1] / helper_struct.scale));
+            epd_fill_circle((70 + (i * X_scale)), 245 + (values[i] / helper_struct.scale), 4);
+          }
+          break;
+      }
+    }
+  }
+  else
+  {
+    epd_set_en_font(ASCII64);
+    sprintf(buff, "INVALID DATA INPUT!");
+    epd_disp_string(buff, 134, 300);
+  }
+}
+
+//Function that creates and renders column chart
+void column_chart_visual(void){
+  int temp;
+  double avg_of_dim;
+
+  //double values[][3] = {{-7.5, -11.1}, {5.2}, {42.0, 42.0, 42.0}, {-7.5, -11.1}, {1.0, 2.8}, {8.3, 3.2}, {-20.0}, {18.3, 4.8}, {3.2}, {6.4}, {19.3}, {-2.0}};
+  double values[][3] = {{7.5, 11.1}, {5.2}, {42.0, 42.0, 42.0}, {7.5, 11.1}};
+  //double values[][3] = {{-7.5, -11.1}, {-5.2}, {-42.0, -42.0, -42.0}, {-7.5, -11.1}};
+  int length = sizeof(values) / sizeof(values[0]);
+  int second_dim_len = sizeof(values[0]) / sizeof(values[0][0]);
+  double avg_values[length];
+  for (int i = 0; i < length; i++) {
+    avg_of_dim = 0.0;
+    temp = second_dim_len;
+    for (int j = 0; j < second_dim_len; j++) {
+        if (values[i][j] != 0)
+        {
+          avg_of_dim += values[i][j];
+        }
+        else
+        {
+          temp -= 1;
+        }
+    }
+    avg_values[i] = (avg_of_dim / temp);
+  }
+  length = sizeof(avg_values) / sizeof(avg_values[0]);
+  Helper helper_struct = get_scale(avg_values, length, COLUMN_CHART);
+  
+  double X_scale = 690 / (length + 1);
   for (int i = 0; i < length; i++)
   {
-    epd_draw_line(70 + ((i + 1) * X_scale), 540, 70 + ((i + 1) * X_scale), 550);
+    epd_draw_line(70 + X_scale + ((i) * X_scale), 540, 70 + X_scale + ((i) * X_scale), 550);
+    sprintf(buff, "%.1f", avg_values[i]);
+    epd_disp_string(buff, 70 + X_scale + ((i) * X_scale), 560);
+    
     switch(helper_struct.type)
     {
-      case 1:
-        if ((length - 1) == i)
-        {
-          epd_set_color(BLACK, WHITE);
-          sprintf(buff, "%.1f", values[i]);
-          epd_disp_string(buff, 70 + (i * X_scale) - 16, 395 - (values[i] / helper_struct.scale) - 45);
-          epd_fill_circle((70 + (i * X_scale)), 395 - (values[i] / helper_struct.scale), 8);
-        }
-        else
-        {
-          epd_set_color(BLACK, WHITE);
-          sprintf(buff, "%.1f", values[i]);
-          if (i == 0)
+        case 1:
+          sprintf(buff, "%.1f", avg_values[i]);
+          if (avg_values[i] > 0 && avg_values[i] < 10)
           {
-            epd_disp_string(buff, 70 + (i * X_scale) + 7, 395 - (values[i] / helper_struct.scale) - 45);
+            epd_disp_string(buff, 40 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
+          }
+          else if (avg_values[i] <= -10)
+          {
+            epd_disp_string(buff, 30 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
           }
           else
           {
-            epd_disp_string(buff, 70 + (i * X_scale) - 16, 395 - (values[i] / helper_struct.scale) - 45);
+            epd_disp_string(buff, 33 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
           }
-          epd_draw_line(70 + (i * X_scale), 395 - (values[i] / helper_struct.scale), 70 + ((i + 1) * X_scale), 395 - (values[i+1] / helper_struct.scale));
-          epd_fill_circle((70 + (i * X_scale)), 395 - (values[i] / helper_struct.scale), 8);
-        }
-        break;
-      case 2:
-        if ((length - 1) == i)
-        {
-          epd_set_color(BLACK, WHITE);
-          sprintf(buff, "%.1f", values[i]);
-          epd_disp_string(buff, 70 + (i * X_scale) - 16, 545 - (values[i] / helper_struct.scale) - 45);
-          epd_fill_circle((70 + (i * X_scale)), 545 - (values[i] / helper_struct.scale), 8);
-        }
-        else
-        {
-          epd_set_color(BLACK, WHITE);
-          sprintf(buff, "%.1f", values[i]);
-          if (i == 0)
+          epd_fill_rect(45 + X_scale + ((i) * X_scale), 545, 75 + X_scale + ((i) * X_scale), 395 - (avg_values[i] / helper_struct.scale));
+          break;
+        default:
+          sprintf(buff, "%.1f", avg_values[i]);
+          if (avg_values[i] > 0 && avg_values[i] < 10)
           {
-            epd_disp_string(buff, 70 + (i * X_scale) + 7, 545 - (values[i] / helper_struct.scale) - 45);
+            epd_disp_string(buff, 40 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
+          }
+          else if (avg_values[i] <= -10)
+          {
+            epd_disp_string(buff, 30 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
           }
           else
           {
-            epd_disp_string(buff, 70 + (i * X_scale) - 16, 545 - (values[i] / helper_struct.scale) - 45);
+            epd_disp_string(buff, 33 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
           }
-          epd_draw_line(70 + (i * X_scale), 545 - (values[i] / helper_struct.scale), 70 + ((i + 1) * X_scale), 545 - (values[i+1] / helper_struct.scale));
-          epd_fill_circle((70 + (i * X_scale)), 545 - (values[i] / helper_struct.scale), 8);
-        }
-        break;
-      case 3:
-        if ((length - 1) == i)
-        {
-          epd_set_color(BLACK, WHITE);
-          sprintf(buff, "%.1f", values[i]);
-          epd_disp_string(buff, 70 + (i * X_scale) - 16, 245 + (values[i] / helper_struct.scale) - 45);
-          epd_fill_circle((70 + (i * X_scale)), 245 + (values[i] / helper_struct.scale), 8);
-        }
-        else
-        {
-          epd_set_color(BLACK, WHITE);
-          sprintf(buff, "%.1f", values[i]);
-          if (i == 0)
-          {
-            epd_disp_string(buff, 70 + (i * X_scale) + 7, 245 + (values[i] / helper_struct.scale) - 45);
-          }
-          else
-          {
-            epd_disp_string(buff, 70 + (i * X_scale) - 16, 245 + (values[i] / helper_struct.scale) - 45);
-          }
-          epd_draw_line(70 + (i * X_scale), 245 + (values[i] / helper_struct.scale), 70 + ((i + 1) * X_scale), 245 + (values[i+1] / helper_struct.scale));
-          epd_fill_circle((70 + (i * X_scale)), 245 + (values[i] / helper_struct.scale), 8);
-        }
-        break;
+          epd_fill_rect(45 + X_scale + ((i) * X_scale), 545, 75 + X_scale + ((i) * X_scale), 545 - (avg_values[i] / helper_struct.scale));
     }
   }
 }
 
 
-Helper get_scale(double values[], int length){
+Helper get_scale(double values[], int length, int chart_type){
   Helper helper_struct;
   double max = values[0];
   double min = values[0];
@@ -389,16 +511,33 @@ Helper get_scale(double values[], int length){
     }
     else if(zero_top)
     {
-      if (i == 8)
+      if(chart_type == 2)
       {
-        sprintf(buff,"0");
-        epd_disp_string(buff, 35, 231);
+        if (i == 0)
+        {
+          sprintf(buff,"0");
+          epd_disp_string(buff, 35, 531);
+        }
+        else
+        {
+          scale_value = -step * i;
+          sprintf(buff,"%.1f", scale_value);
+          epd_disp_string(buff, 0, 531 - i * 37.5);
+        }
       }
       else
       {
-        scale_value = -step * (8 - i);
-        sprintf(buff,"%.1f", scale_value);
-        epd_disp_string(buff, 0, 531 - i * 37.5);
+        if (i == 8)
+        {
+          sprintf(buff,"0");
+          epd_disp_string(buff, 35, 231);
+        }
+        else
+        {
+          scale_value = -step * (8 - i);
+          sprintf(buff,"%.1f", scale_value);
+          epd_disp_string(buff, 0, 531 - i * 37.5);
+        }
       }
     }
   }

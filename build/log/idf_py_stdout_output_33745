@@ -1,0 +1,39 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/comfi/esp/low-power-dashboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:17:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:18:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c: In function 'column_chart_visual':
+/home/comfi/esp/low-power-dashboard/main/visual.c:352:10: warning: variable 'avg_values' set but not used [-Wunused-but-set-variable]
+  352 |   double avg_values[length];
+      |          ^~~~~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18,
+                 from /home/comfi/esp/low-power-dashboard/main/visual.c:19:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h: At top level:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:25:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   25 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:27:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   27 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable low-power-dashboard.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+[9/9] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+low-power-dashboard.bin binary size 0xfd350 bytes. Smallest app partition is 0x100000 bytes. 0x2cb0 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
