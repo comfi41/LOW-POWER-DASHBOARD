@@ -42,11 +42,10 @@ void header(void);
 Helper get_scale();
 void line_chart_visual(void);
 void column_chart_visual(void);
-//void scatter_plot_visual(void);
+void scatter_plot_visual(void);
 
 //void table_visual(void);
 void value_plus_info(void);
-
 
 void wifi_error(void);
 void cloud_error(void);

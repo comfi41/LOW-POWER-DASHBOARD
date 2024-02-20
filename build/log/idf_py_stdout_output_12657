@@ -4,8 +4,6 @@ Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
 [2/10] No install step for 'bootloader'
 [3/10] Completed 'bootloader'
 [4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj
-FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj 
-/home/comfi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2-dev-3065-g272b4091f1\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/comfi/esp/low-power-dashboard/build/config -I/home/comfi/esp/low-power-dashboard/main -I/home/comfi/esp/esp-idf/components/newlib/platform_include -I/home/comfi/esp/esp-idf/components/freertos/config/include -I/home/comfi/esp/esp-idf/components/freertos/config/include/freertos -I/home/comfi/esp/esp-idf/components/freertos/config/xtensa/include -I/home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/comfi/esp/esp-idf/components/freertos/esp_additions/include -I/home/comfi/esp/esp-idf/components/esp_hw_support/include -I/home/comfi/esp/esp-idf/components/esp_hw_support/include/soc -I/home/comfi/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/comfi/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/comfi/esp/esp-idf/components/esp_hw_support/port/esp32/private_include -I/home/comfi/esp/esp-idf/components/heap/include -I/home/comfi/esp/esp-idf/components/log/include -I/home/comfi/esp/esp-idf/components/soc/include -I/home/comfi/esp/esp-idf/components/soc/esp32 -I/home/comfi/esp/esp-idf/components/soc/esp32/include -I/home/comfi/esp/esp-idf/components/hal/esp32/include -I/home/comfi/esp/esp-idf/components/hal/include -I/home/comfi/esp/esp-idf/components/hal/platform_port/include -I/home/comfi/esp/esp-idf/components/esp_rom/include -I/home/comfi/esp/esp-idf/components/esp_rom/include/esp32 -I/home/comfi/esp/esp-idf/components/esp_rom/esp32 -I/home/comfi/esp/esp-idf/components/esp_common/include -I/home/comfi/esp/esp-idf/components/esp_system/include -I/home/comfi/esp/esp-idf/components/esp_system/port/soc -I/home/comfi/esp/esp-idf/components/esp_system/port/include/private -I/home/comfi/esp/esp-idf/components/xtensa/esp32/include -I/home/comfi/esp/esp-idf/components/xtensa/include -I/home/comfi/esp/esp-idf/components/xtensa/deprecated_include -I/home/comfi/esp/esp-idf/components/lwip/include -I/home/comfi/esp/esp-idf/components/lwip/include/apps -I/home/comfi/esp/esp-idf/components/lwip/include/apps/sntp -I/home/comfi/esp/esp-idf/components/lwip/lwip/src/include -I/home/comfi/esp/esp-idf/components/lwip/port/include -I/home/comfi/esp/esp-idf/components/lwip/port/freertos/include -I/home/comfi/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/comfi/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/comfi/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/comfi/esp/esp-idf/components/esp_ringbuf/include -I/home/comfi/esp/esp-idf/components/efuse/include -I/home/comfi/esp/esp-idf/components/efuse/esp32/include -I/home/comfi/esp/esp-idf/components/driver/include -I/home/comfi/esp/esp-idf/components/driver/deprecated -I/home/comfi/esp/esp-idf/components/driver/analog_comparator/include -I/home/comfi/esp/esp-idf/components/driver/dac/include -I/home/comfi/esp/esp-idf/components/driver/gpio/include -I/home/comfi/esp/esp-idf/components/driver/gptimer/include -I/home/comfi/esp/esp-idf/components/driver/i2c/include -I/home/comfi/esp/esp-idf/components/driver/i2s/include -I/home/comfi/esp/esp-idf/components/driver/ledc/include -I/home/comfi/esp/esp-idf/components/driver/mcpwm/include -I/home/comfi/esp/esp-idf/components/driver/parlio/include -I/home/comfi/esp/esp-idf/components/driver/pcnt/include -I/home/comfi/esp/esp-idf/components/driver/rmt/include -I/home/comfi/esp/esp-idf/components/driver/sdio_slave/include -I/home/comfi/esp/esp-idf/components/driver/sdmmc/include -I/home/comfi/esp/esp-idf/components/driver/sigma_delta/include -I/home/comfi/esp/esp-idf/components/driver/spi/include -I/home/comfi/esp/esp-idf/components/driver/temperature_sensor/include -I/home/comfi/esp/esp-idf/components/driver/touch_sensor/include -I/home/comfi/esp/esp-idf/components/driver/twai/include -I/home/comfi/esp/esp-idf/components/driver/uart/include -I/home/comfi/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/comfi/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/comfi/esp/esp-idf/components/esp_pm/include -I/home/comfi/esp/esp-idf/components/mbedtls/port/include -I/home/comfi/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/comfi/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/comfi/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/comfi/esp/esp-idf/components/esp_bootloader_format/include -I/home/comfi/esp/esp-idf/components/esp_app_format/include -I/home/comfi/esp/esp-idf/components/bootloader_support/include -I/home/comfi/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/comfi/esp/esp-idf/components/esp_partition/include -I/home/comfi/esp/esp-idf/components/app_update/include -I/home/comfi/esp/esp-idf/components/esp_mm/include -I/home/comfi/esp/esp-idf/components/spi_flash/include -I/home/comfi/esp/esp-idf/components/pthread/include -I/home/comfi/esp/esp-idf/components/esp_timer/include -I/home/comfi/esp/esp-idf/components/app_trace/include -I/home/comfi/esp/esp-idf/components/esp_event/include -I/home/comfi/esp/esp-idf/components/nvs_flash/include -I/home/comfi/esp/esp-idf/components/esp_phy/include -I/home/comfi/esp/esp-idf/components/esp_phy/esp32/include -I/home/comfi/esp/esp-idf/components/vfs/include -I/home/comfi/esp/esp-idf/components/esp_netif/include -I/home/comfi/esp/esp-idf/components/wpa_supplicant/include -I/home/comfi/esp/esp-idf/components/wpa_supplicant/port/include -I/home/comfi/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/comfi/esp/esp-idf/components/esp_coex/include -I/home/comfi/esp/esp-idf/components/esp_wifi/include -I/home/comfi/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/comfi/esp/esp-idf/components/unity/include -I/home/comfi/esp/esp-idf/components/unity/unity/src -I/home/comfi/esp/esp-idf/components/cmock/CMock/src -I/home/comfi/esp/esp-idf/components/console -I/home/comfi/esp/esp-idf/components/http_parser -I/home/comfi/esp/esp-idf/components/esp-tls -I/home/comfi/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/comfi/esp/esp-idf/components/esp_adc/include -I/home/comfi/esp/esp-idf/components/esp_adc/interface -I/home/comfi/esp/esp-idf/components/esp_adc/esp32/include -I/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include -I/home/comfi/esp/esp-idf/components/esp_eth/include -I/home/comfi/esp/esp-idf/components/esp_gdbstub/include -I/home/comfi/esp/esp-idf/components/esp_hid/include -I/home/comfi/esp/esp-idf/components/tcp_transport/include -I/home/comfi/esp/esp-idf/components/esp_http_client/include -I/home/comfi/esp/esp-idf/components/esp_http_server/include -I/home/comfi/esp/esp-idf/components/esp_https_ota/include -I/home/comfi/esp/esp-idf/components/esp_psram/include -I/home/comfi/esp/esp-idf/components/esp_lcd/include -I/home/comfi/esp/esp-idf/components/esp_lcd/interface -I/home/comfi/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/comfi/esp/esp-idf/components/protocomm/include/common -I/home/comfi/esp/esp-idf/components/protocomm/include/security -I/home/comfi/esp/esp-idf/components/protocomm/include/transports -I/home/comfi/esp/esp-idf/components/esp_local_ctrl/include -I/home/comfi/esp/esp-idf/components/espcoredump/include -I/home/comfi/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/comfi/esp/esp-idf/components/wear_levelling/include -I/home/comfi/esp/esp-idf/components/sdmmc/include -I/home/comfi/esp/esp-idf/components/fatfs/diskio -I/home/comfi/esp/esp-idf/components/fatfs/src -I/home/comfi/esp/esp-idf/components/fatfs/vfs -I/home/comfi/esp/esp-idf/components/idf_test/include -I/home/comfi/esp/esp-idf/components/idf_test/include/esp32 -I/home/comfi/esp/esp-idf/components/ieee802154/include -I/home/comfi/esp/esp-idf/components/json/cJSON -I/home/comfi/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/comfi/esp/esp-idf/components/nvs_sec_provider/include -I/home/comfi/esp/esp-idf/components/perfmon/include -I/home/comfi/esp/esp-idf/components/spiffs/include -I/home/comfi/esp/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/home/comfi/esp/low-power-dashboard=. -fmacro-prefix-map=/home/comfi/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj -c /home/comfi/esp/low-power-dashboard/main/visual.c
 In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:17:
 /home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
    19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
@@ -14,46 +12,98 @@ In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:18:
 /home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
    17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
       |  ^~~~~~~
-/home/comfi/esp/low-power-dashboard/main/visual.c: In function 'value_plus_info':
-/home/comfi/esp/low-power-dashboard/main/visual.c:141:8: warning: variable 'valid' set but not used [-Wunused-but-set-variable]
-  141 |   bool valid = true;
-      |        ^~~~~
-/home/comfi/esp/low-power-dashboard/main/visual.c: In function 'get_scale':
-/home/comfi/esp/low-power-dashboard/main/visual.c:227:23: error: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Werror=format=]
-  227 |   printf("Min value: %d\n", min);
-      |                      ~^     ~~~
-      |                       |     |
-      |                       int   double
-      |                      %f
-/home/comfi/esp/low-power-dashboard/main/visual.c:228:23: error: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Werror=format=]
-  228 |   printf("Max value: %d\n", max);
-      |                      ~^     ~~~
-      |                       |     |
-      |                       int   double
-      |                      %f
-/home/comfi/esp/low-power-dashboard/main/visual.c:231:10: warning: unused variable 'zero_bottom' [-Wunused-variable]
-  231 |     bool zero_bottom = true;
-      |          ^~~~~~~~~~~
-/home/comfi/esp/low-power-dashboard/main/visual.c:237:12: warning: unused variable 'zero_top' [-Wunused-variable]
-  237 |       bool zero_top = true;
-      |            ^~~~~~~~
-/home/comfi/esp/low-power-dashboard/main/visual.c:241:12: warning: unused variable 'zero_midd' [-Wunused-variable]
-  241 |       bool zero_midd = true;
-      |            ^~~~~~~~~
-/home/comfi/esp/low-power-dashboard/main/visual.c:214:8: warning: unused variable 'zero_top' [-Wunused-variable]
-  214 |   bool zero_top = false;
-      |        ^~~~~~~~
-/home/comfi/esp/low-power-dashboard/main/visual.c:210:10: warning: unused variable 'diff' [-Wunused-variable]
-  210 |   double diff;
-      |          ^~~~
 In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18,
                  from /home/comfi/esp/low-power-dashboard/main/visual.c:19:
-/home/comfi/esp/low-power-dashboard/main/wifi_sta.h: At top level:
 /home/comfi/esp/low-power-dashboard/main/wifi_sta.h:25:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
    25 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
       |             ^~~~~~~~~~~~~
 /home/comfi/esp/low-power-dashboard/main/wifi_sta.h:27:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
    27 | static void client_get_function(void);
       |             ^~~~~~~~~~~~~~~~~~~
-cc1: some warnings being treated as errors
-ninja: build stopped: subcommand failed.
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable low-power-dashboard.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+[9/10] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+low-power-dashboard.bin binary size 0xfe6d0 bytes. Smallest app partition is 0x100000 bytes. 0x1930 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
+[9/10] cd /home/comfi/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/comfi/esp/esp-idf -D "SERIAL_TOOL=/home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/comfi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/comfi/esp/low-power-dashboard/build -P /home/comfi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 low-power-dashboard.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:9a:2e:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26912 bytes to 16879...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a5... (100 %)
+Wrote 26912 bytes (16879 compressed) at 0x00001000 in 0.8 seconds (effective 278.3 kbit/s)...
+Hash of data verified.
+Compressed 1042128 bytes to 674433...
+Writing at 0x00010000... (2 %)
+Writing at 0x000189b1... (4 %)
+Writing at 0x0001d5d2... (7 %)
+Writing at 0x00022a31... (9 %)
+Writing at 0x00029c28... (11 %)
+Writing at 0x00032b64... (14 %)
+Writing at 0x0003834f... (16 %)
+Writing at 0x00042316... (19 %)
+Writing at 0x0004e4e9... (21 %)
+Writing at 0x00053f7c... (23 %)
+Writing at 0x00059abf... (26 %)
+Writing at 0x0005f93e... (28 %)
+Writing at 0x000653f2... (30 %)
+Writing at 0x0006aeab... (33 %)
+Writing at 0x0007071f... (35 %)
+Writing at 0x0007676d... (38 %)
+Writing at 0x0007c4dc... (40 %)
+Writing at 0x00081ea7... (42 %)
+Writing at 0x000873d5... (45 %)
+Writing at 0x0008c719... (47 %)
+Writing at 0x00091b7c... (50 %)
+Writing at 0x00096e7c... (52 %)
+Writing at 0x0009c549... (54 %)
+Writing at 0x000a1cca... (57 %)
+Writing at 0x000a7b0a... (59 %)
+Writing at 0x000ad427... (61 %)
+Writing at 0x000b29e2... (64 %)
+Writing at 0x000b8239... (66 %)
+Writing at 0x000bdad5... (69 %)
+Writing at 0x000c3214... (71 %)
+Writing at 0x000c8ae8... (73 %)
+Writing at 0x000ce655... (76 %)
+Writing at 0x000d4874... (78 %)
+Writing at 0x000da25a... (80 %)
+Writing at 0x000e04db... (83 %)
+Writing at 0x000e8555... (85 %)
+Writing at 0x000f1018... (88 %)
+Writing at 0x000f6f1a... (90 %)
+Writing at 0x000fcc3d... (92 %)
+Writing at 0x00102832... (95 %)
+Writing at 0x0010824e... (97 %)
+Writing at 0x0010d5a4... (100 %)
+Wrote 1042128 bytes (674433 compressed) at 0x00010000 in 16.6 seconds (effective 501.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 510.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

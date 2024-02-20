@@ -217,10 +217,11 @@ void line_chart_visual(void)
   int X_value_length = sizeof(X_values) / sizeof(X_values[0]);
   int length = sizeof(values) / sizeof(values[0]);
   
+  //chart header showing the time range from which the data is 
   char unique_X_values[X_value_length][MAX_DATE_LENGTH];
   int unique_values_count = 1;
   strcpy(unique_X_values[0], X_values[0][0]);
-
+   
   for (int i = 1; i < X_value_length; i++) 
   {
     if (strcmp(X_values[i][0], X_values[i - 1][0]) != 0) 
@@ -229,7 +230,7 @@ void line_chart_visual(void)
       unique_values_count++;
     }
   }
-  
+    
   if (unique_values_count >= 2)
   {
     epd_draw_line(0, 172, 455, 172);
@@ -341,78 +342,438 @@ void line_chart_visual(void)
 }
 
 //Function that creates and renders column chart
-void column_chart_visual(void){
+void column_chart_visual(void)
+{
   int temp;
   double avg_of_dim;
 
   //double values[][3] = {{-7.5, -11.1}, {5.2}, {42.0, 42.0, 42.0}, {-7.5, -11.1}, {1.0, 2.8}, {8.3, 3.2}, {-20.0}, {18.3, 4.8}, {3.2}, {6.4}, {19.3}, {-2.0}};
-  double values[][3] = {{7.5, 11.1}, {5.2}, {42.0, 42.0, 42.0}, {7.5, 11.1}};
-  //double values[][3] = {{-7.5, -11.1}, {-5.2}, {-42.0, -42.0, -42.0}, {-7.5, -11.1}};
+  //double values[][3] = {{7.5, 11.1}, {5.2}, {42.0, 42.0, 42.0}, {7.5, 11.1}, {8.3, 3.2}, {-20.0}, {18.3, 4.8}};
+  double values[][3] = {{-7.5, -11.1}, {-5.2}, {-42.0, -42.0, -42.0}, {-7.5, -11.1}};
+  
+  char *X_values[] = {"Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.", "Sun."};
+  //char *X_values[] = {"Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."};
+
+  int X_value_length = sizeof(X_values) / sizeof(X_values[0]);
   int length = sizeof(values) / sizeof(values[0]);
   int second_dim_len = sizeof(values[0]) / sizeof(values[0][0]);
   double avg_values[length];
-  for (int i = 0; i < length; i++) {
-    avg_of_dim = 0.0;
-    temp = second_dim_len;
-    for (int j = 0; j < second_dim_len; j++) {
-        if (values[i][j] != 0)
-        {
-          avg_of_dim += values[i][j];
-        }
-        else
-        {
-          temp -= 1;
-        }
-    }
-    avg_values[i] = (avg_of_dim / temp);
-  }
-  length = sizeof(avg_values) / sizeof(avg_values[0]);
-  Helper helper_struct = get_scale(avg_values, length, COLUMN_CHART);
   
-  double X_scale = 690 / (length + 1);
-  for (int i = 0; i < length; i++)
+  if (X_value_length == length)
   {
-    epd_draw_line(70 + X_scale + ((i) * X_scale), 540, 70 + X_scale + ((i) * X_scale), 550);
-    sprintf(buff, "%.1f", avg_values[i]);
-    epd_disp_string(buff, 70 + X_scale + ((i) * X_scale), 560);
-    
-    switch(helper_struct.type)
-    {
-        case 1:
-          sprintf(buff, "%.1f", avg_values[i]);
-          if (avg_values[i] > 0 && avg_values[i] < 10)
+    for (int i = 0; i < length; i++) {
+      avg_of_dim = 0.0;
+      temp = second_dim_len;
+      for (int j = 0; j < second_dim_len; j++) {
+          if (values[i][j] != 0)
           {
-            epd_disp_string(buff, 40 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
-          }
-          else if (avg_values[i] <= -10)
-          {
-            epd_disp_string(buff, 30 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
+            avg_of_dim += values[i][j];
           }
           else
           {
-            epd_disp_string(buff, 33 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
+            temp -= 1;
           }
-          epd_fill_rect(45 + X_scale + ((i) * X_scale), 545, 75 + X_scale + ((i) * X_scale), 395 - (avg_values[i] / helper_struct.scale));
-          break;
-        default:
-          sprintf(buff, "%.1f", avg_values[i]);
-          if (avg_values[i] > 0 && avg_values[i] < 10)
-          {
-            epd_disp_string(buff, 40 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
-          }
-          else if (avg_values[i] <= -10)
-          {
-            epd_disp_string(buff, 30 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
-          }
-          else
-          {
-            epd_disp_string(buff, 33 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
-          }
-          epd_fill_rect(45 + X_scale + ((i) * X_scale), 545, 75 + X_scale + ((i) * X_scale), 545 - (avg_values[i] / helper_struct.scale));
+      }
+      avg_values[i] = (avg_of_dim / temp);
     }
+    length = sizeof(avg_values) / sizeof(avg_values[0]);
+    Helper helper_struct = get_scale(avg_values, length, COLUMN_CHART);
+    
+    double X_scale = 690 / (length + 1);
+    for (int i = 0; i < length; i++)
+    {
+      
+      epd_draw_line(60 + X_scale + ((i) * X_scale), 540, 60 + X_scale + ((i) * X_scale), 550);
+      sprintf(buff, "%s", X_values[i]);
+      epd_disp_string(buff, 40 + X_scale + ((i) * X_scale), 560);
+      
+      switch(helper_struct.type)
+      {
+          case 1:
+            sprintf(buff, "%.1f", avg_values[i]);
+            if (avg_values[i] > 0 && avg_values[i] < 10)
+            {
+              epd_disp_string(buff, 40 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
+            }
+            else if (avg_values[i] <= -10)
+            {
+              epd_disp_string(buff, 30 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
+            }
+            else
+            {
+              epd_disp_string(buff, 33 + X_scale + ((i) * X_scale), 350 - (avg_values[i] / helper_struct.scale));
+            }
+            epd_fill_rect(45 + X_scale + ((i) * X_scale), 545, 75 + X_scale + ((i) * X_scale), 395 - (avg_values[i] / helper_struct.scale));
+            break;
+          default:
+            sprintf(buff, "%.1f", avg_values[i]);
+            if (avg_values[i] > 0 && avg_values[i] < 10)
+            {
+              epd_disp_string(buff, 40 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
+            }
+            else if (avg_values[i] <= -10)
+            {
+              epd_disp_string(buff, 30 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
+            }
+            else
+            {
+              epd_disp_string(buff, 33 + X_scale + ((i) * X_scale), 500 - (avg_values[i] / helper_struct.scale));
+            }
+            epd_fill_rect(45 + X_scale + ((i) * X_scale), 545, 75 + X_scale + ((i) * X_scale), 545 - (avg_values[i] / helper_struct.scale));
+      }
+    }
+  }
+  else
+  {
+    epd_set_en_font(ASCII64);
+    sprintf(buff, "INVALID DATA INPUT!");
+    epd_disp_string(buff, 134, 300);
   }
 }
 
+void scatter_plot_visual(void)
+{
+  //double values[] = {-7.5, -11.1, 5.2, 8.0, 42}; //test values
+  //double values[] = {1.2, 4.3, 5.2, 8.0, 1.2};
+  char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "-7.5", "-20.1"}, {NULL, NULL, "-5.2"}, {"-10.0", "10.0", "-42.0"}, {"7.5", NULL,  "-11.1"}};
+  //char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "7.5", "20.1"}, {NULL, NULL, "5.2"}, {"10.0", "10.0", "42.0"}, {"7.5", NULL,  "11.1"}};
+  
+  //char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "-7.5", "-20.1"}, {NULL, NULL, "-5.2"}, {"-10.0", "-10.0", "-42.0"}, {"-7.5", NULL,  "-11.1"}};
+  
+  char *X_values[][MAX_DATETIME_LENGTH] = {{"01.01.2024", "10:00"}, {"01.01.2024", "12:00"}, {"01.01.2024", "14:00"}, {"01.01.2024", "16:00"}};
+  
+  
+  int X_value_length = sizeof(X_values) / sizeof(X_values[0]); //count of X scale values
+  int length = sizeof(values) / sizeof(values[0]); //length of input data
+  
+  int second_dim_len = 0;
+  
+  //start of chart header showing the time range from which the data is
+  char unique_X_values[X_value_length][MAX_DATE_LENGTH];
+  int unique_values_count = 1;
+  strcpy(unique_X_values[0], X_values[0][0]);
+  
+  for (int i = 1; i < X_value_length; i++) 
+  {
+    if (strcmp(X_values[i][0], X_values[i - 1][0]) != 0) 
+    {
+      strcpy(unique_X_values[unique_values_count], X_values[i][0]);
+      unique_values_count++;
+    }
+  }
+  
+  if (unique_values_count >= 2)
+  {
+    epd_draw_line(0, 172, 455, 172);
+    sprintf(buff, "Data from: %s -> %s", unique_X_values[0], unique_X_values[unique_values_count-1]);
+    epd_disp_string(buff, 0, 175);
+  }
+  else
+  {
+    epd_draw_line(0, 172, 279, 172);
+    sprintf(buff, "Data from: %s", unique_X_values[0]);
+    epd_disp_string(buff, 0, 175);
+  }
+  
+  if (values[0][0] == NULL && values[0][1] == NULL && values[0][2] == NULL)
+  {
+    second_dim_len = 0;
+  }
+  else if (values[0][1] == NULL && values[0][2] == NULL)
+  {
+      epd_set_color(BLACK, WHITE);
+      epd_fill_circle(300, 225, 8);
+      sprintf(buff, "- %s", values[0][0]);
+      epd_disp_string(buff, 325, 205);
+      second_dim_len = 1;
+  }
+  else if (values[0][2] == NULL)
+  {
+      epd_set_color(BLACK, WHITE);
+      epd_fill_circle(200, 220, 8);
+      sprintf(buff, "- %s", values[0][0]);
+      epd_disp_string(buff, 225, 205);
+      
+      epd_set_color(DARK_GRAY, WHITE);
+      epd_fill_circle(400, 220, 8);
+      epd_set_color(WHITE, BLACK);
+      epd_fill_circle(400, 220, 4);
+      epd_set_color(BLACK, WHITE);
+      sprintf(buff, "- %s", values[0][1]);
+      epd_disp_string(buff, 425, 205);
+      
+      second_dim_len = 2;
+  }
+  else
+  {
+      epd_set_color(BLACK, WHITE);
+      epd_fill_circle(100, 220, 8);
+      sprintf(buff, "- %s", values[0][0]);
+      epd_disp_string(buff, 125, 205);
+      
+      epd_set_color(DARK_GRAY, WHITE);
+      epd_fill_circle(300, 220, 8);
+      epd_set_color(WHITE, BLACK);
+      epd_fill_circle(300, 220, 4);
+      epd_set_color(BLACK, WHITE);
+      sprintf(buff, "- %s", values[0][1]);
+      epd_disp_string(buff, 325, 205);
+      
+      epd_set_color(GRAY, WHITE);
+      epd_fill_circle(500, 220, 8);
+      epd_set_color(BLACK, WHITE);
+      sprintf(buff, "- %s", values[0][2]);
+      epd_disp_string(buff, 525, 205);
+      
+      second_dim_len = 3;
+  }
+  //end of chart header
+  
+  
+  if (X_value_length == (length - 1))
+  {
+    double min = 10000.0;
+    double max = -10000.0;
+    for (int i = 1; i < length; i++) {
+      for (int j = 0; j < second_dim_len; j++) {
+        if (values[i][j] != NULL)
+        {
+          if (atof(values[i][j]) < min)
+          {
+            min = atof(values[i][j]);
+          }
+          if (atof(values[i][j]) > max)
+          {
+            max = atof(values[i][j]);
+          }
+        }
+      }
+    }
+    double min_max[] = {max, min};
+    
+    printf("MAX: %f\n", min_max[0]);
+    printf("MIN: %f\n", min_max[1]);
+    
+    Helper helper_struct = get_scale(min_max, 2, LINE_CHART);
+    
+    double X_scale = 670 / (length - 2);
+    epd_draw_line(70, 540, 70, 550);
+    
+    for (int i = 1; i < length; i++)
+    {
+      epd_set_color(BLACK, WHITE);
+      epd_draw_line(70 + ((i - 1) * X_scale), 540, 70 + ((i - 1) * X_scale), 550);
+      sprintf(buff, "%s", X_values[i-1][1]);
+      epd_disp_string(buff, 40 + ((i - 1) * X_scale), 560); 
+      for (int j = 0; j < second_dim_len; j++) {
+        if (values[i][j] != NULL)
+        {
+          switch(helper_struct.type)
+          {
+            case 1:
+              if ((length - 1) == i)
+              {
+                sprintf(buff, "%.1f", atof(values[i][j]));
+                switch(j) //TENTO SWITCH JAKO FCE, TAKTO JE TO HROZNEJ SHIT CODE :)
+                {
+                  case 0:
+                    epd_set_color(BLACK, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 8);   
+                    break;
+                  case 1:
+                    epd_set_color(DARK_GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 8);
+                    epd_set_color(WHITE, BLACK);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 4); 
+                    break;
+                  case 2:
+                    epd_set_color(GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 8);                    
+                    break;
+                }
+                
+                epd_set_color(BLACK, WHITE);
+                if (atof(values[i][j]) == max && max >= fabs(min))
+                {
+                  epd_disp_string(buff, ((i - 1) * X_scale), 435 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+                else
+                {
+                  epd_disp_string(buff, ((i - 1) * X_scale), 415 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+              }
+              else
+              {
+                sprintf(buff, "%.1f", atof(values[i][j]));
+                switch(j)
+                {
+                  case 0:
+                    epd_set_color(BLACK, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 8);   
+                    break;
+                  case 1:
+                    epd_set_color(DARK_GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 8);
+                    epd_set_color(WHITE, BLACK);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 4); 
+                    break;
+                  case 2:
+                    epd_set_color(GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 395 - (atof(values[i][j]) / helper_struct.scale), 8);                    
+                    break;
+                }
+                
+                epd_set_color(BLACK, WHITE);
+                if (atof(values[i][j]) == max && max >= fabs(min))
+                {
+                  epd_disp_string(buff, 80 + ((i - 1) * X_scale), 435 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+                else
+                {
+                  epd_disp_string(buff, 80 + ((i - 1) * X_scale), 415 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+              }
+              break;
+            case 2:
+              if ((length - 1) == i)
+              {
+                sprintf(buff, "%.1f", atof(values[i][j]));
+                switch(j)
+                {
+                  case 0:
+                    epd_set_color(BLACK, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 8);   
+                    break;
+                  case 1:
+                    epd_set_color(DARK_GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 8);
+                    epd_set_color(WHITE, BLACK);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 4); 
+                    break;
+                  case 2:
+                    epd_set_color(GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 8);                    
+                    break;
+                }
+                
+                epd_set_color(BLACK, WHITE);
+                if (atof(values[i][j]) == max && max >= fabs(min))
+                {
+                  epd_disp_string(buff, ((i - 1) * X_scale), 585 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+                else
+                {
+                  epd_disp_string(buff, ((i - 1) * X_scale), 565 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+              }
+              else
+              {
+                sprintf(buff, "%.1f", atof(values[i][j]));
+               switch(j)
+                {
+                  case 0:
+                    epd_set_color(BLACK, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 8);   
+                    break;
+                  case 1:
+                    epd_set_color(DARK_GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 8);
+                    epd_set_color(WHITE, BLACK);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 4); 
+                    break;
+                  case 2:
+                    epd_set_color(GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 545 - (atof(values[i][j]) / helper_struct.scale), 8);                    
+                    break;
+                }
+                
+                epd_set_color(BLACK, WHITE);
+                if (atof(values[i][j]) == max && max >= fabs(min))
+                {
+                  epd_disp_string(buff, 80 + ((i - 1) * X_scale), 585 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+                else
+                {
+                  epd_disp_string(buff, 80 + ((i - 1) * X_scale), 565 - (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+              }
+              break;
+            case 3:
+              if ((length - 1) == i)
+              {
+                sprintf(buff, "%.1f", atof(values[i][j]));
+                switch(j)
+                {
+                  case 0:
+                    epd_set_color(BLACK, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 8);   
+                    break;
+                  case 1:
+                    epd_set_color(DARK_GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 8);
+                    epd_set_color(WHITE, BLACK);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 4); 
+                    break;
+                  case 2:
+                    epd_set_color(GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 8);                    
+                    break;
+                }
+                
+                epd_set_color(BLACK, WHITE);
+                if (atof(values[i][j]) == max && max >= fabs(min))
+                {
+                  epd_disp_string(buff, ((i - 1) * X_scale), 285 + (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+                else
+                {
+                  epd_disp_string(buff, ((i - 1) * X_scale), 265 + (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+              }
+              else
+              {
+                sprintf(buff, "%.1f", atof(values[i][j]));
+                switch(j)
+                {
+                  case 0:
+                    epd_set_color(BLACK, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 8);   
+                    break;
+                  case 1:
+                    epd_set_color(DARK_GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 8);
+                    epd_set_color(WHITE, BLACK);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 4); 
+                    break;
+                  case 2:
+                    epd_set_color(GRAY, WHITE);
+                    epd_fill_circle((70 + ((i - 1) * X_scale)), 245 + (atof(values[i][j]) / helper_struct.scale), 8);                    
+                    break;
+                }
+                
+                epd_set_color(BLACK, WHITE);
+                if (atof(values[i][j]) == max && max >= fabs(min))
+                {
+                  epd_disp_string(buff, 80 + ((i - 1) * X_scale), 285 + (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+                else
+                {
+                  epd_disp_string(buff, 80 + ((i - 1) * X_scale), 265 + (atof(values[i][j]) / helper_struct.scale) - 45);
+                }
+              }
+              break;
+          }
+        }
+      }
+    } 
+  }
+  else
+  {
+    epd_set_en_font(ASCII64);
+    sprintf(buff, "INVALID DATA INPUT!");
+    epd_disp_string(buff, 134, 300);
+  }  
+}
 
 Helper get_scale(double values[], int length, int chart_type){
   Helper helper_struct;
@@ -467,6 +828,10 @@ Helper get_scale(double values[], int length, int chart_type){
       }
     }
   }
+  
+  printf("MAX: %f\n", max);
+  printf("MIN: %f\n", min);
+  
   epd_fill_rect(70, 545, 740, 546);
   epd_fill_rect(70, 545, 71, 245);
   
@@ -541,6 +906,9 @@ Helper get_scale(double values[], int length, int chart_type){
       }
     }
   }
+  printf("zero_midd: %d\n", zero_midd);
+  printf("zero_bottom: %d\n", zero_bottom);
+  printf("zero_top: %d\n", zero_top);
   helper_struct.scale = diff/300;
   return helper_struct;
 }
