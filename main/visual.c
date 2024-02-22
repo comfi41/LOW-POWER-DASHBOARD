@@ -18,9 +18,6 @@
 #include "esp_adc_cal.h"
 #include "visual.h"
 
-#define MAX_DATETIME_LENGTH 17
-#define MAX_DATE_LENGTH 11
-
 char buff[100];
 static esp_adc_cal_characteristics_t adc1_chars;
 void header(void)
@@ -206,6 +203,7 @@ void value_plus_info(void)
 //Function that creates and renders line chart
 void line_chart_visual(void)
 {
+  value_plus_info();
   //double values[] = {-7.5, -11.1, 5.2, 8.0, 42}; //test values
   //double values[] = {1.2, 4.3, 5.2, 8.0, 1.2};
   double values[] = {-1.2, -4.3, -5.2, -8.0, -1.2};
@@ -344,15 +342,16 @@ void line_chart_visual(void)
 //Function that creates and renders column chart
 void column_chart_visual(void)
 {
+  value_plus_info();
   int temp;
   double avg_of_dim;
 
-  //double values[][3] = {{-7.5, -11.1}, {5.2}, {42.0, 42.0, 42.0}, {-7.5, -11.1}, {1.0, 2.8}, {8.3, 3.2}, {-20.0}, {18.3, 4.8}, {3.2}, {6.4}, {19.3}, {-2.0}};
+  double values[][3] = {{-7.5, -11.1}, {5.2}, {42.0, 42.0, 42.0}, {-7.5, -11.1}, {1.0, 2.8}, {8.3, 3.2}, {-20.0}, {18.3, 4.8}, {3.2}, {6.4}, {19.3}, {-2.0}};
   //double values[][3] = {{7.5, 11.1}, {5.2}, {42.0, 42.0, 42.0}, {7.5, 11.1}, {8.3, 3.2}, {-20.0}, {18.3, 4.8}};
-  double values[][3] = {{-7.5, -11.1}, {-5.2}, {-42.0, -42.0, -42.0}, {-7.5, -11.1}};
+  //double values[][3] = {{-7.5, -11.1}, {-5.2}, {-42.0, -42.0, -42.0}, {-7.5, -11.1}};
   
-  char *X_values[] = {"Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.", "Sun."};
-  //char *X_values[] = {"Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."};
+  //char *X_values[] = {"Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.", "Sun."};
+  char *X_values[] = {"Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."};
 
   int X_value_length = sizeof(X_values) / sizeof(X_values[0]);
   int length = sizeof(values) / sizeof(values[0]);
@@ -433,9 +432,10 @@ void column_chart_visual(void)
 
 void scatter_plot_visual(void)
 {
+  value_plus_info();
   //double values[] = {-7.5, -11.1, 5.2, 8.0, 42}; //test values
   //double values[] = {1.2, 4.3, 5.2, 8.0, 1.2};
-  char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "-7.5", "-20.1"}, {NULL, NULL, "-5.2"}, {"-10.0", "10.0", "-42.0"}, {"7.5", NULL,  "-11.1"}};
+  char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{"3.2", "-7.5", "-20.1"}, {"1.2", "8.3", "-5.2"}, {"-10.0", "10.0", "-42.0"}, {"7.5", "-2.1",  "-11.1"}};
   //char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "7.5", "20.1"}, {NULL, NULL, "5.2"}, {"10.0", "10.0", "42.0"}, {"7.5", NULL,  "11.1"}};
   
   //char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "-7.5", "-20.1"}, {NULL, NULL, "-5.2"}, {"-10.0", "-10.0", "-42.0"}, {"-7.5", NULL,  "-11.1"}};
@@ -550,9 +550,6 @@ void scatter_plot_visual(void)
       }
     }
     double min_max[] = {max, min};
-    
-    printf("MAX: %f\n", min_max[0]);
-    printf("MIN: %f\n", min_max[1]);
     
     Helper helper_struct = get_scale(min_max, 2, LINE_CHART);
     
@@ -775,6 +772,331 @@ void scatter_plot_visual(void)
   }  
 }
 
+void table_visual(void)
+{ 
+  char *values[][20] = {{"Dataaaaaa1", "Dataaaaaa2Dataaaaaa2Dataaaaaa2Dataaaaaa2Dataaaaaa2", "Data1"},{NULL, "-7.5", "-20.1"}, {NULL, NULL, "-5.2"}, {"-10.0", "10.0", "-42.0"}, {"7.5", NULL,  "-11.1"}};
+  //char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "7.5", "20.1"}, {NULL, NULL, "5.2"}, {"10.0", "10.0", "42.0"}, {"7.5", NULL,  "11.1"}};
+  
+  //char *values[][3] = {{"Data Set 1", "Data Set 2", "Data Set 3"},{NULL, "-7.5", "-20.1"}, {NULL, NULL, "-5.2"}, {"-10.0", "-10.0", "-42.0"}, {"-7.5", NULL,  "-11.1"}};
+  
+  char *Table_header[] = {"Monsadddddddddd.", "Tue.", "Wsssssssssssssssssssssssssssssssssssssed.", "Thu."};
+  
+  int Header_length = sizeof(Table_header) / sizeof(Table_header[0]); //count of X scale values
+  int length = sizeof(values) / sizeof(values[0]); //length of input data
+  int second_dim_len = (sizeof(values[0]) / sizeof(values[0][0]));
+  
+  double cell_height, cell_width = 0.0;
+  if (Header_length == (length - 1))
+  {
+    for (int i = 0; i < (sizeof(values[0]) / sizeof(values[0][0])); i++){
+      if (values[0][i] == NULL)
+      {
+        second_dim_len -= 1;
+      }
+    }
+    
+    cell_height = TABLE_HEIGHT / (second_dim_len + 1);
+    cell_width = TABLE_WIDTH / length;
+    
+    if (TABLE_HEIGHT > 400)
+    {
+      //default table dimensions X: 50 -> 750, Y: 100 -> 550 (700x450)
+      epd_fill_rect((800 - TABLE_WIDTH) / 2, 100, 800 - ((800 - TABLE_WIDTH) / 2), 102); //table top line
+      epd_fill_rect((800 - TABLE_WIDTH) / 2, 100, ((800 - TABLE_WIDTH) / 2) + 2, 600 - (600 - TABLE_HEIGHT) + 100); //table left line
+      epd_fill_rect((800 - TABLE_WIDTH) / 2, 600 - (600 - TABLE_HEIGHT) + 100, 800 - ((800 - TABLE_WIDTH) / 2), 600 - (600 - TABLE_HEIGHT) + 102); //table bottom line
+      epd_fill_rect(800 - ((800 - TABLE_WIDTH) / 2), 100, 800 - ((800 - TABLE_WIDTH) / 2) + 2, 600 - (600 - TABLE_HEIGHT) + 100); //table right line
+      
+      for (int i = 1; i < (second_dim_len + 1); i++)
+      {
+        if (i == 1)
+        {
+          epd_fill_rect((800 - TABLE_WIDTH) / 2, 100 + (i * cell_height), 800 - ((800 - TABLE_WIDTH) / 2), 102 + (i * cell_height));
+        }
+        else
+        {
+          epd_draw_line((800 - TABLE_WIDTH) / 2, 100 + (i * cell_height), 800 - ((800 - TABLE_WIDTH) / 2), 100 + (i * cell_height));
+        }
+      }
+      
+      for (int i = 1; i < length; i++)
+      {
+        if (i == 1)
+        {
+          epd_fill_rect(((800 - TABLE_WIDTH) / 2) + (i * cell_width), 100, ((800 - TABLE_WIDTH) / 2) + (i * cell_width) + 2, 600 - (600 - TABLE_HEIGHT) + 100);
+        }
+        else
+        {
+          epd_draw_line(((800 - TABLE_WIDTH) / 2) + (i * cell_width), 100, ((800 - TABLE_WIDTH) / 2) + (i * cell_width), 600 - (600 - TABLE_HEIGHT) + 100);
+        }
+      }
+      
+      int chars_on_line = (int) round((cell_width - 10) / SMALLEST_CHAR_WIDTH); //pocet znaku, co se vejde do jedne bunky
+      int lines_in_cell = (int) round((cell_height - 10) / SMALLEST_CHAR_HEIGHT); //max pocet radku v jedne bunce
+      
+      printf("Pocet znaku na radku: %d \n", chars_on_line);
+      printf("Pocet radku: %d \n", lines_in_cell);
+      
+      char *string = "";
+      char *header_string = "";
+      double X,Y,Y_header = 0.0;
+      int str_len = 0;
+      int required_lines;
+      for (int i = 0; i < length; i++)
+      {
+        X = ((800 - TABLE_WIDTH) / 2) + (i * cell_width);
+        Y = 0.0;
+        Y_header = 0.0;
+        for (int j = 0; j < second_dim_len; j++)
+        {
+          Y = 100 + ((j + 1) * cell_height);
+          Y_header = 100 + (j * cell_height);
+          str_len = 0;
+          if (values[i][j] == NULL)
+          {
+            string = "No data";
+          }
+          else
+          {
+            string = values[i][j];
+          }
+          double LR_border_width = 0.0; //pro vystredeni -> sirka leveho a praveho borderu
+          double TB_border_height = 0.0;//pro vystredeni -> vyska od topu a bottomu
+          
+          if (j == 0 && i >= 1) // subrule listing the header elements 
+          {
+            header_string = Table_header[i - 1];
+            str_len = strlen(header_string);
+            required_lines = (int) round(str_len / chars_on_line) + 1;
+            int lines_done = 1;
+            int chars_done = 0;
+            if (required_lines == 1)
+            {
+              LR_border_width = (cell_width - (str_len * SMALLEST_CHAR_WIDTH)) / 2;
+              TB_border_height = (cell_height - SMALLEST_CHAR_HEIGHT) / 2;
+              
+              sprintf(buff, "%s", header_string);
+              epd_disp_string(buff, X + LR_border_width, Y_header + TB_border_height);
+            }
+            else if (required_lines > lines_in_cell)
+            {
+              TB_border_height = 5;
+              
+              required_lines = lines_in_cell;
+              str_len = required_lines * chars_on_line;
+              
+              print_chars(header_string, TB_border_height, X, Y_header, lines_done, required_lines, str_len, chars_done, chars_on_line);
+            }
+            else
+            {
+              TB_border_height = (cell_height - (required_lines * SMALLEST_CHAR_HEIGHT)) / 2;
+              print_chars(header_string, TB_border_height, X, Y_header, lines_done, required_lines, str_len, chars_done, chars_on_line);
+            }
+          }
+          
+          str_len = strlen(string); //delka konkretniho stringu
+          required_lines = (int) round(str_len / chars_on_line) + 1; //na kolik je radku
+          printf("Pocet radku: %d, X: %d Y: %d \n", required_lines, i, j);
+          int lines_done = 1;
+          int chars_done = 0;
+          if (required_lines == 1)
+          {
+            LR_border_width = (cell_width - (str_len * SMALLEST_CHAR_WIDTH)) / 2;
+            TB_border_height = (cell_height - SMALLEST_CHAR_HEIGHT) / 2;
+            
+            sprintf(buff, "%s", string);
+            epd_disp_string(buff, X + LR_border_width, Y + TB_border_height);
+          }
+          else if (required_lines > lines_in_cell)
+          {
+            TB_border_height = 5;
+            
+            required_lines = lines_in_cell;
+            str_len = required_lines * chars_on_line;
+            
+            print_chars(string, TB_border_height, X, Y, lines_done, required_lines, str_len, chars_done, chars_on_line);
+          }
+          else
+          {
+            TB_border_height = (cell_height - (required_lines * SMALLEST_CHAR_HEIGHT)) / 2;
+            print_chars(string, TB_border_height, X, Y, lines_done, required_lines, str_len, chars_done, chars_on_line);
+          }
+        }
+      }
+    }
+    else //table auto centering with different dimensions
+    {
+      epd_fill_rect((800 - TABLE_WIDTH) / 2, (600 - TABLE_HEIGHT) / 2, 800 - ((800 - TABLE_WIDTH) / 2), ((600 - TABLE_HEIGHT) / 2) + 2); //table top line
+      epd_fill_rect((800 - TABLE_WIDTH) / 2, (600 - TABLE_HEIGHT) / 2, ((800 - TABLE_WIDTH) / 2) + 2, 600 - (600 - TABLE_HEIGHT) + ((600 - TABLE_HEIGHT) / 2)); //table left line
+      epd_fill_rect((800 - TABLE_WIDTH) / 2, 600 - (600 - TABLE_HEIGHT) + ((600 - TABLE_HEIGHT) / 2), 800 - ((800 - TABLE_WIDTH) / 2), 600 - (600 - TABLE_HEIGHT) + ((600 - TABLE_HEIGHT) / 2) + 2); //table bottom line
+      epd_fill_rect(800 - ((800 - TABLE_WIDTH) / 2), (600 - TABLE_HEIGHT) / 2, 800 - ((800 - TABLE_WIDTH) / 2) + 2, 600 - (600 - TABLE_HEIGHT) + ((600 - TABLE_HEIGHT) / 2)); //table right line
+      
+      for (int i = 1; i < (second_dim_len + 1); i++)
+      {
+        if (i == 1)
+        {
+          epd_fill_rect((800 - TABLE_WIDTH) / 2, ((600 - TABLE_HEIGHT) / 2) + (i * cell_height), 800 - ((800 - TABLE_WIDTH) / 2), ((600 - TABLE_HEIGHT) / 2) + (i * cell_height) + 2);
+        }
+        else
+        {
+          epd_draw_line((800 - TABLE_WIDTH) / 2, ((600 - TABLE_HEIGHT) / 2) + (i * cell_height), 800 - ((800 - TABLE_WIDTH) / 2), ((600 - TABLE_HEIGHT) / 2) + (i * cell_height));
+        }
+      }
+      
+      for (int i = 1; i < length; i++)
+      {
+        if (i == 1)
+        {
+          epd_fill_rect(((800 - TABLE_WIDTH) / 2) + (i * cell_width), (600 - TABLE_HEIGHT) / 2, ((800 - TABLE_WIDTH) / 2) + (i * cell_width) + 2, 600 - (600 - TABLE_HEIGHT) + ((600 - TABLE_HEIGHT) / 2));
+        }
+        else
+        {
+          epd_draw_line(((800 - TABLE_WIDTH) / 2) + (i * cell_width), (600 - TABLE_HEIGHT) / 2, ((800 - TABLE_WIDTH) / 2) + (i * cell_width), 600 - (600 - TABLE_HEIGHT) + ((600 - TABLE_HEIGHT) / 2));
+        }
+      }
+      int chars_on_line = (int) round((cell_width - 10) / SMALLEST_CHAR_WIDTH); //pocet znaku, co se vejde do jedne bunky
+      int lines_in_cell = (int) round((cell_height - 10) / SMALLEST_CHAR_HEIGHT); //max pocet radku v jedne bunce
+      
+      printf("Pocet znaku na radku: %d \n", chars_on_line);
+      printf("Pocet radku: %d \n", lines_in_cell);
+      
+      char *string = "";
+      char *header_string = "";
+      double X,Y,Y_header = 0.0;
+      int str_len = 0;
+      int required_lines;
+      for (int i = 0; i < length; i++)
+      {
+        X = ((800 - TABLE_WIDTH) / 2) + (i * cell_width);
+        Y = 0.0;
+        Y_header = 0.0;
+        for (int j = 0; j < second_dim_len; j++)
+        {
+          Y = ((600 - TABLE_HEIGHT) / 2) + ((j + 1) * cell_height);
+          Y_header = ((600 - TABLE_HEIGHT) / 2) + (j * cell_height);
+          str_len = 0;
+          if (values[i][j] == NULL)
+          {
+            string = "No data";
+          }
+          else
+          {
+            string = values[i][j];
+          }
+          double LR_border_width = 0.0; //pro vystredeni -> sirka leveho a praveho borderu
+          double TB_border_height = 0.0;//pro vystredeni -> vyska od topu a bottomu
+          
+          if (j == 0 && i >= 1) // subrule listing the header elements 
+          {
+            header_string = Table_header[i - 1];
+            str_len = strlen(header_string);
+            required_lines = (int) round(str_len / chars_on_line) + 1;
+            int lines_done = 1;
+            int chars_done = 0;
+            if (required_lines == 1)
+            {
+              LR_border_width = (cell_width - (str_len * SMALLEST_CHAR_WIDTH)) / 2;
+              TB_border_height = (cell_height - SMALLEST_CHAR_HEIGHT) / 2;
+              
+              sprintf(buff, "%s", header_string);
+              epd_disp_string(buff, X + LR_border_width, Y_header + TB_border_height);
+            }
+            else if (required_lines > lines_in_cell)
+            {
+              TB_border_height = 5;
+              
+              required_lines = lines_in_cell;
+              str_len = required_lines * chars_on_line;
+              
+              print_chars(header_string, TB_border_height, X, Y_header, lines_done, required_lines, str_len, chars_done, chars_on_line);
+            }
+            else
+            {
+              TB_border_height = (cell_height - (required_lines * SMALLEST_CHAR_HEIGHT)) / 2;
+              print_chars(header_string, TB_border_height, X, Y_header, lines_done, required_lines, str_len, chars_done, chars_on_line);
+            }
+          }
+          
+          str_len = strlen(string); //delka konkretniho stringu
+          required_lines = (int) round(str_len / chars_on_line) + 1; //na kolik je radku
+          printf("Pocet radku: %d, X: %d Y: %d \n", required_lines, i, j);
+          int lines_done = 1;
+          int chars_done = 0;
+          if (required_lines == 1)
+          {
+            LR_border_width = (cell_width - (str_len * SMALLEST_CHAR_WIDTH)) / 2;
+            TB_border_height = (cell_height - SMALLEST_CHAR_HEIGHT) / 2;
+            
+            sprintf(buff, "%s", string);
+            epd_disp_string(buff, X + LR_border_width, Y + TB_border_height);
+          }
+          else if (required_lines > lines_in_cell)
+          {
+            TB_border_height = 5;
+            
+            required_lines = lines_in_cell;
+            str_len = required_lines * chars_on_line;
+            
+            print_chars(string, TB_border_height, X, Y, lines_done, required_lines, str_len, chars_done, chars_on_line);
+          }
+          else
+          {
+            TB_border_height = (cell_height - (required_lines * SMALLEST_CHAR_HEIGHT)) / 2;
+            print_chars(string, TB_border_height, X, Y, lines_done, required_lines, str_len, chars_done, chars_on_line);
+          }
+        }
+      }
+    }
+  }
+  else
+  {
+    epd_set_en_font(ASCII64);
+    sprintf(buff, "INVALID DATA INPUT!");
+    epd_disp_string(buff, 134, 300);
+  }
+}
+
+void print_chars(char *string, double distance_from_top, double X, double Y, int lines_done, int required_lines, int str_len, int chars_done, int chars_on_line)
+{
+  printf("Here 2\n");
+  printf("Done: %d\n", chars_done);
+  printf("Required lines: %d\n", required_lines);
+  printf("Done lines: %d\n", lines_done);
+  if (lines_done == required_lines)
+  {
+    printf("Here 3\n");
+    chars_on_line = str_len - chars_done;
+    sprintf(buff, "%.*s", chars_on_line, string + chars_done);
+    epd_disp_string(buff, X + 5, Y + distance_from_top);
+  }
+  else
+  {
+    printf("Here 4\n");
+    if (chars_done == 0)
+    {
+      printf("Here 5\n");
+      sprintf(buff, "%.*s", chars_on_line, string);
+      epd_disp_string(buff, X + 5, Y + distance_from_top);
+    }
+    else
+    {
+      printf("Here 6\n");
+      //printf("String: %s\n", string);
+      //printf("Line limit: %d\n", chars_on_line);
+      //printf("Done: %d\n", chars_done);
+      //printf("X: %f\n", X + 5);
+      //printf("Y: %f\n", Y);
+      //printf("From top: %f\n", distance_from_top);
+      //sprintf(buff, "%.*s", chars_on_line, string + chars_done);
+      epd_disp_string(buff, X + 5, Y + distance_from_top);
+    }      
+    lines_done += 1;
+    chars_done += chars_on_line;
+    distance_from_top += SMALLEST_CHAR_HEIGHT;
+            
+    print_chars(string, distance_from_top, X, Y, lines_done, required_lines, str_len, chars_done, chars_on_line);
+  }
+}
+
 Helper get_scale(double values[], int length, int chart_type){
   Helper helper_struct;
   double max = values[0];
@@ -828,9 +1150,6 @@ Helper get_scale(double values[], int length, int chart_type){
       }
     }
   }
-  
-  printf("MAX: %f\n", max);
-  printf("MIN: %f\n", min);
   
   epd_fill_rect(70, 545, 740, 546);
   epd_fill_rect(70, 545, 71, 245);
@@ -906,9 +1225,6 @@ Helper get_scale(double values[], int length, int chart_type){
       }
     }
   }
-  printf("zero_midd: %d\n", zero_midd);
-  printf("zero_bottom: %d\n", zero_bottom);
-  printf("zero_top: %d\n", zero_top);
   helper_struct.scale = diff/300;
   return helper_struct;
 }

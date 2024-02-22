@@ -31,6 +31,17 @@
 
 #define LINE_CHART 1
 #define COLUMN_CHART 2
+#define SCATTER_PLOT 3
+#define TABLE 4
+
+#define TABLE_WIDTH 700
+#define TABLE_HEIGHT 450
+
+#define MAX_DATETIME_LENGTH 17
+#define MAX_DATE_LENGTH 11
+
+#define SMALLEST_CHAR_WIDTH 15
+#define SMALLEST_CHAR_HEIGHT 31
 
 typedef struct {
     double scale;
@@ -44,7 +55,8 @@ void line_chart_visual(void);
 void column_chart_visual(void);
 void scatter_plot_visual(void);
 
-//void table_visual(void);
+void table_visual(void);
+void print_chars();
 void value_plus_info(void);
 
 void wifi_error(void);

@@ -1,0 +1,125 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/comfi/esp/low-power-dashboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:17:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:18:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c: In function 'table_visual':
+/home/comfi/esp/low-power-dashboard/main/visual.c:841:18: warning: unused variable 'TB_border_height' [-Wunused-variable]
+  841 |           double TB_border_height = 0.0;//pro vystredeni -> vyska od topu a bottomu
+      |                  ^~~~~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c:840:18: warning: unused variable 'LR_border_width' [-Wunused-variable]
+  840 |           double LR_border_width = 0.0; //pro vystredeni -> sirka leveho a praveho borderu
+      |                  ^~~~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/visual.c:822:16: warning: variable 'Y' set but not used [-Wunused-but-set-variable]
+  822 |       double X,Y = 0.0;
+      |                ^
+/home/comfi/esp/low-power-dashboard/main/visual.c:822:14: warning: variable 'X' set but not used [-Wunused-but-set-variable]
+  822 |       double X,Y = 0.0;
+      |              ^
+/home/comfi/esp/low-power-dashboard/main/visual.c:820:11: warning: unused variable 'lines_in_cell' [-Wunused-variable]
+  820 |       int lines_in_cell = (int) round((cell_height - 10) / 22); //max pocet radku v jedne bunce
+      |           ^~~~~~~~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18,
+                 from /home/comfi/esp/low-power-dashboard/main/visual.c:19:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h: At top level:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:25:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   25 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:27:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   27 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable low-power-dashboard.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+[9/10] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+low-power-dashboard.bin binary size 0xfd2f0 bytes. Smallest app partition is 0x100000 bytes. 0x2d10 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
+[9/10] cd /home/comfi/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/comfi/esp/esp-idf -D "SERIAL_TOOL=/home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/comfi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/comfi/esp/low-power-dashboard/build -P /home/comfi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 low-power-dashboard.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:9a:2e:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26912 bytes to 16879...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a5... (100 %)
+Wrote 26912 bytes (16879 compressed) at 0x00001000 in 0.8 seconds (effective 273.2 kbit/s)...
+Hash of data verified.
+Compressed 1037040 bytes to 671487...
+Writing at 0x00010000... (2 %)
+Writing at 0x00018913... (4 %)
+Writing at 0x0001d530... (7 %)
+Writing at 0x0002298d... (9 %)
+Writing at 0x00029d39... (12 %)
+Writing at 0x00032ac4... (14 %)
+Writing at 0x000382ab... (17 %)
+Writing at 0x00042455... (19 %)
+Writing at 0x0004e4a4... (21 %)
+Writing at 0x00053f40... (24 %)
+Writing at 0x00059b74... (26 %)
+Writing at 0x0005f6c0... (29 %)
+Writing at 0x0006511c... (31 %)
+Writing at 0x0006ab9c... (34 %)
+Writing at 0x00070409... (36 %)
+Writing at 0x00076541... (39 %)
+Writing at 0x0007c132... (41 %)
+Writing at 0x00081a2b... (43 %)
+Writing at 0x00086ef2... (46 %)
+Writing at 0x0008c251... (48 %)
+Writing at 0x000916e2... (51 %)
+Writing at 0x00096a20... (53 %)
+Writing at 0x0009c101... (56 %)
+Writing at 0x000a1884... (58 %)
+Writing at 0x000a77fb... (60 %)
+Writing at 0x000ad085... (63 %)
+Writing at 0x000b25c0... (65 %)
+Writing at 0x000b7db9... (68 %)
+Writing at 0x000bd85f... (70 %)
+Writing at 0x000c2ed6... (73 %)
+Writing at 0x000c88b0... (75 %)
+Writing at 0x000ce627... (78 %)
+Writing at 0x000d46dc... (80 %)
+Writing at 0x000d9e6e... (82 %)
+Writing at 0x000e05c7... (85 %)
+Writing at 0x000e8699... (87 %)
+Writing at 0x000f0df7... (90 %)
+Writing at 0x000f6b06... (92 %)
+Writing at 0x000fc89b... (95 %)
+Writing at 0x00102582... (97 %)
+Writing at 0x00107d0b... (100 %)
+Wrote 1037040 bytes (671487 compressed) at 0x00010000 in 16.7 seconds (effective 497.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 503.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
