@@ -17,6 +17,7 @@ char auth_scope[50];
 char auth_url[50];
 char cloud_url[50];
 int refresh_time;
+int chosen_visual;
 //add last update time
 //add chosen sensor
 //add number of chosen visualization type

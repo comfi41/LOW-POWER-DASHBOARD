@@ -91,14 +91,15 @@ void wifi_init_sta(void)
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
         
-        sprintf(buff,"WiFi connected to:%s",nvs_struct.wifi_ssid);
-        epd_disp_string(buff, 0, 100);
+        //sprintf(buff,"WiFi connected to:%s",nvs_struct.wifi_ssid);
+        //epd_disp_string(buff, 0, 100);
         client_get_function();
     } else if (bits & WIFI_FAIL_BIT) {
         header();
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
-        column_chart_visual();
+        wifi_error();
+        error();
         epd_udpate();
     } else {
         header();
@@ -126,14 +127,29 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
     switch (evt->event_id)
     {
     case HTTP_EVENT_ON_DATA:
-        printf("HTTP_EVENT_ON_DATA: %.*s\n", evt->data_len, (char *)evt->data);
-        sprintf(buff,"GET request to:");
-        epd_disp_string(buff, 0, 150);
-        sprintf(buff,"stage6.api.logimic.online/alive/alive");
-        epd_disp_string(buff, 0, 200);
-        sprintf(buff,"Response: %.*s", evt->data_len, (char *)evt->data);
-        printf("HTTP_EVENT_ON_DATA: %s\n", buff);
-        epd_disp_string(buff, 0, 250);
+        //printf("HTTP_EVENT_ON_DATA: %.*s\n", evt->data_len, (char *)evt->data);
+        //sprintf(buff,"GET request to:");
+        //epd_disp_string(buff, 0, 150);
+        //sprintf(buff,"stage6.api.logimic.online/alive/alive");
+        //epd_disp_string(buff, 0, 200);
+        //sprintf(buff,"Response: %.*s", evt->data_len, (char *)evt->data);
+        //printf("HTTP_EVENT_ON_DATA: %s\n", buff);
+        //epd_disp_string(buff, 0, 250);
+        //sprintf(buff,"Chosen visual:%d",nvs_struct.chosen_visual);
+        //epd_disp_string(buff, 0, 400);
+        header();
+        if (nvs_struct.chosen_visual == 1) 
+        {
+          line_chart_visual();
+        } 
+        else if (nvs_struct.chosen_visual == 2) 
+        {
+          column_chart_visual();
+        }
+        else if (nvs_struct.chosen_visual == 3) 
+        {
+          scatter_plot_visual();
+        }
         epd_udpate();
         break;
 
