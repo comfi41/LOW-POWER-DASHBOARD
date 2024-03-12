@@ -22,8 +22,12 @@
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
 
 extern struct NVS_Data nvs_struct;
-
+extern RingbufHandle_t xRingbuffer;
+#define MAX_HTTP_RECV_BUFFER 512
+#define MAX_HTTP_OUTPUT_BUFFER 4096
 static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
 void wifi_init_sta(void);
 static void client_get_function(void);
 esp_err_t client_event_handler(esp_http_client_event_handle_t evt);
+esp_err_t client_event_handler_post(esp_http_client_event_handle_t evt);
+static void client_post_function(void);

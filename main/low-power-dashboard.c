@@ -33,7 +33,7 @@
     
     static esp_adc_cal_characteristics_t adc1_chars;
     struct NVS_Data nvs_struct;
-
+    RingbufHandle_t xRingbuffer;
     spi_device_handle_t spi2;
 
 
@@ -73,7 +73,7 @@ void app_main()
     epd_clear();
     epd_set_en_font(ASCII32);
     //draw_text_demo();
-
+    xRingbuffer = xRingbufferCreate(1024, RINGBUF_TYPE_NOSPLIT);
     printf("Ini NVS: %d\n", nvs_flash_ini());
     printf("Load data: %d\n", nvs_load());
     printf("WIFI SSID:%s\n PASS:%s TIME:%d\n", nvs_struct.wifi_ssid,  nvs_struct.wifi_pass, nvs_struct.refresh_time);

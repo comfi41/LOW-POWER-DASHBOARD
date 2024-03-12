@@ -1,0 +1,221 @@
+[1/14] Performing build step for 'bootloader'
+[1/1] cd /home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/comfi/esp/low-power-dashboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6900 bytes. 0x700 bytes (6%) free.
+[2/14] No install step for 'bootloader'
+[3/14] Completed 'bootloader'
+[4/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/low-power-dashboard.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:9:
+/home/comfi/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:6:2: warning: #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead [-Wcpp]
+    6 | #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:15:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:16:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c: In function 'app_main':
+/home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:43:14: warning: unused variable 'voltage' [-Wunused-variable]
+   43 |     uint32_t voltage;
+      |              ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:42:10: warning: unused variable 'buff' [-Wunused-variable]
+   42 |     char buff[30];
+      |          ^~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:13:
+/home/comfi/esp/low-power-dashboard/main/sdcard.h: At top level:
+/home/comfi/esp/low-power-dashboard/main/sdcard.h:15:18: warning: 'write_file' declared 'static' but never defined [-Wunused-function]
+   15 | static esp_err_t write_file(const char *path, char *data);
+      |                  ^~~~~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:18:
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.h:28:13: warning: 'wifi_event_handler' declared 'static' but never defined [-Wunused-function]
+   28 | static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:19:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:26:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   26 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:28:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   28 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:31:13: warning: 'client_post_function' declared 'static' but never defined [-Wunused-function]
+   31 | static void client_post_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~~
+[5/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sleep.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/sleep.c:12:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/sleep.c:17:
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.h:28:13: warning: 'wifi_event_handler' declared 'static' but never defined [-Wunused-function]
+   28 | static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/sleep.c:18:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:26:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   26 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:28:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   28 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:31:13: warning: 'client_post_function' declared 'static' but never defined [-Wunused-function]
+   31 | static void client_post_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~~
+[6/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_ap.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:20,
+                 from /home/comfi/esp/low-power-dashboard/main/wifi_ap.c:24:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:21:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c: In function 'wifi_init_softap':
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:124:10: warning: unused variable 'buff' [-Wunused-variable]
+  124 |     char buff[100];
+      |          ^~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c: In function 'get_param_req_handler':
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:237:30: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  237 |     for (char *p = strtok(req->uri,"&"); p != NULL; p = strtok(NULL, "&"))
+      |                           ~~~^~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_ap.c:9:
+/home/comfi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h: At top level:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:26:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   26 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:28:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   28 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:31:13: warning: 'client_post_function' declared 'static' but never defined [-Wunused-function]
+   31 | static void client_post_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~~
+[7/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_sta.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:18:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:19:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.c: In function 'client_event_handler':
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.c:131:10: warning: unused variable 'buff' [-Wunused-variable]
+  131 |     char buff[100];
+      |          ^~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.c: In function 'client_event_handler_post':
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.c:171:10: warning: unused variable 'buff' [-Wunused-variable]
+  171 |     char buff[500];
+      |          ^~~~
+[8/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/visual.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:17:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.c:18:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18,
+                 from /home/comfi/esp/low-power-dashboard/main/visual.c:19:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:26:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   26 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:28:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   28 | static void client_get_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:31:13: warning: 'client_post_function' declared 'static' but never defined [-Wunused-function]
+   31 | static void client_post_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~~
+[9/14] Linking C static library esp-idf/main/libmain.a
+[10/14] Generating ld/sections.ld
+[11/14] Linking CXX executable low-power-dashboard.elf
+[12/14] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+[13/14] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+low-power-dashboard.bin binary size 0xfdc20 bytes. Smallest app partition is 0x177000 bytes. 0x793e0 bytes (32%) free.
+[13/14] cd /home/comfi/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/comfi/esp/esp-idf -D "SERIAL_TOOL=/home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/comfi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/comfi/esp/low-power-dashboard/build -P /home/comfi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 low-power-dashboard.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:9a:2e:90
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 8MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash params set to 0x0230
+Compressed 26880 bytes to 16844...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a5... (100 %)
+Wrote 26880 bytes (16844 compressed) at 0x00001000 in 0.8 seconds (effective 286.1 kbit/s)...
+Hash of data verified.
+Compressed 1039392 bytes to 672192...
+Writing at 0x00010000... (2 %)
+Writing at 0x000191a3... (4 %)
+Writing at 0x0001dceb... (7 %)
+Writing at 0x00023163... (9 %)
+Writing at 0x00029f30... (11 %)
+Writing at 0x00033392... (14 %)
+Writing at 0x0003895b... (16 %)
+Writing at 0x0004253a... (19 %)
+Writing at 0x0004e85c... (21 %)
+Writing at 0x000542ea... (23 %)
+Writing at 0x0005a054... (26 %)
+Writing at 0x0005fbcb... (28 %)
+Writing at 0x000655b6... (30 %)
+Writing at 0x0006b058... (33 %)
+Writing at 0x0007091c... (35 %)
+Writing at 0x00076a6b... (38 %)
+Writing at 0x0007c5db... (40 %)
+Writing at 0x00081ed7... (42 %)
+Writing at 0x00087344... (45 %)
+Writing at 0x0008c701... (47 %)
+Writing at 0x00091b98... (50 %)
+Writing at 0x00096ead... (52 %)
+Writing at 0x0009c596... (54 %)
+Writing at 0x000a1d33... (57 %)
+Writing at 0x000a7ceb... (59 %)
+Writing at 0x000ad523... (61 %)
+Writing at 0x000b2a30... (64 %)
+Writing at 0x000b825c... (66 %)
+Writing at 0x000bdcea... (69 %)
+Writing at 0x000c3359... (71 %)
+Writing at 0x000c8d56... (73 %)
+Writing at 0x000cec59... (76 %)
+Writing at 0x000d4bfa... (78 %)
+Writing at 0x000da2bb... (80 %)
+Writing at 0x000e0b4a... (83 %)
+Writing at 0x000e922e... (85 %)
+Writing at 0x000f1369... (88 %)
+Writing at 0x000f7029... (90 %)
+Writing at 0x000fcdc4... (92 %)
+Writing at 0x00102a73... (95 %)
+Writing at 0x0010827c... (97 %)
+Writing at 0x0010d9cf... (100 %)
+Wrote 1039392 bytes (672192 compressed) at 0x00010000 in 16.6 seconds (effective 502.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 538.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

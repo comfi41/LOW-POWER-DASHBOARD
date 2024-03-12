@@ -1,0 +1,94 @@
+[0;33m--- esp-idf-monitor 1.2.1 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081460: call_start_cpu1 at /home/comfi/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40081a76: panic_abort at /home/comfi/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008aec9: esp_system_abort at /home/comfi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40092171: __assert_func at /home/comfi/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4009024c: block_trim_free at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:496
+ (inlined by) block_prepare_used at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:579
+ (inlined by) tlsf_malloc at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:1005
+[0m
+[0;33m0x4008fb66: multi_heap_malloc_impl at /home/comfi/esp/esp-idf/components/heap/multi_heap.c:207
+[0m
+[0;33m0x40082279: heap_caps_malloc_base at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:176
+[0m
+[0;33m0x400822d1: heap_caps_malloc at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:197
+[0m
+[0;33m0x40082306: heap_caps_malloc_default at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:223
+[0m
+[0;33m0x40092181: malloc at /home/comfi/esp/esp-idf/components/newlib/heap.c:24
+[0m
+[0;33m0x4012c6f8: mem_malloc at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/mem.c:209
+[0m
+[0;33m0x4012d884: pbuf_alloc at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/pbuf.c:284
+[0m
+[0;33m0x40132bd6: tcp_enqueue_flags at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp_out.c:1077
+[0m
+[0;33m0x40132d40: tcp_send_fin at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp_out.c:1020
+[0m
+[0;33m0x4012e8fb: tcp_close_shutdown_fin at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp.c:424
+[0m
+[0;33m0x4012f92b: tcp_close_shutdown at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp.c:403
+[0m
+[0;33m0x4012f94e: tcp_close_ext at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp.c:504 (discriminator 1)
+[0m
+[0;33m0x4013e31d: lwip_netconn_do_close_internal at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/api_msg.c:1054
+[0m
+[0;33m0x4013f0f9: lwip_netconn_do_close at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/api_msg.c:2075 (discriminator 2)
+[0m
+[0;33m0x4012b081: tcpip_thread_handle_msg at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:162
+[0m
+[0;33m0x4012b12c: tcpip_thread at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:148
+[0m
+[0;33m0x4008da25: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081460: call_start_cpu1 at /home/comfi/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0mException in thread Thread-2 (_run_outer):
+Traceback (most recent call last):
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 76, in run
+    data = self.serial.read(self.serial.in_waiting or 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 83, in run
+    self.close_serial()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 105, in close_serial
+    self._disable_closing_wait_or_discard_data()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 119, in _disable_closing_wait_or_discard_data
+    buf = fcntl.ioctl(self.serial.fd, termios.TIOCGSERIAL, buf)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.11/threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/stoppable_thread.py", line 47, in _run_outer
+    self.run()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 100, in run
+    self.close_serial()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 105, in close_serial
+    self._disable_closing_wait_or_discard_data()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 119, in _disable_closing_wait_or_discard_data
+    buf = fcntl.ioctl(self.serial.fd, termios.TIOCGSERIAL, buf)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+[0m

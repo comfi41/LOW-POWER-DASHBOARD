@@ -1,0 +1,166 @@
+[0;33m--- esp-idf-monitor 1.2.1 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081460: call_start_cpu1 at /home/comfi/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40081a76: panic_abort at /home/comfi/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008aec9: esp_system_abort at /home/comfi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40092171: __assert_func at /home/comfi/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4009024c: block_trim_free at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:496
+ (inlined by) block_prepare_used at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:579
+ (inlined by) tlsf_malloc at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:1005
+[0m
+[0;33m0x4008fb66: multi_heap_malloc_impl at /home/comfi/esp/esp-idf/components/heap/multi_heap.c:207
+[0m
+[0;33m0x40082279: heap_caps_malloc_base at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:176
+[0m
+[0;33m0x400822d1: heap_caps_malloc at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:197
+[0m
+[0;33m0x40086051: esp_coex_common_malloc_internal_wrapper at /home/comfi/esp/esp-idf/components/esp_coex/esp32/esp_coex_adapter.c:125
+[0m
+[0;33m0x401729c9: esf_buf_alloc_dynamic at ??:?
+[0m
+[0;33m0x40094ff9: esf_buf_alloc at ??:?
+[0m
+[0;33m0x4011dd1d: ic_ebuf_alloc at ??:?
+[0m
+[0;33m0x4017237e: ieee80211_alloc_tx_buf at ??:?
+[0m
+[0;33m0x401725c2: ieee80211_output_do at ??:?
+[0m
+[0;33m0x40172686: esp_wifi_internal_tx at ??:?
+[0m
+[0;33m0x4008af05: wifi_transmit_wrap at /home/comfi/esp/esp-idf/components/esp_wifi/src/wifi_netif.c:75
+[0m
+[0;33m0x4016ec69: esp_netif_transmit_wrap at /home/comfi/esp/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1217
+[0m
+[0;33m0x4013f629: low_level_output at /home/comfi/esp/esp-idf/components/esp_netif/lwip/netif/wlanif.c:90
+[0m
+[0;33m0x4013becd: ethernet_output at /home/comfi/esp/esp-idf/components/lwip/lwip/src/netif/ethernet.c:312 (discriminator 2)
+[0m
+[0;33m0x401362a2: etharp_output_to_arp_index at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/ipv4/etharp.c:769
+[0m
+[0;33m0x40136581: etharp_output at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/ipv4/etharp.c:868
+[0m
+[0;33m0x4013745d: ip4_output_if_opt_src at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/ipv4/ip4.c:1054
+[0m
+[0;33m0x401374b5: ip4_output_if_opt at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/ipv4/ip4.c:855
+[0m
+[0;33m0x401374dd: ip4_output_if at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/ipv4/ip4.c:832
+[0m
+[0;33m0x40132625: tcp_output_segment at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp_out.c:1608 (discriminator 4)
+[0m
+[0;33m0x4013320d: tcp_output at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp_out.c:1361
+[0m
+[0;33m0x4012e91e: tcp_close_shutdown_fin at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp.c:448
+[0m
+[0;33m0x4012f92b: tcp_close_shutdown at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp.c:403
+[0m
+[0;33m0x4012f94e: tcp_close_ext at /home/comfi/esp/esp-idf/components/lwip/lwip/src/core/tcp.c:504 (discriminator 1)
+[0m
+[0;33m0x4013e31d: lwip_netconn_do_close_internal at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/api_msg.c:1054
+[0m
+[0;33m0x4013f0f9: lwip_netconn_do_close at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/api_msg.c:2075 (discriminator 2)
+[0m
+[0;33m0x4012b081: tcpip_thread_handle_msg at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:162
+[0m
+[0;33m0x4012b12c: tcpip_thread at /home/comfi/esp/esp-idf/components/lwip/lwip/src/api/tcpip.c:148
+[0m
+[0;33m0x4008da25: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081460: call_start_cpu1 at /home/comfi/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40081a76: panic_abort at /home/comfi/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008aec9: esp_system_abort at /home/comfi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40092171: __assert_func at /home/comfi/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4009024c: block_trim_free at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:496
+ (inlined by) block_prepare_used at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:579
+ (inlined by) tlsf_malloc at /home/comfi/esp/esp-idf/components/heap/tlsf/tlsf.c:1005
+[0m
+[0;33m0x4008fb66: multi_heap_malloc_impl at /home/comfi/esp/esp-idf/components/heap/multi_heap.c:207
+[0m
+[0;33m0x40082279: heap_caps_malloc_base at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:176
+[0m
+[0;33m0x400822d1: heap_caps_malloc at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:197
+[0m
+[0;33m0x40082306: heap_caps_malloc_default at /home/comfi/esp/esp-idf/components/heap/heap_caps.c:223
+[0m
+[0;33m0x400921e8: _calloc_r at /home/comfi/esp/esp-idf/components/newlib/heap.c:65
+[0m
+[0;33m0x4009220c: calloc at /home/comfi/esp/esp-idf/components/newlib/heap.c:29
+[0m
+[0;33m0x400e6c58: http_utils_assign_string at /home/comfi/esp/esp-idf/components/esp_http_client/lib/http_utils.c:48
+[0m
+[0;33m0x400e68f9: http_header_new_item at /home/comfi/esp/esp-idf/components/esp_http_client/lib/http_header.c:84 (discriminator 2)
+[0m
+[0;33m0x400e6a95: http_header_set at /home/comfi/esp/esp-idf/components/esp_http_client/lib/http_header.c:115
+[0m
+[0;33m0x400e55ce: esp_http_client_set_header at /home/comfi/esp/esp-idf/components/esp_http_client/esp_http_client.c:338
+[0m
+[0;33m0x400e614f: esp_http_client_init at /home/comfi/esp/esp-idf/components/esp_http_client/esp_http_client.c:816 (discriminator 1)
+[0m
+[0;33m0x400d814a: client_get_function at /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:249
+[0m
+[0;33m0x400d8432: wifi_init_sta at /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:109
+[0m
+[0;33m0x400d7a85: low_pwr_deepsleep at /home/comfi/esp/low-power-dashboard/main/sleep.c:48
+[0m
+[0;33m0x400d756f: app_main at /home/comfi/esp/low-power-dashboard/main/low-power-dashboard.c:82
+[0m
+[0;33m0x40175ffb: main_task at /home/comfi/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008da25: vPortTaskWrapper at /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081460: call_start_cpu1 at /home/comfi/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0mException in thread Thread-2 (_run_outer):
+Traceback (most recent call last):
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 76, in run
+    data = self.serial.read(self.serial.in_waiting or 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 83, in run
+    self.close_serial()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 105, in close_serial
+    self._disable_closing_wait_or_discard_data()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 119, in _disable_closing_wait_or_discard_data
+    buf = fcntl.ioctl(self.serial.fd, termios.TIOCGSERIAL, buf)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.11/threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/stoppable_thread.py", line 47, in _run_outer
+    self.run()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 100, in run
+    self.close_serial()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 105, in close_serial
+    self._disable_closing_wait_or_discard_data()
+  File "/home/comfi/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages/esp_idf_monitor/base/serial_reader.py", line 119, in _disable_closing_wait_or_discard_data
+[0m
+    buf = fcntl.ioctl(self.serial.fd, termios.TIOCGSERIAL, buf)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error

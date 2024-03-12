@@ -18,6 +18,11 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 #include "visual.h"
+#include <string.h>
+#include <sys/param.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include "esp_task_wdt.h"
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
@@ -49,7 +54,8 @@ static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_
 }
 
 void wifi_init_sta(void)
-{    
+{   
+    
     char buff[100];
     s_wifi_event_group = xEventGroupCreate();
 
@@ -94,6 +100,12 @@ void wifi_init_sta(void)
         
         //sprintf(buff,"WiFi connected to:%s",nvs_struct.wifi_ssid);
         //epd_disp_string(buff, 0, 100);
+
+
+        esp_task_wdt_add(NULL); 
+        esp_task_wdt_reset();
+        client_post_function();
+        esp_task_wdt_reset();
         client_get_function();
     } else if (bits & WIFI_FAIL_BIT) {
         header();
@@ -112,6 +124,7 @@ void wifi_init_sta(void)
         epd_clear();
         epd_udpate();
     }
+    vTaskDelay(3000 / portTICK_PERIOD_MS);
 
     /* The event will not be processed after unregister */
     ESP_ERROR_CHECK(esp_event_handler_instance_unregister(IP_EVENT, IP_EVENT_STA_GOT_IP, instance_got_ip));
@@ -128,7 +141,7 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
     switch (evt->event_id)
     {
     case HTTP_EVENT_ON_DATA:
-        //printf("HTTP_EVENT_ON_DATA: %.*s\n", evt->data_len, (char *)evt->data);
+        printf("HTTP_EVENT_ON_DATA: %.*s\n", evt->data_len, (char *)evt->data);
         //sprintf(buff,"GET request to:");
         //epd_disp_string(buff, 0, 150);
         //sprintf(buff,"stage6.api.logimic.online/alive/alive");
@@ -138,6 +151,7 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
         //epd_disp_string(buff, 0, 250);
         //sprintf(buff,"Chosen visual:%d",nvs_struct.chosen_visual);
         //epd_disp_string(buff, 0, 400);
+        /*
         header();
         if (nvs_struct.chosen_visual == 1) 
         {
@@ -152,6 +166,7 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
           scatter_plot_visual();
         }
         epd_udpate();
+        */
         break;
 
     default:
@@ -160,6 +175,61 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
     return ESP_OK;
 }
 
+esp_err_t client_event_handler_post(esp_http_client_event_handle_t evt)
+{
+
+ 
+
+    esp_task_wdt_reset();
+    static int output_len;
+    static char *output_buffer;
+    switch (evt->event_id)
+    {
+    case HTTP_EVENT_ON_DATA:
+        printf("HTTP_EVENT_ON_DATA-vstup: %.*s\n", evt->data_len, (char *)evt->data);
+        printf("HTTP_EVENT_ON_DATA, len=%d\n", evt->data_len);
+        esp_task_wdt_reset();
+            if (output_buffer == NULL) {
+                        // We initialize output_buffer with 0 because it is used by strlen() and similar functions therefore should be null terminated.
+                        output_buffer = (char *) calloc(evt->data_len + 1, sizeof(char));
+                        output_len = 0;
+                        if (output_buffer == NULL) {
+                            printf("Failed to allocate memory for output buffer\n");
+                            return ESP_FAIL;
+                        }
+                    }
+                    int copy_len = 0;
+                    copy_len = evt->data_len;
+                    if (copy_len) {
+                        esp_task_wdt_reset();
+                        output_buffer = (char *) realloc(output_buffer, copy_len);
+                        memcpy(output_buffer + output_len, evt->data, copy_len);
+                    }
+                               
+                output_len += copy_len;
+                 printf("HTTP_EVENT_ON_DATA-castacna: %.*s\n", output_len, (char *)output_buffer);
+            //}
+        break;
+    case HTTP_EVENT_ON_FINISH:
+            esp_task_wdt_reset();
+            printf("HTTP_EVENT_ON_DATA-kompletni-data\n");
+             //if (output_buffer != NULL) {
+                // Response is accumulated in output_buffer. Uncomment the below line to print the accumulated response
+                printf("HTTP_EVENT_ON_DATA-kompletni-data: %.*s\n", output_len, (char *)output_buffer);
+                // ESP_LOG_BUFFER_HEX(TAG, output_buffer, output_len);
+                free(output_buffer);
+                //output_buffer = NULL;
+            //}
+            output_len = 0;
+            break;
+    
+
+    default:
+        break;
+    }
+    return ESP_OK;
+}
+//esp_task_wdt_delete(NULL);
 
 
 static void client_get_function(void)
@@ -172,16 +242,34 @@ esp_http_client_config_t clientConfig = {
      //.url = "https://www.google.com",
       .transport_type = HTTP_TRANSPORT_OVER_SSL,  //Specify transport type
       .crt_bundle_attach = esp_crt_bundle_attach, //Attach the certificate bundle 
-      .event_handler = client_event_handler};
+      .event_handler = client_event_handler_post};
   
 
         
     esp_http_client_handle_t client = esp_http_client_init(&clientConfig);
-
-    esp_http_client_set_header(client, "Content-Type", "application/json");
-
+esp_task_wdt_reset();
+    esp_http_client_set_header(client, "Content-Type", "accept: application/json");
+esp_task_wdt_reset();
     esp_http_client_perform(client);
     esp_http_client_cleanup(client);
 
 }
 
+static void client_post_function(void)
+{
+    esp_http_client_config_t clientConfig = {
+     .url = "https://logimic-itemp2.auth.us-east-1.amazoncognito.com/oauth2/token",
+     .transport_type = HTTP_TRANSPORT_OVER_SSL,  //Specify transport type
+     .method = HTTP_METHOD_POST,
+     .crt_bundle_attach = esp_crt_bundle_attach, //Attach the certificate bundle 
+     .event_handler = client_event_handler_post};
+
+     esp_http_client_handle_t client = esp_http_client_init(&clientConfig);
+esp_task_wdt_reset();
+    const char *post_data = "grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1";
+    esp_http_client_set_header(client, "Content-Type", "application/x-www-form-urlencoded");
+    esp_http_client_set_post_field(client, post_data, strlen(post_data));
+    esp_task_wdt_reset();
+    esp_http_client_perform(client);
+    esp_http_client_cleanup(client);
+}
