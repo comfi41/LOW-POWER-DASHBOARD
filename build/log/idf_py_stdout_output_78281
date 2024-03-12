@@ -1,0 +1,12 @@
+[0/1] cd /home/comfi/esp/low-power-dashboard/build && /usr/bin/cmake -D "IDF_SIZE_TOOL=/home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python;-m;esp_idf_size" -D MAP_FILE=/home/comfi/esp/low-power-dashboard/build/low-power-dashboard.map -D OUTPUT_JSON= -P /home/comfi/esp/esp-idf/tools/cmake/run_size_tool.cmake
+Total sizes:
+Used static DRAM:   36612 bytes ( 144124 remain, 20.3% used)
+      .data size:   17084 bytes
+      .bss  size:   19528 bytes
+Used static IRAM:   97214 bytes (  33858 remain, 74.2% used)
+      .text size:   96187 bytes
+   .vectors size:    1027 bytes
+Used Flash size :  927355 bytes
+           .text:  692079 bytes
+         .rodata:  235020 bytes
+Total image size: 1041653 bytes (.bin may be padded larger)

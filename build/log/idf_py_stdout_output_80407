@@ -1,0 +1,31 @@
+[1/891] Generating memory.ld linker script...
+[2/891] Generating ../../partition_table/partition-table.bin
+FAILED: partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin 
+cd /home/comfi/esp/low-power-dashboard/build/esp-idf/partition_table && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB -- /home/comfi/esp/low-power-dashboard/partitions.csv /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin && /usr/bin/cmake -E echo "Partition table binary generated. Contents:" && /usr/bin/cmake -E echo "*******************************************************************************" && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB -- /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin && /usr/bin/cmake -E echo "*******************************************************************************"
+Partitions tables occupies 2.1MB of flash (2162688 bytes) which does not fit in configured flash size 2MB. Change the flash size in menuconfig under the 'Serial Flasher Config' menu.
+[3/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesce.c.obj
+[4/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesni.c.obj
+[5/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/camellia.c.obj
+[6/891] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Partition table CSV /home/comfi/esp/low-power-dashboard/partitions.csv does not exist." && /usr/bin/cmake -E echo "Either change partition table in menuconfig or create this input file." && /usr/bin/cmake -E remove /home/comfi/esp/low-power-dashboard/build/esp-idf/partition_table/NfwET.cmake && /usr/bin/cmake -E env "FAIL_MESSAGE=Failing the build (see errors on lines above)" /usr/bin/cmake -P /home/comfi/esp/esp-idf/tools/cmake/scripts/fail.cmake
+FAILED: esp-idf/partition_table/CMakeFiles/partition-table /home/comfi/esp/low-power-dashboard/build/esp-idf/partition_table/CMakeFiles/partition-table 
+cd /home/comfi/esp/low-power-dashboard/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Partition table CSV /home/comfi/esp/low-power-dashboard/partitions.csv does not exist." && /usr/bin/cmake -E echo "Either change partition table in menuconfig or create this input file." && /usr/bin/cmake -E remove /home/comfi/esp/low-power-dashboard/build/esp-idf/partition_table/NfwET.cmake && /usr/bin/cmake -E env "FAIL_MESSAGE=Failing the build (see errors on lines above)" /usr/bin/cmake -P /home/comfi/esp/esp-idf/tools/cmake/scripts/fail.cmake
+Partition table CSV /home/comfi/esp/low-power-dashboard/partitions.csv does not exist.
+Either change partition table in menuconfig or create this input file.
+CMake Error at /home/comfi/esp/esp-idf/tools/cmake/scripts/fail.cmake:3 (message):
+  Failing the build (see errors on lines above)
+
+
+[7/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/chacha20.c.obj
+[8/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/chachapoly.c.obj
+[9/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod_raw.c.obj
+[10/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aes.c.obj
+[11/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1parse.c.obj
+[12/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1write.c.obj
+[13/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/base64.c.obj
+[14/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod.c.obj
+[15/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ccm.c.obj
+[16/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aria.c.obj
+[17/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/cipher.c.obj
+[18/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_core.c.obj
+[19/891] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum.c.obj
+ninja: build stopped: subcommand failed.

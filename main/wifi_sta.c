@@ -1,4 +1,5 @@
 #include <string.h>
+#include <time.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
@@ -48,7 +49,7 @@ static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_
 }
 
 void wifi_init_sta(void)
-{
+{    
     char buff[100];
     s_wifi_event_group = xEventGroupCreate();
 
