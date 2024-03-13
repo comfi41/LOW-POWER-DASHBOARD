@@ -38,6 +38,11 @@ void low_pwr_deepsleep(int refresh_time)
             printf("ESP_WIFI_MODE_STA\n");
             wifi_init_sta();
             
+            /* odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
+            wifi_init_softap();
+             reset_enable=0;
+            */
+
             break;
         }
 
@@ -47,6 +52,10 @@ void low_pwr_deepsleep(int refresh_time)
             printf("ESP_WIFI_MODE_STA\n");
             wifi_init_sta();
             
+            /* odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
+            wifi_init_softap();
+             reset_enable=0;
+            */
     }
 
     if(reset_enable)

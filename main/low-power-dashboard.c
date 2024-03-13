@@ -17,7 +17,8 @@
 #include "sleep.h"
 #include "wifi_ap.h"
 #include "wifi_sta.h"
-
+#include "freertos/event_groups.h"
+#include "freertos/ringbuf.h"
 
 
     #define BUTT_OK GPIO_NUM_33
@@ -73,7 +74,17 @@ void app_main()
     epd_clear();
     epd_set_en_font(ASCII32);
     //draw_text_demo();
-    xRingbuffer = xRingbufferCreate(1024, RINGBUF_TYPE_NOSPLIT);
+
+    //Create Ring Buffer 
+    //No Split
+    xRingbuffer = xRingbufferCreate(10240, RINGBUF_TYPE_NOSPLIT);
+
+    //Check everything was created
+    configASSERT( xRingbuffer );
+
+
+
+
     printf("Ini NVS: %d\n", nvs_flash_ini());
     printf("Load data: %d\n", nvs_load());
     printf("WIFI SSID:%s\n PASS:%s TIME:%d\n", nvs_struct.wifi_ssid,  nvs_struct.wifi_pass, nvs_struct.refresh_time);

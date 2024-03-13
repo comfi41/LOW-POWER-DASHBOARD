@@ -12,10 +12,10 @@ char wifi_ssid[50];
 char wifi_pass[50];
 char auth_grant_type[50];
 char auth_client_id[50];
-char auth_client_secret[50];
+char auth_client_secret[100];
 char auth_scope[50];
-char auth_url[50];
-char cloud_url[50];
+char auth_url[100];
+char cloud_url[100];
 int refresh_time;
 int chosen_visual;
 //add last update time

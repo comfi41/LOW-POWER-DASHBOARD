@@ -1,0 +1,30 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/comfi/esp/low-power-dashboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6900 bytes. 0x700 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_sta.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:18:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:19:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.c: In function 'client_post_function':
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.c:240:13: warning: passing argument 1 of 'sprintf' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  240 |     sprintf(post_data,"grant_type=%s&client_id=%s&client_secret=%s",nvs_struct.auth_grant_type,nvs_struct.auth_client_id,nvs_struct.auth_client_secret);
+      |             ^~~~~~~~~
+In file included from /home/comfi/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:11,
+                 from /home/comfi/esp/esp-idf/components/esp_hw_support/include/esp_cpu.h:20,
+                 from /home/comfi/esp/esp-idf/components/esp_hw_support/include/spinlock.h:11,
+                 from /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:59,
+                 from /home/comfi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:71,
+                 from /home/comfi/esp/low-power-dashboard/main/wifi_sta.c:3:
+/home/comfi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h:244:18: note: expected 'char * restrict' but argument is of type 'const char *'
+  244 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
