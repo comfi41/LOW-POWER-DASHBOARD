@@ -69,23 +69,24 @@ char html_page[] = "<!DOCTYPE HTML><html>\n"
                    "        <br>Client password: <input type=\"text\" name=\"input5\" value=\"%s\" size=\"4\">\n"
                    "        <br>Auth scope: <input type=\"text\" name=\"input6\" value=\"%s\" size=\"4\">\n"
                    "        <br>Auth URL: <input type=\"text\" name=\"input7\" value=\"%s\" size=\"4\">\n"
-                   "        <br>Cloud URL: <input type=\"text\" name=\"input8\" value=\"%s\" size=\"4\"><br><br>\n"
+                   "        <br>Cloud URL: <input type=\"text\" name=\"input8\" value=\"%s\" size=\"4\">\n"
+                   "        <br>System ID: <input type=\"text\" name=\"input9\" value=\"%d\" size=\"4\"><br><br>\n"
                    "      </div>\n"
                    "      <div class=\"card\">\n"
                    "        <h4>DISPLAY SETTINGS</h4>\n"
-                   "        Refresh time: <input type=\"text\" name=\"input9\" value=\"%d\" size=\"4\"><br><br>\n"
+                   "        Refresh time: <input type=\"text\" name=\"input10\" value=\"%d\" size=\"4\"><br><br>\n"
                    "      </div>\n"
                    "      <div class=\"card\">\n"
                    "        <h4>VISUALISATION SETTINGS</h4>\n"
-                   "        Choose visual: <select name=\"input10\"><option value=\"1\" %s>Line chart</option><option value=\"2\" %s>Column chart</option><option value=\"3\" %s>Scatter plot</option></select><br><br>\n"
+                   "        Choose visual: <select name=\"input11\"><option value=\"1\" %s>Line chart</option><option value=\"2\" %s>Column chart</option><option value=\"3\" %s>Scatter plot</option></select><br><br>\n"
                    "      </div>\n"
                    "      <div class=\"card\">\n"
                    "        <h4>CHOOSE SENSORS</h4>\n"
                    "        <div id=\"list1\" class=\"dropdown-check-list\">\n"
                    "          <span class=\"anchor\">Browse</span>\n"
                    "          <ul class=\"items\">\n"
-                   "            <li><input name=\"input11\" type=\"checkbox\" value=\"11\" />Senzor 1</li>\n"
-                   "            <li><input name=\"input12\" type=\"checkbox\" value=\"12\" />Senzor 2</li>\n"
+                   "            <li><input name=\"input12\" type=\"checkbox\" value=\"12\" />Senzor 1</li>\n"
+                   "            <li><input name=\"input13\" type=\"checkbox\" value=\"13\" />Senzor 2</li>\n"
                    "          </ul>\n"
                    "        </div>\n"
                    "      </div>\n"
@@ -216,7 +217,7 @@ esp_err_t send_web_page(httpd_req_t *req,char alert[])
       strcpy(option_1, " selected");
     }
     
-    sprintf(response_data, html_page,nvs_struct.wifi_ssid,nvs_struct.wifi_pass,nvs_struct.auth_grant_type,nvs_struct.auth_client_id,nvs_struct.auth_client_secret,nvs_struct.auth_scope,nvs_struct.auth_url,nvs_struct.cloud_url,nvs_struct.refresh_time,option_1,option_2,option_3,alert); //join webpage and variables
+    sprintf(response_data, html_page,nvs_struct.wifi_ssid,nvs_struct.wifi_pass,nvs_struct.auth_grant_type,nvs_struct.auth_client_id,nvs_struct.auth_client_secret,nvs_struct.auth_scope,nvs_struct.auth_url,nvs_struct.cloud_url,nvs_struct.systemID,nvs_struct.refresh_time,option_1,option_2,option_3,alert); //join webpage and variables
     response = httpd_resp_send(req, response_data, HTTPD_RESP_USE_STRLEN); //send to client
 
     return response;
@@ -254,13 +255,15 @@ esp_err_t get_param_req_handler(httpd_req_t *req)
     printf("Counter 7: %d\n", counter_pass);
     if (sscanf(p, "input8=%s",nvs_struct.cloud_url)) counter_pass+=8;
     printf("Counter 8: %d\n", counter_pass);
-    if (sscanf(p, "input9=%d",&nvs_struct.refresh_time)) counter_pass+=9;
+    if (sscanf(p, "input9=%d",&nvs_struct.systemID)) counter_pass+=9;
     printf("Counter 9: %d\n", counter_pass);
-    if (sscanf(p, "input10=%d",&nvs_struct.chosen_visual)) counter_pass+=10;
+    if (sscanf(p, "input10=%d",&nvs_struct.refresh_time)) counter_pass+=10;
     printf("Counter 10: %d\n", counter_pass);
+    if (sscanf(p, "input11=%d",&nvs_struct.chosen_visual)) counter_pass+=11;
+    printf("Counter 11: %d\n", counter_pass);
     }
 
-    if (counter_pass==55)
+    if (counter_pass==66)
     {
         printf( "ALL inputs are valid!\n");
         printf("Save to NVS: %d\n", nvs_save());

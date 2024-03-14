@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "low-power-dashboard",
-    "project_version":    "9c454f9-dirty",
+    "project_version":    "932287a-dirty",
     "project_path":       "/home/comfi/esp/low-power-dashboard",
     "idf_path":           "/home/comfi/esp/esp-idf",
     "build_dir":          "/home/comfi/esp/low-power-dashboard/build",
