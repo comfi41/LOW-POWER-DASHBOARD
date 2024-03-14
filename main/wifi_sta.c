@@ -1,3 +1,4 @@
+
 #include <string.h>
 #include <time.h>
 #include "freertos/FreeRTOS.h"
@@ -25,10 +26,15 @@
 #include "esp_task_wdt.h"
 #include "freertos/event_groups.h"
 #include "freertos/ringbuf.h"
+#include <sys/time.h>
+#include "esp_attr.h"
+#include "esp_sleep.h"
+#include "esp_sntp.h"
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
 
+char Current_Date_Time[100];
 
 static const char *TAG = "wifi station";
 
@@ -53,6 +59,72 @@ static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_
         s_retry_num = 0;
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }
+}
+
+void time_sync_notification_cb(struct timeval *tv)
+{
+    ESP_LOGI(TAG, "Notification of a time synchronization event");
+}
+
+void Get_current_date_time(char *date_time){
+	char strftime_buf[64];
+	time_t now;
+	    struct tm timeinfo;
+	    time(&now);
+	    localtime_r(&now, &timeinfo);
+
+	    	// Set timezone
+	    	    setenv("TZ", "CET-1CEST,M3.5.0/2,M10.5.0/3", 1);
+	    	    tzset();
+	    	    localtime_r(&now, &timeinfo);
+
+	    	    strftime(strftime_buf, sizeof(strftime_buf), "%d.%m.%Y %H:%M", &timeinfo);
+	    	    ESP_LOGI(TAG, "The current date/time in Brno is: %s", strftime_buf);
+                strcpy(date_time,strftime_buf);
+}
+
+
+static void initialize_sntp(void)
+{
+    ESP_LOGI(TAG, "Initializing SNTP");
+    esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);
+    esp_sntp_setservername(0, "pool.ntp.org");
+    sntp_set_time_sync_notification_cb(time_sync_notification_cb);
+#ifdef CONFIG_SNTP_TIME_SYNC_METHOD_SMOOTH
+    sntp_set_sync_mode(SNTP_SYNC_MODE_SMOOTH);
+#endif
+    esp_sntp_init();
+}
+static void obtain_time(void)
+{
+
+
+    initialize_sntp();
+    // wait for time to be set
+    time_t now = 0;
+    struct tm timeinfo = { 0 };
+    int retry = 0;
+    const int retry_count = 5;
+    while (sntp_get_sync_status() == SNTP_SYNC_STATUS_RESET && ++retry < retry_count) {
+        ESP_LOGI(TAG, "Waiting for system time to be set... (%d/%d)", retry, retry_count);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+    time(&now);
+    localtime_r(&now, &timeinfo);
+}
+ void Set_SystemTime_SNTP()  {
+
+	 time_t now;
+	    struct tm timeinfo;
+	    time(&now);
+	    localtime_r(&now, &timeinfo);
+	    // Is time set? If not, tm_year will be (1970 - 1900).
+	    if (timeinfo.tm_year < (2016 - 1900)) {
+	        ESP_LOGI(TAG, "Time is not set yet. Connecting to WiFi and getting time over NTP.");
+	        obtain_time();
+	        // update 'now' variable with current time
+	        time(&now);
+	    }
 }
 
 void wifi_init_sta(void)
@@ -109,6 +181,29 @@ void wifi_init_sta(void)
         client_post_function();
         esp_task_wdt_reset();
         client_get_function();
+        
+        Set_SystemTime_SNTP();
+        Get_current_date_time(Current_Date_Time);
+        //if (difftime(mktime(Current_Date_Time), mktime("01.01.2000 01:00")) < 0)
+        //{
+        strcpy(nvs_struct.last_update, Current_Date_Time);
+        nvs_save();
+        //}
+	printf("Current date and time is = %s\n",nvs_struct.last_update);
+        header();
+        if (nvs_struct.chosen_visual == 1) 
+        {
+          line_chart_visual();
+        } 
+        else if (nvs_struct.chosen_visual == 2) 
+        {
+          column_chart_visual();
+        }
+        else if (nvs_struct.chosen_visual == 3) 
+        {
+          scatter_plot_visual();
+        }
+        epd_udpate();
     } else if (bits & WIFI_FAIL_BIT) {
         header();
         ESP_LOGI(TAG, "Failed to connect to SSID:%s, password:%s",
@@ -126,7 +221,6 @@ void wifi_init_sta(void)
         epd_clear();
         epd_udpate();
     }
-    vTaskDelay(3000 / portTICK_PERIOD_MS);
 
     /* The event will not be processed after unregister */
     ESP_ERROR_CHECK(esp_event_handler_instance_unregister(IP_EVENT, IP_EVENT_STA_GOT_IP, instance_got_ip));
@@ -245,3 +339,4 @@ static void client_post_function(void)
     esp_http_client_perform(client);
     esp_http_client_cleanup(client);
 }
+

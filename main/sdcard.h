@@ -4,6 +4,7 @@
 #include "esp_vfs_fat.h"
 #include "sdmmc_cmd.h"
 
+
 #define MAX_FILE_CHAR_SIZE    64
 #define MOUNT_POINT "/sdcard"
 

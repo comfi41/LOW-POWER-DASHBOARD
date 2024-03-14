@@ -18,7 +18,7 @@ char auth_url[100];
 char cloud_url[100];
 int refresh_time;
 int chosen_visual;
-//add last update time
+char last_update[20];
 //add chosen sensor
 //add number of chosen visualization type
 };
@@ -28,4 +28,3 @@ extern struct NVS_Data nvs_struct;
 esp_err_t nvs_load(void);
 esp_err_t nvs_save(void);
 esp_err_t nvs_flash_ini(void);
-

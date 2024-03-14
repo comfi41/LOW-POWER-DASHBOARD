@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -37,11 +38,10 @@ void low_pwr_deepsleep(int refresh_time)
             printf("Wake up from timer.\n");
             printf("ESP_WIFI_MODE_STA\n");
             wifi_init_sta();
+            //odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
+            //wifi_init_softap();
+            //reset_enable=0;
             
-            /* odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
-            wifi_init_softap();
-             reset_enable=0;
-            */
 
             break;
         }
@@ -51,11 +51,9 @@ void low_pwr_deepsleep(int refresh_time)
             printf("Not a deep sleep reset\n");
             printf("ESP_WIFI_MODE_STA\n");
             wifi_init_sta();
-            
-            /* odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
-            wifi_init_softap();
-             reset_enable=0;
-            */
+            // odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
+            //wifi_init_softap();
+            // reset_enable=0;
     }
 
     if(reset_enable)
@@ -82,3 +80,4 @@ void low_pwr_deepsleep(int refresh_time)
     vTaskDelay(1000 / portTICK_PERIOD_MS); //toto smazat, pouze pro debug
 }
 }
+

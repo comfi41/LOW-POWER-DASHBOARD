@@ -17,6 +17,7 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 #include "visual.h"
+#include "NV_storage.h"
 
 char buff[100];
 static esp_adc_cal_characteristics_t adc1_chars;
@@ -26,7 +27,7 @@ void header(void)
   // Last update info 
   sprintf(buff,"Last update:");
   epd_disp_string(buff, 10, 10);
-  sprintf(buff,"01.01.2025 10:00");
+  sprintf(buff,"%s", nvs_struct.last_update);
   epd_disp_string(buff, 170, 10);
         
   // Battery diagram
