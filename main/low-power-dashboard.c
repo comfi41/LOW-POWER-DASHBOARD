@@ -29,7 +29,7 @@
     #define CHRG_S2 GPIO_NUM_35
     #define ADC_BAT_MEAS ADC1_CHANNEL_4
 
-  
+    char temp[2000];
     
     
     static esp_adc_cal_characteristics_t adc1_chars;

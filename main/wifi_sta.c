@@ -175,7 +175,13 @@ void wifi_init_sta(void)
         esp_task_wdt_reset();
         client_post_function();
         esp_task_wdt_reset();
-        client_get_function();
+        client_get_function(0);
+        esp_task_wdt_reset();
+        client_get_function(1);
+         esp_task_wdt_reset();
+        client_get_function(2);
+         esp_task_wdt_reset();
+        client_get_function(3);
         
         printf("Before update NV = %s\n",nvs_struct.last_update);
         Set_SystemTime_SNTP();
@@ -344,13 +350,28 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
             esp_task_wdt_reset();
             printf("HTTP_EVENT_ON_DATA-kompletni-data\n");
              if (output_buffer != NULL) {
-                printf("HTTP_EVENT_ON_DATA-kompletni-data: %.*s\n", output_len, (char *)output_buffer);
+                printf("Prijata data: %.*s\n", output_len, (char *)output_buffer);
                 
-                UBaseType_t res = xRingbufferSendFromISR(xRingbuffer, output_buffer, sizeof(output_buffer), NULL);
-                 printf("xRingbufferSendFromISR res=%d\n", res);
-                if (res != pdTRUE) {
-                    printf("Failed to xRingbufferSend\n");
-                }
+             for (char *p = strtok(output_buffer,","); p != NULL; p = strtok(NULL, ","))
+    {
+     printf( "parse: %s\n", p );
+     if (sscanf(p, "{\"access_token\":\"%s",temp)) 
+     {
+        temp[strlen(temp)-1] = '\0';
+        printf("SFSCAN: %s\n", temp);
+     }
+
+        
+
+    }
+
+
+
+
+
+
+
+                
                 free(output_buffer);
                 output_buffer = NULL;
             }
@@ -366,14 +387,30 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
 //esp_task_wdt_delete(NULL);
 
 
-static void client_get_function(void)
+static void client_get_function(int type_of_req)
 {
- 
+int temp_groupID=224;
+char url_temp[150];
+char header_temp[2100];
+sprintf(header_temp,"Bearer %s",temp);
+printf("header_temp: %s\n", header_temp);
+
+if(type_of_req==GET_NUMBER_DEVS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/groups/number?systemId=%d",nvs_struct.systemID);
+if(type_of_req==GET_GROUPS) sprintf(url_temp,"https://stage6.api.logimic.online/kpi/get/groupsExt?systemId=%d",nvs_struct.systemID);
+if(type_of_req==GET_SENSORS_VALUES) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/devices?systemId=%d&groupId=%d&verbosity=parameterTypeEnums",nvs_struct.systemID,temp_groupID);
+if(type_of_req==GET_SENSORS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/deviceModels");
+
+//https://stage6.api.logimic.online/deviceModel/get/deviceModels
+
+//https://stage6.api.logimic.online/deviceModel/get/devices?systemId=129&groupId=103&verbosity=parameterTypeEnums
+
 esp_http_client_config_t clientConfig = {
     //.url = "https://worldtimeapi.org/api/timezone/Europe/London/",
-     .url = "https://stage6.api.logimic.online/alive/alive",
+     .url=url_temp,
+     //.url = "https://stage6.api.logimic.online/kpi/get/groupsAlertSummary?systemId=129",
     //.url = "http://httpbin.org/post",
      //.url = "https://www.google.com",
+      .buffer_size_tx = 8192,
       .transport_type = HTTP_TRANSPORT_OVER_SSL,  //Specify transport type
       .crt_bundle_attach = esp_crt_bundle_attach, //Attach the certificate bundle 
       .event_handler = client_event_handler};
@@ -381,8 +418,11 @@ esp_http_client_config_t clientConfig = {
 
         
     esp_http_client_handle_t client = esp_http_client_init(&clientConfig);
-esp_task_wdt_reset();
-    esp_http_client_set_header(client, "Content-Type", "accept: application/json");
+    esp_task_wdt_reset();
+    esp_http_client_set_header(client, "Authorization", header_temp);
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_header(client, "conname", "iTemp2"); 
+    esp_http_client_set_header(client, "Connection", "close");
 esp_task_wdt_reset();
     esp_http_client_perform(client);
     esp_http_client_cleanup(client);

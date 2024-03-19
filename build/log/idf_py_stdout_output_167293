@@ -1,0 +1,1425 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a16ch (237932) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a194 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a1a4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004ea18 vaddr=40080000 size=01600h (  5632) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf60h (708448) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf88 vaddr=40081600 size=16670h ( 91760) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=00113600 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  209cb203d...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (618) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (678) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (768) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (768) wifi:enable tsf
+[0;32mI (768) wifi station: wifi_init_sta finished.[0m
+I (778) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (788) wifi:state: init -> auth (b0)
+I (788) wifi:state: auth -> init (1c0)
+I (788) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (798) wifi station: retry to connect to the AP[0m
+[0;32mI (798) wifi station: connect to the AP fail[0m
+[0;32mI (3208) wifi station: retry to connect to the AP[0m
+[0;32mI (3208) wifi station: connect to the AP fail[0m
+I (3218) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3218) wifi:state: init -> auth (b0)
+I (3228) wifi:state: auth -> assoc (0)
+I (3238) wifi:state: assoc -> run (10)
+I (3288) wifi:connected with Galaxy, aid = 8, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (3288) wifi:security: WPA2-PSK, phy: bgn, rssi: -26
+I (3298) wifi:pm start, type: 1
+
+I (3368) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4298) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (4298) wifi station: got ip:192.168.110.178[0m
+[0;32mI (4298) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (4388) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (4918) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MzI4MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY5NjgwLCJpYXQiOjE3MTA4ODMyODAsInZlcnNpb24iOjIsImp0aSI6IjQ1YzhlMjI3LTc3YTQtNGY4MS1iNDYzLWJkN2VkM2I5M2Q3ZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.dKmR11aqkaW4vYTwf8kyK_F0L75V_P_AWgUDs4Ds1C0py-cdKMKEVm7Pk9A3KlWRduPgpELYW5CMvQK_G0nY66PZdMUb4017gO2jF8QSXyFk72_mzRdUkBfLrPzIYLO_z3qcuOSen3Jj_iztLChk_DaJDw4NjlSCrez7izCUqCMU1ab5iDcKB5BrQC5TDnExpuLIcjD3DNrVp15eCB112bSFUNAnp6s4cvW5-nxNAUqg6yq_hCV2zxCLM7A3T_ja56dlbdAaRN73351IzrUxh6UEC_BsByA3QI1Pn_YtuZExxHG_txaXHquAQ7porQcLkIY-D6c6Av9vXnRKGElCAw","expires_in":86400,"token_type":"Bearer"}
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MzI4MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY5NjgwLCJpYXQiOjE3MTA4ODMyODAsInZlcnNpb24iOjIsImp0aSI6IjQ1YzhlMjI3LTc3YTQtNGY4MS1iNDYzLWJkN2VkM2I5M2Q3ZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.dKmR11aqkaW4vYTwf8kyK_F0L75V_P_AWgUDs4Ds1C0py-cdKMKEVm7Pk9A3KlWRduPgpELYW5CMvQK_G0nY66PZdMUb4017gO2jF8QSXyFk72_mzRdUkBfLrPzIYLO_z3qcuOSen3Jj_iztLChk_DaJDw4NjlSCrez7izCUqCMU1ab5iDcKB5BrQC5TDnExpuLIcjD3DNrVp15eCB112bSFUNAnp6s4cvW5-nxNAUqg6yq_hCV2zxCLM7A3T_ja56dlbdAaRN73351IzrUxh6UEC_BsByA3QI1Pn_YtuZExxHG_txaXHquAQ7porQcLkIY-D6c6Av9vXnRKGElCAw"
+SFSCAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MzI4MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY5NjgwLCJpYXQiOjE3MTA4ODMyODAsInZlcnNpb24iOjIsImp0aSI6IjQ1YzhlMjI3LTc3YTQtNGY4MS1iNDYzLWJkN2VkM2I5M2Q3ZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.dKmR11aqkaW4vYTwf8kyK_F0L75V_P_AWgUDs4Ds1C0py-cdKMKEVm7Pk9A3KlWRduPgpELYW5CMvQK_G0nY66PZdMUb4017gO2jF8QSXyFk72_mzRdUkBfLrPzIYLO_z3qcuOSen3Jj_iztLChk_DaJDw4NjlSCrez7izCUqCMU1ab5iDcKB5BrQC5TDnExpuLIcjD3DNrVp15eCB112bSFUNAnp6s4cvW5-nxNAUqg6yq_hCV2zxCLM7A3T_ja56dlbdAaRN73351IzrUxh6UEC_BsByA3QI1Pn_YtuZExxHG_txaXHquAQ7porQcLkIY-D6c6Av9vXnRKGElCAw
+parse: "expires_in":86400
+parse: "token_type":"Bearer"}1llYd�d�<�S��9��i`��WjM۩ط���F�z������u�м�"�����G�2�?�i�|D�_'A*��a�@ p�-�7�Y�$ak�?
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MzI4MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY5NjgwLCJpYXQiOjE3MTA4ODMyODAsInZlcnNpb24iOjIsImp0aSI6IjQ1YzhlMjI3LTc3YTQtNGY4MS1iNDYzLWJkN2VkM2I5M2Q3ZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.dKmR11aqkaW4vYTwf8kyK_F0L75V_P_AWgUDs4Ds1C0py-cdKMKEVm7Pk9A3KlWRduPgpELYW5CMvQK_G0nY66PZdMUb4017gO2jF8QSXyFk72_mzRdUkBfLrPzIYLO_z3qcuOSen3Jj_iztLChk_DaJDw4NjlSCrez7izCUqCMU1ab5iDcKB5BrQC5TDnExpuLIcjD3DNrVp15eCB112bSFUNAnp6s4cvW5-nxNAUqg6yq_hCV2zxCLM7A3T_ja56dlbdAaRN73351IzrUxh6UEC_BsByA3QI1Pn_YtuZExxHG_txaXHquAQ7porQcLkIY-D6c6Av9vXnRKGElCAw
+[0;32mI (7378) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: 23
+parse: 23�?4��?���
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MzI4MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY5NjgwLCJpYXQiOjE3MTA4ODMyODAsInZlcnNpb24iOjIsImp0aSI6IjQ1YzhlMjI3LTc3YTQtNGY4MS1iNDYzLWJkN2VkM2I5M2Q3ZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.dKmR11aqkaW4vYTwf8kyK_F0L75V_P_AWgUDs4Ds1C0py-cdKMKEVm7Pk9A3KlWRduPgpELYW5CMvQK_G0nY66PZdMUb4017gO2jF8QSXyFk72_mzRdUkBfLrPzIYLO_z3qcuOSen3Jj_iztLChk_DaJDw4NjlSCrez7izCUqCMU1ab5iDcKB5BrQC5TDnExpuLIcjD3DNrVp15eCB112bSFUNAnp6s4cvW5-nxNAUqg6yq_hCV2zxCLM7A3T_ja56dlbdAaRN73351IzrUxh6UEC_BsByA3QI1Pn_YtuZExxHG_txaXHquAQ7porQcLkIY-D6c6Av9vXnRKGElCAw
+[0;32mI (9218) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: [{"id":103,"name":"Skleníky","label":"Skleníky","descr":"Skleníky","order":"1","url":"","mnImageId":3,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":173,"name":"Sklep","label":"Sklep","descr":"Sklep","order":"1","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":192,"name":"Goodwe","label":"Goodwe","descr":"Goodwe","order":"2","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":193,"name":"Bruli","label":"Bruli","descr":"Bruli","order":"3","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":194,"name":"Tapo","label":"Tapo","descr":"Tapo","order":"4","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"warning"},{"id":197,"name":"Shelly","label":"Shelly","descr":"Shelly","order":"5","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"warning"},{"id":198,"name":"Solární Boiler","label":"Solární Boiler","descr":"Solární Boiler","order":"6","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":199,"name":"Sensor světla","label":"Sensor světla","descr":"Sensor světla","order":"7","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":200,"name":"Sensor vlhkosti","label":"Sensor vlhkosti","descr":"Sensor vlhkosti","order":"8","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":205,"name":"Intex","label":"Intex","descr":"Intex","order":"9","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":211,"name":"Retenčka","label":"Retenčka","descr":"Retenčka","order":"10","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":214,"name":"Teplotní 3čidlo","label":"Teplotní 3čidlo","descr":"Teplotní 3čidlo","order":"11","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":215,"name":"Světlo","label":"Světlo","descr":"Světlo","order":"12","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"ok"},{"id":220,"name":"Air quality","label":"Air quality","descr":"Air quality","order":"13","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":221,"name":"Kuchyň","label":"Kuchyň","descr":"Kuchyň","order":"14","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":222,"name":"Smart water/gas valve","label":"Smart water/gas valve","descr":"Smart water/gas valve","order":"15","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":223,"name":"Zighbee router","label":"Zighbee router","descr":"Zighbee router","order":"16","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":224,"name":"Vlhkost půdy","label":"Vlhkost půdy","descr":"Vlhkost půdy","order":"17","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":225,"name":"Radiátory","label":"Radiátory","descr":"Radiátory","order":"18","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":226,"name":"Kouř","label":"Kouř","descr":"Kouř","order":"19","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":227,"name":"Prodlužky","label":"Prodlužky","descr":"Prodlužky","order":"20","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":228,"name":"Dveře","label":"Dveře","descr":"Dveře","order":"21","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":230,"name":"Meteo Stanice","label":"Meteo Stanice","descr":"Meteo Stanice","order":"22","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"}]
+parse: [{"id":103
+parse: "name":"Skleníky"
+parse: "label":"Skleníky"
+parse: "descr":"Skleníky"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":3
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":173
+parse: "name":"Sklep"
+parse: "label":"Sklep"
+parse: "descr":"Sklep"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":192
+parse: "name":"Goodwe"
+parse: "label":"Goodwe"
+parse: "descr":"Goodwe"
+parse: "order":"2"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":193
+parse: "name":"Bruli"
+parse: "label":"Bruli"
+parse: "descr":"Bruli"
+parse: "order":"3"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":194
+parse: "name":"Tapo"
+parse: "label":"Tapo"
+parse: "descr":"Tapo"
+parse: "order":"4"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":197
+parse: "name":"Shelly"
+parse: "label":"Shelly"
+parse: "descr":"Shelly"
+parse: "order":"5"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":198
+parse: "name":"Solární Boiler"
+parse: "label":"Solární Boiler"
+parse: "descr":"Solární Boiler"
+parse: "order":"6"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":199
+parse: "name":"Sensor světla"
+parse: "label":"Sensor světla"
+parse: "descr":"Sensor světla"
+parse: "order":"7"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":200
+parse: "name":"Sensor vlhkosti"
+parse: "label":"Sensor vlhkosti"
+parse: "descr":"Sensor vlhkosti"
+parse: "order":"8"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":205
+parse: "name":"Intex"
+parse: "label":"Intex"
+parse: "descr":"Intex"
+parse: "order":"9"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":211
+parse: "name":"Retenčka"
+parse: "label":"Retenčka"
+parse: "descr":"Retenčka"
+parse: "order":"10"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":214
+parse: "name":"Teplotní 3čidlo"
+parse: "label":"Teplotní 3čidlo"
+parse: "descr":"Teplotní 3čidlo"
+parse: "order":"11"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":215
+parse: "name":"Světlo"
+parse: "label":"Světlo"
+parse: "descr":"Světlo"
+parse: "order":"12"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"ok"}
+parse: {"id":220
+parse: "name":"Air quality"
+parse: "label":"Air quality"
+parse: "descr":"Air quality"
+parse: "order":"13"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":221
+parse: "name":"Kuchyň"
+parse: "label":"Kuchyň"
+parse: "descr":"Kuchyň"
+parse: "order":"14"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":222
+parse: "name":"Smart water/gas valve"
+parse: "label":"Smart water/gas valve"
+parse: "descr":"Smart water/gas valve"
+parse: "order":"15"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":223
+parse: "name":"Zighbee router"
+parse: "label":"Zighbee router"
+parse: "descr":"Zighbee router"
+parse: "order":"16"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":224
+parse: "name":"Vlhkost půdy"
+parse: "label":"Vlhkost půdy"
+parse: "descr":"Vlhkost půdy"
+parse: "order":"17"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":225
+parse: "name":"Radiátory"
+parse: "label":"Radiátory"
+parse: "descr":"Radiátory"
+parse: "order":"18"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":226
+parse: "name":"Kouř"
+parse: "label":"Kouř"
+parse: "descr":"Kouř"
+parse: "order":"19"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":227
+parse: "name":"Prodlužky"
+parse: "label":"Prodlužky"
+parse: "descr":"Prodlužky"
+parse: "order":"20"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":228
+parse: "name":"Dveře"
+parse: "label":"Dveře"
+parse: "descr":"Dveře"
+parse: "order":"21"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":230
+parse: "name":"Meteo Stanice"
+parse: "label":"Meteo Stanice"
+parse: "descr":"Meteo Stanice"
+parse: "order":"22"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}]S��|m�������z��B���6N��a�R�Zi���W��
+�.}_�h�u���V�_)��b詼!s�P��� 4�o�
+parse: �/E�;Wy�.(|����
+parse: ��(�T��%��o=�V	���}SB6Θ��
+K�Ԓ�6�䩛�������%Z�_=��"R�F�L
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MzI4MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY5NjgwLCJpYXQiOjE3MTA4ODMyODAsInZlcnNpb24iOjIsImp0aSI6IjQ1YzhlMjI3LTc3YTQtNGY4MS1iNDYzLWJkN2VkM2I5M2Q3ZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.dKmR11aqkaW4vYTwf8kyK_F0L75V_P_AWgUDs4Ds1C0py-cdKMKEVm7Pk9A3KlWRduPgpELYW5CMvQK_G0nY66PZdMUb4017gO2jF8QSXyFk72_mzRdUkBfLrPzIYLO_z3qcuOSen3Jj_iztLChk_DaJDw4NjlSCrez7izCUqCMU1ab5iDcKB5BrQC5TDnExpuLIcjD3DNrVp15eCB112bSFUNAnp6s4cvW5-nxNAUqg6yq_hCV2zxCLM7A3T_ja56dlbdAaRN73351IzrUxh6UEC_BsByA3QI1Pn_YtuZExxHG_txaXHquAQ7porQcLkIY-D6c6Av9vXnRKGElCAw
+[0;32mI (12088) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: [{"id":5502,"mnSystemId":129,"mnDeviceModelId":132,"deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c138f673d97eda","deviceName":"Rajčata","defaultName":0,"customerName":"","street":"","city":"","zip":"","district":"","state":"","route":"","location":"","grouping":"","locDetails":"","descr":"","mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c138f673d97eda/john/ntf","mqttTs":"1707988886","position":{},"entryPosition":{},"parameterValues":[{"id":5415,"devParName":"linkquality","label":"link quality","mnParameterId":209,"lastUpdateTs":"2024-02-15T09:21:26.851Z","value":0,"mnParameter":{"id":209,"devParName":"linkquality","unit":"","unitImp":"","descr":"link quality","label":"link quality","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5416,"devParName":"soil_moisture","label":"soil moisture","mnParameterId":214,"lastUpdateTs":"2024-02-15T09:21:26.851Z","value":35,"mnParameter":{"id":214,"devParName":"soil_moisture","unit":"","unitImp":"","descr":"soil moisture","label":"soil moisture","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5414,"devParName":"temperature","label":"Teplota","mnParameterId":2,"lastUpdateTs":"2024-02-15T09:21:26.851Z","value":11,"mnParameter":{"id":2,"devParName":"temperature","unit":"°C","unitImp":"","descr":"Temperature on sensor","label":"Teplota","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}}]},{"id":5507,"mnSystemId":129,"mnDeviceModelId":132,"deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c13810b0475f9c","deviceName":"Feferonky","defaultName":0,"customerName":"","street":"","city":"","zip":"","district":"","state":"","route":"","location":"","grouping":"","locDetails":"","descr":"","mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c13810b0475f9c/john/ntf","mqttTs":"1710368639","position":{},"entryPosition":{},"parameterValues":[{"id":5418,"devParName":"linkquality","label":"link quality","mnParameterId":209,"lastUpdateTs":"2024-03-13T22:23:59.661Z","value":94,"mnParameter":{"id":209,"devParName":"linkquality","unit":"","unitImp":"","descr":"link quality","label":"link quality","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5419,"devParName":"soil_moisture","label":"soil moisture","mnParameterId":214,"lastUpdateTs":"2024-03-13T22:23:59.661Z","value":0,"mnParameter":{"id":214,"devParName":"soil_moisture","unit":"","unitImp":"","descr":"soil moisture","label":"soil moisture","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5420,"devParName":"temperature","label":"Teplota","mnParameterId":2,"lastUpdateTs":"2024-03-13T22:23:59.661Z","value":21,"mnParameter":{"id":2,"devParName":"temperature","unit":"°C","unitImp":"","descr":"Temperature on sensor","label":"Teplota","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}}]},{"id":5509,"mnSystemId":129,"mnDeviceModelId":132,"deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c138cabafde366","deviceName":"Papriky","defaultName":0,"customerName":"","street":"","city":"","zip":"","district":"","state":"","route":"","location":"","grouping":"","locDetails":"","descr":"","mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c138cabafde366/john/ntf","mqttTs":"1705303678","position":{},"entryPosition":{},"parameterValues":[{"id":5422,"devParName":"linkquality","label":"link quality","mnParameterId":209,"lastUpdateTs":"2024-01-15T07:27:58.737Z","value":91,"mnParameter":{"id":209,"devParName":"linkquality","unit":"","unitImp":"","descr":"link quality","label":"link quality","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5421,"devParName":"soil_moisture","label":"soil moisture","mnParameterId":214,"lastUpdateTs":"2024-01-15T07:27:58.737Z","value":0,"mnParameter":{"id":214,"devParName":"soil_moisture","unit":"","unitImp":"","descr":"soil moisture","label":"soil moisture","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5423,"devParName":"temperature","label":"Teplota","mnParameterId":2,"lastUpdateTs":"2024-01-15T07:27:58.737Z","value":9,"mnParameter":{"id":2,"devParName":"temperature","unit":"°C","unitImp":"","descr":"Temperature on sensor","label":"Teplota","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}}]},{"id":5521,"mnSystemId":129,"mnDeviceModelId":137,"deviceUid":"A8404148218845D4","deviceName":"draginoSE01-LB-1","defaultName":1,"customerName":"","street":"","city":"","zip":"","district":"","state":"","route":"","location":"","grouping":"","locDetails":"","descr":"","mqttTopic":"lgmcChirpstack/Chirpstack4/27/device/a8404148218845d4/event/up","mqttTs":"1699034270","position":{},"entryPosition":{},"parameterValues":[{"id":5691,"devParName":"BatV","label":"BatV","mnParameterId":199,"value":0,"mnParameter":{"id":199,"devParName":"BatV","unit":"","unitImp":"","descr":"BatV","label":"BatV","visibility":5,"visibilityCmd":1,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":118,"mnParameterType":{"id":118,"parTypName":"battery_3_7v","dataType":"number","maxVal":0,"minVal":0,"stepVal":0}}},{"id":5700,"devParName":"conduct_SOIL","label":"Conductivity Soil","mnParameterId":257,"value":0,"mnParameter":{"id":257,"devParName":"conduct_SOIL","unit":"","unitImp":"","descr":"Conductivity Soil","label":"Conductivity Soil","visibility":4,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5693,"devParName":"temp_SOIL","label":"Temperature Soil","mnParameterId":258,"value":0,"mnParameter":{"id":258,"devParName":"temp_SOIL","unit":"° C","unitImp":"° C","descr":"Temperature Soil","label":"Temperature Soil","visibility":4,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5696,"devParName":"water_SOIL","label":"Water Soil","mnParameterId":256,"value":0,"mnParameter":{"id":256,"devParName":"water_SOIL","unit":"%","unitImp":"%","descr":"Water Soil","label":"Water Soil","visibility":4,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}}]},{"id":5535,"mnSystemId":129,"mnDeviceModelId":137,"deviceUid":"A840417031884C98","deviceName":"draginoSE01-LB-1","defaultName":1,"customerName":"","street":"","city":"","zip":"","district":"","state":"","route":"","location":"","grouping":"","locDetails":"","descr":"","mqttTopic":"lgmcChirpstack/Chirpstack4/27/device/a840417031884c98/event/up","mqttTs":"1710882115","position":{},"entryPosition":{},"parameterValues":[{"id":5690,"devParName":"BatV","label":"BatV","mnParameterId":199,"lastUpdateTs":"2024-03-19T21:01:55.171Z","value":3.33,"mnParameter":{"id":199,"devParName":"BatV","unit":"","unitImp":"","descr":"BatV","label":"BatV","visibility":5,"visibilityCmd":1,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":118,"mnParameterType":{"id":118,"parTypName":"battery_3_7v","dataType":"number","maxVal":0,"minVal":0,"stepVal":0}}},{"id":5699,"devParName":"conduct_SOIL","label":"Conductivity Soil","mnParameterId":257,"lastUpdateTs":"2024-03-19T21:01:55.171Z","value":0,"mnParameter":{"id":257,"devParName":"conduct_SOIL","unit":"","unitImp":"","descr":"Conductivity Soil","label":"Conductivity Soil","visibility":4,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5694,"devParName":"temp_SOIL","label":"Temperature Soil","mnParameterId":258,"lastUpdateTs":"2024-03-19T21:01:55.171Z","value":21.2,"mnParameter":{"id":258,"devParName":"temp_SOIL","unit":"° C","unitImp":"° C","descr":"Temperature Soil","label":"Temperature Soil","visibility":4,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":5697,"devParName":"water_SOIL","label":"Water Soil","mnParameterId":256,"lastUpdateTs":"2024-03-19T21:01:55.171Z","value":0,"mnParameter":{"id":256,"devParName":"water_SOIL","unit":"%","unitImp":"%","descr":"Water Soil","label":"Water Soil","visibility":4,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}}]},{"id":5969,"mnSystemId":129,"mnDeviceModelId":138,"deviceUid":"A840410DE1889974","deviceName":"Rajčata Teplota","defaultName":0,"customerName":"","street":"","city":"","zip":"","district":"","state":"","route":"","location":"","grouping":"","locDetails":"","descr":"","mqttTopic":"lgmcChirpstack/Chirpstack4/30/device/a840410de1889974/event/up","mqttTs":"1710882893","position":{},"entryPosition":{},"parameterValues":[{"id":8474,"devParName":"humidity","label":"Vlhkost","mnParameterId":3,"lastUpdateTs":"2024-03-19T21:14:53.193Z","value":64.4,"mnParameter":{"id":3,"devParName":"humidity","unit":"%","unitImp":"","descr":"Humidity on sensor","label":"Vlhkost","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":11,"mnParameterType":{"id":11,"parTypName":"humidity","dataType":"number","maxVal":100,"minVal":0,"stepVal":0.01}}},{"id":8498,"devParName":"temperature","label":"Teplota","mnParameterId":2,"lastUpdateTs":"2024-03-19T21:14:53.193Z","value":-1.96,"mnParameter":{"id":2,"devParName":"temperature","unit":"°C","unitImp":"","descr":"Temperature on sensor","label":"Teplota","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}},{"id":8506,"devParName":"temperature_probe","label":"Teplota na sondě","mnParameterId":260,"lastUpdateTs":"2024-03-19T21:14:53.193Z","value":-1.75,"mnParameter":{"id":260,"devParName":"temperature_probe","unit":"","unitImp":"","descr":"Teplota na sondě","label":"Teplota na sondě","visibility":4,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}}]}]
+parse: [{"id":5502
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":132
+parse: "deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c138f673d97eda"
+parse: "deviceName":"Rajčata"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c138f673d97eda/john/ntf"
+parse: "mqttTs":"1707988886"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5415
+parse: "devParName":"linkquality"
+parse: "label":"link quality"
+parse: "mnParameterId":209
+parse: "lastUpdateTs":"2024-02-15T09:21:26.851Z"
+parse: "value":0
+parse: "mnParameter":{"id":209
+parse: "devParName":"linkquality"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"link quality"
+parse: "label":"link quality"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5416
+parse: "devParName":"soil_moisture"
+parse: "label":"soil moisture"
+parse: "mnParameterId":214
+parse: "lastUpdateTs":"2024-02-15T09:21:26.851Z"
+parse: "value":35
+parse: "mnParameter":{"id":214
+parse: "devParName":"soil_moisture"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"soil moisture"
+parse: "label":"soil moisture"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5414
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-02-15T09:21:26.851Z"
+parse: "value":11
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}]}
+parse: {"id":5507
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":132
+parse: "deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c13810b0475f9c"
+parse: "deviceName":"Feferonky"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c13810b0475f9c/john/ntf"
+parse: "mqttTs":"1710368639"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5418
+parse: "devParName":"linkquality"
+parse: "label":"link quality"
+parse: "mnParameterId":209
+parse: "lastUpdateTs":"2024-03-13T22:23:59.661Z"
+parse: "value":94
+parse: "mnParameter":{"id":209
+parse: "devParName":"linkquality"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"link quality"
+parse: "label":"link quality"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5419
+parse: "devParName":"soil_moisture"
+parse: "label":"soil moisture"
+parse: "mnParameterId":214
+parse: "lastUpdateTs":"2024-03-13T22:23:59.661Z"
+parse: "value":0
+parse: "mnParameter":{"id":214
+parse: "devParName":"soil_moisture"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"soil moisture"
+parse: "label":"soil moisture"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5420
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-03-13T22:23:59.661Z"
+parse: "value":21
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}]}
+parse: {"id":5509
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":132
+parse: "deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c138cabafde366"
+parse: "deviceName":"Papriky"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c138cabafde366/john/ntf"
+parse: "mqttTs":"1705303678"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5422
+parse: "devParName":"linkquality"
+parse: "label":"link quality"
+parse: "mnParameterId":209
+parse: "lastUpdateTs":"2024-01-15T07:27:58.737Z"
+parse: "value":91
+parse: "mnParameter":{"id":209
+parse: "devParName":"linkquality"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"link quality"
+parse: "label":"link quality"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5421
+parse: "devParName":"soil_moisture"
+parse: "label":"soil moisture"
+parse: "mnParameterId":214
+parse: "lastUpdateTs":"2024-01-15T07:27:58.737Z"
+parse: "value":0
+parse: "mnParameter":{"id":214
+parse: "devParName":"soil_moisture"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"soil moisture"
+parse: "label":"soil moisture"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5423
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-01-15T07:27:58.737Z"
+parse: "value":9
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}]}
+parse: {"id":5521
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":137
+parse: "deviceUid":"A8404148218845D4"
+parse: "deviceName":"draginoSE01-LB-1"
+parse: "defaultName":1
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"lgmcChirpstack/Chirpstack4/27/device/a8404148218845d4/event/up"
+parse: "mqttTs":"1699034270"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5691
+parse: "devParName":"BatV"
+parse: "label":"BatV"
+parse: "mnParameterId":199
+parse: "value":0
+parse: "mnParameter":{"id":199
+parse: "devParName":"BatV"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"BatV"
+parse: "label":"BatV"
+parse: "visibility":5
+parse: "visibilityCmd":1
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":118
+parse: "mnParameterType":{"id":118
+parse: "parTypName":"battery_3_7v"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0}}}
+parse: {"id":5700
+parse: "devParName":"conduct_SOIL"
+parse: "label":"Conductivity Soil"
+parse: "mnParameterId":257
+parse: "value":0
+parse: "mnParameter":{"id":257
+parse: "devParName":"conduct_SOIL"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Conductivity Soil"
+parse: "label":"Conductivity Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5693
+parse: "devParName":"temp_SOIL"
+parse: "label":"Temperature Soil"
+parse: "mnParameterId":258
+parse: "value":0
+parse: "mnParameter":{"id":258
+parse: "devParName":"temp_SOIL"
+parse: "unit":"° C"
+parse: "unitImp":"° C"
+parse: "descr":"Temperature Soil"
+parse: "label":"Temperature Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5696
+parse: "devParName":"water_SOIL"
+parse: "label":"Water Soil"
+parse: "mnParameterId":256
+parse: "value":0
+parse: "mnParameter":{"id":256
+parse: "devParName":"water_SOIL"
+parse: "unit":"%"
+parse: "unitImp":"%"
+parse: "descr":"Water Soil"
+parse: "label":"Water Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}]}
+parse: {"id":5535
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":137
+parse: "deviceUid":"A840417031884C98"
+parse: "deviceName":"draginoSE01-LB-1"
+parse: "defaultName":1
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"lgmcChirpstack/Chirpstack4/27/device/a840417031884c98/event/up"
+parse: "mqttTs":"1710882115"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5690
+parse: "devParName":"BatV"
+parse: "label":"BatV"
+parse: "mnParameterId":199
+parse: "lastUpdateTs":"2024-03-19T21:01:55.171Z"
+parse: "value":3.33
+parse: "mnParameter":{"id":199
+parse: "devParName":"BatV"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"BatV"
+parse: "label":"BatV"
+parse: "visibility":5
+parse: "visibilityCmd":1
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":118
+parse: "mnParameterType":{"id":118
+parse: "parTypName":"battery_3_7v"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0}}}
+parse: {"id":5699
+parse: "devParName":"conduct_SOIL"
+parse: "label":"Conductivity Soil"
+parse: "mnParameterId":257
+parse: "lastUpdateTs":"2024-03-19T21:01:55.171Z"
+parse: "value":0
+parse: "mnParameter":{"id":257
+parse: "devParName":"conduct_SOIL"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Conductivity Soil"
+parse: "label":"Conductivity Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5694
+parse: "devParName":"temp_SOIL"
+parse: "label":"Temperature Soil"
+parse: "mnParameterId":258
+parse: "lastUpdateTs":"2024-03-19T21:01:55.171Z"
+parse: "value":21.2
+parse: "mnParameter":{"id":258
+parse: "devParName":"temp_SOIL"
+parse: "unit":"° C"
+parse: "unitImp":"° C"
+parse: "descr":"Temperature Soil"
+parse: "label":"Temperature Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5697
+parse: "devParName":"water_SOIL"
+parse: "label":"Water Soil"
+parse: "mnParameterId":256
+parse: "lastUpdateTs":"2024-03-19T21:01:55.171Z"
+parse: "value":0
+parse: "mnParameter":{"id":256
+parse: "devParName":"water_SOIL"
+parse: "unit":"%"
+parse: "unitImp":"%"
+parse: "descr":"Water Soil"
+parse: "label":"Water Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}]}
+parse: {"id":5969
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":138
+parse: "deviceUid":"A840410DE1889974"
+parse: "deviceName":"Rajčata Teplota"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"lgmcChirpstack/Chirpstack4/30/device/a840410de1889974/event/up"
+parse: "mqttTs":"1710882893"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":8474
+parse: "devParName":"humidity"
+parse: "label":"Vlhkost"
+parse: "mnParameterId":3
+parse: "lastUpdateTs":"2024-03-19T21:14:53.193Z"
+parse: "value":64.4
+parse: "mnParameter":{"id":3
+parse: "devParName":"humidity"
+parse: "unit":"%"
+parse: "unitImp":""
+parse: "descr":"Humidity on sensor"
+parse: "label":"Vlhkost"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":11
+parse: "mnParameterType":{"id":11
+parse: "parTypName":"humidity"
+parse: "dataType":"number"
+parse: "maxVal":100
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":8498
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-03-19T21:14:53.193Z"
+parse: "value":-1.96
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}
+parse: {"id":8506
+parse: "devParName":"temperature_probe"
+parse: "label":"Teplota na sondě"
+parse: "mnParameterId":260
+parse: "lastUpdateTs":"2024-03-19T21:14:53.193Z"
+parse: "value":-1.75
+parse: "mnParameter":{"id":260
+parse: "devParName":"temperature_probe"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Teplota na sondě"
+parse: "label":"Teplota na sondě"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}]}]`�g���n���P��'�c�q�[�80!�1���ge���Q��������8]��	�4�Fn#� �A�;=�h3�QpɆ�k��/k��҃���o�.�
+���6�s��S��Y�d��j-���xy���N�s;��Ŷ�({��p5�
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MzI4MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY5NjgwLCJpYXQiOjE3MTA4ODMyODAsInZlcnNpb24iOjIsImp0aSI6IjQ1YzhlMjI3LTc3YTQtNGY4MS1iNDYzLWJkN2VkM2I5M2Q3ZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.dKmR11aqkaW4vYTwf8kyK_F0L75V_P_AWgUDs4Ds1C0py-cdKMKEVm7Pk9A3KlWRduPgpELYW5CMvQK_G0nY66PZdMUb4017gO2jF8QSXyFk72_mzRdUkBfLrPzIYLO_z3qcuOSen3Jj_iztLChk_DaJDw4NjlSCrez7izCUqCMU1ab5iDcKB5BrQC5TDnExpuLIcjD3DNrVp15eCB112bSFUNAnp6s4cvW5-nxNAUqg6yq_hCV2zxCLM7A3T_ja56dlbdAaRN73351IzrUxh6UEC_BsByA3QI1Pn_YtuZExxHG_txaXHquAQ7porQcLkIY-D6c6Av9vXnRKGElCAw
+[0;32mI (16798) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: [{"id":2,"deviceType":"tSens","deviceFamily":"RisingHF","iotModel":"RHF1S001","mfgName":"RisingHF","mfgModel":"RHF1S001","vendor":"Logimic","serial":"n/a","urlDataSheet":"","urlInstallGuide":"","symbolId":4,"imageId":3},{"id":101,"deviceType":"IqrfIqarosSen7172","deviceFamily":"MICRORISC","iotModel":"device iotModel","mfgName":"mfgName","mfgModel":"mfgModel","vendor":"Vendor","serial":"Serial","urlDataSheet":"","urlInstallGuide":"","symbolId":4,"imageId":5},{"id":102,"deviceType":"IqrfIqarosSen8196","deviceFamily":"MICRORISC","iotModel":"device iotModel","mfgName":"mfgName","mfgModel":"mfgModel","vendor":"Vendor","serial":"Serial","urlDataSheet":"","urlInstallGuide":"","symbolId":4,"imageId":6},{"id":103,"deviceType":"IqrfIqarosSen9220","deviceFamily":"MICRORISC","iotModel":"device iotModel","mfgName":"mfgName","mfgModel":"mfgModel","vendor":"Vendor","serial":"Serial","urlDataSheet":"","urlInstallGuide":"","symbolId":4,"imageId":7},{"id":3,"deviceType":"waterLevel","deviceFamily":"Kotahi","iotModel":"Kotahi","mfgName":"Kotahi","mfgModel":"Kota-001","vendor":"Logimic","serial":"n/a","urlDataSheet":"","urlInstallGuide":"","symbolId":8,"imageId":9},{"id":105,"deviceType":"IqrfIqarosGateway","deviceFamily":"MICRORISC","iotModel":"device iotModel","mfgName":"mfgName","mfgModel":"mfgModel","vendor":"Vendor","serial":"Serial","urlDataSheet":"","urlInstallGuide":"","symbolId":10,"imageId":10},{"id":104,"deviceType":"IqrfIqarosRepeater","deviceFamily":"MICRORISC","iotModel":"device iotModel","mfgName":"mfgName","mfgModel":"mfgModel","vendor":"Vendor","serial":"Serial","urlDataSheet":"","urlInstallGuide":"","symbolId":11,"imageId":11},{"id":133,"deviceType":"ZN231392","deviceFamily":"ZN231392","iotModel":"ZN231392","mfgName":"ZN231392","mfgModel":"ZN231392","vendor":"zigbee2mqtt","serial":"ZN231392","urlDataSheet":"","urlInstallGuide":""},{"id":134,"deviceType":"07707L","deviceFamily":"07707L","iotModel":"07707L","mfgName":"07707L","mfgModel":"07707L","vendor":"immax","serial":"07707L","urlDataSheet":"","urlInstallGuide":""},{"id":107,"deviceType":"vaisalaAqt420","deviceFamily":"VaisalaAqt420","iotModel":"VaisalaAqt420","mfgName":"Vaisala","mfgModel":"Vaisala","vendor":"Vaisala","serial":"Serial","urlDataSheet":"https://www.vaisala.com/sites/default/files/documents/AQT400%20User%20Guide-211942.pdf","urlInstallGuide":"https://www.vaisala.com/sites/default/files/documents/AQT400%20User%20Guide-211942.pdf","symbolId":14,"imageId":14},{"id":135,"deviceType":" TS0203","deviceFamily":" TS0203","iotModel":" TS0203","mfgName":" TS0203","mfgModel":" TS0203","vendor":"zighbee2mqtt","serial":" TS0203","urlDataSheet":"","urlInstallGuide":""},{"id":108,"deviceType":"Temperature Sensor","deviceFamily":"RisingHF","iotModel":"RHF1S001","mfgName":"RisingHF","mfgModel":"RHF1S001","vendor":"RisingHF","serial":"Serial","urlDataSheet":"","urlInstallGuide":"","symbolId":3},{"id":109,"deviceType":"GW10K-ET","deviceFamily":"Goodwe","iotModel":"Goodwe","mfgName":"Goodwe","mfgModel":"Goodwe","vendor":"Goodwe","serial":"Goodwe","urlDataSheet":"","urlInstallGuide":""},{"id":110,"deviceType":"bruliv3.5","deviceFamily":"Bruli","iotModel":"Bruli","mfgName":"Bruli","mfgModel":"Bruli","vendor":"Bruli","serial":"Bruli","urlDataSheet":"","urlInstallGuide":""},{"id":111,"deviceType":"P100","deviceFamily":"P100","iotModel":"P100","mfgName":"P100","mfgModel":"P100","vendor":"tapo","serial":"P100","urlDataSheet":"","urlInstallGuide":""},{"id":112,"deviceType":"P110","deviceFamily":"P110","iotModel":"P110","mfgName":"P110","mfgModel":"P110","vendor":"tapo","serial":"P110","urlDataSheet":"","urlInstallGuide":""},{"id":136,"deviceType":"GW1100A_V2.2.7","deviceFamily":"GW1100A_V2.2.7","iotModel":"GW1100A_V2.2.7","mfgName":"GW1100A_V2.2.7","mfgModel":"GW1100A_V2.2.7","vendor":"zighbee2mqtt","serial":"GW1100A_V2.2.7","urlDataSheet":"","urlInstallGuide":""},{"id":137,"deviceType":"draginoSE01-LB","deviceFamily":"draginoSE01-LB","iotModel":"draginoSE01-LB","mfgName":"draginoSE01-LB","mfgModel":"draginoSE01-LB","vendor":"Dragino","serial":"draginoSE01-LB","urlDataSheet":"","urlInstallGuide":""},{"id":113,"deviceType":"lgmc-15","deviceFamily":"Vicki TRV","iotModel":"Vicki TRV","mfgName":"Vicki TRV","mfgModel":"Vicki TRV","vendor":"MClimate","serial":"Vicki TRV","urlDataSheet":"https://docs.mclimate.eu/mclimate-lorawan-devices/devices/mclimate-vicki-lorawan","urlInstallGuide":"https://www.youtube.com/watch?v=4z_WnS4CDCY","symbolId":41,"imageId":41},{"id":114,"deviceType":"lgmc-03","deviceFamily":"waterLevel","iotModel":"device iotModel","mfgName":"LDDS75 Water Level","mfgModel":"LDDS75 Water Level","vendor":"Dragino","serial":"Serial","urlDataSheet":"","urlInstallGuide":""},{"id":115,"deviceType":"shelly1pro","deviceFamily":"shelly1pro","iotModel":"shelly1pro","mfgName":"shelly1pro","mfgModel":"shelly1pro","vendor":"shelly1pro","serial":"shelly1pro","urlDataSheet":"","urlInstallGuide":""},{"id":116,"deviceType":"john_boiler_solar","deviceFamily":"john_boiler_solar","iotModel":"john_boiler_solar","mfgName":"john_boiler_solar","mfgModel":"john_boiler_solar","vendor":"john_boiler_solar","serial":"john_boiler_solar","urlDataSheet":"","urlInstallGuide":""},{"id":117,"deviceType":"john_light","deviceFamily":"john_light","iotModel":"john_light","mfgName":"john_light","mfgModel":"john_light","vendor":"john_light","serial":"john_light","urlDataSheet":"","urlInstallGuide":""},{"id":118,"deviceType":"john_soil","deviceFamily":"john_soil","iotModel":"john_soil","mfgName":"john_soil","mfgModel":"john_soil","vendor":"john_soil","serial":"john_soil","urlDataSheet":"","urlInstallGuide":""},{"id":119,"deviceType":"lgmc-16","deviceFamily":"LT22222","iotModel":"LT22222","mfgName":"LT22222","mfgModel":"LT22222","vendor":"","serial":"","urlDataSheet":"","urlInstallGuide":"","symbolId":42,"imageId":42},{"id":120,"deviceType":"lgmc-17","deviceFamily":"LT22222","iotModel":"LT22222","mfgName":"LT22222","mfgModel":"LT22222","vendor":"","serial":"","urlDataSheet":"","urlInstallGuide":"","symbolId":42,"imageId":42},{"id":121,"deviceType":"intex_spa","deviceFamily":"intex_spa","iotModel":"intex_spa","mfgName":"intex_spa","mfgModel":"intex_spa","vendor":"intex","serial":"intex_spa","urlDataSheet":"","urlInstallGuide":""},{"id":122,"deviceType":"IQD-GW-02A","deviceFamily":"IQD-GW-02A","iotModel":"IQD-GW-02A","mfgName":"IQD-GW-02A","mfgModel":"IQD-GW-02A","vendor":"Microrisc","serial":"","urlDataSheet":"","urlInstallGuide":"","symbolId":10,"imageId":10},{"id":123,"deviceType":"IqarosSensor","deviceFamily":"Temp & Humidity sensor","iotModel":"Temp & Humidity sensor","mfgName":"Temp & Humidity sensor","mfgModel":"Temp & Humidity sensor","vendor":"Microrisc","serial":"","urlDataSheet":"https://iqaros.cz/assets/files/Product_sheet_IQD-SE03-01_220323.pdf","urlInstallGuide":"https://iqaros.cz/installation.html","symbolId":51,"imageId":51},{"id":125,"deviceType":"Dragino-LHT65N-E5","deviceFamily":"Dragino-LHT65N-E5","iotModel":"Dragino-LHT65N-E5","mfgName":"Dragino-LHT65N-E5","mfgModel":"Dragino-LHT65N-E5","vendor":"Dragino","serial":"Dragino-LHT65N-E5","urlDataSheet":"","urlInstallGuide":""},{"id":124,"deviceType":"Dragino-LSN50v2-D23","deviceFamily":"Dragino-LSN50v2-D23","iotModel":"Dragino-LSN50v2-D23","mfgName":"Dragino-LSN50v2-D23","mfgModel":"Dragino-LSN50v2-D23","vendor":"dragino","serial":"Dragino-LSN50v2-D23","urlDataSheet":"","urlInstallGuide":""},{"id":126,"deviceType":"WIFISA10CWT","deviceFamily":"WIFISA10CWT","iotModel":"WIFISA10CWT","mfgName":"WIFISA10CWT","mfgModel":"WIFISA10CWT","vendor":"nedis","serial":"WIFISA10CWT","urlDataSheet":"","urlInstallGuide":""},{"id":127,"deviceType":"TH01_CB3S","deviceFamily":"TH01_CB3S","iotModel":"TH01_CB3S","mfgName":"TH01_CB3S","mfgModel":"TH01_CB3S","vendor":"homeAssistant","serial":"TH01_CB3S","urlDataSheet":"","urlInstallGuide":""},{"id":129,"deviceType":"CC2530.ROUTER","deviceFamily":"CC2530.ROUTER","iotModel":"CC2530.ROUTER","mfgName":"CC2530.ROUTER","mfgModel":"CC2530.ROUTER","vendor":"zigbee2mqtt","serial":"CC2530.ROUTER","urlDataSheet":"","urlInstallGuide":""},{"id":128,"deviceType":"TS0205","deviceFamily":"TS0205","iotModel":"TS0205","mfgName":"TS0205","mfgModel":"TS0205","vendor":"zigbee2mqtt","serial":"TS0205","urlDataSheet":"","urlInstallGuide":""},{"id":130,"deviceType":" TS0201","deviceFamily":" TS0201","iotModel":" TS0201","mfgName":" TS0201","mfgModel":" TS0201","vendor":"zigbee2mqtt","serial":" TS0201","urlDataSheet":"","urlInstallGuide":""},{"id":131,"deviceType":"GS361A-H04","deviceFamily":"GS361A-H04","iotModel":"GS361A-H04","mfgName":"GS361A-H04","mfgModel":"GS361A-H04","vendor":"zigbee2mqtt","serial":"GS361A-H04","urlDataSheet":"","urlInstallGuide":""},{"id":132,"deviceType":"TS0601_soil","deviceFamily":"TS0601_soil","iotModel":"TS0601_soil","mfgName":"TS0601_soil","mfgModel":"TS0601_soil","vendor":"zigbee2mqtt","serial":"TS0601_soil","urlDataSheet":"","urlInstallGuide":""},{"id":138,"deviceType":"Dragino-LHT52","deviceFamily":"Dragino-LHT52","iotModel":"Dragino-LHT52","mfgName":"Dragino-LHT52","mfgModel":"Dragino-LHT52","vendor":"Dragino","serial":"Dragino-LHT52","urlDataSheet":"","urlInstallGuide":""}]
+parse: [{"id":2
+parse: "deviceType":"tSens"
+parse: "deviceFamily":"RisingHF"
+parse: "iotModel":"RHF1S001"
+parse: "mfgName":"RisingHF"
+parse: "mfgModel":"RHF1S001"
+parse: "vendor":"Logimic"
+parse: "serial":"n/a"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":4
+parse: "imageId":3}
+parse: {"id":101
+parse: "deviceType":"IqrfIqarosSen7172"
+parse: "deviceFamily":"MICRORISC"
+parse: "iotModel":"device iotModel"
+parse: "mfgName":"mfgName"
+parse: "mfgModel":"mfgModel"
+parse: "vendor":"Vendor"
+parse: "serial":"Serial"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":4
+parse: "imageId":5}
+parse: {"id":102
+parse: "deviceType":"IqrfIqarosSen8196"
+parse: "deviceFamily":"MICRORISC"
+parse: "iotModel":"device iotModel"
+parse: "mfgName":"mfgName"
+parse: "mfgModel":"mfgModel"
+parse: "vendor":"Vendor"
+parse: "serial":"Serial"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":4
+parse: "imageId":6}
+parse: {"id":103
+parse: "deviceType":"IqrfIqarosSen9220"
+parse: "deviceFamily":"MICRORISC"
+parse: "iotModel":"device iotModel"
+parse: "mfgName":"mfgName"
+parse: "mfgModel":"mfgModel"
+parse: "vendor":"Vendor"
+parse: "serial":"Serial"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":4
+parse: "imageId":7}
+parse: {"id":3
+parse: "deviceType":"waterLevel"
+parse: "deviceFamily":"Kotahi"
+parse: "iotModel":"Kotahi"
+parse: "mfgName":"Kotahi"
+parse: "mfgModel":"Kota-001"
+parse: "vendor":"Logimic"
+parse: "serial":"n/a"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":8
+parse: "imageId":9}
+parse: {"id":105
+parse: "deviceType":"IqrfIqarosGateway"
+parse: "deviceFamily":"MICRORISC"
+parse: "iotModel":"device iotModel"
+parse: "mfgName":"mfgName"
+parse: "mfgModel":"mfgModel"
+parse: "vendor":"Vendor"
+parse: "serial":"Serial"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":10
+parse: "imageId":10}
+parse: {"id":104
+parse: "deviceType":"IqrfIqarosRepeater"
+parse: "deviceFamily":"MICRORISC"
+parse: "iotModel":"device iotModel"
+parse: "mfgName":"mfgName"
+parse: "mfgModel":"mfgModel"
+parse: "vendor":"Vendor"
+parse: "serial":"Serial"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":11
+parse: "imageId":11}
+parse: {"id":133
+parse: "deviceType":"ZN231392"
+parse: "deviceFamily":"ZN231392"
+parse: "iotModel":"ZN231392"
+parse: "mfgName":"ZN231392"
+parse: "mfgModel":"ZN231392"
+parse: "vendor":"zigbee2mqtt"
+parse: "serial":"ZN231392"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":134
+parse: "deviceType":"07707L"
+parse: "deviceFamily":"07707L"
+parse: "iotModel":"07707L"
+parse: "mfgName":"07707L"
+parse: "mfgModel":"07707L"
+parse: "vendor":"immax"
+parse: "serial":"07707L"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":107
+parse: "deviceType":"vaisalaAqt420"
+parse: "deviceFamily":"VaisalaAqt420"
+parse: "iotModel":"VaisalaAqt420"
+parse: "mfgName":"Vaisala"
+parse: "mfgModel":"Vaisala"
+parse: "vendor":"Vaisala"
+parse: "serial":"Serial"
+parse: "urlDataSheet":"https://www.vaisala.com/sites/default/files/documents/AQT400%20User%20Guide-211942.pdf"
+parse: "urlInstallGuide":"https://www.vaisala.com/sites/default/files/documents/AQT400%20User%20Guide-211942.pdf"
+parse: "symbolId":14
+parse: "imageId":14}
+parse: {"id":135
+parse: "deviceType":" TS0203"
+parse: "deviceFamily":" TS0203"
+parse: "iotModel":" TS0203"
+parse: "mfgName":" TS0203"
+parse: "mfgModel":" TS0203"
+parse: "vendor":"zighbee2mqtt"
+parse: "serial":" TS0203"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":108
+parse: "deviceType":"Temperature Sensor"
+parse: "deviceFamily":"RisingHF"
+parse: "iotModel":"RHF1S001"
+parse: "mfgName":"RisingHF"
+parse: "mfgModel":"RHF1S001"
+parse: "vendor":"RisingHF"
+parse: "serial":"Serial"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":3}
+parse: {"id":109
+parse: "deviceType":"GW10K-ET"
+parse: "deviceFamily":"Goodwe"
+parse: "iotModel":"Goodwe"
+parse: "mfgName":"Goodwe"
+parse: "mfgModel":"Goodwe"
+parse: "vendor":"Goodwe"
+parse: "serial":"Goodwe"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":110
+parse: "deviceType":"bruliv3.5"
+parse: "deviceFamily":"Bruli"
+parse: "iotModel":"Bruli"
+parse: "mfgName":"Bruli"
+parse: "mfgModel":"Bruli"
+parse: "vendor":"Bruli"
+parse: "serial":"Bruli"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":111
+parse: "deviceType":"P100"
+parse: "deviceFamily":"P100"
+parse: "iotModel":"P100"
+parse: "mfgName":"P100"
+parse: "mfgModel":"P100"
+parse: "vendor":"tapo"
+parse: "serial":"P100"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":112
+parse: "deviceType":"P110"
+parse: "deviceFamily":"P110"
+parse: "iotModel":"P110"
+parse: "mfgName":"P110"
+parse: "mfgModel":"P110"
+parse: "vendor":"tapo"
+parse: "serial":"P110"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":136
+parse: "deviceType":"GW1100A_V2.2.7"
+parse: "deviceFamily":"GW1100A_V2.2.7"
+parse: "iotModel":"GW1100A_V2.2.7"
+parse: "mfgName":"GW1100A_V2.2.7"
+parse: "mfgModel":"GW1100A_V2.2.7"
+parse: "vendor":"zighbee2mqtt"
+parse: "serial":"GW1100A_V2.2.7"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":137
+parse: "deviceType":"draginoSE01-LB"
+parse: "deviceFamily":"draginoSE01-LB"
+parse: "iotModel":"draginoSE01-LB"
+parse: "mfgName":"draginoSE01-LB"
+parse: "mfgModel":"draginoSE01-LB"
+parse: "vendor":"Dragino"
+parse: "serial":"draginoSE01-LB"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":113
+parse: "deviceType":"lgmc-15"
+parse: "deviceFamily":"Vicki TRV"
+parse: "iotModel":"Vicki TRV"
+parse: "mfgName":"Vicki TRV"
+parse: "mfgModel":"Vicki TRV"
+parse: "vendor":"MClimate"
+parse: "serial":"Vicki TRV"
+parse: "urlDataSheet":"https://docs.mclimate.eu/mclimate-lorawan-devices/devices/mclimate-vicki-lorawan"
+parse: "urlInstallGuide":"https://www.youtube.com/watch?v=4z_WnS4CDCY"
+parse: "symbolId":41
+parse: "imageId":41}
+parse: {"id":114
+parse: "deviceType":"lgmc-03"
+parse: "deviceFamily":"waterLevel"
+parse: "iotModel":"device iotModel"
+parse: "mfgName":"LDDS75 Water Level"
+parse: "mfgModel":"LDDS75 Water Level"
+parse: "vendor":"Dragino"
+parse: "serial":"Serial"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":115
+parse: "deviceType":"shelly1pro"
+parse: "deviceFamily":"shelly1pro"
+parse: "iotModel":"shelly1pro"
+parse: "mfgName":"shelly1pro"
+parse: "mfgModel":"shelly1pro"
+parse: "vendor":"shelly1pro"
+parse: "serial":"shelly1pro"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":116
+parse: "deviceType":"john_boiler_solar"
+parse: "deviceFamily":"john_boiler_solar"
+parse: "iotModel":"john_boiler_solar"
+parse: "mfgName":"john_boiler_solar"
+parse: "mfgModel":"john_boiler_solar"
+parse: "vendor":"john_boiler_solar"
+parse: "serial":"john_boiler_solar"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":117
+parse: "deviceType":"john_light"
+parse: "deviceFamily":"john_light"
+parse: "iotModel":"john_light"
+parse: "mfgName":"john_light"
+parse: "mfgModel":"john_light"
+parse: "vendor":"john_light"
+parse: "serial":"john_light"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":118
+parse: "deviceType":"john_soil"
+parse: "deviceFamily":"john_soil"
+parse: "iotModel":"john_soil"
+parse: "mfgName":"john_soil"
+parse: "mfgModel":"john_soil"
+parse: "vendor":"john_soil"
+parse: "serial":"john_soil"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":119
+parse: "deviceType":"lgmc-16"
+parse: "deviceFamily":"LT22222"
+parse: "iotModel":"LT22222"
+parse: "mfgName":"LT22222"
+parse: "mfgModel":"LT22222"
+parse: "vendor":""
+parse: "serial":""
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":42
+parse: "imageId":42}
+parse: {"id":120
+parse: "deviceType":"lgmc-17"
+parse: "deviceFamily":"LT22222"
+parse: "iotModel":"LT22222"
+parse: "mfgName":"LT22222"
+parse: "mfgModel":"LT22222"
+parse: "vendor":""
+parse: "serial":""
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":42
+parse: "imageId":42}
+parse: {"id":121
+parse: "deviceType":"intex_spa"
+parse: "deviceFamily":"intex_spa"
+parse: "iotModel":"intex_spa"
+parse: "mfgName":"intex_spa"
+parse: "mfgModel":"intex_spa"
+parse: "vendor":"intex"
+parse: "serial":"intex_spa"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":122
+parse: "deviceType":"IQD-GW-02A"
+parse: "deviceFamily":"IQD-GW-02A"
+parse: "iotModel":"IQD-GW-02A"
+parse: "mfgName":"IQD-GW-02A"
+parse: "mfgModel":"IQD-GW-02A"
+parse: "vendor":"Microrisc"
+parse: "serial":""
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""
+parse: "symbolId":10
+parse: "imageId":10}
+parse: {"id":123
+parse: "deviceType":"IqarosSensor"
+parse: "deviceFamily":"Temp & Humidity sensor"
+parse: "iotModel":"Temp & Humidity sensor"
+parse: "mfgName":"Temp & Humidity sensor"
+parse: "mfgModel":"Temp & Humidity sensor"
+parse: "vendor":"Microrisc"
+parse: "serial":""
+parse: "urlDataSheet":"https://iqaros.cz/assets/files/Product_sheet_IQD-SE03-01_220323.pdf"
+parse: "urlInstallGuide":"https://iqaros.cz/installation.html"
+parse: "symbolId":51
+parse: "imageId":51}
+parse: {"id":125
+parse: "deviceType":"Dragino-LHT65N-E5"
+parse: "deviceFamily":"Dragino-LHT65N-E5"
+parse: "iotModel":"Dragino-LHT65N-E5"
+parse: "mfgName":"Dragino-LHT65N-E5"
+parse: "mfgModel":"Dragino-LHT65N-E5"
+parse: "vendor":"Dragino"
+parse: "serial":"Dragino-LHT65N-E5"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":124
+parse: "deviceType":"Dragino-LSN50v2-D23"
+parse: "deviceFamily":"Dragino-LSN50v2-D23"
+parse: "iotModel":"Dragino-LSN50v2-D23"
+parse: "mfgName":"Dragino-LSN50v2-D23"
+parse: "mfgModel":"Dragino-LSN50v2-D23"
+parse: "vendor":"dragino"
+parse: "serial":"Dragino-LSN50v2-D23"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":126
+parse: "deviceType":"WIFISA10CWT"
+parse: "deviceFamily":"WIFISA10CWT"
+parse: "iotModel":"WIFISA10CWT"
+parse: "mfgName":"WIFISA10CWT"
+parse: "mfgModel":"WIFISA10CWT"
+parse: "vendor":"nedis"
+parse: "serial":"WIFISA10CWT"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":127
+parse: "deviceType":"TH01_CB3S"
+parse: "deviceFamily":"TH01_CB3S"
+parse: "iotModel":"TH01_CB3S"
+parse: "mfgName":"TH01_CB3S"
+parse: "mfgModel":"TH01_CB3S"
+parse: "vendor":"homeAssistant"
+parse: "serial":"TH01_CB3S"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":129
+parse: "deviceType":"CC2530.ROUTER"
+parse: "deviceFamily":"CC2530.ROUTER"
+parse: "iotModel":"CC2530.ROUTER"
+parse: "mfgName":"CC2530.ROUTER"
+parse: "mfgModel":"CC2530.ROUTER"
+parse: "vendor":"zigbee2mqtt"
+parse: "serial":"CC2530.ROUTER"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":128
+parse: "deviceType":"TS0205"
+parse: "deviceFamily":"TS0205"
+parse: "iotModel":"TS0205"
+parse: "mfgName":"TS0205"
+parse: "mfgModel":"TS0205"
+parse: "vendor":"zigbee2mqtt"
+parse: "serial":"TS0205"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":130
+parse: "deviceType":" TS0201"
+parse: "deviceFamily":" TS0201"
+parse: "iotModel":" TS0201"
+parse: "mfgName":" TS0201"
+parse: "mfgModel":" TS0201"
+parse: "vendor":"zigbee2mqtt"
+parse: "serial":" TS0201"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":131
+parse: "deviceType":"GS361A-H04"
+parse: "deviceFamily":"GS361A-H04"
+parse: "iotModel":"GS361A-H04"
+parse: "mfgName":"GS361A-H04"
+parse: "mfgModel":"GS361A-H04"
+parse: "vendor":"zigbee2mqtt"
+parse: "serial":"GS361A-H04"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":132
+parse: "deviceType":"TS0601_soil"
+parse: "deviceFamily":"TS0601_soil"
+parse: "iotModel":"TS0601_soil"
+parse: "mfgName":"TS0601_soil"
+parse: "mfgModel":"TS0601_soil"
+parse: "vendor":"zigbee2mqtt"
+parse: "serial":"TS0601_soil"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}
+parse: {"id":138
+parse: "deviceType":"Dragino-LHT52"
+parse: "deviceFamily":"Dragino-LHT52"
+parse: "iotModel":"Dragino-LHT52"
+parse: "mfgName":"Dragino-LHT52"
+parse: "mfgModel":"Dragino-LHT52"
+parse: "vendor":"Dragino"
+parse: "serial":"Dragino-LHT52"
+parse: "urlDataSheet":""
+parse: "urlInstallGuide":""}]re Soil"
+parse: "mnParameterId":258
+parse: "lastUpdateTs":"2024-03-19T21:01:5�>
+Before update NV = 19.03.2024 22:20
+[0;32mI (20048) wifi station: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (20058) wifi station: Initializing SNTP[0m
+[0;32mI (20058) wifi station: Waiting for system time to be set... (1/5)[0m
+[0;32mI (21068) wifi station: Waiting for system time to be set... (2/5)[0m
+[0;32mI (22068) wifi station: Waiting for system time to be set... (3/5)[0m

@@ -21,16 +21,22 @@
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
-
+extern char temp[2000];
 extern struct NVS_Data nvs_struct;
 extern RingbufHandle_t xRingbuffer;
 #define MAX_HTTP_RECV_BUFFER 512
 #define MAX_HTTP_OUTPUT_BUFFER 4096
+
+#define GET_NUMBER_DEVS 0
+#define GET_GROUPS 1
+#define GET_SENSORS 3
+#define GET_SENSORS_VALUES 2
+
 static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
 void wifi_init_sta(void);
 void Get_current_date_time(char *date_time);
 void Set_SystemTime_SNTP(void);
-static void client_get_function(void);
+static void client_get_function(int type_of_req);
 esp_err_t client_event_handler(esp_http_client_event_handle_t evt);
 static void client_post_function(void);
 
