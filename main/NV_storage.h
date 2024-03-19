@@ -18,7 +18,7 @@ char auth_url[100];
 char cloud_url[100];
 int refresh_time;
 int chosen_visual;
-char last_update[20];
+char last_update[40];
 int systemID;
 //add chosen sensor
 //add number of chosen visualization type

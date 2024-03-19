@@ -69,18 +69,17 @@ void time_sync_notification_cb(struct timeval *tv)
 void Get_current_date_time(char *date_time){
 	char strftime_buf[64];
 	time_t now;
-	    struct tm timeinfo;
-	    time(&now);
-	    localtime_r(&now, &timeinfo);
+	struct tm timeinfo;
+	time(&now);
+	localtime_r(&now, &timeinfo);
 
-	    	// Set timezone
-	    	    setenv("TZ", "CET-1CEST,M3.5.0/2,M10.5.0/3", 1);
-	    	    tzset();
-	    	    localtime_r(&now, &timeinfo);
-
-	    	    strftime(strftime_buf, sizeof(strftime_buf), "%d.%m.%Y %H:%M", &timeinfo);
-	    	    ESP_LOGI(TAG, "The current date/time in Brno is: %s", strftime_buf);
-                strcpy(date_time,strftime_buf);
+    	// Set timezone
+  	setenv("TZ", "CET-1CEST,M3.5.0/2,M10.5.0/3", 1);
+	tzset();
+    	localtime_r(&now, &timeinfo);
+    	strftime(strftime_buf, sizeof(strftime_buf), "%d.%m.%Y %H:%M", &timeinfo);
+  	ESP_LOGI(TAG, "The current date/time in Brno is: %s", strftime_buf);
+        strcpy(date_time,strftime_buf);
 }
 
 
@@ -102,7 +101,7 @@ static void obtain_time(void)
     initialize_sntp();
     // wait for time to be set
     time_t now = 0;
-    struct tm timeinfo = { 0 };
+    struct tm timeinfo = {0};
     int retry = 0;
     const int retry_count = 5;
     while (sntp_get_sync_status() == SNTP_SYNC_STATUS_RESET && ++retry < retry_count) {
@@ -113,18 +112,15 @@ static void obtain_time(void)
     localtime_r(&now, &timeinfo);
 }
  void Set_SystemTime_SNTP()  {
-
-	 time_t now;
-	    struct tm timeinfo;
-	    time(&now);
-	    localtime_r(&now, &timeinfo);
-	    // Is time set? If not, tm_year will be (1970 - 1900).
-	    if (timeinfo.tm_year < (2016 - 1900)) {
-	        ESP_LOGI(TAG, "Time is not set yet. Connecting to WiFi and getting time over NTP.");
-	        obtain_time();
-	        // update 'now' variable with current time
-	        time(&now);
-	    }
+    time_t now;
+    struct tm timeinfo;
+    time(&now);
+    localtime_r(&now, &timeinfo);
+    if (timeinfo.tm_year < (2016 - 1900)) {
+	ESP_LOGI(TAG, "Time is not set yet. Connecting to WiFi and getting time over NTP.");
+	obtain_time();
+	time(&now);
+    }
 }
 
 void wifi_init_sta(void)
@@ -168,7 +164,6 @@ void wifi_init_sta(void)
      * happened. */
     epd_clear();
     if (bits & WIFI_CONNECTED_BIT) {
-        header();
         ESP_LOGI(TAG, "connected to ap SSID:%s password:%s",
                  nvs_struct.wifi_ssid, nvs_struct.wifi_pass);
         
@@ -182,13 +177,90 @@ void wifi_init_sta(void)
         esp_task_wdt_reset();
         client_get_function();
         
+        printf("Before update NV = %s\n",nvs_struct.last_update);
         Set_SystemTime_SNTP();
         Get_current_date_time(Current_Date_Time);
-        //if (difftime(mktime(Current_Date_Time), mktime("01.01.2000 01:00")) < 0)
-        //{
-        strcpy(nvs_struct.last_update, Current_Date_Time);
+        printf("Before update NV 2 = %s\n",nvs_struct.last_update);
+        printf("Current = %s\n",Current_Date_Time);
+        if (strcmp(nvs_struct.last_update, "") != 0)
+        {
+          int min1, hour1, day1, month1, year1;
+          int min2, hour2, day2, month2, year2;
+          
+          sscanf(nvs_struct.last_update, "%d.%d.%d %d:%d", &day1, &month1, &year1, &hour1, &min1);
+          sscanf(Current_Date_Time, "%d.%d.%d %d:%d", &day2, &month2, &year2, &hour2, &min2);
+          if (year1 < year2)
+          {
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (year1 > year2)
+          {
+            strcpy(Current_Date_Time, nvs_struct.last_update);
+            if (strstr(Current_Date_Time, " - SNTP error") == 0)
+            {
+              strcat(Current_Date_Time, " - SNTP error");
+            }
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (month1 < month2)
+          {
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (month1 > month2)
+          {
+            strcpy(Current_Date_Time, nvs_struct.last_update);
+            if (strstr(Current_Date_Time, " - SNTP error") == 0)
+            {
+              strcat(Current_Date_Time, " - SNTP error");
+            }
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (day1 < day2)
+          {
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (day1 > day2)
+          {
+            strcpy(Current_Date_Time, nvs_struct.last_update);
+            if (strstr(Current_Date_Time, " - SNTP error") == 0)
+            {
+              strcat(Current_Date_Time, " - SNTP error");
+            }
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (hour1 < hour2)
+          {
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (hour1 > hour2)
+          {
+            strcpy(Current_Date_Time, nvs_struct.last_update);
+            if (strstr(Current_Date_Time, " - SNTP error") == 0)
+            {
+              strcat(Current_Date_Time, " - SNTP error");
+            }
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else if (min1 <= min2)
+          {
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+          else
+          {
+            strcpy(Current_Date_Time, nvs_struct.last_update);
+            if (strstr(Current_Date_Time, " - SNTP error") == 0)
+            {
+              strcat(Current_Date_Time, " - SNTP error");
+            }
+            strcpy(nvs_struct.last_update, Current_Date_Time);
+          }
+        }
+        else
+        {
+          strcpy(nvs_struct.last_update, Current_Date_Time);
+        }
         nvs_save();
-        //}
+        
 	printf("Current date and time is = %s\n",nvs_struct.last_update);
         header();
         if (nvs_struct.chosen_visual == 1) 
