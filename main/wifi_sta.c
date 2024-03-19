@@ -347,36 +347,30 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
             //}
         break;
     case HTTP_EVENT_ON_FINISH:
-            esp_task_wdt_reset();
-            printf("HTTP_EVENT_ON_DATA-kompletni-data\n");
-             if (output_buffer != NULL) {
-                printf("Prijata data: %.*s\n", output_len, (char *)output_buffer);
-                
-             for (char *p = strtok(output_buffer,","); p != NULL; p = strtok(NULL, ","))
-    {
-     printf( "parse: %s\n", p );
-     if (sscanf(p, "{\"access_token\":\"%s",temp)) 
-     {
-        temp[strlen(temp)-1] = '\0';
-        printf("SFSCAN: %s\n", temp);
-     }
-
-        
-
-    }
-
-
-
-
-
-
-
-                
-                free(output_buffer);
-                output_buffer = NULL;
+        esp_task_wdt_reset();
+        printf("HTTP_EVENT_ON_FINISH\n");
+         if (output_buffer != NULL) 
+         {
+            for (char *p = strtok(output_buffer,","); p != NULL; p = strtok(NULL, ","))
+            {
+                printf( "parse: %s\n", p );
+                if (sscanf(p, "{\"access_token\":\"%s",temp)) 
+                {
+                    temp[strlen(temp)-1] = '\0';
+                    printf("TOKEN VYPARSOVAN: %s\n", temp);
+                }
+              /*  if (sscanf(p, "{\"access_token\":\"%s",temp)) 
+                {
+                    temp[strlen(temp)-1] = '\0';
+                    printf("TOKEN VYPARSOVAN: %s\n", temp);
+                }
+*/
             }
-            output_len = 0;
-            break;
+            free(output_buffer);
+            output_buffer = NULL;
+        }
+        output_len = 0;
+        break;
     
 
     default:
@@ -389,27 +383,19 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
 
 static void client_get_function(int type_of_req)
 {
-int temp_groupID=224;
-char url_temp[150];
-char header_temp[2100];
-sprintf(header_temp,"Bearer %s",temp);
-printf("header_temp: %s\n", header_temp);
+    int temp_groupID=224;
+    char url_temp[150];
+    char header_temp[2100];
+    sprintf(header_temp,"Bearer %s",temp);
+    //printf("header_temp: %s\n", header_temp);
 
-if(type_of_req==GET_NUMBER_DEVS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/groups/number?systemId=%d",nvs_struct.systemID);
-if(type_of_req==GET_GROUPS) sprintf(url_temp,"https://stage6.api.logimic.online/kpi/get/groupsExt?systemId=%d",nvs_struct.systemID);
-if(type_of_req==GET_SENSORS_VALUES) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/devices?systemId=%d&groupId=%d&verbosity=parameterTypeEnums",nvs_struct.systemID,temp_groupID);
-if(type_of_req==GET_SENSORS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/deviceModels");
+    if(type_of_req==GET_NUMBER_DEVS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/groups/number?systemId=%d",nvs_struct.systemID);
+    if(type_of_req==GET_GROUPS) sprintf(url_temp,"https://stage6.api.logimic.online/kpi/get/groupsExt?systemId=%d",nvs_struct.systemID);
+    if(type_of_req==GET_SENSORS_VALUES) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/devices?systemId=%d&groupId=%d&verbosity=parameterTypeEnums",nvs_struct.systemID,temp_groupID);
+    if(type_of_req==GET_SENSORS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/deviceModels");
 
-//https://stage6.api.logimic.online/deviceModel/get/deviceModels
-
-//https://stage6.api.logimic.online/deviceModel/get/devices?systemId=129&groupId=103&verbosity=parameterTypeEnums
-
-esp_http_client_config_t clientConfig = {
-    //.url = "https://worldtimeapi.org/api/timezone/Europe/London/",
-     .url=url_temp,
-     //.url = "https://stage6.api.logimic.online/kpi/get/groupsAlertSummary?systemId=129",
-    //.url = "http://httpbin.org/post",
-     //.url = "https://www.google.com",
+    esp_http_client_config_t clientConfig = {
+      .url=url_temp,
       .buffer_size_tx = 8192,
       .transport_type = HTTP_TRANSPORT_OVER_SSL,  //Specify transport type
       .crt_bundle_attach = esp_crt_bundle_attach, //Attach the certificate bundle 
@@ -423,7 +409,7 @@ esp_http_client_config_t clientConfig = {
     esp_http_client_set_header(client, "Content-Type", "application/json");
     esp_http_client_set_header(client, "conname", "iTemp2"); 
     esp_http_client_set_header(client, "Connection", "close");
-esp_task_wdt_reset();
+    esp_task_wdt_reset();
     esp_http_client_perform(client);
     esp_http_client_cleanup(client);
 
