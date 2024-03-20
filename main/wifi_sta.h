@@ -21,16 +21,19 @@
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
+extern int parsing_poiter;
 extern char token[1536];
 extern struct NVS_Data nvs_struct;
 extern RingbufHandle_t xRingbuffer;
+extern int parsing_pointer;
 #define MAX_HTTP_RECV_BUFFER 512
 #define MAX_HTTP_OUTPUT_BUFFER 4096
 
-#define GET_NUMBER_DEVS 0
-#define GET_GROUPS 1
-#define GET_SENSORS 3
-#define GET_SENSORS_VALUES 2
+#define TOKEN 0
+#define GET_NUMBER_DEVS 1
+#define GET_GROUPS 2
+#define GET_SENSORS 4
+#define GET_SENSORS_VALUES 3
 
 static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
 void wifi_init_sta(void);

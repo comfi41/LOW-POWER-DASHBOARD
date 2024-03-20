@@ -92,3 +92,58 @@ for (int i = 0; i < noOfRecords; i++)
   }
   
 }
+
+void parser(char *input_buffer)
+{
+	int number;
+	float number_float;
+	char buffer[250];
+
+				printf( "INPUT: %s\n", input_buffer);
+
+	            for (char *p = strtok(input_buffer,","); p != NULL; p = strtok(NULL, ","))
+            	{
+            		//parsovani tokenu
+            	    //printf( "parse: %s\n", p );
+                	if ((sscanf(p, "{\"access_token\":\"%s",token))&&(parsing_pointer==TOKEN)) 
+                	{
+                    	token[strlen(token)-1] = '\0';
+                    	printf("TOKEN VYPARSOVAN: %s\n", token);
+                	}
+                	
+                	//parsovani poctu grup a senzoru
+                	if((*p >= '0' && *p <= '9')&&(parsing_pointer=GET_NUMBER_DEVS))
+                	{
+  						if (sscanf(p, "%d", &number) == 1) printf("VYPARSOVANO CISLO: %d\n", number);
+                	}
+
+                	//parsovani ID a nazvu grup
+                	if (((sscanf(p, "{\"id\":%d",&number))||(sscanf(p, "[{\"id\":%d",&number)))&&(parsing_pointer==GET_GROUPS)) printf("VYPARSOVANO ID GRUPY: %d\n", number);
+                	if (sscanf(p, "\"name\":\"%[^\t\n]",buffer))
+                	{
+                		buffer[strlen(buffer)-1] = '\0';
+                    	printf("VYPARSOVANO NAME GRUPY: %s\n", buffer);
+                	}
+
+                	//parsovani dat ze senzoru
+                	if (((sscanf(p, "{\"id\":%d",&number))||(sscanf(p, "[{\"id\":%d",&number)))&&(parsing_pointer==GET_SENSORS_VALUES)) printf("VYPARSOVANO ID SENZORU: %d\n", number);
+                	if (sscanf(p, "\"deviceName\":\"%[^\t\n]",buffer))
+                	{
+                		buffer[strlen(buffer)-1] = '\0';
+                    	printf("VYPARSOVANO DEVICE NAME: %s\n", buffer);
+                	}
+                	if (sscanf(p, "\"label\":\"%[^\t\n]",buffer))
+                	{
+                		buffer[strlen(buffer)-1] = '\0';
+                    	printf("VYPARSOVANO LABEL OF PARAM: %s\n", buffer);
+                	}
+                	if (sscanf(p, "\"value\":%f",&number_float)) printf("VYPARSOVANO VALUE: %.2f\n", number_float);
+                	
+                	if (sscanf(p, "\"unit\":\"%[^\t\n]",buffer))
+                	{
+                		buffer[strlen(buffer)-1] = '\0';
+                    	printf("VYPARSOVANO UNIT OF PARAM: %s\n", buffer);
+                	}
+                	
+                }
+}

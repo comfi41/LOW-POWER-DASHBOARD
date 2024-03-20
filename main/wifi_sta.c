@@ -30,6 +30,7 @@
 #include "esp_sleep.h"
 #include "esp_sntp.h"
 #include "get_sntp.h"
+#include "data_processing.h"
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
@@ -110,15 +111,19 @@ void wifi_init_sta(void)
 
         esp_task_wdt_add(NULL); 
         esp_task_wdt_reset();
+        parsing_pointer=TOKEN;
         client_post_function();
         esp_task_wdt_reset();
-        client_get_function(0);
+        parsing_pointer=GET_NUMBER_DEVS;
+        client_get_function(parsing_pointer);
         esp_task_wdt_reset();
-        client_get_function(1);
+        parsing_pointer=GET_GROUPS;
+        client_get_function(parsing_pointer);
          esp_task_wdt_reset();
-        client_get_function(2);
+         parsing_pointer=GET_SENSORS_VALUES;
+        client_get_function(parsing_pointer);
         esp_task_wdt_reset();
-        client_get_function(3);
+        //client_get_function(3);
                 
         get_time_sntp();
         header();
@@ -201,24 +206,12 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
         break;
     case HTTP_EVENT_ON_FINISH:
         esp_task_wdt_reset();
+        memcpy(output_buffer + output_len, "\0", 1);
+        //(output_buffer+1+output_len)='\0';
         printf("HTTP_EVENT_ON_FINISH\n");
          if (output_buffer != NULL) 
          {
-            for (char *p = strtok(output_buffer,","); p != NULL; p = strtok(NULL, ","))
-            {
-                printf( "parse: %s\n", p );
-                if (sscanf(p, "{\"access_token\":\"%s",token)) 
-                {
-                    token[strlen(token)-1] = '\0';
-                    printf("TOKEN VYPARSOVAN: %s\n", token);
-                }
-              /*  if (sscanf(p, "{\"access_token\":\"%s",temp)) 
-                {
-                    temp[strlen(temp)-1] = '\0';
-                    printf("TOKEN VYPARSOVAN: %s\n", temp);
-                }
-*/
-            }
+            parser(output_buffer);
             free(output_buffer);
             output_buffer = NULL;
         }
@@ -236,7 +229,7 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
 
 static void client_get_function(int type_of_req)
 {
-    int temp_groupID=224;
+    int temp_groupID=103;
     char url_temp[150];
     char header_temp[2100];
     sprintf(header_temp,"Bearer %s",token);

@@ -31,6 +31,7 @@
     #define ADC_BAT_MEAS ADC1_CHANNEL_4
 
     char token[1536]; //max parsed token size 1,5kB
+    int parsing_pointer;
     
     
     static esp_adc_cal_characteristics_t adc1_chars;

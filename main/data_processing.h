@@ -32,7 +32,8 @@ char name_param[50];
 char unit_param[50];
 };
 	void temporary_structure_initializer(void);
-
+	void parser(char *input_buffer);
 	extern struct Group_Data *group_struct;
     extern struct Sensor_Data *sensor_struct;
     extern struct Sensor_history_Data *history_struct;
+    extern int parsing_pointer;
