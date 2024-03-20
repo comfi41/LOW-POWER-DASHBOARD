@@ -17,9 +17,10 @@
 #include "sleep.h"
 #include "wifi_ap.h"
 #include "wifi_sta.h"
+#include "data_processing.h"
 #include "freertos/event_groups.h"
 #include "freertos/ringbuf.h"
-
+#include "esp_sntp.h"
 
     #define BUTT_OK GPIO_NUM_33
     #define BUTT_UP GPIO_NUM_22
@@ -29,11 +30,14 @@
     #define CHRG_S2 GPIO_NUM_35
     #define ADC_BAT_MEAS ADC1_CHANNEL_4
 
-    char temp[2000];
+    char token[1536]; //max parsed token size 1,5kB
     
     
     static esp_adc_cal_characteristics_t adc1_chars;
     struct NVS_Data nvs_struct;
+    struct Group_Data *group_struct;
+    struct Sensor_Data *sensor_struct;
+    struct Sensor_history_Data *history_struct;
     RingbufHandle_t xRingbuffer;
     spi_device_handle_t spi2;
 

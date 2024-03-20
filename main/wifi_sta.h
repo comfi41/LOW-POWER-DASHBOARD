@@ -21,7 +21,7 @@
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
-extern char temp[2000];
+extern char token[1536];
 extern struct NVS_Data nvs_struct;
 extern RingbufHandle_t xRingbuffer;
 #define MAX_HTTP_RECV_BUFFER 512

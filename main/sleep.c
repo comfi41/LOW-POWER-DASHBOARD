@@ -17,6 +17,7 @@
 #include "epd.h"
 #include "wifi_ap.h"
 #include "wifi_sta.h"
+#include "data_processing.h"
 
 void low_pwr_deepsleep(int refresh_time)
 {
@@ -37,6 +38,7 @@ void low_pwr_deepsleep(int refresh_time)
         case ESP_SLEEP_WAKEUP_TIMER: {
             printf("Wake up from timer.\n");
             printf("ESP_WIFI_MODE_STA\n");
+            temporary_structure_initializer();
             wifi_init_sta();
             //odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
             //wifi_init_softap();
@@ -50,6 +52,7 @@ void low_pwr_deepsleep(int refresh_time)
         default:
             printf("Not a deep sleep reset\n");
             printf("ESP_WIFI_MODE_STA\n");
+            temporary_structure_initializer();
             wifi_init_sta();
             // odkomentovat při rozbité nvflash a zakomentovat wifi_init_sta();
             //wifi_init_softap();
@@ -58,7 +61,12 @@ void low_pwr_deepsleep(int refresh_time)
 
     if(reset_enable)
     {
-    
+
+    free(group_struct);
+    free(sensor_struct);
+    free(history_struct);
+
+
     const int wakeup_time_sec = refresh_time;
     printf("Enabling timer wakeup, %ds\n", wakeup_time_sec);
     esp_sleep_enable_timer_wakeup(wakeup_time_sec * 1000000);
