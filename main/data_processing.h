@@ -26,7 +26,7 @@ char unit_params[20][50];
 struct Sensor_history_Data{
 int sensor_id;
 int number_of_records;
-int values[50];
+double values[50];
 int time[50]; //zatim fakt nevim
 char name_param[50];
 char unit_param[50];
