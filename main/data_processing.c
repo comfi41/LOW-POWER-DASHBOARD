@@ -87,7 +87,7 @@ for (int i = 0; i < noOfRecords; i++)
   for (int i = 0; i < noOfRecords; i++) {
     printf("ID senzoru:%d\nDelka zaznamu:%d\n", (history_struct+i)->sensor_id, (history_struct+i)->number_of_records);
   printf("Data zaznam dat c.:%d\n",i); 
-  for (int x = 0; x < (history_struct+i)->number_of_records; x++) printf("Cas:%d, Hodnota: %f\n",(history_struct+i)->time[x],(history_struct+i)->values[x]);	
+  for (int x = 0; x < (history_struct+i)->number_of_records; x++) printf("Cas:%d, Hodnota: %d\n",(history_struct+i)->time[x],(history_struct+i)->values[x]);	
   if((history_struct+i)->number_of_records) printf("Nazev veliciny: %s, Jednotka: %s\n",(history_struct+i)->name_param,(history_struct+i)->unit_param);
   }
   
