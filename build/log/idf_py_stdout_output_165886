@@ -1,0 +1,916 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a12ch (237868) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a154 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a164 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e9d8 vaddr=40080000 size=01640h (  5696) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf50h (708432) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf78 vaddr=40081640 size=16630h ( 91696) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=001135b0 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  843393adc...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (618) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (768) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (778) wifi:enable tsf
+[0;32mI (778) wifi station: wifi_init_sta finished.[0m
+I (788) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (788) wifi:state: init -> auth (b0)
+I (798) wifi:state: auth -> init (1c0)
+I (798) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (798) wifi station: retry to connect to the AP[0m
+[0;32mI (798) wifi station: connect to the AP fail[0m
+[0;32mI (3218) wifi station: retry to connect to the AP[0m
+[0;32mI (3218) wifi station: connect to the AP fail[0m
+I (3218) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3218) wifi:state: init -> auth (b0)
+I (3228) wifi:state: auth -> assoc (0)
+I (3238) wifi:state: assoc -> run (10)
+I (3278) wifi:connected with Galaxy, aid = 30, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (3278) wifi:security: WPA2-PSK, phy: bgn, rssi: -27
+I (3288) wifi:pm start, type: 1
+
+I (3328) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4288) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (4288) wifi station: got ip:192.168.110.178[0m
+[0;32mI (4288) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (4358) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (4968) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MjA2NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4NDY3LCJpYXQiOjE3MTA4ODIwNjcsInZlcnNpb24iOjIsImp0aSI6ImNlY2M4ODdmLWNjM2QtNDFlNC04MmM0LTZmMWVlNWFhZjJjNCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q_i_HLQMO7j-v7QCT5VAZbVPsP8R01mH-5OSf6rvMsD9rn218ECICd1Z5K5YbB62Erbq98dA-Wc_IZLbP1g07sJqfa7NXIfrnjpJm2xKB-JcrhpoLZcGz7E0-f1NurcY5mvsVjIjQmdeS_jgEMcAzZ6B2vzEHPMw_IIqxsYjNKpfJD-Fa6a0aucBQo4ld8E0iaH9e2F0aOZRSuv4R6hyzW0JKyUsYDyIEyF0fWqttUucfmoodk6h07xezrbslXRcIjQm4NBemC-drfdURbWgoOzGjxHrEBpFzZ-hs8uscZhjnjz_CFGdwOBrltcUMvPvscRnSsp_1YPhvsNc9tIdoA","expires_in":86400,"token_type":"Bearer"}
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MjA2NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4NDY3LCJpYXQiOjE3MTA4ODIwNjcsInZlcnNpb24iOjIsImp0aSI6ImNlY2M4ODdmLWNjM2QtNDFlNC04MmM0LTZmMWVlNWFhZjJjNCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q_i_HLQMO7j-v7QCT5VAZbVPsP8R01mH-5OSf6rvMsD9rn218ECICd1Z5K5YbB62Erbq98dA-Wc_IZLbP1g07sJqfa7NXIfrnjpJm2xKB-JcrhpoLZcGz7E0-f1NurcY5mvsVjIjQmdeS_jgEMcAzZ6B2vzEHPMw_IIqxsYjNKpfJD-Fa6a0aucBQo4ld8E0iaH9e2F0aOZRSuv4R6hyzW0JKyUsYDyIEyF0fWqttUucfmoodk6h07xezrbslXRcIjQm4NBemC-drfdURbWgoOzGjxHrEBpFzZ-hs8uscZhjnjz_CFGdwOBrltcUMvPvscRnSsp_1YPhvsNc9tIdoA"
+SFSCAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MjA2NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4NDY3LCJpYXQiOjE3MTA4ODIwNjcsInZlcnNpb24iOjIsImp0aSI6ImNlY2M4ODdmLWNjM2QtNDFlNC04MmM0LTZmMWVlNWFhZjJjNCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q_i_HLQMO7j-v7QCT5VAZbVPsP8R01mH-5OSf6rvMsD9rn218ECICd1Z5K5YbB62Erbq98dA-Wc_IZLbP1g07sJqfa7NXIfrnjpJm2xKB-JcrhpoLZcGz7E0-f1NurcY5mvsVjIjQmdeS_jgEMcAzZ6B2vzEHPMw_IIqxsYjNKpfJD-Fa6a0aucBQo4ld8E0iaH9e2F0aOZRSuv4R6hyzW0JKyUsYDyIEyF0fWqttUucfmoodk6h07xezrbslXRcIjQm4NBemC-drfdURbWgoOzGjxHrEBpFzZ-hs8uscZhjnjz_CFGdwOBrltcUMvPvscRnSsp_1YPhvsNc9tIdoA
+parse: "expires_in":86400
+parse: "token_type":"Bearer"}~(�#�P�_��T��Һthvɤ1g���b#�?�`�BV���%��y�������#u�)"3��r+��#��Z���?6����f����ٱO�C�?
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MjA2NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4NDY3LCJpYXQiOjE3MTA4ODIwNjcsInZlcnNpb24iOjIsImp0aSI6ImNlY2M4ODdmLWNjM2QtNDFlNC04MmM0LTZmMWVlNWFhZjJjNCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q_i_HLQMO7j-v7QCT5VAZbVPsP8R01mH-5OSf6rvMsD9rn218ECICd1Z5K5YbB62Erbq98dA-Wc_IZLbP1g07sJqfa7NXIfrnjpJm2xKB-JcrhpoLZcGz7E0-f1NurcY5mvsVjIjQmdeS_jgEMcAzZ6B2vzEHPMw_IIqxsYjNKpfJD-Fa6a0aucBQo4ld8E0iaH9e2F0aOZRSuv4R6hyzW0JKyUsYDyIEyF0fWqttUucfmoodk6h07xezrbslXRcIjQm4NBemC-drfdURbWgoOzGjxHrEBpFzZ-hs8uscZhjnjz_CFGdwOBrltcUMvPvscRnSsp_1YPhvsNc9tIdoA
+[0;32mI (7428) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: 23
+parse: 23�?4��?
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MjA2NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4NDY3LCJpYXQiOjE3MTA4ODIwNjcsInZlcnNpb24iOjIsImp0aSI6ImNlY2M4ODdmLWNjM2QtNDFlNC04MmM0LTZmMWVlNWFhZjJjNCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q_i_HLQMO7j-v7QCT5VAZbVPsP8R01mH-5OSf6rvMsD9rn218ECICd1Z5K5YbB62Erbq98dA-Wc_IZLbP1g07sJqfa7NXIfrnjpJm2xKB-JcrhpoLZcGz7E0-f1NurcY5mvsVjIjQmdeS_jgEMcAzZ6B2vzEHPMw_IIqxsYjNKpfJD-Fa6a0aucBQo4ld8E0iaH9e2F0aOZRSuv4R6hyzW0JKyUsYDyIEyF0fWqttUucfmoodk6h07xezrbslXRcIjQm4NBemC-drfdURbWgoOzGjxHrEBpFzZ-hs8uscZhjnjz_CFGdwOBrltcUMvPvscRnSsp_1YPhvsNc9tIdoA
+[0;32mI (9268) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: [{"id":103,"name":"Skleníky","label":"Skleníky","descr":"Skleníky","order":"1","url":"","mnImageId":3,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":173,"name":"Sklep","label":"Sklep","descr":"Sklep","order":"1","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":192,"name":"Goodwe","label":"Goodwe","descr":"Goodwe","order":"2","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":193,"name":"Bruli","label":"Bruli","descr":"Bruli","order":"3","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":194,"name":"Tapo","label":"Tapo","descr":"Tapo","order":"4","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"warning"},{"id":197,"name":"Shelly","label":"Shelly","descr":"Shelly","order":"5","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"warning"},{"id":198,"name":"Solární Boiler","label":"Solární Boiler","descr":"Solární Boiler","order":"6","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":199,"name":"Sensor světla","label":"Sensor světla","descr":"Sensor světla","order":"7","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":200,"name":"Sensor vlhkosti","label":"Sensor vlhkosti","descr":"Sensor vlhkosti","order":"8","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":205,"name":"Intex","label":"Intex","descr":"Intex","order":"9","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":211,"name":"Retenčka","label":"Retenčka","descr":"Retenčka","order":"10","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":214,"name":"Teplotní 3čidlo","label":"Teplotní 3čidlo","descr":"Teplotní 3čidlo","order":"11","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":215,"name":"Světlo","label":"Světlo","descr":"Světlo","order":"12","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"ok"},{"id":220,"name":"Air quality","label":"Air quality","descr":"Air quality","order":"13","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":221,"name":"Kuchyň","label":"Kuchyň","descr":"Kuchyň","order":"14","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":222,"name":"Smart water/gas valve","label":"Smart water/gas valve","descr":"Smart water/gas valve","order":"15","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":223,"name":"Zighbee router","label":"Zighbee router","descr":"Zighbee router","order":"16","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":224,"name":"Vlhkost půdy","label":"Vlhkost půdy","descr":"Vlhkost půdy","order":"17","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":225,"name":"Radiátory","label":"Radiátory","descr":"Radiátory","order":"18","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":226,"name":"Kouř","label":"Kouř","descr":"Kouř","order":"19","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":227,"name":"Prodlužky","label":"Prodlužky","descr":"Prodlužky","order":"20","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":228,"name":"Dveře","label":"Dveře","descr":"Dveře","order":"21","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":230,"name":"Meteo Stanice","label":"Meteo Stanice","descr":"Meteo Stanice","order":"22","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"}]
+parse: [{"id":103
+parse: "name":"Skleníky"
+parse: "label":"Skleníky"
+parse: "descr":"Skleníky"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":3
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":173
+parse: "name":"Sklep"
+parse: "label":"Sklep"
+parse: "descr":"Sklep"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":192
+parse: "name":"Goodwe"
+parse: "label":"Goodwe"
+parse: "descr":"Goodwe"
+parse: "order":"2"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":193
+parse: "name":"Bruli"
+parse: "label":"Bruli"
+parse: "descr":"Bruli"
+parse: "order":"3"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":194
+parse: "name":"Tapo"
+parse: "label":"Tapo"
+parse: "descr":"Tapo"
+parse: "order":"4"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":197
+parse: "name":"Shelly"
+parse: "label":"Shelly"
+parse: "descr":"Shelly"
+parse: "order":"5"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":198
+parse: "name":"Solární Boiler"
+parse: "label":"Solární Boiler"
+parse: "descr":"Solární Boiler"
+parse: "order":"6"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":199
+parse: "name":"Sensor světla"
+parse: "label":"Sensor světla"
+parse: "descr":"Sensor světla"
+parse: "order":"7"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":200
+parse: "name":"Sensor vlhkosti"
+parse: "label":"Sensor vlhkosti"
+parse: "descr":"Sensor vlhkosti"
+parse: "order":"8"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":205
+parse: "name":"Intex"
+parse: "label":"Intex"
+parse: "descr":"Intex"
+parse: "order":"9"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":211
+parse: "name":"Retenčka"
+parse: "label":"Retenčka"
+parse: "descr":"Retenčka"
+parse: "order":"10"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":214
+parse: "name":"Teplotní 3čidlo"
+parse: "label":"Teplotní 3čidlo"
+parse: "descr":"Teplotní 3čidlo"
+parse: "order":"11"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":215
+parse: "name":"Světlo"
+parse: "label":"Světlo"
+parse: "descr":"Světlo"
+parse: "order":"12"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"ok"}
+parse: {"id":220
+parse: "name":"Air quality"
+parse: "label":"Air quality"
+parse: "descr":"Air quality"
+parse: "order":"13"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":221
+parse: "name":"Kuchyň"
+parse: "label":"Kuchyň"
+parse: "descr":"Kuchyň"
+parse: "order":"14"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":222
+parse: "name":"Smart water/gas valve"
+parse: "label":"Smart water/gas valve"
+parse: "descr":"Smart water/gas valve"
+parse: "order":"15"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":223
+parse: "name":"Zighbee router"
+parse: "label":"Zighbee router"
+parse: "descr":"Zighbee router"
+parse: "order":"16"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":224
+parse: "name":"Vlhkost půdy"
+parse: "label":"Vlhkost půdy"
+parse: "descr":"Vlhkost půdy"
+parse: "order":"17"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":225
+parse: "name":"Radiátory"
+parse: "label":"Radiátory"
+parse: "descr":"Radiátory"
+parse: "order":"18"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":226
+parse: "name":"Kouř"
+parse: "label":"Kouř"
+parse: "descr":"Kouř"
+parse: "order":"19"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":227
+parse: "name":"Prodlužky"
+parse: "label":"Prodlužky"
+parse: "descr":"Prodlužky"
+parse: "order":"20"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":228
+parse: "name":"Dveře"
+parse: "label":"Dveře"
+parse: "descr":"Dveře"
+parse: "order":"21"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":230
+parse: "name":"Meteo Stanice"
+parse: "label":"Meteo Stanice"
+parse: "descr":"Meteo Stanice"
+parse: "order":"22"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}]���z��J���6N��a�R�Zm��aW�È�.y_�h�
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MjA2NywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4NDY3LCJpYXQiOjE3MTA4ODIwNjcsInZlcnNpb24iOjIsImp0aSI6ImNlY2M4ODdmLWNjM2QtNDFlNC04MmM0LTZmMWVlNWFhZjJjNCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q_i_HLQMO7j-v7QCT5VAZbVPsP8R01mH-5OSf6rvMsD9rn218ECICd1Z5K5YbB62Erbq98dA-Wc_IZLbP1g07sJqfa7NXIfrnjpJm2xKB-JcrhpoLZcGz7E0-f1NurcY5mvsVjIjQmdeS_jgEMcAzZ6B2vzEHPMw_IIqxsYjNKpfJD-Fa6a0aucBQo4ld8E0iaH9e2F0aOZRSuv4R6hyzW0JKyUsYDyIEyF0fWqttUucfmoodk6h07xezrbslXRcIjQm4NBemC-drfdURbWgoOzGjxHrEBpFzZ-hs8uscZhjnjz_CFGdwOBrltcUMvPvscRnSsp_1YPhvsNc9tIdoA
+[0;32mI (12348) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: [{"id":5271,"mnSystemId":129,"mnDeviceModelId":2,"deviceUid":"8CF95740000030E9","deviceName":"Greenhouse","defaultName":0,"customerName":"","street":"","city":"","zip":"","district":"","state":"","route":"","location":"","grouping":"","locDetails":"","descr":"","mqttTopic":"lgmcChirpstack/Chirpstack4/2/device/8cf95740000030e9/event/up","mqttTs":"1710881832","position":{},"entryPosition":{},"parameterValues":[{"id":2725,"devParName":"last_alert","label":"---","mnParameterId":106,"value":0,"mnParameter":{"id":106,"devParName":"last_alert","unit":"","unitImp":"","descr":"last_alert","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":2732,"devParName":"signal","label":"Signál","mnParameterId":107,"lastUpdateTs":"2024-03-19T20:57:12.420Z","value":-90,"mnParameter":{"id":107,"devParName":"signal","unit":"","unitImp":"","descr":"Signal","label":"Signál","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":107,"mnParameterType":{"id":107,"parTypName":"rssi","dataType":"number","maxVal":0,"minVal":0,"stepVal":0}}},{"id":2735,"devParName":"tmp_max_triggered","label":"---","mnParameterId":105,"value":0,"mnParameter":{"id":105,"devParName":"tmp_max_triggered","unit":"","unitImp":"","descr":"tmp_max_triggered","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":2726,"devParName":"tmp_min_triggered","label":"---","mnParameterId":104,"value":0,"mnParameter":{"id":104,"devParName":"tmp_min_triggered","unit":"","unitImp":"","descr":"tmp_min_triggered","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":109,"mnParameterType":{"id":109,"parTypName":"number","dataType":"number","maxVal":0,"minVal":0,"stepVal":0.01}}},{"id":2728,"devParName":"batLifeProjection","label":"---","mnParameterId":18,"mnParameter":{"id":18,"devParName":"batLifeProjection","unit":"year","unitImp":"","descr":"Battery Life projection","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":9,"mnParameterType":{"id":9,"parTypName":"battery_life_projection","dataType":"enum","enumItems":[{"id":90,"code":0,"value":"1","label":"1"},{"id":91,"code":1,"value":"5","label":"5"},{"id":92,"code":3,"value":"10","label":"10"}]}}},{"id":2739,"devParName":"batPerDev","label":"---","mnParameterId":16,"mnParameter":{"id":16,"devParName":"batPerDev","unit":"","unitImp":"","descr":"Batteries per Device","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":7,"mnParameterType":{"id":7,"parTypName":"battery_per_device","dataType":"enum","enumItems":[{"id":70,"code":0,"value":"1","label":"1"},{"id":71,"code":1,"value":"2","label":"2"},{"id":72,"code":2,"value":"3","label":"3"},{"id":73,"code":3,"value":"4","label":"4"},{"id":74,"code":4,"value":"5","label":"5"}]}}},{"id":2729,"devParName":"batReplaceable","label":"Battery replaceable","mnParameterId":17,"mnParameter":{"id":17,"devParName":"batReplaceable","unit":"","unitImp":"","descr":"Replaceable battery","label":"Battery replaceable","visibility":2,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":8,"mnParameterType":{"id":8,"parTypName":"decision","dataType":"enum","enumItems":[{"id":80,"code":0,"value":"no","label":"no"},{"id":81,"code":1,"value":"yes","label":"yes"}]}}},{"id":2730,"devParName":"batSize","label":"---","mnParameterId":15,"mnParameter":{"id":15,"devParName":"batSize","unit":"","unitImp":"","descr":"Battery Size","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":6,"mnParameterType":{"id":6,"parTypName":"battery_size","dataType":"enum","enumItems":[{"id":60,"code":0,"value":"AA","label":"AA"},{"id":61,"code":1,"value":"AAA","label":"AAA"},{"id":62,"code":2,"value":"C","label":"C"},{"id":63,"code":3,"value":"D","label":"D"}]}}},{"id":2736,"devParName":"battery","label":"Baterie","mnParameterId":1,"lastUpdateTs":"2024-03-19T20:57:12.420Z","value":3.45,"mnParameter":{"id":1,"devParName":"battery","unit":"V","unitImp":"","descr":"Battery voltage","label":"Baterie","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":1,"mnParameterType":{"id":1,"parTypName":"type_battery_3.6","dataType":"number","maxVal":4,"minVal":1,"stepVal":0.1}}},{"id":2737,"devParName":"batType","label":"---","mnParameterId":4,"mnParameter":{"id":4,"devParName":"batType","unit":"","unitImp":"","descr":"Battery Type","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":5,"mnParameterType":{"id":5,"parTypName":"battery_type","dataType":"enum","enumItems":[{"id":50,"code":0,"value":"Lithium Ion","label":"Lithium Ion"},{"id":51,"code":1,"value":"SAFT LSH20","label":"SAFT LSH20"},{"id":203,"code":2,"value":"Other","label":"Other"}]}}},{"id":2731,"devParName":"enableTempMaxCheck","label":"Check Temperature Max","mnParameterId":24,"value":{"id":120,"code":0,"value":"false","label":"false"},"mnParameter":{"id":24,"devParName":"enableTempMaxCheck","unit":"","unitImp":"","descr":"Enable Temperature Max Level Check","label":"Check Temperature Max","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":12,"mnParameterType":{"id":12,"parTypName":"enable","dataType":"enum","enumItems":[{"id":120,"code":0,"value":"false","label":"false"},{"id":121,"code":1,"value":"true","label":"true"}]}}},{"id":2738,"devParName":"enableTempMinCheck","label":"Check Temperature Min","mnParameterId":23,"value":{"id":120,"code":0,"value":"false","label":"false"},"mnParameter":{"id":23,"devParName":"enableTempMinCheck","unit":"","unitImp":"","descr":"Enable Temperature Min Level Check","label":"Check Temperature Min","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":12,"mnParameterType":{"id":12,"parTypName":"enable","dataType":"enum","enumItems":[{"id":120,"code":0,"value":"false","label":"false"},{"id":121,"code":1,"value":"true","label":"true"}]}}},{"id":2724,"devParName":"envRating","label":"---","mnParameterId":20,"mnParameter":{"id":20,"devParName":"envRating","unit":"","unitImp":"","descr":"Environmental rating","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":13,"mnParameterType":{"id":13,"parTypName":"env_rating","dataType":"enum","enumItems":[{"id":130,"code":0,"value":"IP67","label":"IP67"},{"id":131,"code":1,"value":"IP68","label":"IP68"},{"id":132,"code":2,"value":"IP6x","label":"IP6x"}]}}},{"id":2741,"devParName":"humidity","label":"Vlhkost","mnParameterId":3,"lastUpdateTs":"2024-03-19T20:57:12.420Z","value":94.58594,"mnParameter":{"id":3,"devParName":"humidity","unit":"%","unitImp":"","descr":"Humidity on sensor","label":"Vlhkost","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":11,"mnParameterType":{"id":11,"parTypName":"humidity","dataType":"number","maxVal":100,"minVal":0,"stepVal":0.01}}},{"id":2733,"devParName":"operTemp","label":"---","mnParameterId":19,"mnParameter":{"id":19,"devParName":"operTemp","unit":"°C","unitImp":"","descr":"Operating temperature","label":"---","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}},{"id":2727,"devParName":"temperature","label":"Teplota","mnParameterId":2,"lastUpdateTs":"2024-03-19T20:57:12.420Z","value":9.108197,"mnParameter":{"id":2,"devParName":"temperature","unit":"°C","unitImp":"","descr":"Temperature on sensor","label":"Teplota","visibility":3,"visibilityCmd":0,"recorded":true,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}},{"id":2740,"devParName":"tempMax","label":"Temperature Max","mnParameterId":7,"value":0,"mnParameter":{"id":7,"devParName":"tempMax","unit":"°C","unitImp":"","descr":"","label":"Temperature Max","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}},{"id":2734,"devParName":"tempMin","label":"Temperature Min","mnParameterId":6,"value":0,"mnParameter":{"id":6,"devParName":"tempMin","unit":"°C","unitImp":"","descr":"","label":"Temperature Min","visibility":0,"visibilityCmd":0,"recorded":false,"treshold1":0,"treshold2":0,"mnParameterTypeId":4,"mnParameterType":{"id":4,"parTypName":"type_temperature_out","dataType":"number","maxVal":70,"minVal":-70,"stepVal":0.001}}}]}]
+parse: [{"id":5271
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":2
+parse: "deviceUid":"8CF95740000030E9"
+parse: "deviceName":"Greenhouse"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"lgmcChirpstack/Chirpstack4/2/device/8cf95740000030e9/event/up"
+parse: "mqttTs":"1710881832"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":2725
+parse: "devParName":"last_alert"
+parse: "label":"---"
+parse: "mnParameterId":106
+parse: "value":0
+parse: "mnParameter":{"id":106
+parse: "devParName":"last_alert"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"last_alert"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":2732
+parse: "devParName":"signal"
+parse: "label":"Signál"
+parse: "mnParameterId":107
+parse: "lastUpdateTs":"2024-03-19T20:57:12.420Z"
+parse: "value":-90
+parse: "mnParameter":{"id":107
+parse: "devParName":"signal"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Signal"
+parse: "label":"Signál"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":107
+parse: "mnParameterType":{"id":107
+parse: "parTypName":"rssi"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0}}}
+parse: {"id":2735
+parse: "devParName":"tmp_max_triggered"
+parse: "label":"---"
+parse: "mnParameterId":105
+parse: "value":0
+parse: "mnParameter":{"id":105
+parse: "devParName":"tmp_max_triggered"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"tmp_max_triggered"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":2726
+parse: "devParName":"tmp_min_triggered"
+parse: "label":"---"
+parse: "mnParameterId":104
+parse: "value":0
+parse: "mnParameter":{"id":104
+parse: "devParName":"tmp_min_triggered"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"tmp_min_triggered"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":2728
+parse: "devParName":"batLifeProjection"
+parse: "label":"---"
+parse: "mnParameterId":18
+parse: "mnParameter":{"id":18
+parse: "devParName":"batLifeProjection"
+parse: "unit":"year"
+parse: "unitImp":""
+parse: "descr":"Battery Life projection"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":9
+parse: "mnParameterType":{"id":9
+parse: "parTypName":"battery_life_projection"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":90
+parse: "code":0
+parse: "value":"1"
+parse: "label":"1"}
+parse: {"id":91
+parse: "code":1
+parse: "value":"5"
+parse: "label":"5"}
+parse: {"id":92
+parse: "code":3
+parse: "value":"10"
+parse: "label":"10"}]}}}
+parse: {"id":2739
+parse: "devParName":"batPerDev"
+parse: "label":"---"
+parse: "mnParameterId":16
+parse: "mnParameter":{"id":16
+parse: "devParName":"batPerDev"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Batteries per Device"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":7
+parse: "mnParameterType":{"id":7
+parse: "parTypName":"battery_per_device"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":70
+parse: "code":0
+parse: "value":"1"
+parse: "label":"1"}
+parse: {"id":71
+parse: "code":1
+parse: "value":"2"
+parse: "label":"2"}
+parse: {"id":72
+parse: "code":2
+parse: "value":"3"
+parse: "label":"3"}
+parse: {"id":73
+parse: "code":3
+parse: "value":"4"
+parse: "label":"4"}
+parse: {"id":74
+parse: "code":4
+parse: "value":"5"
+parse: "label":"5"}]}}}
+parse: {"id":2729
+parse: "devParName":"batReplaceable"
+parse: "label":"Battery replaceable"
+parse: "mnParameterId":17
+parse: "mnParameter":{"id":17
+parse: "devParName":"batReplaceable"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Replaceable battery"
+parse: "label":"Battery replaceable"
+parse: "visibility":2
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":8
+parse: "mnParameterType":{"id":8
+parse: "parTypName":"decision"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":80
+parse: "code":0
+parse: "value":"no"
+parse: "label":"no"}
+parse: {"id":81
+parse: "code":1
+parse: "value":"yes"
+parse: "label":"yes"}]}}}
+parse: {"id":2730
+parse: "devParName":"batSize"
+parse: "label":"---"
+parse: "mnParameterId":15
+parse: "mnParameter":{"id":15
+parse: "devParName":"batSize"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Battery Size"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":6
+parse: "mnParameterType":{"id":6
+parse: "parTypName":"battery_size"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":60
+parse: "code":0
+parse: "value":"AA"
+parse: "label":"AA"}
+parse: {"id":61
+parse: "code":1
+parse: "value":"AAA"
+parse: "label":"AAA"}
+parse: {"id":62
+parse: "code":2
+parse: "value":"C"
+parse: "label":"C"}
+parse: {"id":63
+parse: "code":3
+parse: "value":"D"
+parse: "label":"D"}]}}}
+parse: {"id":2736
+parse: "devParName":"battery"
+parse: "label":"Baterie"
+parse: "mnParameterId":1
+parse: "lastUpdateTs":"2024-03-19T20:57:12.420Z"
+parse: "value":3.45
+parse: "mnParameter":{"id":1
+parse: "devParName":"battery"
+parse: "unit":"V"
+parse: "unitImp":""
+parse: "descr":"Battery voltage"
+parse: "label":"Baterie"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":1
+parse: "mnParameterType":{"id":1
+parse: "parTypName":"type_battery_3.6"
+parse: "dataType":"number"
+parse: "maxVal":4
+parse: "minVal":1
+parse: "stepVal":0.1}}}
+parse: {"id":2737
+parse: "devParName":"batType"
+parse: "label":"---"
+parse: "mnParameterId":4
+parse: "mnParameter":{"id":4
+parse: "devParName":"batType"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Battery Type"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":5
+parse: "mnParameterType":{"id":5
+parse: "parTypName":"battery_type"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":50
+parse: "code":0
+parse: "value":"Lithium Ion"
+parse: "label":"Lithium Ion"}
+parse: {"id":51
+parse: "code":1
+parse: "value":"SAFT LSH20"
+parse: "label":"SAFT LSH20"}
+parse: {"id":203
+parse: "code":2
+parse: "value":"Other"
+parse: "label":"Other"}]}}}
+parse: {"id":2731
+parse: "devParName":"enableTempMaxCheck"
+parse: "label":"Check Temperature Max"
+parse: "mnParameterId":24
+parse: "value":{"id":120
+parse: "code":0
+parse: "value":"false"
+parse: "label":"false"}
+parse: "mnParameter":{"id":24
+parse: "devParName":"enableTempMaxCheck"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Enable Temperature Max Level Check"
+parse: "label":"Check Temperature Max"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":12
+parse: "mnParameterType":{"id":12
+parse: "parTypName":"enable"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":120
+parse: "code":0
+parse: "value":"false"
+parse: "label":"false"}
+parse: {"id":121
+parse: "code":1
+parse: "value":"true"
+parse: "label":"true"}]}}}
+parse: {"id":2738
+parse: "devParName":"enableTempMinCheck"
+parse: "label":"Check Temperature Min"
+parse: "mnParameterId":23
+parse: "value":{"id":120
+parse: "code":0
+parse: "value":"false"
+parse: "label":"false"}
+parse: "mnParameter":{"id":23
+parse: "devParName":"enableTempMinCheck"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Enable Temperature Min Level Check"
+parse: "label":"Check Temperature Min"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":12
+parse: "mnParameterType":{"id":12
+parse: "parTypName":"enable"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":120
+parse: "code":0
+parse: "value":"false"
+parse: "label":"false"}
+parse: {"id":121
+parse: "code":1
+parse: "value":"true"
+parse: "label":"true"}]}}}
+parse: {"id":2724
+parse: "devParName":"envRating"
+parse: "label":"---"
+parse: "mnParameterId":20
+parse: "mnParameter":{"id":20
+parse: "devParName":"envRating"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Environmental rating"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":13
+parse: "mnParameterType":{"id":13
+parse: "parTypName":"env_rating"
+parse: "dataType":"enum"
+parse: "enumItems":[{"id":130
+parse: "code":0
+parse: "value":"IP67"
+parse: "label":"IP67"}
+parse: {"id":131
+parse: "code":1
+parse: "value":"IP68"
+parse: "label":"IP68"}
+parse: {"id":132
+parse: "code":2
+parse: "value":"IP6x"
+parse: "label":"IP6x"}]}}}
+parse: {"id":2741
+parse: "devParName":"humidity"
+parse: "label":"Vlhkost"
+parse: "mnParameterId":3
+parse: "lastUpdateTs":"2024-03-19T20:57:12.420Z"
+parse: "value":94.58594
+parse: "mnParameter":{"id":3
+parse: "devParName":"humidity"
+parse: "unit":"%"
+parse: "unitImp":""
+parse: "descr":"Humidity on sensor"
+parse: "label":"Vlhkost"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":11
+parse: "mnParameterType":{"id":11
+parse: "parTypName":"humidity"
+parse: "dataType":"number"
+parse: "maxVal":100
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":2733
+parse: "devParName":"operTemp"
+parse: "label":"---"
+parse: "mnParameterId":19
+parse: "mnParameter":{"id":19
+parse: "devParName":"operTemp"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Operating temperature"
+parse: "label":"---"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}
+parse: {"id":2727
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-03-19T20:57:12.420Z"
+parse: "value":9.108197
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}
+parse: {"id":2740
+parse: "devParName":"tempMax"
+parse: "label":"Temperature Max"
+parse: "mnParameterId":7
+parse: "value":0
+parse: "mnParameter":{"id":7
+parse: "devParName":"tempMax"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":""
+parse: "label":"Temperature Max"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}
+parse: {"id":2734
+parse: "devParName":"tempMin"
+parse: "label":"Temperature Min"
+parse: "mnParameterId":6
+parse: "value":0
+parse: "mnParameter":{"id":6
+parse: "devParName":"tempMin"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":""
+parse: "label":"Temperature Min"
+parse: "visibility":0
+parse: "visibilityCmd":0
+parse: "recorded":false
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}]}]>����%��f=�����ȶ�A�~G���Pq<
+Before update NV = 19.03.2024 21:55
+[0;32mI (15648) wifi station: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (15658) wifi station: Initializing SNTP[0m
+[0;32mI (15658) wifi station: Waiting for system time to be set... (1/5)[0m
+[0;32mI (16588) wifi station: Notification of a time synchronization event[0m
+[0;32mI (16668) wifi station: The current date/time in Brno is: 19.03.2024 22:01[0m
+Before update NV 2 = 19.03.2024 21:55
+Current = 19.03.2024 22:01
+Current date and time is = 19.03.2024 22:01
+I (16838) wifi:state: run -> init (0)
+I (16838) wifi:pm stop, total sleep time: 10354384 us / 13551108 us
+
+I (16838) wifi:<ba-del>idx:0, tid:0
+I (16838) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep

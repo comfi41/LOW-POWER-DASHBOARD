@@ -1,0 +1,1029 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a18ch (237964) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a1b4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a1c4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004ea38 vaddr=40080000 size=015e0h (  5600) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acff0h (708592) map[0m
+[0;32mI (324) esp_image: segment 5: paddr=000fd018 vaddr=400815e0 size=16690h ( 91792) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=001136b0 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      210c586-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 20 2024 20:18:47[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  0df24e004...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9C58 len 000263A8 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+Displaying data from structures GROUP:
+0
+Grupa:0
+1073467616
+31
+1
+Grupa:1
+1073467616
+0
+2
+Grupa:2
+1073467616
+2069990405
+3
+Grupa:3
+1073467616
+44430838
+4
+Grupa:4
+1073467616
+-1858200435
+5
+Grupa:5
+1073467616
+1464518723
+6
+Grupa:6
+1073467616
+768304992
+7
+Grupa:7
+1073467616
+1354442588
+8
+Grupa:8
+1073467616
+-201788590
+9
+Grupa:9
+1073467616
+439515733
+I (618) wifi:wifi driver task: 3ffc7b64, prio:23, stack:6656, core=0
+I (638) wifi:wifi firmware version: cb43ccc
+I (638) wifi:wifi certification version: v7.0
+I (638) wifi:config NVS flash: enabled
+I (638) wifi:config nano formating: disabled
+I (648) wifi:Init data frame dynamic rx buffer num: 32
+I (648) wifi:Init static rx mgmt buffer num: 5
+I (658) wifi:Init management short buffer num: 32
+I (658) wifi:Init dynamic tx buffer num: 32
+I (658) wifi:Init static rx buffer size: 1600
+I (668) wifi:Init static rx buffer num: 10
+I (668) wifi:Init dynamic rx buffer num: 32
+[0;32mI (678) wifi_init: rx ba win: 6[0m
+[0;32mI (678) wifi_init: tcpip mbox: 32[0m
+[0;32mI (678) wifi_init: udp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp tx win: 5744[0m
+[0;32mI (688) wifi_init: tcp rx win: 5744[0m
+[0;32mI (698) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (708) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (718) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (798) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (798) wifi:enable tsf
+[0;32mI (808) wifi station: wifi_init_sta finished.[0m
+I (818) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (818) wifi:state: init -> auth (b0)
+I (818) wifi:state: auth -> init (1c0)
+I (828) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (828) wifi station: retry to connect to the AP[0m
+[0;32mI (828) wifi station: connect to the AP fail[0m
+[0;32mI (3238) wifi station: retry to connect to the AP[0m
+[0;32mI (3238) wifi station: connect to the AP fail[0m
+I (3248) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (3248) wifi:state: init -> auth (b0)
+I (3288) wifi:state: auth -> assoc (0)
+I (3298) wifi:state: assoc -> run (10)
+I (3358) wifi:connected with Galaxy, aid = 13, channel 1, BW20, bssid = 96:33:67:ac:1c:a6
+I (3358) wifi:security: WPA2-PSK, phy: bgn, rssi: -15
+I (3358) wifi:pm start, type: 1
+
+I (3408) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4368) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (4368) wifi station: got ip:192.168.110.178[0m
+[0;32mI (4368) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (4398) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (5058) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDk2NDYxMCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzExMDUxMDEwLCJpYXQiOjE3MTA5NjQ2MTAsInZlcnNpb24iOjIsImp0aSI6Ijg2M2ExMTFhLWUzZWYtNDUzNy1hN2JmLWE2NDE0MWIxNDA2NSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.G7PhJfiWry3f64TLFitglFIvzl5v1N6MEeA-NBY30qNd2_n9dHA2MbXiVTQKKmZ8KfFk9gI_lCqVp3CVOMwaNS33Lm9no6Zo21uI3TTms9eZAgcV68tRcuFONcUhWRwLw1vRgGJrxYS2lz0friV9QSaSbw6a_ge6QXbY52aHSHxvxr7Ddu_oRz4VLahcX0c4dP5hQup5FOvKhnb-heNMjZZtk_jy1v6C-ClzAm6po0MYq_J0F7I-zJlzc3h-mySEo1eTfxA0eacWdOO5yLrCICTLYQe2TdsRhPjoic5swOg34AuTh8m9gL7Z7oMQRNwWxP2E37LTz1dXiiCvlXbPdw"
+TOKEN VYPARSOVAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDk2NDYxMCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzExMDUxMDEwLCJpYXQiOjE3MTA5NjQ2MTAsInZlcnNpb24iOjIsImp0aSI6Ijg2M2ExMTFhLWUzZWYtNDUzNy1hN2JmLWE2NDE0MWIxNDA2NSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.G7PhJfiWry3f64TLFitglFIvzl5v1N6MEeA-NBY30qNd2_n9dHA2MbXiVTQKKmZ8KfFk9gI_lCqVp3CVOMwaNS33Lm9no6Zo21uI3TTms9eZAgcV68tRcuFONcUhWRwLw1vRgGJrxYS2lz0friV9QSaSbw6a_ge6QXbY52aHSHxvxr7Ddu_oRz4VLahcX0c4dP5hQup5FOvKhnb-heNMjZZtk_jy1v6C-ClzAm6po0MYq_J0F7I-zJlzc3h-mySEo1eTfxA0eacWdOO5yLrCICTLYQe2TdsRhPjoic5swOg34AuTh8m9gL7Z7oMQRNwWxP2E37LTz1dXiiCvlXbPdw
+parse: "expires_in":86400
+parse: "token_type":"Bearer"}'z5Q��?%����XRV��
+�:���E�fG������/�m�$3������?�b�@��E�
+�D���������[p��
+S�~�?
+[0;32mI (6898) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+parse: 23�?l��?���
+[0;32mI (8738) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+parse: [{"id":103
+parse: "name":"Skleníky"
+parse: "label":"Skleníky"
+parse: "descr":"Skleníky"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":3
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":173
+parse: "name":"Sklep"
+parse: "label":"Sklep"
+parse: "descr":"Sklep"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":192
+parse: "name":"Goodwe"
+parse: "label":"Goodwe"
+parse: "descr":"Goodwe"
+parse: "order":"2"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":193
+parse: "name":"Bruli"
+parse: "label":"Bruli"
+parse: "descr":"Bruli"
+parse: "order":"3"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"ok"}
+parse: {"id":194
+parse: "name":"Tapo"
+parse: "label":"Tapo"
+parse: "descr":"Tapo"
+parse: "order":"4"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":197
+parse: "name":"Shelly"
+parse: "label":"Shelly"
+parse: "descr":"Shelly"
+parse: "order":"5"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":198
+parse: "name":"Solární Boiler"
+parse: "label":"Solární Boiler"
+parse: "descr":"Solární Boiler"
+parse: "order":"6"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":199
+parse: "name":"Sensor světla"
+parse: "label":"Sensor světla"
+parse: "descr":"Sensor světla"
+parse: "order":"7"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":200
+parse: "name":"Sensor vlhkosti"
+parse: "label":"Sensor vlhkosti"
+parse: "descr":"Sensor vlhkosti"
+parse: "order":"8"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":205
+parse: "name":"Intex"
+parse: "label":"Intex"
+parse: "descr":"Intex"
+parse: "order":"9"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":211
+parse: "name":"Retenčka"
+parse: "label":"Retenčka"
+parse: "descr":"Retenčka"
+parse: "order":"10"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":214
+parse: "name":"Teplotní 3čidlo"
+parse: "label":"Teplotní 3čidlo"
+parse: "descr":"Teplotní 3čidlo"
+parse: "order":"11"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":215
+parse: "name":"Světlo"
+parse: "label":"Světlo"
+parse: "descr":"Světlo"
+parse: "order":"12"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"ok"}
+parse: {"id":220
+parse: "name":"Air quality"
+parse: "label":"Air quality"
+parse: "descr":"Air quality"
+parse: "order":"13"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":221
+parse: "name":"Kuchyň"
+parse: "label":"Kuchyň"
+parse: "descr":"Kuchyň"
+parse: "order":"14"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":222
+parse: "name":"Smart water/gas valve"
+parse: "label":"Smart water/gas valve"
+parse: "descr":"Smart water/gas valve"
+parse: "order":"15"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":223
+parse: "name":"Zighbee router"
+parse: "label":"Zighbee router"
+parse: "descr":"Zighbee router"
+parse: "order":"16"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":224
+parse: "name":"Vlhkost půdy"
+parse: "label":"Vlhkost půdy"
+parse: "descr":"Vlhkost půdy"
+parse: "order":"17"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":225
+parse: "name":"Radiátory"
+parse: "label":"Radiátory"
+parse: "descr":"Radiátory"
+parse: "order":"18"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":226
+parse: "name":"Kouř"
+parse: "label":"Kouř"
+parse: "descr":"Kouř"
+parse: "order":"19"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":227
+parse: "name":"Prodlužky"
+parse: "label":"Prodlužky"
+parse: "descr":"Prodlužky"
+parse: "order":"20"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":228
+parse: "name":"Dveře"
+parse: "label":"Dveře"
+parse: "descr":"Dveře"
+parse: "order":"21"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":230
+parse: "name":"Meteo Stanice"
+parse: "label":"Meteo Stanice"
+parse: "descr":"Meteo Stanice"
+parse: "order":"22"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}]
+[0;32mI (10998) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+parse: [{"id":5502
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":132
+parse: "deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c138f673d97eda"
+parse: "deviceName":"Rajčata"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c138f673d97eda/john/ntf"
+parse: "mqttTs":"1707988886"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5415
+parse: "devParName":"linkquality"
+parse: "label":"link quality"
+parse: "mnParameterId":209
+parse: "lastUpdateTs":"2024-02-15T09:21:26.851Z"
+parse: "value":0
+parse: "mnParameter":{"id":209
+parse: "devParName":"linkquality"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"link quality"
+parse: "label":"link quality"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5416
+parse: "devParName":"soil_moisture"
+parse: "label":"soil moisture"
+parse: "mnParameterId":214
+parse: "lastUpdateTs":"2024-02-15T09:21:26.851Z"
+parse: "value":35
+parse: "mnParameter":{"id":214
+parse: "devParName":"soil_moisture"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"soil moisture"
+parse: "label":"soil moisture"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5414
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-02-15T09:21:26.851Z"
+parse: "value":11
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}]}
+parse: {"id":5507
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":132
+parse: "deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c13810b0475f9c"
+parse: "deviceName":"Feferonky"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c13810b0475f9c/john/ntf"
+parse: "mqttTs":"1710368639"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5418
+parse: "devParName":"linkquality"
+parse: "label":"link quality"
+parse: "mnParameterId":209
+parse: "lastUpdateTs":"2024-03-13T22:23:59.661Z"
+parse: "value":94
+parse: "mnParameter":{"id":209
+parse: "devParName":"linkquality"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"link quality"
+parse: "label":"link quality"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5419
+parse: "devParName":"soil_moisture"
+parse: "label":"soil moisture"
+parse: "mnParameterId":214
+parse: "lastUpdateTs":"2024-03-13T22:23:59.661Z"
+parse: "value":0
+parse: "mnParameter":{"id":214
+parse: "devParName":"soil_moisture"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"soil moisture"
+parse: "label":"soil moisture"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5420
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-03-13T22:23:59.661Z"
+parse: "value":21
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}]}
+parse: {"id":5509
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":132
+parse: "deviceUid":"zighbee2mqtt/TS0601_soil/0xa4c138cabafde366"
+parse: "deviceName":"Papriky"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"IotLogimic/dev5/zighbee2mqtt/TS0601_soil/0xa4c138cabafde366/john/ntf"
+parse: "mqttTs":"1705303678"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5422
+parse: "devParName":"linkquality"
+parse: "label":"link quality"
+parse: "mnParameterId":209
+parse: "lastUpdateTs":"2024-01-15T07:27:58.737Z"
+parse: "value":91
+parse: "mnParameter":{"id":209
+parse: "devParName":"linkquality"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"link quality"
+parse: "label":"link quality"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5421
+parse: "devParName":"soil_moisture"
+parse: "label":"soil moisture"
+parse: "mnParameterId":214
+parse: "lastUpdateTs":"2024-01-15T07:27:58.737Z"
+parse: "value":0
+parse: "mnParameter":{"id":214
+parse: "devParName":"soil_moisture"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"soil moisture"
+parse: "label":"soil moisture"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5423
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-01-15T07:27:58.737Z"
+parse: "value":9
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}]}
+parse: {"id":5521
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":137
+parse: "deviceUid":"A8404148218845D4"
+parse: "deviceName":"draginoSE01-LB-1"
+parse: "defaultName":1
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"lgmcChirpstack/Chirpstack4/27/device/a8404148218845d4/event/up"
+parse: "mqttTs":"1699034270"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5691
+parse: "devParName":"BatV"
+parse: "label":"BatV"
+parse: "mnParameterId":199
+parse: "value":0
+parse: "mnParameter":{"id":199
+parse: "devParName":"BatV"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"BatV"
+parse: "label":"BatV"
+parse: "visibility":5
+parse: "visibilityCmd":1
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":118
+parse: "mnParameterType":{"id":118
+parse: "parTypName":"battery_3_7v"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0}}}
+parse: {"id":5700
+parse: "devParName":"conduct_SOIL"
+parse: "label":"Conductivity Soil"
+parse: "mnParameterId":257
+parse: "value":0
+parse: "mnParameter":{"id":257
+parse: "devParName":"conduct_SOIL"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Conductivity Soil"
+parse: "label":"Conductivity Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5693
+parse: "devParName":"temp_SOIL"
+parse: "label":"Temperature Soil"
+parse: "mnParameterId":258
+parse: "value":0
+parse: "mnParameter":{"id":258
+parse: "devParName":"temp_SOIL"
+parse: "unit":"° C"
+parse: "unitImp":"° C"
+parse: "descr":"Temperature Soil"
+parse: "label":"Temperature Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5696
+parse: "devParName":"water_SOIL"
+parse: "label":"Water Soil"
+parse: "mnParameterId":256
+parse: "value":0
+parse: "mnParameter":{"id":256
+parse: "devParName":"water_SOIL"
+parse: "unit":"%"
+parse: "unitImp":"%"
+parse: "descr":"Water Soil"
+parse: "label":"Water Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}]}
+parse: {"id":5535
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":137
+parse: "deviceUid":"A840417031884C98"
+parse: "deviceName":"draginoSE01-LB-1"
+parse: "defaultName":1
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"lgmcChirpstack/Chirpstack4/27/device/a840417031884c98/event/up"
+parse: "mqttTs":"1710963699"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":5690
+parse: "devParName":"BatV"
+parse: "label":"BatV"
+parse: "mnParameterId":199
+parse: "lastUpdateTs":"2024-03-20T19:41:39.984Z"
+parse: "value":3.33
+parse: "mnParameter":{"id":199
+parse: "devParName":"BatV"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"BatV"
+parse: "label":"BatV"
+parse: "visibility":5
+parse: "visibilityCmd":1
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":118
+parse: "mnParameterType":{"id":118
+parse: "parTypName":"battery_3_7v"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0}}}
+parse: {"id":5699
+parse: "devParName":"conduct_SOIL"
+parse: "label":"Conductivity Soil"
+parse: "mnParameterId":257
+parse: "lastUpdateTs":"2024-03-20T19:41:39.984Z"
+parse: "value":0
+parse: "mnParameter":{"id":257
+parse: "devParName":"conduct_SOIL"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Conductivity Soil"
+parse: "label":"Conductivity Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5694
+parse: "devParName":"temp_SOIL"
+parse: "label":"Temperature Soil"
+parse: "mnParameterId":258
+parse: "lastUpdateTs":"2024-03-20T19:41:39.984Z"
+parse: "value":21.74
+parse: "mnParameter":{"id":258
+parse: "devParName":"temp_SOIL"
+parse: "unit":"° C"
+parse: "unitImp":"° C"
+parse: "descr":"Temperature Soil"
+parse: "label":"Temperature Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":5697
+parse: "devParName":"water_SOIL"
+parse: "label":"Water Soil"
+parse: "mnParameterId":256
+parse: "lastUpdateTs":"2024-03-20T19:41:39.984Z"
+parse: "value":0
+parse: "mnParameter":{"id":256
+parse: "devParName":"water_SOIL"
+parse: "unit":"%"
+parse: "unitImp":"%"
+parse: "descr":"Water Soil"
+parse: "label":"Water Soil"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}]}
+parse: {"id":5969
+parse: "mnSystemId":129
+parse: "mnDeviceModelId":138
+parse: "deviceUid":"A840410DE1889974"
+parse: "deviceName":"Rajčata Teplota"
+parse: "defaultName":0
+parse: "customerName":""
+parse: "street":""
+parse: "city":""
+parse: "zip":""
+parse: "district":""
+parse: "state":""
+parse: "route":""
+parse: "location":""
+parse: "grouping":""
+parse: "locDetails":""
+parse: "descr":""
+parse: "mqttTopic":"lgmcChirpstack/Chirpstack4/30/device/a840410de1889974/event/up"
+parse: "mqttTs":"1710964497"
+parse: "position":{}
+parse: "entryPosition":{}
+parse: "parameterValues":[{"id":8474
+parse: "devParName":"humidity"
+parse: "label":"Vlhkost"
+parse: "mnParameterId":3
+parse: "lastUpdateTs":"2024-03-20T19:54:57.826Z"
+parse: "value":61.1
+parse: "mnParameter":{"id":3
+parse: "devParName":"humidity"
+parse: "unit":"%"
+parse: "unitImp":""
+parse: "descr":"Humidity on sensor"
+parse: "label":"Vlhkost"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":11
+parse: "mnParameterType":{"id":11
+parse: "parTypName":"humidity"
+parse: "dataType":"number"
+parse: "maxVal":100
+parse: "minVal":0
+parse: "stepVal":0.01}}}
+parse: {"id":8498
+parse: "devParName":"temperature"
+parse: "label":"Teplota"
+parse: "mnParameterId":2
+parse: "lastUpdateTs":"2024-03-20T19:54:57.826Z"
+parse: "value":4.13
+parse: "mnParameter":{"id":2
+parse: "devParName":"temperature"
+parse: "unit":"°C"
+parse: "unitImp":""
+parse: "descr":"Temperature on sensor"
+parse: "label":"Teplota"
+parse: "visibility":3
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":4
+parse: "mnParameterType":{"id":4
+parse: "parTypName":"type_temperature_out"
+parse: "dataType":"number"
+parse: "maxVal":70
+parse: "minVal":-70
+parse: "stepVal":0.001}}}
+parse: {"id":8506
+parse: "devParName":"temperature_probe"
+parse: "label":"Teplota na sondě"
+parse: "mnParameterId":260
+parse: "lastUpdateTs":"2024-03-20T19:54:57.826Z"
+parse: "value":3.93
+parse: "mnParameter":{"id":260
+parse: "devParName":"temperature_probe"
+parse: "unit":""
+parse: "unitImp":""
+parse: "descr":"Teplota na sondě"
+parse: "label":"Teplota na sondě"
+parse: "visibility":4
+parse: "visibilityCmd":0
+parse: "recorded":true
+parse: "treshold1":0
+parse: "treshold2":0
+parse: "mnParameterTypeId":109
+parse: "mnParameterType":{"id":109
+parse: "parTypName":"number"
+parse: "dataType":"number"
+parse: "maxVal":0
+parse: "minVal":0
+parse: "stepVal":0.01}}}]}]
+[0;32mI (14888) esp-x509-crt-bundle: Certificate validated[0m

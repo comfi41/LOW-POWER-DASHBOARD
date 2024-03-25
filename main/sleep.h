@@ -16,3 +16,7 @@
 #include "wifi_sta.h"
 
 void low_pwr_deepsleep(int refresh_time);
+
+	extern struct Group_Data *group_struct;
+    extern struct Sensor_Data *sensor_struct;
+    extern struct Sensor_history_Data *history_struct;

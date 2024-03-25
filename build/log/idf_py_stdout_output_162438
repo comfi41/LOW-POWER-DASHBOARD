@@ -1,0 +1,1154 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (417) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc6744, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (768) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (768) wifi:enable tsf
+[0;32mI (768) wifi station: wifi_init_sta finished.[0m
+I (778) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (788) wifi:state: init -> auth (b0)
+I (788) wifi:state: auth -> init (1c0)
+I (788) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (798) wifi station: retry to connect to the AP[0m
+[0;32mI (798) wifi station: connect to the AP fail[0m
+[0;32mI (3208) wifi station: retry to connect to the AP[0m
+[0;32mI (3208) wifi station: connect to the AP fail[0m
+I (3218) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3218) wifi:state: init -> auth (b0)
+I (3218) wifi:state: auth -> assoc (0)
+I (3228) wifi:state: assoc -> run (10)
+I (3278) wifi:connected with Galaxy, aid = 30, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (3278) wifi:security: WPA2-PSK, phy: bgn, rssi: -28
+I (3288) wifi:pm start, type: 1
+
+I (3318) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4288) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (4288) wifi station: got ip:192.168.110.178[0m
+[0;32mI (4288) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (4548) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (5068) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDE5MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NTkzLCJpYXQiOjE3MTA4ODAxOTMsInZlcnNpb24iOjIsImp0aSI6IjZjYzBkYWZjLTRlYTItNDgwZi04YmM1LTk5ZDU3ODU0ZjBjYSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q0gNgZPSb2x-roQLY-IaG_PjXljUYmq5cz9ixrL0vQBzhr53CER67s8OeeQ0LOGwOWgAK1KTud4w2ZK6xFVzatEM-NF06lkWRjujL5vZSEXuZj_u5gWBK73z3pVAqst8brgW2oUdtp8Ey6T3EfFluv6aZRM-hEmyZdrJJz9iRpu1e_RTB2GQWz6YH--pswQVBj6KyoVbRzSoTtbeW1OKtAqwtKXdndaqn7mHeLwRsfHp5PWEd6D3fr1OsoUuFfaAS3t7bP6NpFr8f_9D6aIaKm8JIK4V2NGODgQTMXxd1SnHULlfO_dWllEZwmku8jKCWQOSGO_C6Vqzo-pqPwPyUg","expires_in":86400,"token_type":"Bearer"}
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDE5MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NTkzLCJpYXQiOjE3MTA4ODAxOTMsInZlcnNpb24iOjIsImp0aSI6IjZjYzBkYWZjLTRlYTItNDgwZi04YmM1LTk5ZDU3ODU0ZjBjYSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q0gNgZPSb2x-roQLY-IaG_PjXljUYmq5cz9ixrL0vQBzhr53CER67s8OeeQ0LOGwOWgAK1KTud4w2ZK6xFVzatEM-NF06lkWRjujL5vZSEXuZj_u5gWBK73z3pVAqst8brgW2oUdtp8Ey6T3EfFluv6aZRM-hEmyZdrJJz9iRpu1e_RTB2GQWz6YH--pswQVBj6KyoVbRzSoTtbeW1OKtAqwtKXdndaqn7mHeLwRsfHp5PWEd6D3fr1OsoUuFfaAS3t7bP6NpFr8f_9D6aIaKm8JIK4V2NGODgQTMXxd1SnHULlfO_dWllEZwmku8jKCWQOSGO_C6Vqzo-pqPwPyUg"
+SFSCAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDE5MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NTkzLCJpYXQiOjE3MTA4ODAxOTMsInZlcnNpb24iOjIsImp0aSI6IjZjYzBkYWZjLTRlYTItNDgwZi04YmM1LTk5ZDU3ODU0ZjBjYSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q0gNgZPSb2x-roQLY-IaG_PjXljUYmq5cz9ixrL0vQBzhr53CER67s8OeeQ0LOGwOWgAK1KTud4w2ZK6xFVzatEM-NF06lkWRjujL5vZSEXuZj_u5gWBK73z3pVAqst8brgW2oUdtp8Ey6T3EfFluv6aZRM-hEmyZdrJJz9iRpu1e_RTB2GQWz6YH--pswQVBj6KyoVbRzSoTtbeW1OKtAqwtKXdndaqn7mHeLwRsfHp5PWEd6D3fr1OsoUuFfaAS3t7bP6NpFr8f_9D6aIaKm8JIK4V2NGODgQTMXxd1SnHULlfO_dWllEZwmku8jKCWQOSGO_C6Vqzo-pqPwPyUg
+parse: "expires_in":86400
+parse: "token_type":"Bearer"}�tŚ�i(D�@�a��p	�`�]&-
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDE5MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NTkzLCJpYXQiOjE3MTA4ODAxOTMsInZlcnNpb24iOjIsImp0aSI6IjZjYzBkYWZjLTRlYTItNDgwZi04YmM1LTk5ZDU3ODU0ZjBjYSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Q0gNgZPSb2x-roQLY-IaG_PjXljUYmq5cz9ixrL0vQBzhr53CER67s8OeeQ0LOGwOWgAK1KTud4w2ZK6xFVzatEM-NF06lkWRjujL5vZSEXuZj_u5gWBK73z3pVAqst8brgW2oUdtp8Ey6T3EfFluv6aZRM-hEmyZdrJJz9iRpu1e_RTB2GQWz6YH--pswQVBj6KyoVbRzSoTtbeW1OKtAqwtKXdndaqn7mHeLwRsfHp5PWEd6D3fr1OsoUuFfaAS3t7bP6NpFr8f_9D6aIaKm8JIK4V2NGODgQTMXxd1SnHULlfO_dWllEZwmku8jKCWQOSGO_C6Vqzo-pqPwPyUg
+[0;32mI (7318) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: 23
+parse: 23�?4��?���
+Before update NV = 19.03.2024 21:28
+[0;32mI (8658) wifi station: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (8658) wifi station: Initializing SNTP[0m
+[0;32mI (8668) wifi station: Waiting for system time to be set... (1/5)[0m
+[0;32mI (9668) wifi station: Waiting for system time to be set... (2/5)[0m
+[0;32mI (10668) wifi station: Waiting for system time to be set... (3/5)[0m
+[0;32mI (11668) wifi station: Waiting for system time to be set... (4/5)[0m
+[0;32mI (12328) wifi station: Notification of a time synchronization event[0m
+[0;32mI (12668) wifi station: The current date/time in Brno is: 19.03.2024 21:29[0m
+Before update NV 2 = 19.03.2024 21:28
+Current = 19.03.2024 21:29
+Current date and time is = 19.03.2024 21:29
+I (12798) wifi:state: run -> init (0)
+I (12798) wifi:pm stop, total sleep time: 7594422 us / 9510638 us
+
+I (12798) wifi:<ba-del>idx:0, tid:0
+I (12798) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (394) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (400) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (417) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (428) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (433) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (493) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Wake up from timer.
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc6744, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (708) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (708) wifi:enable tsf
+[0;32mI (708) wifi station: wifi_init_sta finished.[0m
+I (718) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (718) wifi:state: init -> auth (b0)
+I (728) wifi:state: auth -> assoc (0)
+I (738) wifi:state: assoc -> run (10)
+I (778) wifi:connected with Galaxy, aid = 31, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (778) wifi:security: WPA2-PSK, phy: bgn, rssi: -32
+I (788) wifi:pm start, type: 1
+
+I (828) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1788) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (1788) wifi station: got ip:192.168.110.178[0m
+[0;32mI (1788) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (1818) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (2398) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDIxMywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NjEzLCJpYXQiOjE3MTA4ODAyMTMsInZlcnNpb24iOjIsImp0aSI6IjRiNDUxMDRmLWU3YzEtNGNlYy1iNmU1LTIxZTFjMzNlMDdhOCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.QRL4qoBoaaR-1UnMVpB72WnQRSo3p--GlqjGUV5pvVHAfzCKQK4OZrp922C_QL-3TN37D7HlowtvsMzXMtbjYa28AEKB8WdsSiiZhd6v91VkWnsll5BkaQ2IaicrJIUVU5A6-4HBOuyCaQXp-GH34N6d3kK3x5JmCM8AkVxlQwXKMgk9AV37u1cn3_fEtEPKY99nw6eBX3TFC4tER0kuII4Ha_FlMGUcysTxjnNKm2V1b15xLzfr2Y4FMPfh_6igdZjSaE5uIy9IMnxjoOFkG5uxOmkrIN18eodOT9tcxVvtzYQpMnZufOBEjr9c3UokAmbI4Jl-bCiekXILZEZ8QQ","expires_in":86400,"token_type":"Bearer"}
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDIxMywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NjEzLCJpYXQiOjE3MTA4ODAyMTMsInZlcnNpb24iOjIsImp0aSI6IjRiNDUxMDRmLWU3YzEtNGNlYy1iNmU1LTIxZTFjMzNlMDdhOCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.QRL4qoBoaaR-1UnMVpB72WnQRSo3p--GlqjGUV5pvVHAfzCKQK4OZrp922C_QL-3TN37D7HlowtvsMzXMtbjYa28AEKB8WdsSiiZhd6v91VkWnsll5BkaQ2IaicrJIUVU5A6-4HBOuyCaQXp-GH34N6d3kK3x5JmCM8AkVxlQwXKMgk9AV37u1cn3_fEtEPKY99nw6eBX3TFC4tER0kuII4Ha_FlMGUcysTxjnNKm2V1b15xLzfr2Y4FMPfh_6igdZjSaE5uIy9IMnxjoOFkG5uxOmkrIN18eodOT9tcxVvtzYQpMnZufOBEjr9c3UokAmbI4Jl-bCiekXILZEZ8QQ"
+SFSCAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDIxMywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NjEzLCJpYXQiOjE3MTA4ODAyMTMsInZlcnNpb24iOjIsImp0aSI6IjRiNDUxMDRmLWU3YzEtNGNlYy1iNmU1LTIxZTFjMzNlMDdhOCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.QRL4qoBoaaR-1UnMVpB72WnQRSo3p--GlqjGUV5pvVHAfzCKQK4OZrp922C_QL-3TN37D7HlowtvsMzXMtbjYa28AEKB8WdsSiiZhd6v91VkWnsll5BkaQ2IaicrJIUVU5A6-4HBOuyCaQXp-GH34N6d3kK3x5JmCM8AkVxlQwXKMgk9AV37u1cn3_fEtEPKY99nw6eBX3TFC4tER0kuII4Ha_FlMGUcysTxjnNKm2V1b15xLzfr2Y4FMPfh_6igdZjSaE5uIy9IMnxjoOFkG5uxOmkrIN18eodOT9tcxVvtzYQpMnZufOBEjr9c3UokAmbI4Jl-bCiekXILZEZ8QQ
+parse: "expires_in":86400
+parse: "token_type":"Bearer"}��u������
+parse: `O1��{�/.��	�ZHH��΀��
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDIxMywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NjEzLCJpYXQiOjE3MTA4ODAyMTMsInZlcnNpb24iOjIsImp0aSI6IjRiNDUxMDRmLWU3YzEtNGNlYy1iNmU1LTIxZTFjMzNlMDdhOCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.QRL4qoBoaaR-1UnMVpB72WnQRSo3p--GlqjGUV5pvVHAfzCKQK4OZrp922C_QL-3TN37D7HlowtvsMzXMtbjYa28AEKB8WdsSiiZhd6v91VkWnsll5BkaQ2IaicrJIUVU5A6-4HBOuyCaQXp-GH34N6d3kK3x5JmCM8AkVxlQwXKMgk9AV37u1cn3_fEtEPKY99nw6eBX3TFC4tER0kuII4Ha_FlMGUcysTxjnNKm2V1b15xLzfr2Y4FMPfh_6igdZjSaE5uIy9IMnxjoOFkG5uxOmkrIN18eodOT9tcxVvtzYQpMnZufOBEjr9c3UokAmbI4Jl-bCiekXILZEZ8QQ
+[0;32mI (4838) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: 23
+parse: 23�?4��?���
+Before update NV = 19.03.2024 21:29
+[0;32mI (5988) wifi station: The current date/time in Brno is: 19.03.2024 21:30[0m
+Before update NV 2 = 19.03.2024 21:29
+Current = 19.03.2024 21:30
+Current date and time is = 19.03.2024 21:30
+I (6128) wifi:state: run -> init (0)
+I (6128) wifi:pm stop, total sleep time: 3813440 us / 5345444 us
+
+I (6128) wifi:<ba-del>idx:0, tid:0
+I (6128) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (394) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (400) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (417) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (428) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (433) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (493) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+I (588) wifi:wifi driver task: 3ffc6764, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (708) wifi:mode : softAP (d4:8a:fc:9a:2e:91)
+I (708) wifi:Total power save buffer number: 16
+I (708) wifi:Init max length of beacon: 752/752
+I (718) wifi:Init max length of beacon: 752/752
+Wifi AP started. SSID:Low-Pwr-Dashboard
+[0;32mI (718) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Wake up from GPIO
+[0;32mI (768) main_task: Returned from app_main()[0m
+I (6978) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (6978) wifi:station: dc:a9:71:41:4e:1b join, AID=1, bgn, 20
+Station dc:a9:71:41:4e:1b join, AID=1
+[0;32mI (16598) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (18568) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (21498) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (25948) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (33968) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (35198) wifi:<ba-add>idx:2 (ifx:1, dc:a9:71:41:4e:1b), tid:0, ssn:200, winSize:64
+Input: /get?input1=Galaxy&input2=123456789&input3=client_credentials&input4=7q7eo84rddr67i3a6mjf7t9cr&input5=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1&input6=ascope&input7=https%25253A%25252F%25252Flogimic-itemp2.auth.us-east-1.amazoncognito.com%25252Foauth2%25252Ftoken&input8=%25251E&input9=129&input10=10&input11=1
+parse: /get?input1=Galaxy
+Counter 1: 1
+Counter 2: 1
+Counter 3: 1
+Counter 4: 1
+Counter 5: 1
+Counter 6: 1
+Counter 7: 1
+Counter 8: 1
+Counter 9: 1
+Counter 10: 1
+Counter 11: 1
+parse: input2=123456789
+Counter 1: 1
+Counter 2: 3
+Counter 3: 3
+Counter 4: 3
+Counter 5: 3
+Counter 6: 3
+Counter 7: 3
+Counter 8: 3
+Counter 9: 3
+Counter 10: 3
+Counter 11: 3
+parse: input3=client_credentials
+Counter 1: 3
+Counter 2: 3
+Counter 3: 6
+Counter 4: 6
+Counter 5: 6
+Counter 6: 6
+Counter 7: 6
+Counter 8: 6
+Counter 9: 6
+Counter 10: 6
+Counter 11: 6
+parse: input4=7q7eo84rddr67i3a6mjf7t9cr
+Counter 1: 6
+Counter 2: 6
+Counter 3: 6
+Counter 4: 10
+Counter 5: 10
+Counter 6: 10
+Counter 7: 10
+Counter 8: 10
+Counter 9: 10
+Counter 10: 10
+Counter 11: 10
+parse: input5=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+Counter 1: 10
+Counter 2: 10
+Counter 3: 10
+Counter 4: 10
+Counter 5: 15
+Counter 6: 15
+Counter 7: 15
+Counter 8: 15
+Counter 9: 15
+Counter 10: 15
+Counter 11: 15
+parse: input6=ascope
+Counter 1: 15
+Counter 2: 15
+Counter 3: 15
+Counter 4: 15
+Counter 5: 15
+Counter 6: 21
+Counter 7: 21
+Counter 8: 21
+Counter 9: 21
+Counter 10: 21
+Counter 11: 21
+parse: input7=https%25253A%25252F%25252Flogimic-itemp2.auth.us-east-1.amazoncognito.com%25252Foauth2%25252Ftoken
+Counter 1: 21
+Counter 2: 21
+Counter 3: 21
+Counter 4: 21
+Counter 5: 21
+Counter 6: 21
+Counter 7: 28
+Counter 8: 28
+Counter 9: 28
+Counter 10: 28
+Counter 11: 28
+parse: input8=%25251E
+Counter 1: 28
+Counter 2: 28
+Counter 3: 28
+Counter 4: 28
+Counter 5: 28
+Counter 6: 28
+Counter 7: 28
+Counter 8: 36
+Counter 9: 36
+Counter 10: 36
+Counter 11: 36
+parse: input9=129
+Counter 1: 36
+Counter 2: 36
+Counter 3: 36
+Counter 4: 36
+Counter 5: 36
+Counter 6: 36
+Counter 7: 36
+Counter 8: 36
+Counter 9: 45
+Counter 10: 45
+Counter 11: 45
+parse: input10=10
+Counter 1: 45
+Counter 2: 45
+Counter 3: 45
+Counter 4: 45
+Counter 5: 45
+Counter 6: 45
+Counter 7: 45
+Counter 8: 45
+Counter 9: 45
+Counter 10: 55
+Counter 11: 55
+parse: input11=1
+Counter 1: 55
+Counter 2: 55
+Counter 3: 55
+Counter 4: 55
+Counter 5: 55
+Counter 6: 55
+Counter 7: 55
+Counter 8: 55
+Counter 9: 55
+Counter 10: 55
+Counter 11: 66
+ALL inputs are valid!
+Save to NVS: 0
+I (65048) wifi:station: dc:a9:71:41:4e:1b leave, AID = 1, bss_flags is 134243, bss:0x3ffbb1d4
+I (65048) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1
+I (65048) wifi:<ba-del>idx:2, tid:0
+E (65048) wifi:NAN WiFi stop
+Station dc:a9:71:41:4e:1b leave, AID=1I (65098) wifi:flush txq
+I (65098) wifi:stop sw txq
+I (65098) wifi:lmac stop hw txq
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (359) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (768) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (768) wifi:enable tsf
+[0;32mI (768) wifi station: wifi_init_sta finished.[0m
+I (778) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (788) wifi:state: init -> auth (b0)
+I (828) wifi:state: auth -> assoc (0)
+I (828) wifi:state: assoc -> run (10)
+I (888) wifi:connected with Galaxy, aid = 32, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (888) wifi:security: WPA2-PSK, phy: bgn, rssi: -36
+I (898) wifi:pm start, type: 1
+
+I (988) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1898) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (1898) wifi station: got ip:192.168.110.178[0m
+[0;32mI (1898) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (2218) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (2688) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDI5MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NjkwLCJpYXQiOjE3MTA4ODAyOTAsInZlcnNpb24iOjIsImp0aSI6Ijg4M2VjODQxLTA1YjUtNDc2NC04NGY5LTA3ODk5MWVjZDY4NyIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.LwwjDpFR0pvdhR5O5cZ-0rgt9Tf7K-gUjgl006QA4t2DRSZcMRUMXMDRO_SRoIC7zSyJNaCZTH4zje7pCSyXk6oIQ2tYPbQoJr7FncFBdODOHK6iPeMo6RprryQFinQ9VusmEXSUHj16NKlaUmddheJ56DwHZbt4Xbso4gXpjyDzkwHXwoW7AoPzrzav6TUtaJwsjO6KvEcfT4Z0wJeg5N0BxPfUivg6RTPTRhgzXimexcd2xG6Cjpv3QlH9gHyrnUL_WkAOWyMLSZKMaVMjptR_vFbceHZvIjC4g_xyzSqJy42tqzDFJMthwOag0nTXs-2O_x_TxoWl2scd0AqOUQ","expires_in":86400,"token_type":"Bearer"}
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDI5MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NjkwLCJpYXQiOjE3MTA4ODAyOTAsInZlcnNpb24iOjIsImp0aSI6Ijg4M2VjODQxLTA1YjUtNDc2NC04NGY5LTA3ODk5MWVjZDY4NyIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.LwwjDpFR0pvdhR5O5cZ-0rgt9Tf7K-gUjgl006QA4t2DRSZcMRUMXMDRO_SRoIC7zSyJNaCZTH4zje7pCSyXk6oIQ2tYPbQoJr7FncFBdODOHK6iPeMo6RprryQFinQ9VusmEXSUHj16NKlaUmddheJ56DwHZbt4Xbso4gXpjyDzkwHXwoW7AoPzrzav6TUtaJwsjO6KvEcfT4Z0wJeg5N0BxPfUivg6RTPTRhgzXimexcd2xG6Cjpv3QlH9gHyrnUL_WkAOWyMLSZKMaVMjptR_vFbceHZvIjC4g_xyzSqJy42tqzDFJMthwOag0nTXs-[0;32mI (5398) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: 23
+parse: 23�?4��?���
+Before update NV = 19.03.2024 21:30
+[0;32mI (6738) wifi station: The current date/time in Brno is: 19.03.2024 21:31[0m
+Before update NV 2 = 19.03.2024 21:30
+Current = 19.03.2024 21:31
+Current date and time is = 19.03.2024 21:31
+I (6878) wifi:state: run -> init (0)
+I (6878) wifi:pm stop, total sleep time: 4283180 us / 5982919 us
+
+I (6878) wifi:<ba-del>idx:0, tid:0
+I (6878) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (394) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (400) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (417) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (428) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (433) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (493) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Wake up from timer.
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (708) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (708) wifi:enable tsf
+[0;32mI (708) wifi station: wifi_init_sta finished.[0m
+I (718) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (718) wifi:state: init -> auth (b0)
+I (778) wifi:state: auth -> assoc (0)
+I (788) wifi:state: assoc -> run (10)
+I (838) wifi:connected with Galaxy, aid = 1, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (838) wifi:security: WPA2-PSK, phy: bgn, rssi: -36
+I (848) wifi:pm start, type: 1
+
+I (878) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1848) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (1848) wifi station: got ip:192.168.110.178[0m
+[0;32mI (1848) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (2418) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (2938) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDMwNywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NzA3LCJpYXQiOjE3MTA4ODAzMDcsInZlcnNpb24iOjIsImp0aSI6ImVhMThmZTYyLWZhYTEtNDdlNC05YTJmLTdlNjg2MTY0NjI0OSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.B03mPqNxtZP10wJFLnJQKQqYjAiP30UZJo2zj_bSLd3z7hoc-hxJOyb5jwAdW-oG0hRLFytLDmtytHd8sp-ARA9XaQ6su9DNvFPNwTA0M5AV7F3NlNu_00jFCMCyz4yUNgC50yAoBSN0k64_KGc1PsDcOeQB9IyUoR35GzQgllr-8GEdz6R4OQX5yAD3WQ-XN7xsJLbYdN0OFXVYjXQg-twB9EaKuXFljL6idiMcBanx6daZ-XMuK9UvOorLZNfrG7FarMUBwwtQ5WK5FFfiOvHQ7cCVVYOex1ZXC-N3Wf92vYBwsSGjZEGtx98ELnxFOz90yR_pyCRQYkbaGRzjkQ","expires_in":86400,"token_type":"Bearer"}
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDMwNywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NzA3LCJpYXQiOjE3MTA4ODAzMDcsInZlcnNpb24iOjIsImp0aSI6ImVhMThmZTYyLWZhYTEtNDdlNC05YTJmLTdlNjg2MTY0NjI0OSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.B03mPqNxtZP10wJFLnJQKQqYjAiP30UZJo2zj_bSLd3z7hoc-hxJOyb5jwAdW-oG0hRLFytLDmtytHd8sp-ARA9XaQ6su9DNvFPNwTA0M5AV7F3NlNu_00jFCMCyz4yUNgC50yAoBSN0k64_KGc1PsDcOeQB9IyUoR35GzQgllr-8GEdz6R4OQX5yAD3WQ-XN7xsJLbYdN0OFXVYjXQg-twB9EaKuXFljL6idiMcBanx6daZ-XMuK9UvOorLZNfrG7FarMUBwwtQ5WK5FFfiOvHQ7cCVVYOex1ZXC-N3Wf92vYBwsSGjZEGtx98ELnxFOz90yR_pyCRQYkbaGRzjkQ"
+SFSCAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDMwNywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NzA3LCJpYXQiOjE3MTA4ODAzMDcsInZlcnNpb24iOjIsImp0aSI6ImVhMThmZTYyLWZhYTEtNDdlNC05YTJmLTdlNjg2MTY0NjI0OSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.B03mPqNxtZP10wJFLnJQKQqYjAiP30UZJo2zj_bSLd3z7hoc-hxJOyb5jwAdW-oG0hRLFytLDmtytHd8sp-ARA9XaQ6su9DNvFPNwTA0M5AV7F3NlNu_00jFCMCyz4yUNgC50yAoBSN0k64_KGc1PsDcOeQB9IyUoR35GzQgllr-8GEdz6R4OQX5yAD3WQ-XN7xsJLbYdN0OFXVYjXQg-twB9EaKuXFljL6idiMcBanx6daZ-XMuK9UvOorLZNfrG7FarMUBwwtQ5WK5FFfiOvHQ7cCVVYOex1ZXC-N3Wf92vYBwsSGjZEGtx98ELnxFOz90yR_pyCRQYkbaGRzjkQ
+parse: "expires_in":86400
+parse: "token_type":"Bearer"}�����]�l�á-"lO��ڬ�u_�w֤�Τ$��v���BS���Qb����[���T�a��v.����#�`�i�(����&��E�|���C�?
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MDMwNywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY2NzA3LCJpYXQiOjE3MTA4ODAzMDcsInZlcnNpb24iOjIsImp0aSI6ImVhMThmZTYyLWZhYTEtNDdlNC05YTJmLTdlNjg2MTY0NjI0OSIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.B03mPqNxtZP10wJFLnJQKQqYjAiP30UZJo2zj_bSLd3z7hoc-hxJOyb5jwAdW-oG0hRLFytLDmtytHd8sp-ARA9XaQ6su9DNvFPNwTA0M5AV7F3NlNu_00jFCMCyz4yUNgC50yAoBSN0k64_KGc1PsDcOeQB9IyUoR35GzQgllr-8GEdz6R4OQX5yAD3WQ-XN7xsJLbYdN0OFXVYjXQg-twB9EaKuXFljL6idiMcBanx6daZ-XMuK9UvOorLZNfrG7FarMUBwwtQ5WK5FFfiOvHQ7cCVVYOex1ZXC-N3Wf92vYBwsSGjZEGtx98ELnxFOz90yR_pyCRQYkbaGRzjkQ
+[0;32mI (5498) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: 23
+parse: 23�?4��?<��?
+Before update NV = 19.03.2024 21:31
+[0;32mI (6738) wifi station: The current date/time in Brno is: 19.03.2024 21:31[0m
+Before update NV 2 = 19.03.2024 21:31
+Current = 19.03.2024 21:31
+Current date and time is = 19.03.2024 21:31
+I (6868) wifi:state: run -> init (0)
+I (6868) wifi:pm stop, total sleep time: 4367500 us / 6019097 us
+
+I (6868) wifi:<ba-del>idx:0, tid:0
+I (6868) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (394) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (400) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (417) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (428) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (433) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (493) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Wake up from timer.
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (708) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (708) wifi:enable tsf
+[0;32mI (708) wifi station: wifi_init_sta finished.[0m
+I (718) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (718) wifi:state: init -> auth (b0)
+I (1718) wifi:state: auth -> init (200)
+I (1728) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1728) wifi station: retry to connect to the AP[0m
+[0;32mI (1728) wifi station: connect to the AP fail[0m
+[0;32mI (4138) wifi station: retry to connect to the AP[0m
+[0;32mI (4138) wifi station: connect to the AP fail[0m
+I (4148) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4148) wifi:state: init -> auth (b0)
+I (5148) wifi:state: auth -> init (200)
+I (5158) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (5158) wifi station: retry to connect to the AP[0m
+[0;32mI (5158) wifi station: connect to the AP fail[0m
+[0;32mI (7568) wifi station: retry to connect to the AP[0m
+[0;32mI (7568) wifi station: connect to the AP fail[0m
+I (7578) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (7578) wifi:state: init -> auth (b0)
+I (8578) wifi:state: auth -> init (200)
+I (8578) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (8588) wifi station: retry to connect to the AP[0m
+[0;32mI (8588) wifi station: connect to the AP fail[0m
+[0;32mI (10998) wifi station: connect to the AP fail[0m
+[0;32mI (11008) wifi station: Failed to connect to SSID:Galaxy, password:123456789[0m
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (394) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (400) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (417) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (428) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (433) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (493) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Wake up from timer.
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (708) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (708) wifi:enable tsf
+[0;32mI (708) wifi station: wifi_init_sta finished.[0m
+I (718) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (718) wifi:state: init -> auth (b0)
+I (1728) wifi:state: auth -> init (200)
+I (1728) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1728) wifi station: retry to connect to the AP[0m
+[0;32mI (1728) wifi station: connect to the AP fail[0m
+[0;32mI (4138) wifi station: retry to connect to the AP[0m
+[0;32mI (4138) wifi station: connect to the AP fail[0m
+I (4148) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4148) wifi:state: init -> auth (b0)
+I (5148) wifi:state: auth -> init (200)
+I (5158) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (5158) wifi station: retry to connect to the AP[0m
+[0;32mI (5158) wifi station: connect to the AP fail[0m
+[0;32mI (7568) wifi station: retry to connect to the AP[0m
+[0;32mI (7568) wifi station: connect to the AP fail[0m
+I (7578) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (7578) wifi:state: init -> auth (b0)
+I (8578) wifi:state: auth -> init (200)
+I (8578) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (8588) wifi station: retry to connect to the AP[0m
+[0;32mI (8588) wifi station: connect to the AP fail[0m
+[0;32mI (10998) wifi station: connect to the AP fail[0m
+[0;32mI (11008) wifi station: Failed to connect to SSID:Galaxy, password:123456789[0m
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a07ch (237692) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a0a4 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a0b4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e928 vaddr=40080000 size=016f0h (  5872) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf08h (708360) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf30 vaddr=400816f0 size=16580h ( 91520) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=001134b8 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (394) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (400) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  3b4f630ef...[0m
+[0;32mI (417) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (428) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (433) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (438) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (445) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (470) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (493) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Wake up from timer.
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (628) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (708) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (708) wifi:enable tsf
+[0;32mI (708) wifi station: wifi_init_sta finished.[0m
+I (718) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (718) wifi:state: init -> auth (b0)
+I (1728) wifi:state: auth -> init (200)
+I (1728) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (1728) wifi station: retry to connect to the AP[0m
+[0;32mI (1728) wifi station: connect to the AP fail[0m
+[0;32mI (4138) wifi station: retry to connect to the AP[0m
+[0;32mI (4138) wifi station: connect to the AP fail[0m
+I (4148) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (4148) wifi:state: init -> auth (b0)
+I (5148) wifi:state: auth -> init (200)
+I (5158) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (5158) wifi station: retry to connect to the AP[0m
+[0;32mI (5158) wifi station: connect to the AP fail[0m
+[0;32mI (7568) wifi station: retry to connect to the AP[0m
+[0;32mI (7568) wifi station: connect to the AP fail[0m
+I (7578) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (7578) wifi:state: init -> auth (b0)
+I (8578) wifi:state: auth -> init (200)
+I (8578) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (8588) wifi station: retry to connect to the AP[0m
+[0;32mI (8588) wifi station: connect to the AP fail[0m
+[0;32mI (10998) wifi station: connect to the AP fail[0m
+[0;32mI (11008) wifi station: Failed to connect to SSID:Galaxy, password:123456789[0m
+Enabling timer wakeup, 10s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep

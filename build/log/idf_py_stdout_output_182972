@@ -1,0 +1,645 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a48ch (238732) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a4b4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a4c4 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004ed38 vaddr=40080000 size=012e0h (  4832) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=ad554h (709972) map[0m
+[0;32mI (324) esp_image: segment 5: paddr=000fd57c vaddr=400812e0 size=16990h ( 92560) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=00113f14 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (361) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (361) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (373) cpu_start: Pro cpu up.[0m
+[0;32mI (373) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (391) cpu_start: Pro cpu start user code[0m
+[0;32mI (391) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (391) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      8326377-dirty[0m
+[0;32mI (407) cpu_start: Compile time:     Mar 20 2024 22:02:58[0m
+[0;32mI (413) cpu_start: ELF file SHA256:  8b15582aa...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (425) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9C60 len 000263A0 (152 KiB): DRAM[0m
+[0;32mI (459) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (465) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (479) spi_flash: detected chip: gd[0m
+[0;32mI (482) spi_flash: flash io: dio[0m
+[0;33mW (486) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (495) app_start: Starting scheduler on CPU0[0m
+[0;32mI (499) app_start: Starting scheduler on CPU1[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (509) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+
+Displaying data from structures GROUP:
+ID grupy:0
+Nazev rupy:Francouska Grupa:0
+Pocet senzoru:0
+ID senzoru:
+ID grupy:1
+Nazev rupy:Francouska Grupa:1
+Pocet senzoru:1
+ID senzoru:0,
+ID grupy:2
+Nazev rupy:Francouska Grupa:2
+Pocet senzoru:2
+ID senzoru:0,1,
+ID grupy:3
+Nazev rupy:Francouska Grupa:3
+Pocet senzoru:3
+ID senzoru:0,1,2,
+ID grupy:4
+Nazev rupy:Francouska Grupa:4
+Pocet senzoru:4
+ID senzoru:0,1,2,3,
+ID grupy:5
+Nazev rupy:Francouska Grupa:5
+Pocet senzoru:5
+ID senzoru:0,1,2,3,4,
+ID grupy:6
+Nazev rupy:Francouska Grupa:6
+Pocet senzoru:6
+ID senzoru:0,1,2,3,4,5,
+ID grupy:7
+Nazev rupy:Francouska Grupa:7
+Pocet senzoru:7
+ID senzoru:0,1,2,3,4,5,6,
+ID grupy:8
+Nazev rupy:Francouska Grupa:8
+Pocet senzoru:8
+ID senzoru:0,1,2,3,4,5,6,7,
+ID grupy:9
+Nazev rupy:Francouska Grupa:9
+Pocet senzoru:9
+ID senzoru:0,1,2,3,4,5,6,7,8,
+
+Displaying data from structures SENSOR:
+ID senzoru:0
+Nazev senzoru:Super Sensor:0
+Pocet parametru:0
+Data z cidel:
+ID senzoru:1
+Nazev senzoru:Super Sensor:1
+Pocet parametru:1
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:1, Hodnota: 0, Jednotka: lahvace
+ID senzoru:2
+Nazev senzoru:Super Sensor:2
+Pocet parametru:2
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:2, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:2, Hodnota: 10, Jednotka: lahvace
+ID senzoru:3
+Nazev senzoru:Super Sensor:3
+Pocet parametru:3
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:3, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:3, Hodnota: 15, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:3, Hodnota: 30, Jednotka: lahvace
+ID senzoru:4
+Nazev senzoru:Super Sensor:4
+Pocet parametru:4
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:4, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:4, Hodnota: 20, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:4, Hodnota: 40, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:4, Hodnota: 60, Jednotka: lahvace
+ID senzoru:5
+Nazev senzoru:Super Sensor:5
+Pocet parametru:5
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:5, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:5, Hodnota: 25, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:5, Hodnota: 50, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:5, Hodnota: 75, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:5, Hodnota: 100, Jednotka: lahvace
+ID senzoru:6
+Nazev senzoru:Super Sensor:6
+Pocet parametru:6
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:6, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:6, Hodnota: 30, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:6, Hodnota: 60, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:6, Hodnota: 90, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:6, Hodnota: 120, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:6, Hodnota: 150, Jednotka: lahvace
+ID senzoru:7
+Nazev senzoru:Super Sensor:7
+Pocet parametru:7
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:7, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:7, Hodnota: 35, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:7, Hodnota: 70, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:7, Hodnota: 105, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:7, Hodnota: 140, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:7, Hodnota: 175, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:7, Hodnota: 210, Jednotka: lahvace
+ID senzoru:8
+Nazev senzoru:Super Sensor:8
+Pocet parametru:8
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:8, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:8, Hodnota: 40, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:8, Hodnota: 80, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:8, Hodnota: 120, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:8, Hodnota: 160, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:8, Hodnota: 200, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:8, Hodnota: 240, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:8, Hodnota: 280, Jednotka: lahvace
+ID senzoru:9
+Nazev senzoru:Super Sensor:9
+Pocet parametru:9
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:9, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:9, Hodnota: 45, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:9, Hodnota: 90, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:9, Hodnota: 135, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:9, Hodnota: 180, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:9, Hodnota: 225, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:9, Hodnota: 270, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:9, Hodnota: 315, Jednotka: lahvace
+Parametr:8, Nazev veliciny: Alkohol:9, Hodnota: 360, Jednotka: lahvace
+
+Displaying data from structures HISTORY:
+ID senzoru:0
+Delka zaznamu:0
+Data zaznam dat c.:0
+ID senzoru:1
+Delka zaznamu:1
+Data zaznam dat c.:1
+Cas:0, Hodnota: 0
+Nazev veliciny: Teplota c.:1, Jednotka: ˚C
+ID senzoru:2
+Delka zaznamu:2
+Data zaznam dat c.:2
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 4
+Nazev veliciny: Teplota c.:2, Jednotka: ˚C
+ID senzoru:3
+Delka zaznamu:3
+Data zaznam dat c.:3
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 6
+Cas:2, Hodnota: 12
+Nazev veliciny: Teplota c.:3, Jednotka: ˚C
+ID senzoru:4
+Delka zaznamu:4
+Data zaznam dat c.:4
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 8
+Cas:2, Hodnota: 16
+Cas:3, Hodnota: 24
+Nazev veliciny: Teplota c.:4, Jednotka: ˚C
+ID senzoru:5
+Delka zaznamu:5
+Data zaznam dat c.:5
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 10
+Cas:2, Hodnota: 20
+Cas:3, Hodnota: 30
+Cas:4, Hodnota: 40
+Nazev veliciny: Teplota c.:5, Jednotka: ˚C
+ID senzoru:6
+Delka zaznamu:6
+Data zaznam dat c.:6
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 12
+Cas:2, Hodnota: 24
+Cas:3, Hodnota: 36
+Cas:4, Hodnota: 48
+Cas:5, Hodnota: 60
+Nazev veliciny: Teplota c.:6, Jednotka: ˚C
+ID senzoru:7
+Delka zaznamu:7
+Data zaznam dat c.:7
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 14
+Cas:2, Hodnota: 28
+Cas:3, Hodnota: 42
+Cas:4, Hodnota: 56
+Cas:5, Hodnota: 70
+Cas:6, Hodnota: 84
+Nazev veliciny: Teplota c.:7, Jednotka: ˚C
+ID senzoru:8
+Delka zaznamu:8
+Data zaznam dat c.:8
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 16
+Cas:2, Hodnota: 32
+Cas:3, Hodnota: 48
+Cas:4, Hodnota: 64
+Cas:5, Hodnota: 80
+Cas:6, Hodnota: 96
+Cas:7, Hodnota: 112
+Nazev veliciny: Teplota c.:8, Jednotka: ˚C
+ID senzoru:9
+Delka zaznamu:9
+Data zaznam dat c.:9
+Cas:0, Hodnota: 0
+Cas:1, Hodnota: 18
+Cas:2, Hodnota: 36
+Cas:3, Hodnota: 54
+Cas:4, Hodnota: 72
+Cas:5, Hodnota: 90
+Cas:6, Hodnota: 108
+Cas:7, Hodnota: 126
+Cas:8, Hodnota: 144
+Nazev veliciny: Teplota c.:9, Jednotka: ˚C
+I (1179) wifi:wifi driver task: 3ffcd7ac, prio:23, stack:6656, core=0
+I (1199) wifi:wifi firmware version: cb43ccc
+I (1199) wifi:wifi certification version: v7.0
+I (1199) wifi:config NVS flash: enabled
+I (1199) wifi:config nano formating: disabled
+I (1209) wifi:Init data frame dynamic rx buffer num: 32
+I (1209) wifi:Init static rx mgmt buffer num: 5
+I (1209) wifi:Init management short buffer num: 32
+I (1219) wifi:Init dynamic tx buffer num: 32
+I (1219) wifi:Init static rx buffer size: 1600
+I (1229) wifi:Init static rx buffer num: 10
+I (1229) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1239) wifi_init: rx ba win: 6[0m
+[0;32mI (1239) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1239) wifi_init: udp mbox: 6[0m
+[0;32mI (1249) wifi_init: tcp mbox: 6[0m
+[0;32mI (1249) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1249) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1259) wifi_init: tcp mss: 1440[0m
+[0;32mI (1259) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1269) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1279) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (1359) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (1359) wifi:enable tsf
+[0;32mI (1359) wifi station: wifi_init_sta finished.[0m
+I (1369) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (1379) wifi:state: init -> auth (b0)
+I (1379) wifi:state: auth -> init (1c0)
+I (1379) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+[0;32mI (1389) wifi station: retry to connect to the AP[0m
+[0;32mI (1389) wifi station: connect to the AP fail[0m
+[0;32mI (3799) wifi station: retry to connect to the AP[0m
+[0;32mI (3799) wifi station: connect to the AP fail[0m
+I (3809) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (3809) wifi:state: init -> auth (b0)
+I (3809) wifi:state: auth -> assoc (0)
+I (3849) wifi:state: assoc -> run (10)
+I (3889) wifi:connected with Galaxy, aid = 27, channel 1, BW20, bssid = 96:33:67:ac:1c:a6
+I (3889) wifi:security: WPA2-PSK, phy: bgn, rssi: -16
+I (3889) wifi:pm start, type: 1
+
+I (3959) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+I (3999) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:2, winSize:64
+[0;32mI (4899) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (4899) wifi station: got ip:192.168.110.178[0m
+[0;32mI (4899) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+[0;32mI (5509) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+TOKEN VYPARSOVAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDk3MjY1MCwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzExMDU5MDUwLCJpYXQiOjE3MTA5NzI2NTAsInZlcnNpb24iOjIsImp0aSI6IjQ3OWE1NGIwLWQ4MzEtNGM2MC1hZWZjLTMwZjFiYjNlNTYwNCIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.DrRftPvhOQhrcTZPXI5zMaJ-n0Smvb6a4w5HK_5MSJ9USblphHu0G2u9qLXOZLh1JkTLshc6XygV9LxN_1IrkoF_axQssVI6CMZb8TBF3pMi-AKhT4FBUJc8lDzqyr9UckbItgPc3d9_X7RSLfBY-BCmX-LAGlpxq0uK7nA6Bkx7W4rE7eJchZBftFxOgoTWtVq-8tChEcIF36JhC0aaUdn31Yyr9xJB94mfbjsZz6QjmpLiRFu5DouTWlDVutrLpqwp1je7AF2K8lU2jhmXabW-bFGKkd7uveSnUH69kE6WQ3Kb1S5uPTiNoSC15-jIDfdsDGsQECyiyoWVFkSUHQ
+[0;32mI (7559) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+VYPARSOVANO CISLO: 23
+[0;32mI (9399) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+VYPARSOVANO ID GRUPY: 103
+VYPARSOVANO ID SENZORU: 103
+VYPARSOVANO NAME GRUPY: Skleníky
+VYPARSOVANO LABEL OF PARAM: Skleníky
+VYPARSOVANO ID GRUPY: 173
+VYPARSOVANO ID SENZORU: 173
+VYPARSOVANO NAME GRUPY: Sklep
+VYPARSOVANO LABEL OF PARAM: Sklep
+VYPARSOVANO ID GRUPY: 192
+VYPARSOVANO ID SENZORU: 192
+VYPARSOVANO NAME GRUPY: Goodwe
+VYPARSOVANO LABEL OF PARAM: Goodwe
+VYPARSOVANO ID GRUPY: 193
+VYPARSOVANO ID SENZORU: 193
+VYPARSOVANO NAME GRUPY: Bruli
+VYPARSOVANO LABEL OF PARAM: Bruli
+VYPARSOVANO ID GRUPY: 194
+VYPARSOVANO ID SENZORU: 194
+VYPARSOVANO NAME GRUPY: Tapo
+VYPARSOVANO LABEL OF PARAM: Tapo
+VYPARSOVANO ID GRUPY: 197
+VYPARSOVANO ID SENZORU: 197
+VYPARSOVANO NAME GRUPY: Shelly
+VYPARSOVANO LABEL OF PARAM: Shelly
+VYPARSOVANO ID GRUPY: 198
+VYPARSOVANO ID SENZORU: 198
+VYPARSOVANO NAME GRUPY: Solární Boiler
+VYPARSOVANO LABEL OF PARAM: Solární Boiler
+VYPARSOVANO ID GRUPY: 199
+VYPARSOVANO ID SENZORU: 199
+VYPARSOVANO NAME GRUPY: Sensor světla
+VYPARSOVANO LABEL OF PARAM: Sensor světla
+VYPARSOVANO ID GRUPY: 200
+VYPARSOVANO ID SENZORU: 200
+VYPARSOVANO NAME GRUPY: Sensor vlhkosti
+VYPARSOVANO LABEL OF PARAM: Sensor vlhkosti
+VYPARSOVANO ID GRUPY: 205
+VYPARSOVANO ID SENZORU: 205
+VYPARSOVANO NAME GRUPY: Intex
+VYPARSOVANO LABEL OF PARAM: Intex
+VYPARSOVANO ID GRUPY: 211
+VYPARSOVANO ID SENZORU: 211
+VYPARSOVANO NAME GRUPY: Retenčka
+VYPARSOVANO LABEL OF PARAM: Retenčka
+VYPARSOVANO ID GRUPY: 214
+VYPARSOVANO ID SENZORU: 214
+VYPARSOVANO NAME GRUPY: Teplotní 3čidlo
+VYPARSOVANO LABEL OF PARAM: Teplotní 3čidlo
+VYPARSOVANO ID GRUPY: 215
+VYPARSOVANO ID SENZORU: 215
+VYPARSOVANO NAME GRUPY: Světlo
+VYPARSOVANO LABEL OF PARAM: Světlo
+VYPARSOVANO ID GRUPY: 220
+VYPARSOVANO ID SENZORU: 220
+VYPARSOVANO NAME GRUPY: Air quality
+VYPARSOVANO LABEL OF PARAM: Air quality
+VYPARSOVANO ID GRUPY: 221
+VYPARSOVANO ID SENZORU: 221
+VYPARSOVANO NAME GRUPY: Kuchyň
+VYPARSOVANO LABEL OF PARAM: Kuchyň
+VYPARSOVANO ID GRUPY: 222
+VYPARSOVANO ID SENZORU: 222
+VYPARSOVANO NAME GRUPY: Smart water/gas valve
+VYPARSOVANO LABEL OF PARAM: Smart water/gas valve
+VYPARSOVANO ID GRUPY: 223
+VYPARSOVANO ID SENZORU: 223
+VYPARSOVANO NAME GRUPY: Zighbee router
+VYPARSOVANO LABEL OF PARAM: Zighbee router
+VYPARSOVANO ID GRUPY: 224
+VYPARSOVANO ID SENZORU: 224
+VYPARSOVANO NAME GRUPY: Vlhkost půdy
+VYPARSOVANO LABEL OF PARAM: Vlhkost půdy
+VYPARSOVANO ID GRUPY: 225
+VYPARSOVANO ID SENZORU: 225
+VYPARSOVANO NAME GRUPY: Radiátory
+VYPARSOVANO LABEL OF PARAM: Radiátory
+VYPARSOVANO ID GRUPY: 226
+VYPARSOVANO ID SENZORU: 226
+VYPARSOVANO NAME GRUPY: Kouř
+VYPARSOVANO LABEL OF PARAM: Kouř
+VYPARSOVANO ID GRUPY: 227
+VYPARSOVANO ID SENZORU: 227
+VYPARSOVANO NAME GRUPY: Prodlužky
+VYPARSOVANO LABEL OF PARAM: Prodlužky
+VYPARSOVANO ID GRUPY: 228
+VYPARSOVANO ID SENZORU: 228
+VYPARSOVANO NAME GRUPY: Dveře
+VYPARSOVANO LABEL OF PARAM: Dveře
+VYPARSOVANO ID GRUPY: 230
+VYPARSOVANO ID SENZORU: 230
+VYPARSOVANO NAME GRUPY: Meteo Stanice
+VYPARSOVANO LABEL OF PARAM: Meteo Stanice
+[0;32mI (11449) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+VYPARSOVANO ID GRUPY: 5502
+VYPARSOVANO ID SENZORU: 5502
+VYPARSOVANO DEVICE NAME: Rajčata
+VYPARSOVANO LABEL OF PARAM: link quality
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: link quality
+VYPARSOVANO ID GRUPY: 5416
+VYPARSOVANO ID SENZORU: 5416
+VYPARSOVANO LABEL OF PARAM: soil moisture
+VYPARSOVANO VALUE: 35
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: soil moisture
+VYPARSOVANO ID GRUPY: 5414
+VYPARSOVANO ID SENZORU: 5414
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO VALUE: 11
+VYPARSOVANO UNIT OF PARAM: °C
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO ID GRUPY: 5507
+VYPARSOVANO ID SENZORU: 5507
+VYPARSOVANO DEVICE NAME: Feferonky
+VYPARSOVANO LABEL OF PARAM: link quality
+VYPARSOVANO VALUE: 94
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: link quality
+VYPARSOVANO ID GRUPY: 5419
+VYPARSOVANO ID SENZORU: 5419
+VYPARSOVANO LABEL OF PARAM: soil moisture
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: soil moisture
+VYPARSOVANO ID GRUPY: 5420
+VYPARSOVANO ID SENZORU: 5420
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO VALUE: 21
+VYPARSOVANO UNIT OF PARAM: °C
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO ID GRUPY: 5509
+VYPARSOVANO ID SENZORU: 5509
+VYPARSOVANO DEVICE NAME: Papriky
+VYPARSOVANO LABEL OF PARAM: link quality
+VYPARSOVANO VALUE: 91
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: link quality
+VYPARSOVANO ID GRUPY: 5421
+VYPARSOVANO ID SENZORU: 5421
+VYPARSOVANO LABEL OF PARAM: soil moisture
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: soil moisture
+VYPARSOVANO ID GRUPY: 5423
+VYPARSOVANO ID SENZORU: 5423
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO VALUE: 9
+VYPARSOVANO UNIT OF PARAM: °C
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO ID GRUPY: 5521
+VYPARSOVANO ID SENZORU: 5521
+VYPARSOVANO DEVICE NAME: draginoSE01-LB-1
+VYPARSOVANO LABEL OF PARAM: BatV
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: BatV
+VYPARSOVANO ID GRUPY: 5700
+VYPARSOVANO ID SENZORU: 5700
+VYPARSOVANO LABEL OF PARAM: Conductivity Soil
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: Conductivity Soil
+VYPARSOVANO ID GRUPY: 5693
+VYPARSOVANO ID SENZORU: 5693
+VYPARSOVANO LABEL OF PARAM: Temperature Soil
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: ° C
+VYPARSOVANO LABEL OF PARAM: Temperature Soil
+VYPARSOVANO ID GRUPY: 5696
+VYPARSOVANO ID SENZORU: 5696
+VYPARSOVANO LABEL OF PARAM: Water Soil
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: %
+VYPARSOVANO LABEL OF PARAM: Water Soil
+VYPARSOVANO ID GRUPY: 5535
+VYPARSOVANO ID SENZORU: 5535
+VYPARSOVANO DEVICE NAME: draginoSE01-LB-1
+VYPARSOVANO LABEL OF PARAM: BatV
+VYPARSOVANO VALUE: 3
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: BatV
+VYPARSOVANO ID GRUPY: 5699
+VYPARSOVANO ID SENZORU: 5699
+VYPARSOVANO LABEL OF PARAM: Conductivity Soil
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: Conductivity Soil
+VYPARSOVANO ID GRUPY: 5694
+VYPARSOVANO ID SENZORU: 5694
+VYPARSOVANO LABEL OF PARAM: Temperature Soil
+VYPARSOVANO VALUE: 21
+VYPARSOVANO UNIT OF PARAM: ° C
+VYPARSOVANO LABEL OF PARAM: Temperature Soil
+VYPARSOVANO ID GRUPY: 5697
+VYPARSOVANO ID SENZORU: 5697
+VYPARSOVANO LABEL OF PARAM: Water Soil
+VYPARSOVANO VALUE: 0
+VYPARSOVANO UNIT OF PARAM: %
+VYPARSOVANO LABEL OF PARAM: Water Soil
+VYPARSOVANO ID GRUPY: 5969
+VYPARSOVANO ID SENZORU: 5969
+VYPARSOVANO DEVICE NAME: Rajčata Teplota
+VYPARSOVANO LABEL OF PARAM: Vlhkost
+VYPARSOVANO VALUE: 65
+VYPARSOVANO UNIT OF PARAM: %
+VYPARSOVANO LABEL OF PARAM: Vlhkost
+VYPARSOVANO ID GRUPY: 8498
+VYPARSOVANO ID SENZORU: 8498
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO VALUE: 2
+VYPARSOVANO UNIT OF PARAM: °C
+VYPARSOVANO LABEL OF PARAM: Teplota
+VYPARSOVANO ID GRUPY: 8506
+VYPARSOVANO ID SENZORU: 8506
+VYPARSOVANO LABEL OF PARAM: Teplota na sondě
+VYPARSOVANO VALUE: 2
+VYPARSOVANO UNIT OF PARAM: 
+VYPARSOVANO LABEL OF PARAM: Teplota na sondě
+[0;32mI (13909) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_FINISH
+VYPARSOVANO ID GRUPY: 2
+VYPARSOVANO ID SENZORU: 2
+VYPARSOVANO ID GRUPY: 101
+VYPARSOVANO ID SENZORU: 101
+VYPARSOVANO ID GRUPY: 102
+VYPARSOVANO ID SENZORU: 102
+VYPARSOVANO ID GRUPY: 103
+VYPARSOVANO ID SENZORU: 103
+VYPARSOVANO ID GRUPY: 3
+VYPARSOVANO ID SENZORU: 3
+VYPARSOVANO ID GRUPY: 105
+VYPARSOVANO ID SENZORU: 105
+VYPARSOVANO ID GRUPY: 104
+VYPARSOVANO ID SENZORU: 104
+VYPARSOVANO ID GRUPY: 133
+VYPARSOVANO ID SENZORU: 133
+VYPARSOVANO ID GRUPY: 134
+VYPARSOVANO ID SENZORU: 134
+VYPARSOVANO ID GRUPY: 107
+VYPARSOVANO ID SENZORU: 107
+VYPARSOVANO ID GRUPY: 135
+VYPARSOVANO ID SENZORU: 135
+VYPARSOVANO ID GRUPY: 108
+VYPARSOVANO ID SENZORU: 108
+VYPARSOVANO ID GRUPY: 109
+VYPARSOVANO ID SENZORU: 109
+VYPARSOVANO ID GRUPY: 110
+VYPARSOVANO ID SENZORU: 110
+VYPARSOVANO ID GRUPY: 111
+VYPARSOVANO ID SENZORU: 111
+VYPARSOVANO ID GRUPY: 112
+VYPARSOVANO ID SENZORU: 112
+VYPARSOVANO ID GRUPY: 136
+VYPARSOVANO ID SENZORU: 136
+VYPARSOVANO ID GRUPY: 137
+VYPARSOVANO ID SENZORU: 137
+VYPARSOVANO ID GRUPY: 113
+VYPARSOVANO ID SENZORU: 113
+VYPARSOVANO ID GRUPY: 114
+VYPARSOVANO ID SENZORU: 114
+VYPARSOVANO ID GRUPY: 115
+VYPARSOVANO ID SENZORU: 115
+VYPARSOVANO ID GRUPY: 116
+VYPARSOVANO ID SENZORU: 116
+VYPARSOVANO ID GRUPY: 117
+VYPARSOVANO ID SENZORU: 117
+VYPARSOVANO ID GRUPY: 118
+VYPARSOVANO ID SENZORU: 118
+VYPARSOVANO ID GRUPY: 119
+VYPARSOVANO ID SENZORU: 119
+VYPARSOVANO ID GRUPY: 120
+VYPARSOVANO ID SENZORU: 120
+VYPARSOVANO ID GRUPY: 121
+VYPARSOVANO ID SENZORU: 121
+VYPARSOVANO ID GRUPY: 122
+VYPARSOVANO ID SENZORU: 122
+VYPARSOVANO ID GRUPY: 123
+VYPARSOVANO ID SENZORU: 123
+VYPARSOVANO ID GRUPY: 125
+VYPARSOVANO ID SENZORU: 125
+VYPARSOVANO ID GRUPY: 124
+VYPARSOVANO ID SENZORU: 124
+VYPARSOVANO ID GRUPY: 126
+VYPARSOVANO ID SENZORU: 126
+VYPARSOVANO ID GRUPY: 127
+VYPARSOVANO ID SENZORU: 127
+VYPARSOVANO ID GRUPY: 129
+VYPARSOVANO ID SENZORU: 129
+VYPARSOVANO ID GRUPY: 128
+VYPARSOVANO ID SENZORU: 128
+VYPARSOVANO ID GRUPY: 130
+VYPARSOVANO ID SENZORU: 130
+VYPARSOVANO ID GRUPY: 131
+VYPARSOVANO ID SENZORU: 131
+VYPARSOVANO ID GRUPY: 132
+VYPARSOVANO ID SENZORU: 132
+VYPARSOVANO ID GRUPY: 138
+VYPARSOVANO ID SENZORU: 138
+Before update NV = 20.03.2024 23:09
+[0;32mI (15439) wifi station: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (15439) wifi station: Initializing SNTP[0m
+[0;32mI (15449) wifi station: Waiting for system time to be set... (1/5)[0m
+[0;32mI (16459) wifi station: Waiting for system time to be set... (2/5)[0m
+[0;32mI (17459) wifi station: Waiting for system time to be set... (3/5)[0m

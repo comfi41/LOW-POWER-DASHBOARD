@@ -19,6 +19,14 @@
 #include "visual.h"
 #include "NV_storage.h"
 
+extern char deviceName[50];
+extern char groupName[50];
+extern double actual_value;
+extern double device_values[50];
+extern char unit[50];
+extern char param[50];
+
+
 char buff[100];
 static esp_adc_cal_characteristics_t adc1_chars;
 void header(void)
@@ -136,7 +144,8 @@ void conf_mode(void)
 
 void value_plus_info(void)
 {
-  char value[] = "-8";
+  char value[50];
+  sprintf(value, "%.1f", actual_value);
   int value_length = strlen(value);
   double spec_char = 0.0;
   for (int i = 0; value[i] != '\0'; i++)
@@ -163,48 +172,59 @@ void value_plus_info(void)
     epd_set_en_font(ASCII64);
     sprintf(buff, "%s", value);
     epd_disp_string(buff, 100, 70);
-    epd_set_en_font(ASCII32);
-    sprintf(buff, "o");
-    int position = 110 + (value_length * 28) + spec_char;
-    epd_disp_string(buff, position, 67);
-    
-    epd_set_en_font(ASCII48);
-    sprintf(buff, "C");
-    epd_disp_string(buff, position + 19, 70);
+    if (strcmp(unit, "˚C") == 0)
+    {
+      epd_set_en_font(ASCII32);
+      sprintf(buff, "o");
+      int position = 110 + (value_length * 28) + spec_char;
+      epd_disp_string(buff, position, 67);
+      
+      epd_set_en_font(ASCII48);
+      sprintf(buff, "C");
+      epd_disp_string(buff, position + 19, 70);
+    }
+    else
+    {
+      epd_set_en_font(ASCII64);
+      sprintf(buff, "%s", unit);
+      int position = 110 + (value_length * 28) + spec_char;
+      epd_disp_string(buff, position, 67);
+    }
   }
   
   epd_set_en_font(ASCII32);
   epd_set_color(DARK_GRAY, WHITE);
-  sprintf(buff, "Device ID:");
+  sprintf(buff, "Device:");
   epd_disp_string(buff, 400, 60);
   
   epd_set_color(BLACK, WHITE);
-  sprintf(buff, "123456789");
-  epd_disp_string(buff, 528, 60);
+  sprintf(buff, "%s", deviceName);
+  epd_disp_string(buff, 500, 60);
   
   epd_set_en_font(ASCII32);
   epd_set_color(DARK_GRAY, WHITE);
-  sprintf(buff, "Device name:");
+  sprintf(buff, "Group:");
   epd_disp_string(buff, 400, 90);
   
   epd_set_color(BLACK, WHITE);
-  sprintf(buff, "sensor 1");
-  epd_disp_string(buff, 568.327, 90); 
+  sprintf(buff, "%s", groupName);
+  epd_disp_string(buff, 490, 90); 
   
   epd_set_en_font(ASCII32);
   epd_set_color(DARK_GRAY, WHITE);
-  sprintf(buff, "Battery:");
+  sprintf(buff, "Parameter:");
   epd_disp_string(buff, 400, 120);
   
   epd_set_color(BLACK, WHITE);
-  sprintf(buff, "50 %%");
-  epd_disp_string(buff, 499.9065, 120);
+  sprintf(buff, "%s",param);
+  epd_disp_string(buff, 529.9065, 120);
 }
 
 //Function that creates and renders line chart
 void line_chart_visual(void)
 {
   value_plus_info();
+  
   //double values[] = {-7.5, -11.1, 5.2, 8.0, 42}; //test values
   //double values[] = {1.2, 4.3, 5.2, 8.0, 1.2};
   double values[] = {-1.2, -4.3, -5.2, -8.0, -1.2};

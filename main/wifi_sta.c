@@ -1,4 +1,3 @@
-
 #include <string.h>
 #include <time.h>
 #include "freertos/FreeRTOS.h"
@@ -30,11 +29,20 @@
 #include "esp_attr.h"
 #include "esp_sleep.h"
 #include "esp_sntp.h"
+#include "get_sntp.h"
+#include "data_processing.h"
+
+extern int noOfRecords;
+
+char deviceName[50];
+char groupName[50];
+double actual_value;
+double device_values[50];
+char unit[50];
+char param[50];
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
-
-char Current_Date_Time[100];
 
 static const char *TAG = "wifi station";
 
@@ -61,67 +69,6 @@ static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_
     }
 }
 
-void time_sync_notification_cb(struct timeval *tv)
-{
-    ESP_LOGI(TAG, "Notification of a time synchronization event");
-}
-
-void Get_current_date_time(char *date_time){
-	char strftime_buf[64];
-	time_t now;
-	struct tm timeinfo;
-	time(&now);
-	localtime_r(&now, &timeinfo);
-
-    	// Set timezone
-  	setenv("TZ", "CET-1CEST,M3.5.0/2,M10.5.0/3", 1);
-	tzset();
-    	localtime_r(&now, &timeinfo);
-    	strftime(strftime_buf, sizeof(strftime_buf), "%d.%m.%Y %H:%M", &timeinfo);
-  	ESP_LOGI(TAG, "The current date/time in Brno is: %s", strftime_buf);
-        strcpy(date_time,strftime_buf);
-}
-
-
-static void initialize_sntp(void)
-{
-    ESP_LOGI(TAG, "Initializing SNTP");
-    esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);
-    esp_sntp_setservername(0, "pool.ntp.org");
-    sntp_set_time_sync_notification_cb(time_sync_notification_cb);
-#ifdef CONFIG_SNTP_TIME_SYNC_METHOD_SMOOTH
-    sntp_set_sync_mode(SNTP_SYNC_MODE_SMOOTH);
-#endif
-    esp_sntp_init();
-}
-static void obtain_time(void)
-{
-
-
-    initialize_sntp();
-    // wait for time to be set
-    time_t now = 0;
-    struct tm timeinfo = {0};
-    int retry = 0;
-    const int retry_count = 5;
-    while (sntp_get_sync_status() == SNTP_SYNC_STATUS_RESET && ++retry < retry_count) {
-        ESP_LOGI(TAG, "Waiting for system time to be set... (%d/%d)", retry, retry_count);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }
-    time(&now);
-    localtime_r(&now, &timeinfo);
-}
- void Set_SystemTime_SNTP()  {
-    time_t now;
-    struct tm timeinfo;
-    time(&now);
-    localtime_r(&now, &timeinfo);
-    if (timeinfo.tm_year < (2016 - 1900)) {
-	ESP_LOGI(TAG, "Time is not set yet. Connecting to WiFi and getting time over NTP.");
-	obtain_time();
-	time(&now);
-    }
-}
 
 void wifi_init_sta(void)
 {   
@@ -173,95 +120,61 @@ void wifi_init_sta(void)
 
         esp_task_wdt_add(NULL); 
         esp_task_wdt_reset();
+        parsing_pointer=TOKEN;
         client_post_function();
         esp_task_wdt_reset();
-        client_get_function();
-        
-        printf("Before update NV = %s\n",nvs_struct.last_update);
-        Set_SystemTime_SNTP();
-        Get_current_date_time(Current_Date_Time);
-        printf("Before update NV 2 = %s\n",nvs_struct.last_update);
-        printf("Current = %s\n",Current_Date_Time);
-        if (strcmp(nvs_struct.last_update, "") != 0)
+        parsing_pointer=GET_NUMBER_DEVS;
+        client_get_function(parsing_pointer);
+        esp_task_wdt_reset();
+        parsing_pointer=GET_GROUPS;
+        client_get_function(parsing_pointer);
+         esp_task_wdt_reset();
+         parsing_pointer=GET_SENSORS_VALUES;
+        client_get_function(parsing_pointer);
+        esp_task_wdt_reset();
+        //client_get_function(3);
+                
+        get_time_sntp();
+        printf("NUMBER OF GROUPS!!!: %d\n",noOfRecords);
+        int chosen_sensor = 7; //only for testing
+        int number_of_sensors; // == devices
+        //from device (sensor) UID gets more device info - > name only right now 
+        for (int i = 0; i < noOfRecords; i++) 
         {
-          int min1, hour1, day1, month1, year1;
-          int min2, hour2, day2, month2, year2;
-          
-          sscanf(nvs_struct.last_update, "%d.%d.%d %d:%d", &day1, &month1, &year1, &hour1, &min1);
-          sscanf(Current_Date_Time, "%d.%d.%d %d:%d", &day2, &month2, &year2, &hour2, &min2);
-          if (year1 < year2)
-          {
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (year1 > year2)
-          {
-            strcpy(Current_Date_Time, nvs_struct.last_update);
-            if (strstr(Current_Date_Time, " - SNTP error") == 0)
+            if ((sensor_struct+i)->sensor_id == chosen_sensor)
             {
-              strcat(Current_Date_Time, " - SNTP error");
+              strcpy(deviceName, (sensor_struct+i)->name);
+              goto deviceName_end;
             }
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (month1 < month2)
-          {
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (month1 > month2)
-          {
-            strcpy(Current_Date_Time, nvs_struct.last_update);
-            if (strstr(Current_Date_Time, " - SNTP error") == 0)
-            {
-              strcat(Current_Date_Time, " - SNTP error");
-            }
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (day1 < day2)
-          {
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (day1 > day2)
-          {
-            strcpy(Current_Date_Time, nvs_struct.last_update);
-            if (strstr(Current_Date_Time, " - SNTP error") == 0)
-            {
-              strcat(Current_Date_Time, " - SNTP error");
-            }
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (hour1 < hour2)
-          {
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (hour1 > hour2)
-          {
-            strcpy(Current_Date_Time, nvs_struct.last_update);
-            if (strstr(Current_Date_Time, " - SNTP error") == 0)
-            {
-              strcat(Current_Date_Time, " - SNTP error");
-            }
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else if (min1 <= min2)
-          {
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
-          else
-          {
-            strcpy(Current_Date_Time, nvs_struct.last_update);
-            if (strstr(Current_Date_Time, " - SNTP error") == 0)
-            {
-              strcat(Current_Date_Time, " - SNTP error");
-            }
-            strcpy(nvs_struct.last_update, Current_Date_Time);
-          }
         }
-        else
+        deviceName_end:;
+        //from device (sensor) UID gets more group info - > name only right now 
+        for (int i = 0; i < noOfRecords; i++) 
         {
-          strcpy(nvs_struct.last_update, Current_Date_Time);
+          number_of_sensors = sizeof((group_struct+i)->sensors_id) / sizeof((group_struct+i)->sensors_id[0]);
+          for (int x = 0; x < number_of_sensors; x++)
+            if ((group_struct+i)->sensors_id[x] == chosen_sensor)
+            {
+              strcpy(groupName, (group_struct+i)->name);
+              goto groupName_end;
+            }
         }
-        nvs_save();
+        groupName_end:;
         
-	printf("Current date and time is = %s\n",nvs_struct.last_update);
+        for (int i = 0; i < noOfRecords; i++) 
+        {
+            if ((history_struct+i)->sensor_id == chosen_sensor)
+            {
+              actual_value = (history_struct+i)->values[(history_struct+i)->number_of_records - 1];
+              strcpy(unit, (history_struct+i)->unit_param);
+              strcpy(param, (history_struct+i)->name_param);
+              memcpy(device_values, (history_struct+i)->values, sizeof(device_values));
+            }
+        }
+        
+        printf("Device/sensor name: %s\n",deviceName);
+        printf("Group name: %s\n",groupName);
+        
         header();
         if (nvs_struct.chosen_visual == 1) 
         {
@@ -341,21 +254,18 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
             //}
         break;
     case HTTP_EVENT_ON_FINISH:
-            esp_task_wdt_reset();
-            printf("HTTP_EVENT_ON_DATA-kompletni-data\n");
-             if (output_buffer != NULL) {
-                printf("HTTP_EVENT_ON_DATA-kompletni-data: %.*s\n", output_len, (char *)output_buffer);
-                
-                UBaseType_t res = xRingbufferSendFromISR(xRingbuffer, output_buffer, sizeof(output_buffer), NULL);
-                 printf("xRingbufferSendFromISR res=%d\n", res);
-                if (res != pdTRUE) {
-                    printf("Failed to xRingbufferSend\n");
-                }
-                free(output_buffer);
-                output_buffer = NULL;
-            }
-            output_len = 0;
-            break;
+        esp_task_wdt_reset();
+        memcpy(output_buffer + output_len, "\0", 1);
+        //(output_buffer+1+output_len)='\0';
+        printf("HTTP_EVENT_ON_FINISH\n");
+         if (output_buffer != NULL) 
+         {
+            parser(output_buffer);
+            free(output_buffer);
+            output_buffer = NULL;
+        }
+        output_len = 0;
+        break;
     
 
     default:
@@ -366,14 +276,22 @@ esp_err_t client_event_handler(esp_http_client_event_handle_t evt)
 //esp_task_wdt_delete(NULL);
 
 
-static void client_get_function(void)
+static void client_get_function(int type_of_req)
 {
- 
-esp_http_client_config_t clientConfig = {
-    //.url = "https://worldtimeapi.org/api/timezone/Europe/London/",
-     .url = "https://stage6.api.logimic.online/alive/alive",
-    //.url = "http://httpbin.org/post",
-     //.url = "https://www.google.com",
+    int temp_groupID=103;
+    char url_temp[150];
+    char header_temp[2100];
+    sprintf(header_temp,"Bearer %s",token);
+    //printf("header_temp: %s\n", header_temp);
+
+    if(type_of_req==GET_NUMBER_DEVS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/groups/number?systemId=%d",nvs_struct.systemID);
+    if(type_of_req==GET_GROUPS) sprintf(url_temp,"https://stage6.api.logimic.online/kpi/get/groupsExt?systemId=%d",nvs_struct.systemID);
+    if(type_of_req==GET_SENSORS_VALUES) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/devices?systemId=%d&groupId=%d&verbosity=parameterTypeEnums",nvs_struct.systemID,temp_groupID);
+    if(type_of_req==GET_SENSORS) sprintf(url_temp,"https://stage6.api.logimic.online/deviceModel/get/deviceModels");
+
+    esp_http_client_config_t clientConfig = {
+      .url=url_temp,
+      .buffer_size_tx = 8192,
       .transport_type = HTTP_TRANSPORT_OVER_SSL,  //Specify transport type
       .crt_bundle_attach = esp_crt_bundle_attach, //Attach the certificate bundle 
       .event_handler = client_event_handler};
@@ -381,9 +299,12 @@ esp_http_client_config_t clientConfig = {
 
         
     esp_http_client_handle_t client = esp_http_client_init(&clientConfig);
-esp_task_wdt_reset();
-    esp_http_client_set_header(client, "Content-Type", "accept: application/json");
-esp_task_wdt_reset();
+    esp_task_wdt_reset();
+    esp_http_client_set_header(client, "Authorization", header_temp);
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_header(client, "conname", "iTemp2"); 
+    esp_http_client_set_header(client, "Connection", "close");
+    esp_task_wdt_reset();
     esp_http_client_perform(client);
     esp_http_client_cleanup(client);
 

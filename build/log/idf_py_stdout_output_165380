@@ -1,0 +1,522 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a11ch (237852) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a144 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a154 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e9c8 vaddr=40080000 size=01650h (  5712) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf4ch (708428) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf74 vaddr=40081650 size=16620h ( 91680) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=0011359c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  83d5dc596...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (618) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (768) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (768) wifi:enable tsf
+[0;32mI (768) wifi station: wifi_init_sta finished.[0m
+I (778) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (788) wifi:state: init -> auth (b0)
+I (788) wifi:state: auth -> init (1c0)
+I (788) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (798) wifi station: retry to connect to the AP[0m
+[0;32mI (798) wifi station: connect to the AP fail[0m
+[0;32mI (3208) wifi station: retry to connect to the AP[0m
+[0;32mI (3208) wifi station: connect to the AP fail[0m
+I (3208) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3218) wifi:state: init -> auth (b0)
+I (3218) wifi:state: auth -> assoc (0)
+I (3238) wifi:state: assoc -> run (10)
+I (3278) wifi:connected with Galaxy, aid = 26, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (3278) wifi:security: WPA2-PSK, phy: bgn, rssi: -23
+I (3288) wifi:pm start, type: 1
+
+I (3318) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4288) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (4288) wifi station: got ip:192.168.110.178[0m
+[0;32mI (4288) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (4548) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
+[0;32mI (5068) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MTgyMSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4MjIxLCJpYXQiOjE3MTA4ODE4MjEsInZlcnNpb24iOjIsImp0aSI6IjcwOWRiN2UzLTRiMjgtNDdmNC05ZTg1LTRhODZhYjFiMTJlZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Z8xUp2_VBx4Crf5FMv0fry7IR2SJ_pgKMrBkuSyAN2xiuT-F8MMfMludz_NsezqO6MvaJ1umN7TqHgjEgJBq7FIRZ7iYjv7p63hQCYodJ8_eGXaUt-HZAK_OrNgySreVZrEQdphGTbPanfogbMOd9-SpE2lQLYxnJvpYj6TdD8bIF7al5QjFoixbiIngyOSGAX7UJB1cSncnmheMxeSWeiQk_2thZJ_CjRU0xwHZ4B4IO1-NSq8cdBwbw4qT41nMMKgJeODSyrlDq8jSXfEp42bpUWQmVVEzzdj8wSETJX2QgYvKmt8TnZmKdaCEaXqVQsQISM8B9l8Fh1fOn-MLUA","expires_in":86400,"token_type":"Bearer"}
+parse: {"access_token":"eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MTgyMSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4MjIxLCJpYXQiOjE3MTA4ODE4MjEsInZlcnNpb24iOjIsImp0aSI6IjcwOWRiN2UzLTRiMjgtNDdmNC05ZTg1LTRhODZhYjFiMTJlZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Z8xUp2_VBx4Crf5FMv0fry7IR2SJ_pgKMrBkuSyAN2xiuT-F8MMfMludz_NsezqO6MvaJ1umN7TqHgjEgJBq7FIRZ7iYjv7p63hQCYodJ8_eGXaUt-HZAK_OrNgySreVZrEQdphGTbPanfogbMOd9-SpE2lQLYxnJvpYj6TdD8bIF7al5QjFoixbiIngyOSGAX7UJB1cSncnmheMxeSWeiQk_2thZJ_CjRU0xwHZ4B4IO1-NSq8cdBwbw4qT41nMMKgJeODSyrlDq8jSXfEp42bpUWQmVVEzzdj8wSETJX2QgYvKmt8TnZmKdaCEaXqVQsQISM8B9l8Fh1fOn-MLUA"
+SFSCAN: eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MTgyMSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4MjIxLCJpYXQiOjE3MTA4ODE4MjEsInZlcnNpb24iOjIsImp0aSI6IjcwOWRiN2UzLTRiMjgtNDdmNC05ZTg1LTRhODZhYjFiMTJlZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Z8xUp2_VBx4Crf5FMv0fry7IR2SJ_pgKMrBkuSyAN2xiuT-F8MMfMludz_NsezqO6MvaJ1umN7TqHgjEgJBq7FIRZ7iYjv7p63hQCYodJ8_eGXaUt-HZAK_OrNgySreVZrEQdphGTbPanfogbMOd9-SpE2lQLYxnJvpYj6TdD8bIF7al5QjFoixbiIngyOSGAX7UJB1cSncnmheMxeSWeiQk_2thZJ_CjRU0xwHZ4B4IO1-NSq8cdBwbw4qT41nMMKgJeODSyrlDq8jSXfEp42bpUWQmVVEzzdj8wSETJX2QgYvKmt8TnZmKdaCEaXqVQsQISM8B9l8Fh1fOn-MLUA
+parse: "expires_in":86400
+parse: "token_type":"Bearer"}
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MTgyMSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4MjIxLCJpYXQiOjE3MTA4ODE4MjEsInZlcnNpb24iOjIsImp0aSI6IjcwOWRiN2UzLTRiMjgtNDdmNC05ZTg1LTRhODZhYjFiMTJlZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Z8xUp2_VBx4Crf5FMv0fry7IR2SJ_pgKMrBkuSyAN2xiuT-F8MMfMludz_NsezqO6MvaJ1umN7TqHgjEgJBq7FIRZ7iYjv7p63hQCYodJ8_eGXaUt-HZAK_OrNgySreVZrEQdphGTbPanfogbMOd9-SpE2lQLYxnJvpYj6TdD8bIF7al5QjFoixbiIngyOSGAX7UJB1cSncnmheMxeSWeiQk_2thZJ_CjRU0xwHZ4B4IO1-NSq8cdBwbw4qT41nMMKgJeODSyrlDq8jSXfEp42bpUWQmVVEzzdj8wSETJX2QgYvKmt8TnZmKdaCEaXqVQsQISM8B9l8Fh1fOn-MLUA
+[0;32mI (7118) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: 23
+parse: 23�?4��?���
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MTgyMSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4MjIxLCJpYXQiOjE3MTA4ODE4MjEsInZlcnNpb24iOjIsImp0aSI6IjcwOWRiN2UzLTRiMjgtNDdmNC05ZTg1LTRhODZhYjFiMTJlZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Z8xUp2_VBx4Crf5FMv0fry7IR2SJ_pgKMrBkuSyAN2xiuT-F8MMfMludz_NsezqO6MvaJ1umN7TqHgjEgJBq7FIRZ7iYjv7p63hQCYodJ8_eGXaUt-HZAK_OrNgySreVZrEQdphGTbPanfogbMOd9-SpE2lQLYxnJvpYj6TdD8bIF7al5QjFoixbiIngyOSGAX7UJB1cSncnmheMxeSWeiQk_2thZJ_CjRU0xwHZ4B4IO1-NSq8cdBwbw4qT41nMMKgJeODSyrlDq8jSXfEp42bpUWQmVVEzzdj8wSETJX2QgYvKmt8TnZmKdaCEaXqVQsQISM8B9l8Fh1fOn-MLUA
+[0;32mI (9168) esp-x509-crt-bundle: Certificate validated[0m
+HTTP_EVENT_ON_DATA-kompletni-data
+Prijata data: [{"id":103,"name":"Skleníky","label":"Skleníky","descr":"Skleníky","order":"1","url":"","mnImageId":3,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":173,"name":"Sklep","label":"Sklep","descr":"Sklep","order":"1","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":192,"name":"Goodwe","label":"Goodwe","descr":"Goodwe","order":"2","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":193,"name":"Bruli","label":"Bruli","descr":"Bruli","order":"3","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":194,"name":"Tapo","label":"Tapo","descr":"Tapo","order":"4","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"warning"},{"id":197,"name":"Shelly","label":"Shelly","descr":"Shelly","order":"5","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"warning"},{"id":198,"name":"Solární Boiler","label":"Solární Boiler","descr":"Solární Boiler","order":"6","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":199,"name":"Sensor světla","label":"Sensor světla","descr":"Sensor světla","order":"7","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":200,"name":"Sensor vlhkosti","label":"Sensor vlhkosti","descr":"Sensor vlhkosti","order":"8","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":205,"name":"Intex","label":"Intex","descr":"Intex","order":"9","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":211,"name":"Retenčka","label":"Retenčka","descr":"Retenčka","order":"10","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":214,"name":"Teplotní 3čidlo","label":"Teplotní 3čidlo","descr":"Teplotní 3čidlo","order":"11","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"},{"id":215,"name":"Světlo","label":"Světlo","descr":"Světlo","order":"12","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"ok"},{"id":220,"name":"Air quality","label":"Air quality","descr":"Air quality","order":"13","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":221,"name":"Kuchyň","label":"Kuchyň","descr":"Kuchyň","order":"14","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":222,"name":"Smart water/gas valve","label":"Smart water/gas valve","descr":"Smart water/gas valve","order":"15","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":223,"name":"Zighbee router","label":"Zighbee router","descr":"Zighbee router","order":"16","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":224,"name":"Vlhkost půdy","label":"Vlhkost půdy","descr":"Vlhkost půdy","order":"17","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":225,"name":"Radiátory","label":"Radiátory","descr":"Radiátory","order":"18","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":226,"name":"Kouř","label":"Kouř","descr":"Kouř","order":"19","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":227,"name":"Prodlužky","label":"Prodlužky","descr":"Prodlužky","order":"20","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":228,"name":"Dveře","label":"Dveře","descr":"Dveře","order":"21","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"none"},{"id":230,"name":"Meteo Stanice","label":"Meteo Stanice","descr":"Meteo Stanice","order":"22","url":"","mnImageId":1,"mnSystemId":129,"mnComposeModificationId":null,"mnKpis":[],"alertSummaryStatus":"error"}]
+parse: [{"id":103
+parse: "name":"Skleníky"
+parse: "label":"Skleníky"
+parse: "descr":"Skleníky"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":3
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":173
+parse: "name":"Sklep"
+parse: "label":"Sklep"
+parse: "descr":"Sklep"
+parse: "order":"1"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":192
+parse: "name":"Goodwe"
+parse: "label":"Goodwe"
+parse: "descr":"Goodwe"
+parse: "order":"2"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":193
+parse: "name":"Bruli"
+parse: "label":"Bruli"
+parse: "descr":"Bruli"
+parse: "order":"3"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":194
+parse: "name":"Tapo"
+parse: "label":"Tapo"
+parse: "descr":"Tapo"
+parse: "order":"4"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":197
+parse: "name":"Shelly"
+parse: "label":"Shelly"
+parse: "descr":"Shelly"
+parse: "order":"5"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"warning"}
+parse: {"id":198
+parse: "name":"Solární Boiler"
+parse: "label":"Solární Boiler"
+parse: "descr":"Solární Boiler"
+parse: "order":"6"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":199
+parse: "name":"Sensor světla"
+parse: "label":"Sensor světla"
+parse: "descr":"Sensor světla"
+parse: "order":"7"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":200
+parse: "name":"Sensor vlhkosti"
+parse: "label":"Sensor vlhkosti"
+parse: "descr":"Sensor vlhkosti"
+parse: "order":"8"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":205
+parse: "name":"Intex"
+parse: "label":"Intex"
+parse: "descr":"Intex"
+parse: "order":"9"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":211
+parse: "name":"Retenčka"
+parse: "label":"Retenčka"
+parse: "descr":"Retenčka"
+parse: "order":"10"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":214
+parse: "name":"Teplotní 3čidlo"
+parse: "label":"Teplotní 3čidlo"
+parse: "descr":"Teplotní 3čidlo"
+parse: "order":"11"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}
+parse: {"id":215
+parse: "name":"Světlo"
+parse: "label":"Světlo"
+parse: "descr":"Světlo"
+parse: "order":"12"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"ok"}
+parse: {"id":220
+parse: "name":"Air quality"
+parse: "label":"Air quality"
+parse: "descr":"Air quality"
+parse: "order":"13"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":221
+parse: "name":"Kuchyň"
+parse: "label":"Kuchyň"
+parse: "descr":"Kuchyň"
+parse: "order":"14"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":222
+parse: "name":"Smart water/gas valve"
+parse: "label":"Smart water/gas valve"
+parse: "descr":"Smart water/gas valve"
+parse: "order":"15"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":223
+parse: "name":"Zighbee router"
+parse: "label":"Zighbee router"
+parse: "descr":"Zighbee router"
+parse: "order":"16"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":224
+parse: "name":"Vlhkost půdy"
+parse: "label":"Vlhkost půdy"
+parse: "descr":"Vlhkost půdy"
+parse: "order":"17"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":225
+parse: "name":"Radiátory"
+parse: "label":"Radiátory"
+parse: "descr":"Radiátory"
+parse: "order":"18"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":226
+parse: "name":"Kouř"
+parse: "label":"Kouř"
+parse: "descr":"Kouř"
+parse: "order":"19"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":227
+parse: "name":"Prodlužky"
+parse: "label":"Prodlužky"
+parse: "descr":"Prodlužky"
+parse: "order":"20"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":228
+parse: "name":"Dveře"
+parse: "label":"Dveře"
+parse: "descr":"Dveře"
+parse: "order":"21"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"none"}
+parse: {"id":230
+parse: "name":"Meteo Stanice"
+parse: "label":"Meteo Stanice"
+parse: "descr":"Meteo Stanice"
+parse: "order":"22"
+parse: "url":""
+parse: "mnImageId":1
+parse: "mnSystemId":129
+parse: "mnComposeModificationId":null
+parse: "mnKpis":[]
+parse: "alertSummaryStatus":"error"}]�M��o
+header_temp: Bearer eyJraWQiOiJpNk13blRmZXhFYW5TOThLTlZDVzdTNlJ4XC9ZTnVYaEIwTUswSUs0VEZ3VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI3cTdlbzg0cmRkcjY3aTNhNm1qZjd0OWNyIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJpdGVtcC5sb2dpbWljLm9ubGluZVwvYXBpLmFsbCIsImF1dGhfdGltZSI6MTcxMDg4MTgyMSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfYTFscWZ2WDdtIiwiZXhwIjoxNzEwOTY4MjIxLCJpYXQiOjE3MTA4ODE4MjEsInZlcnNpb24iOjIsImp0aSI6IjcwOWRiN2UzLTRiMjgtNDdmNC05ZTg1LTRhODZhYjFiMTJlZiIsImNsaWVudF9pZCI6IjdxN2VvODRyZGRyNjdpM2E2bWpmN3Q5Y3IifQ.Z8xUp2_VBx4Crf5FMv0fry7IR2SJ_pgKMrBkuSyAN2xiuT-F8MMfMludz_NsezqO6MvaJ1umN7TqHgjEgJBq7FIRZ7iYjv7p63hQCYodJ8_eGXaUt-HZAK_OrNgySreVZrEQdphGTbPanfogbMOd9-SpE2lQLYxnJvpYj6TdD8bIF7al5QjFoixbiIngyOSGAX7UJB1cSncnmheMxeSWeiQk_2thZJ_CjRU0xwHZ4B4IO1-NSq8cdBwbw4qT41nMMKgJeODSyrlDq8jSXfEp42bpUWQmVVEzzdj8wSETJX2QgYvKmt8TnZmKdaCEaXqVQsQISM8B9l8Fh1fOn-MLUA
+[0;32mI (12028) esp-x509-crt-bundle: Certificate validated[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4000c2e4  PS      : 0x00060630  A0      : 0x800d8e25  A1      : 0x3ffbc600  
+A2      : 0x0000d800  A3      : 0x3ffcd55c  A4      : 0x00000200  A5      : 0x0000d800  
+A6      : 0x7d303a22  A7      : 0x7b2c7d7d  A8      : 0x00000000  A9      : 0x3ffbc5d0  
+A10     : 0x00000000  A11     : 0x0001bc00  A12     : 0x3ffe46bc  A13     : 0x00060e23  
+A14     : 0xb33fffff  A15     : 0xb33fffff  SAR     : 0x00000014  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x0000d800  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0x0000001f  
+
+
+Backtrace: 0x4000c2e1:0x3ffbc600 0x400d8e22:0x3ffbc610 0x40174157:0x3ffbc630 0x400ff37c:0x3ffbc650 0x40153501:0x3ffbc680 0x400ff741:0x3ffbc6e0 0x40100a20:0x3ffbc700 0x400d8d88:0x3ffbc730 0x400d9185:0x3ffbd080 0x400d8535:0x3ffbd2e0 0x400d7fba:0x3ffbd300 0x4017ad37:0x3ffbd320 0x4008da4d:0x3ffbd350
+
+
+
+
+ELF file SHA256: 83d5dc596
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 19 2024 20:20:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a11ch (237852) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a144 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a154 vaddr=3ffb0000 size=0486ch ( 18540) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e9c8 vaddr=40080000 size=01650h (  5712) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=acf4ch (708428) map[0m
+[0;32mI (323) esp_image: segment 5: paddr=000fcf74 vaddr=40081650 size=16620h ( 91680) load[0m
+[0;32mI (347) esp_image: segment 6: paddr=0011359c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (371) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (359) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      73362cd-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 19 2024 20:20:56[0m
+[0;32mI (412) cpu_start: ELF file SHA256:  83d5dc596...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9E20 len 000261E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (478) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (485) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (498) app_start: Starting scheduler on CPU1[0m
+[0;32mI (498) main_task: Started on CPU0[0m
+[0;32mI (508) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:Galaxy
+ PASS:123456789 TIME:10
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+I (588) wifi:wifi driver task: 3ffc67c8, prio:23, stack:6656, core=0
+I (608) wifi:wifi firmware version: cb43ccc
+I (608) wifi:wifi certification version: v7.0
+I (608) wifi:config NVS flash: enabled
+I (608) wifi:config nano formating: disabled
+I (618) wifi:Init data frame dynamic rx buffer num: 32
+I (618) wifi:Init static rx mgmt buffer num: 5
+I (618) wifi:Init management short buffer num: 32
+I (628) wifi:Init dynamic tx buffer num: 32
+I (628) wifi:Init static rx buffer size: 1600
+I (638) wifi:Init static rx buffer num: 10
+I (638) wifi:Init dynamic rx buffer num: 32
+[0;32mI (648) wifi_init: rx ba win: 6[0m
+[0;32mI (648) wifi_init: tcpip mbox: 32[0m
+[0;32mI (648) wifi_init: udp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp mbox: 6[0m
+[0;32mI (658) wifi_init: tcp tx win: 5744[0m
+[0;32mI (658) wifi_init: tcp rx win: 5744[0m
+[0;32mI (668) wifi_init: tcp mss: 1440[0m
+[0;32mI (668) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (678) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (688) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (768) wifi:mode : sta (d4:8a:fc:9a:2e:90)
+I (768) wifi:enable tsf
+[0;32mI (768) wifi station: wifi_init_sta finished.[0m
+I (778) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (778) wifi:state: init -> auth (b0)
+I (788) wifi:state: auth -> init (1c0)
+I (788) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+[0;32mI (788) wifi station: retry to connect to the AP[0m
+[0;32mI (798) wifi station: connect to the AP fail[0m
+[0;32mI (3208) wifi station: retry to connect to the AP[0m
+[0;32mI (3208) wifi station: connect to the AP fail[0m
+I (3208) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (3208) wifi:state: init -> auth (b0)
+I (3218) wifi:state: auth -> assoc (0)
+I (3228) wifi:state: assoc -> run (10)
+I (3258) wifi:connected with Galaxy, aid = 27, channel 11, BW20, bssid = 96:33:67:ac:1c:a6
+I (3258) wifi:security: WPA2-PSK, phy: bgn, rssi: -24
+I (3268) wifi:pm start, type: 1
+
+I (3268) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (4278) esp_netif_handlers: sta ip: 192.168.110.178, mask: 255.255.255.0, gw: 192.168.110.90[0m
+[0;32mI (4278) wifi station: got ip:192.168.110.178[0m
+[0;32mI (4278) wifi station: connected to ap SSID:Galaxy password:123456789[0m
+grant_type=client_credentials&client_id=7q7eo84rddr67i3a6mjf7t9cr&client_secret=qs77l0qstbhra2eod12p4afmrhec250pk3s9hmio87duku5mqf1
+I (4328) wifi:<ba-add>idx:0 (ifx:0, 96:33:67:ac:1c:a6), tid:0, ssn:3, winSize:64
