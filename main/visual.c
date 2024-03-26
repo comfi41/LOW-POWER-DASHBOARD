@@ -22,7 +22,8 @@
 extern char deviceName[50];
 extern char groupName[50];
 extern double actual_value;
-extern double device_values[50];
+extern double *device_values;
+extern int values_count;
 extern char unit[50];
 extern char param[50];
 
@@ -141,6 +142,17 @@ void conf_mode(void)
   epd_disp_string(buff, 330, 470);
 }
 
+void new_conf(void)
+{
+  epd_set_en_font(ASCII64);
+  sprintf(buff,"NEW CONFIGURATION");
+  epd_disp_string(buff, 140, 150);
+  sprintf(buff,"SAVED");
+  epd_disp_string(buff, 330, 220);
+  
+  sprintf(buff,"Rebooting...");
+  epd_disp_string(buff, 270, 380);
+}
 
 void value_plus_info(void)
 {
@@ -227,8 +239,11 @@ void line_chart_visual(void)
   
   //double values[] = {-7.5, -11.1, 5.2, 8.0, 42}; //test values
   //double values[] = {1.2, 4.3, 5.2, 8.0, 1.2};
-  double values[] = {-1.2, -4.3, -5.2, -8.0, -1.2};
-  char *X_values[][MAX_DATETIME_LENGTH] = {{"01.01.2024", "10:00"}, {"01.01.2024", "12:00"}, {"01.01.2024", "14:00"}, {"01.01.2024", "16:00"}, {"01.01.2024", "18:00"}};
+  //double values[] = {-1.2, -4.3, -5.2, -8.0, -1.2};
+  double values[values_count];
+  memcpy(values, device_values, values_count * sizeof(double));
+  free(device_values);
+  char *X_values[][MAX_DATETIME_LENGTH] = {{"01.01.2024", "10:00"}, {"01.01.2024", "12:00"}, {"01.01.2024", "14:00"}, {"01.01.2024", "16:00"}, {"01.01.2024", "18:00"}, {"01.01.2024", "20:00"}};
   
   //char *X_values[][MAX_DATETIME_LENGTH] = {{"01.01.2024", "10:00"}, {"01.01.2024", "12:00"}, {"01.01.2024", "14:00"}, {"01.01.2024", "16:00"}, {"01.01.2024", "18:00"}, {"01.01.2024", "20:00"}, {"01.01.2024", "22:00"}, {"02.01.2024", "00:00"}, {"02.01.2024", "02:00"}, {"02.01.2024", "04:00"}};
   //double values[] = {-1.2, -4.3, -5.2, -8.0, 11.1, 5.2, 8.0, 42, 1.2, 4.3};
@@ -236,35 +251,34 @@ void line_chart_visual(void)
   int X_value_length = sizeof(X_values) / sizeof(X_values[0]);
   int length = sizeof(values) / sizeof(values[0]);
   
-  //chart header showing the time range from which the data is 
-  char unique_X_values[X_value_length][MAX_DATE_LENGTH];
-  int unique_values_count = 1;
-  strcpy(unique_X_values[0], X_values[0][0]);
-   
-  for (int i = 1; i < X_value_length; i++) 
-  {
-    if (strcmp(X_values[i][0], X_values[i - 1][0]) != 0) 
-    {
-      strcpy(unique_X_values[unique_values_count], X_values[i][0]);
-      unique_values_count++;
-    }
-  }
-    
-  if (unique_values_count >= 2)
-  {
-    epd_draw_line(0, 172, 455, 172);
-    sprintf(buff, "Data from: %s -> %s", unique_X_values[0], unique_X_values[unique_values_count-1]);
-    epd_disp_string(buff, 0, 175);
-  }
-  else
-  {
-    epd_draw_line(0, 172, 279, 172);
-    sprintf(buff, "Data from: %s", unique_X_values[0]);
-    epd_disp_string(buff, 0, 175);
-  }
-  
   if (X_value_length == length)
   {
+    //chart header showing the time range from which the data is 
+    char unique_X_values[X_value_length][MAX_DATE_LENGTH];
+    int unique_values_count = 1;
+    strcpy(unique_X_values[0], X_values[0][0]);
+     
+    for (int i = 1; i < X_value_length; i++) 
+    {
+      if (strcmp(X_values[i][0], X_values[i - 1][0]) != 0) 
+      {
+        strcpy(unique_X_values[unique_values_count], X_values[i][0]);
+        unique_values_count++;
+      }
+    }
+      
+    if (unique_values_count >= 2)
+    {
+      epd_draw_line(0, 172, 455, 172);
+      sprintf(buff, "Data from: %s -> %s", unique_X_values[0], unique_X_values[unique_values_count-1]);
+      epd_disp_string(buff, 0, 175);
+    }
+    else
+    {
+      epd_draw_line(0, 172, 279, 172);
+      sprintf(buff, "Data from: %s", unique_X_values[0]);
+      epd_disp_string(buff, 0, 175);
+    }
     Helper helper_struct = get_scale(values, length, LINE_CHART);
     
     double X_scale = 670 / (length - 1);

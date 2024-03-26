@@ -37,7 +37,8 @@ extern int noOfRecords;
 char deviceName[50];
 char groupName[50];
 double actual_value;
-double device_values[50];
+double *device_values;
+int values_count;
 char unit[50];
 char param[50];
 
@@ -136,7 +137,7 @@ void wifi_init_sta(void)
                 
         get_time_sntp();
         printf("NUMBER OF GROUPS!!!: %d\n",noOfRecords);
-        int chosen_sensor = 7; //only for testing
+        int chosen_sensor = 6; //only for testing
         int number_of_sensors; // == devices
         //from device (sensor) UID gets more device info - > name only right now 
         for (int i = 0; i < noOfRecords; i++) 
@@ -160,7 +161,6 @@ void wifi_init_sta(void)
             }
         }
         groupName_end:;
-        
         for (int i = 0; i < noOfRecords; i++) 
         {
             if ((history_struct+i)->sensor_id == chosen_sensor)
@@ -168,10 +168,14 @@ void wifi_init_sta(void)
               actual_value = (history_struct+i)->values[(history_struct+i)->number_of_records - 1];
               strcpy(unit, (history_struct+i)->unit_param);
               strcpy(param, (history_struct+i)->name_param);
-              memcpy(device_values, (history_struct+i)->values, sizeof(device_values));
+              device_values = (double *)malloc((history_struct+i)->number_of_records * sizeof(double));
+              values_count = (history_struct+i)->number_of_records;
+              memcpy(device_values, (history_struct+i)->values, (history_struct+i)->number_of_records * sizeof(double));
+              if (device_values == NULL) {
+                 ESP_LOGI(TAG, "Mem allocation failed.\n");
+              }
             }
         }
-        
         printf("Device/sensor name: %s\n",deviceName);
         printf("Group name: %s\n",groupName);
         

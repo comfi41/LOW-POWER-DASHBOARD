@@ -64,4 +64,5 @@ void cloud_error(void);
 void error(void);
 
 void conf_mode(void);
+void new_conf(void);
 #endif
