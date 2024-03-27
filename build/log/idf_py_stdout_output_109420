@@ -1,0 +1,134 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/comfi/esp/low-power-dashboard/build/bootloader/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/comfi/esp/low-power-dashboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6900 bytes. 0x700 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_ap.c.obj
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:20,
+                 from /home/comfi/esp/low-power-dashboard/main/wifi_ap.c:24:
+/home/comfi/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:21:
+/home/comfi/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c: In function 'wifi_init_softap':
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:126:10: warning: unused variable 'buff' [-Wunused-variable]
+  126 |     char buff[100];
+      |          ^~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c: In function 'send_web_page':
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:220:48: warning: comparison between pointer and integer
+  220 |     for (int i = 0; (group_struct+i)->group_id != NULL; i++){
+      |                                                ^~
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c: In function 'get_param_req_handler':
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:243:30: warning: passing argument 1 of 'strtok' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  243 |     for (char *p = strtok(req->uri,"&"); p != NULL; p = strtok(NULL, "&"))
+      |                           ~~~^~~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/wifi_ap.c:9:
+/home/comfi/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h:50:18: note: expected 'char * restrict' but argument is of type 'const char *'
+   50 | char    *strtok (char *__restrict, const char *__restrict);
+      |                  ^
+/home/comfi/esp/low-power-dashboard/main/wifi_ap.c:238:10: warning: unused variable 'buff' [-Wunused-variable]
+  238 |     char buff[30];
+      |          ^~~~
+In file included from /home/comfi/esp/low-power-dashboard/main/visual.h:18:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h: At top level:
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:38:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+   38 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:42:13: warning: 'client_get_function' declared 'static' but never defined [-Wunused-function]
+   42 | static void client_get_function(int type_of_req);
+      |             ^~~~~~~~~~~~~~~~~~~
+/home/comfi/esp/low-power-dashboard/main/wifi_sta.h:44:13: warning: 'client_post_function' declared 'static' but never defined [-Wunused-function]
+   44 | static void client_post_function(void);
+      |             ^~~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable low-power-dashboard.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+[9/10] cd /home/comfi/esp/low-power-dashboard/build/esp-idf/esptool_py && /home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/comfi/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/comfi/esp/low-power-dashboard/build/partition_table/partition-table.bin /home/comfi/esp/low-power-dashboard/build/low-power-dashboard.bin
+low-power-dashboard.bin binary size 0x1042e0 bytes. Smallest app partition is 0x177000 bytes. 0x72d20 bytes (31%) free.
+[9/10] cd /home/comfi/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/comfi/esp/esp-idf -D "SERIAL_TOOL=/home/comfi/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/comfi/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/comfi/esp/low-power-dashboard/build -P /home/comfi/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 low-power-dashboard.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:9a:2e:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 8MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00114fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash params set to 0x0230
+Compressed 26880 bytes to 16845...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000769a... (100 %)
+Wrote 26880 bytes (16845 compressed) at 0x00001000 in 0.8 seconds (effective 272.1 kbit/s)...
+Hash of data verified.
+Compressed 1065696 bytes to 688995...
+Writing at 0x00010000... (2 %)
+Writing at 0x00019767... (4 %)
+Writing at 0x0001e288... (6 %)
+Writing at 0x0002360d... (9 %)
+Writing at 0x00029937... (11 %)
+Writing at 0x000360cc... (13 %)
+Writing at 0x0003b1d2... (16 %)
+Writing at 0x00042358... (18 %)
+Writing at 0x0004e94e... (20 %)
+Writing at 0x00054c12... (23 %)
+Writing at 0x0005a5d3... (25 %)
+Writing at 0x00060823... (27 %)
+Writing at 0x000662ed... (30 %)
+Writing at 0x0006b885... (32 %)
+Writing at 0x000711b7... (34 %)
+Writing at 0x00076a03... (37 %)
+Writing at 0x0007c309... (39 %)
+Writing at 0x00082046... (41 %)
+Writing at 0x00087978... (44 %)
+Writing at 0x0008d4fe... (46 %)
+Writing at 0x0009325c... (48 %)
+Writing at 0x00098e96... (51 %)
+Writing at 0x0009e5f8... (53 %)
+Writing at 0x000a390b... (55 %)
+Writing at 0x000a8cba... (58 %)
+Writing at 0x000ae255... (60 %)
+Writing at 0x000b3620... (62 %)
+Writing at 0x000b8cb3... (65 %)
+Writing at 0x000be4de... (67 %)
+Writing at 0x000c4128... (69 %)
+Writing at 0x000c9950... (72 %)
+Writing at 0x000cf2e9... (74 %)
+Writing at 0x000d56ae... (76 %)
+Writing at 0x000db225... (79 %)
+Writing at 0x000e0678... (81 %)
+Writing at 0x000e7025... (83 %)
+Writing at 0x000ef70f... (86 %)
+Writing at 0x000f79fe... (88 %)
+Writing at 0x000fd721... (90 %)
+Writing at 0x001031c2... (93 %)
+Writing at 0x00108eb7... (95 %)
+Writing at 0x0010e6e3... (97 %)
+Writing at 0x00113dc1... (100 %)
+Wrote 1065696 bytes (688995 compressed) at 0x00010000 in 17.1 seconds (effective 499.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 500.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

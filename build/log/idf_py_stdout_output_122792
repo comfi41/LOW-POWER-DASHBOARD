@@ -1,0 +1,1079 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 26 2024 16:19:17[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a56ch (238956) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a594 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a5a4 vaddr=3ffb0000 size=0426ch ( 17004) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e818 vaddr=40080000 size=01800h (  6144) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=ad904h (710916) map[0m
+[0;32mI (324) esp_image: segment 5: paddr=000fd92c vaddr=40081800 size=16470h ( 91248) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=00113da4 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (361) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (373) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      2cff38f-dirty[0m
+[0;32mI (407) cpu_start: Compile time:     Mar 27 2024 16:08:44[0m
+[0;32mI (413) cpu_start: ELF file SHA256:  1e6a7c79a...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (425) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9D20 len 000262E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (465) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (479) spi_flash: detected chip: gd[0m
+[0;32mI (482) spi_flash: flash io: dio[0m
+[0;33mW (486) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (499) app_start: Starting scheduler on CPU1[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (509) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:ESP32
+ PASS:hesloNeni TIME:20
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+
+Displaying data from structures GROUP:
+ID grupy:0
+Nazev rupy:Francouska Grupa:0
+Pocet senzoru:0
+ID senzoru:
+ID grupy:1
+Nazev rupy:Francouska Grupa:1
+Pocet senzoru:1
+ID senzoru:0,
+ID grupy:2
+Nazev rupy:Francouska Grupa:2
+Pocet senzoru:2
+ID senzoru:0,1,
+ID grupy:3
+Nazev rupy:Francouska Grupa:3
+Pocet senzoru:3
+ID senzoru:0,1,2,
+ID grupy:4
+Nazev rupy:Francouska Grupa:4
+Pocet senzoru:4
+ID senzoru:0,1,2,3,
+ID grupy:5
+Nazev rupy:Francouska Grupa:5
+Pocet senzoru:5
+ID senzoru:0,1,2,3,4,
+ID grupy:6
+Nazev rupy:Francouska Grupa:6
+Pocet senzoru:6
+ID senzoru:0,1,2,3,4,5,
+ID grupy:7
+Nazev rupy:Francouska Grupa:7
+Pocet senzoru:7
+ID senzoru:0,1,2,3,4,5,6,
+ID grupy:8
+Nazev rupy:Francouska Grupa:8
+Pocet senzoru:8
+ID senzoru:0,1,2,3,4,5,6,7,
+ID grupy:9
+Nazev rupy:Francouska Grupa:9
+Pocet senzoru:9
+ID senzoru:0,1,2,3,4,5,6,7,8,
+
+Displaying data from structures SENSOR:
+ID senzoru:0
+Nazev senzoru:Super Sensor:0
+Pocet parametru:0
+Data z cidel:
+ID senzoru:1
+Nazev senzoru:Super Sensor:1
+Pocet parametru:1
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:1, Hodnota: 0, Jednotka: lahvace
+ID senzoru:2
+Nazev senzoru:Super Sensor:2
+Pocet parametru:2
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:2, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:2, Hodnota: 10, Jednotka: lahvace
+ID senzoru:3
+Nazev senzoru:Super Sensor:3
+Pocet parametru:3
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:3, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:3, Hodnota: 15, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:3, Hodnota: 30, Jednotka: lahvace
+ID senzoru:4
+Nazev senzoru:Super Sensor:4
+Pocet parametru:4
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:4, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:4, Hodnota: 20, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:4, Hodnota: 40, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:4, Hodnota: 60, Jednotka: lahvace
+ID senzoru:5
+Nazev senzoru:Super Sensor:5
+Pocet parametru:5
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:5, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:5, Hodnota: 25, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:5, Hodnota: 50, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:5, Hodnota: 75, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:5, Hodnota: 100, Jednotka: lahvace
+ID senzoru:6
+Nazev senzoru:Super Sensor:6
+Pocet parametru:6
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:6, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:6, Hodnota: 30, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:6, Hodnota: 60, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:6, Hodnota: 90, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:6, Hodnota: 120, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:6, Hodnota: 150, Jednotka: lahvace
+ID senzoru:7
+Nazev senzoru:Super Sensor:7
+Pocet parametru:7
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:7, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:7, Hodnota: 35, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:7, Hodnota: 70, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:7, Hodnota: 105, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:7, Hodnota: 140, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:7, Hodnota: 175, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:7, Hodnota: 210, Jednotka: lahvace
+ID senzoru:8
+Nazev senzoru:Super Sensor:8
+Pocet parametru:8
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:8, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:8, Hodnota: 40, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:8, Hodnota: 80, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:8, Hodnota: 120, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:8, Hodnota: 160, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:8, Hodnota: 200, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:8, Hodnota: 240, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:8, Hodnota: 280, Jednotka: lahvace
+ID senzoru:9
+Nazev senzoru:Super Sensor:9
+Pocet parametru:9
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:9, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:9, Hodnota: 45, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:9, Hodnota: 90, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:9, Hodnota: 135, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:9, Hodnota: 180, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:9, Hodnota: 225, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:9, Hodnota: 270, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:9, Hodnota: 315, Jednotka: lahvace
+Parametr:8, Nazev veliciny: Alkohol:9, Hodnota: 360, Jednotka: lahvace
+
+Displaying data from structures HISTORY:
+ID senzoru:0
+Delka zaznamu:0
+Data zaznam dat c.:0
+ID senzoru:1
+Delka zaznamu:1
+Data zaznam dat c.:1
+Cas:0, Hodnota: 0.000000
+Nazev veliciny: Teplota c.:1, Jednotka: ˚C
+ID senzoru:2
+Delka zaznamu:2
+Data zaznam dat c.:2
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 4.000000
+Nazev veliciny: Teplota c.:2, Jednotka: ˚C
+ID senzoru:3
+Delka zaznamu:3
+Data zaznam dat c.:3
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 6.000000
+Cas:2, Hodnota: 12.000000
+Nazev veliciny: Teplota c.:3, Jednotka: ˚C
+ID senzoru:4
+Delka zaznamu:4
+Data zaznam dat c.:4
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 8.000000
+Cas:2, Hodnota: 16.000000
+Cas:3, Hodnota: 24.000000
+Nazev veliciny: Teplota c.:4, Jednotka: ˚C
+ID senzoru:5
+Delka zaznamu:5
+Data zaznam dat c.:5
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 10.000000
+Cas:2, Hodnota: 20.000000
+Cas:3, Hodnota: 30.000000
+Cas:4, Hodnota: 40.000000
+Nazev veliciny: Teplota c.:5, Jednotka: ˚C
+ID senzoru:6
+Delka zaznamu:6
+Data zaznam dat c.:6
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 12.000000
+Cas:2, Hodnota: 24.000000
+Cas:3, Hodnota: 36.000000
+Cas:4, Hodnota: 48.000000
+Cas:5, Hodnota: 60.000000
+Nazev veliciny: Teplota c.:6, Jednotka: ˚C
+ID senzoru:7
+Delka zaznamu:7
+Data zaznam dat c.:7
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 14.000000
+Cas:2, Hodnota: 28.000000
+Cas:3, Hodnota: 42.000000
+Cas:4, Hodnota: 56.000000
+Cas:5, Hodnota: 70.000000
+Cas:6, Hodnota: 84.000000
+Nazev veliciny: Teplota c.:7, Jednotka: ˚C
+ID senzoru:8
+Delka zaznamu:8
+Data zaznam dat c.:8
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 16.000000
+Cas:2, Hodnota: 32.000000
+Cas:3, Hodnota: 48.000000
+Cas:4, Hodnota: 64.000000
+Cas:5, Hodnota: 80.000000
+Cas:6, Hodnota: 96.000000
+Cas:7, Hodnota: 112.000000
+Nazev veliciny: Teplota c.:8, Jednotka: ˚C
+ID senzoru:9
+Delka zaznamu:9
+Data zaznam dat c.:9
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 18.000000
+Cas:2, Hodnota: 36.000000
+Cas:3, Hodnota: 54.000000
+Cas:4, Hodnota: 72.000000
+Cas:5, Hodnota: 90.000000
+Cas:6, Hodnota: 108.000000
+Cas:7, Hodnota: 126.000000
+Cas:8, Hodnota: 144.000000
+Nazev veliciny: Teplota c.:9, Jednotka: ˚C
+I (1209) wifi:wifi driver task: 3ffce1bc, prio:23, stack:6656, core=0
+I (1229) wifi:wifi firmware version: cb43ccc
+I (1229) wifi:wifi certification version: v7.0
+I (1229) wifi:config NVS flash: enabled
+I (1229) wifi:config nano formating: disabled
+I (1239) wifi:Init data frame dynamic rx buffer num: 32
+I (1239) wifi:Init static rx mgmt buffer num: 5
+I (1239) wifi:Init management short buffer num: 32
+I (1249) wifi:Init dynamic tx buffer num: 32
+I (1249) wifi:Init static rx buffer size: 1600
+I (1259) wifi:Init static rx buffer num: 10
+I (1259) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1269) wifi_init: rx ba win: 6[0m
+[0;32mI (1269) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1269) wifi_init: udp mbox: 6[0m
+[0;32mI (1279) wifi_init: tcp mbox: 6[0m
+[0;32mI (1279) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1289) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1289) wifi_init: tcp mss: 1440[0m
+[0;32mI (1289) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1299) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1309) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (1389) wifi:mode : sta (d4:8a:fc:9a:2e:28)
+I (1389) wifi:enable tsf
+[0;32mI (1399) wifi station: wifi_init_sta finished.[0m
+[0;32mI (3809) wifi station: retry to connect to the AP[0m
+[0;32mI (3809) wifi station: connect to the AP fail[0m
+[0;32mI (6229) wifi station: retry to connect to the AP[0m
+[0;32mI (6229) wifi station: connect to the AP fail[0m
+[0;32mI (8639) wifi station: retry to connect to the AP[0m
+[0;32mI (8639) wifi station: connect to the AP fail[0m
+[0;32mI (11049) wifi station: retry to connect to the AP[0m
+[0;32mI (11049) wifi station: connect to the AP fail[0m
+[0;32mI (13459) wifi station: retry to connect to the AP[0m
+[0;32mI (13469) wifi station: connect to the AP fail[0m
+[0;32mI (15879) wifi station: connect to the AP fail[0m
+[0;32mI (15889) wifi station: Failed to connect to SSID:ESP32, password:hesloNeni[0m
+Enabling timer wakeup, 20s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 26 2024 16:19:17[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a56ch (238956) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a594 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (156) esp_image: segment 2: paddr=0004a5a4 vaddr=3ffb0000 size=0426ch ( 17004) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e818 vaddr=40080000 size=01800h (  6144) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=ad904h (710916) map[0m
+[0;32mI (324) esp_image: segment 5: paddr=000fd92c vaddr=40081800 size=16470h ( 91248) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=00113da4 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      2cff38f-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 27 2024 16:08:44[0m
+[0;32mI (413) cpu_start: ELF file SHA256:  1e6a7c79a...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9D20 len 000262E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (479) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (486) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (499) app_start: Starting scheduler on CPU1[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (509) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:ESP32
+ PASS:hesloNeni TIME:20
+I (599) wifi:wifi driver task: 3ffc676c, prio:23, stack:6656, core=0
+I (619) wifi:wifi firmware version: cb43ccc
+I (619) wifi:wifi certification version: v7.0
+I (619) wifi:config NVS flash: enabled
+I (619) wifi:config nano formating: disabled
+I (629) wifi:Init data frame dynamic rx buffer num: 32
+I (629) wifi:Init static rx mgmt buffer num: 5
+I (629) wifi:Init management short buffer num: 32
+I (639) wifi:Init dynamic tx buffer num: 32
+I (639) wifi:Init static rx buffer size: 1600
+I (649) wifi:Init static rx buffer num: 10
+I (649) wifi:Init dynamic rx buffer num: 32
+[0;32mI (659) wifi_init: rx ba win: 6[0m
+[0;32mI (659) wifi_init: tcpip mbox: 32[0m
+[0;32mI (659) wifi_init: udp mbox: 6[0m
+[0;32mI (669) wifi_init: tcp mbox: 6[0m
+[0;32mI (669) wifi_init: tcp tx win: 5744[0m
+[0;32mI (669) wifi_init: tcp rx win: 5744[0m
+[0;32mI (679) wifi_init: tcp mss: 1440[0m
+[0;32mI (679) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (689) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (719) wifi:mode : softAP (d4:8a:fc:9a:2e:29)
+I (719) wifi:Total power save buffer number: 16
+I (719) wifi:Init max length of beacon: 752/752
+I (719) wifi:Init max length of beacon: 752/752
+Wifi AP started. SSID:Low-Pwr-Dashboard
+[0;32mI (729) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+Wake up from GPIO
+[0;32mI (779) main_task: Returned from app_main()[0m
+I (9069) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (9069) wifi:station: d8:f2:ca:08:20:a0 join, AID=1, bgn, 40U
+Station d8:f2:ca:08:20:a0 join, AID=1
+[0;32mI (9099) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x4009032f  PS      : 0x00060f33  A0      : 0x8008fb91  A1      : 0x3ffd0d10  
+A2      : 0x3ffb9d34  A3      : 0x00000001  A4      : 0x0000000b  A5      : 0x00000001  
+A6      : 0x3ffd2170  A7      : 0x00000000  A8      : 0x3ffd2504  A9      : 0x3ffd255c  
+A10     : 0x49656311  A11     : 0x00000001  A12     : 0x49656368  A13     : 0x00000000  
+A14     : 0x89628870  A15     : 0x3ffd250c  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x89628870  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffef  
+
+
+Backtrace: 0x4009032c:0x3ffd0d10 0x4008fb8e:0x3ffd0d30 0x40082279:0x3ffd0d50 0x400822d1:0x3ffd0d70 0x4008e0d5:0x3ffd0d90 0x4008b2ac:0x3ffd0db0 0x400f74f3:0x3ffd0dd0 0x400f753f:0x3ffd0df0 0x400fa523:0x3ffd0e10 0x400fa89e:0x3ffd0e30 0x400fa905:0x3ffd0e80 0x400f9aea:0x3ffd0eb0 0x40102d4c:0x3ffd0ee0 0x40174be9:0x3ffd0f00 0x401029fd:0x3ffd0f20 0x400d8a61:0x3ffd0f60 0x400d8a71:0x3ffd2140 0x40103017:0x3ffd2160 0x40103891:0x44497075 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 1e6a7c79a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 26 2024 16:19:17[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (45) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a56ch (238956) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a594 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0004a5a4 vaddr=3ffb0000 size=0426ch ( 17004) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e818 vaddr=40080000 size=01800h (  6144) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=ad904h (710916) map[0m
+[0;32mI (324) esp_image: segment 5: paddr=000fd92c vaddr=40081800 size=16470h ( 91248) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=00113da4 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (361) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (360) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (391) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      2cff38f-dirty[0m
+[0;32mI (407) cpu_start: Compile time:     Mar 27 2024 16:08:44[0m
+[0;32mI (413) cpu_start: ELF file SHA256:  1e6a7c79a...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (425) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9D20 len 000262E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (465) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (479) spi_flash: detected chip: gd[0m
+[0;32mI (482) spi_flash: flash io: dio[0m
+[0;33mW (486) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (499) app_start: Starting scheduler on CPU1[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (509) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:ESP32
+ PASS:hesloNeni TIME:20
+Not a deep sleep reset
+ESP_WIFI_MODE_STA
+
+Displaying data from structures GROUP:
+ID grupy:0
+Nazev rupy:Francouska Grupa:0
+Pocet senzoru:0
+ID senzoru:
+ID grupy:1
+Nazev rupy:Francouska Grupa:1
+Pocet senzoru:1
+ID senzoru:0,
+ID grupy:2
+Nazev rupy:Francouska Grupa:2
+Pocet senzoru:2
+ID senzoru:0,1,
+ID grupy:3
+Nazev rupy:Francouska Grupa:3
+Pocet senzoru:3
+ID senzoru:0,1,2,
+ID grupy:4
+Nazev rupy:Francouska Grupa:4
+Pocet senzoru:4
+ID senzoru:0,1,2,3,
+ID grupy:5
+Nazev rupy:Francouska Grupa:5
+Pocet senzoru:5
+ID senzoru:0,1,2,3,4,
+ID grupy:6
+Nazev rupy:Francouska Grupa:6
+Pocet senzoru:6
+ID senzoru:0,1,2,3,4,5,
+ID grupy:7
+Nazev rupy:Francouska Grupa:7
+Pocet senzoru:7
+ID senzoru:0,1,2,3,4,5,6,
+ID grupy:8
+Nazev rupy:Francouska Grupa:8
+Pocet senzoru:8
+ID senzoru:0,1,2,3,4,5,6,7,
+ID grupy:9
+Nazev rupy:Francouska Grupa:9
+Pocet senzoru:9
+ID senzoru:0,1,2,3,4,5,6,7,8,
+
+Displaying data from structures SENSOR:
+ID senzoru:0
+Nazev senzoru:Super Sensor:0
+Pocet parametru:0
+Data z cidel:
+ID senzoru:1
+Nazev senzoru:Super Sensor:1
+Pocet parametru:1
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:1, Hodnota: 0, Jednotka: lahvace
+ID senzoru:2
+Nazev senzoru:Super Sensor:2
+Pocet parametru:2
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:2, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:2, Hodnota: 10, Jednotka: lahvace
+ID senzoru:3
+Nazev senzoru:Super Sensor:3
+Pocet parametru:3
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:3, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:3, Hodnota: 15, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:3, Hodnota: 30, Jednotka: lahvace
+ID senzoru:4
+Nazev senzoru:Super Sensor:4
+Pocet parametru:4
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:4, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:4, Hodnota: 20, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:4, Hodnota: 40, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:4, Hodnota: 60, Jednotka: lahvace
+ID senzoru:5
+Nazev senzoru:Super Sensor:5
+Pocet parametru:5
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:5, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:5, Hodnota: 25, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:5, Hodnota: 50, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:5, Hodnota: 75, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:5, Hodnota: 100, Jednotka: lahvace
+ID senzoru:6
+Nazev senzoru:Super Sensor:6
+Pocet parametru:6
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:6, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:6, Hodnota: 30, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:6, Hodnota: 60, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:6, Hodnota: 90, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:6, Hodnota: 120, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:6, Hodnota: 150, Jednotka: lahvace
+ID senzoru:7
+Nazev senzoru:Super Sensor:7
+Pocet parametru:7
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:7, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:7, Hodnota: 35, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:7, Hodnota: 70, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:7, Hodnota: 105, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:7, Hodnota: 140, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:7, Hodnota: 175, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:7, Hodnota: 210, Jednotka: lahvace
+ID senzoru:8
+Nazev senzoru:Super Sensor:8
+Pocet parametru:8
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:8, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:8, Hodnota: 40, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:8, Hodnota: 80, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:8, Hodnota: 120, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:8, Hodnota: 160, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:8, Hodnota: 200, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:8, Hodnota: 240, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:8, Hodnota: 280, Jednotka: lahvace
+ID senzoru:9
+Nazev senzoru:Super Sensor:9
+Pocet parametru:9
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:9, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:9, Hodnota: 45, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:9, Hodnota: 90, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:9, Hodnota: 135, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:9, Hodnota: 180, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:9, Hodnota: 225, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:9, Hodnota: 270, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:9, Hodnota: 315, Jednotka: lahvace
+Parametr:8, Nazev veliciny: Alkohol:9, Hodnota: 360, Jednotka: lahvace
+
+Displaying data from structures HISTORY:
+ID senzoru:0
+Delka zaznamu:0
+Data zaznam dat c.:0
+ID senzoru:1
+Delka zaznamu:1
+Data zaznam dat c.:1
+Cas:0, Hodnota: 0.000000
+Nazev veliciny: Teplota c.:1, Jednotka: ˚C
+ID senzoru:2
+Delka zaznamu:2
+Data zaznam dat c.:2
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 4.000000
+Nazev veliciny: Teplota c.:2, Jednotka: ˚C
+ID senzoru:3
+Delka zaznamu:3
+Data zaznam dat c.:3
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 6.000000
+Cas:2, Hodnota: 12.000000
+Nazev veliciny: Teplota c.:3, Jednotka: ˚C
+ID senzoru:4
+Delka zaznamu:4
+Data zaznam dat c.:4
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 8.000000
+Cas:2, Hodnota: 16.000000
+Cas:3, Hodnota: 24.000000
+Nazev veliciny: Teplota c.:4, Jednotka: ˚C
+ID senzoru:5
+Delka zaznamu:5
+Data zaznam dat c.:5
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 10.000000
+Cas:2, Hodnota: 20.000000
+Cas:3, Hodnota: 30.000000
+Cas:4, Hodnota: 40.000000
+Nazev veliciny: Teplota c.:5, Jednotka: ˚C
+ID senzoru:6
+Delka zaznamu:6
+Data zaznam dat c.:6
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 12.000000
+Cas:2, Hodnota: 24.000000
+Cas:3, Hodnota: 36.000000
+Cas:4, Hodnota: 48.000000
+Cas:5, Hodnota: 60.000000
+Nazev veliciny: Teplota c.:6, Jednotka: ˚C
+ID senzoru:7
+Delka zaznamu:7
+Data zaznam dat c.:7
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 14.000000
+Cas:2, Hodnota: 28.000000
+Cas:3, Hodnota: 42.000000
+Cas:4, Hodnota: 56.000000
+Cas:5, Hodnota: 70.000000
+Cas:6, Hodnota: 84.000000
+Nazev veliciny: Teplota c.:7, Jednotka: ˚C
+ID senzoru:8
+Delka zaznamu:8
+Data zaznam dat c.:8
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 16.000000
+Cas:2, Hodnota: 32.000000
+Cas:3, Hodnota: 48.000000
+Cas:4, Hodnota: 64.000000
+Cas:5, Hodnota: 80.000000
+Cas:6, Hodnota: 96.000000
+Cas:7, Hodnota: 112.000000
+Nazev veliciny: Teplota c.:8, Jednotka: ˚C
+ID senzoru:9
+Delka zaznamu:9
+Data zaznam dat c.:9
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 18.000000
+Cas:2, Hodnota: 36.000000
+Cas:3, Hodnota: 54.000000
+Cas:4, Hodnota: 72.000000
+Cas:5, Hodnota: 90.000000
+Cas:6, Hodnota: 108.000000
+Cas:7, Hodnota: 126.000000
+Cas:8, Hodnota: 144.000000
+Nazev veliciny: Teplota c.:9, Jednotka: ˚C
+I (1209) wifi:wifi driver task: 3ffce1bc, prio:23, stack:6656, core=0
+I (1229) wifi:wifi firmware version: cb43ccc
+I (1229) wifi:wifi certification version: v7.0
+I (1229) wifi:config NVS flash: enabled
+I (1229) wifi:config nano formating: disabled
+I (1239) wifi:Init data frame dynamic rx buffer num: 32
+I (1239) wifi:Init static rx mgmt buffer num: 5
+I (1239) wifi:Init management short buffer num: 32
+I (1249) wifi:Init dynamic tx buffer num: 32
+I (1249) wifi:Init static rx buffer size: 1600
+I (1259) wifi:Init static rx buffer num: 10
+I (1259) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1269) wifi_init: rx ba win: 6[0m
+[0;32mI (1269) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1269) wifi_init: udp mbox: 6[0m
+[0;32mI (1279) wifi_init: tcp mbox: 6[0m
+[0;32mI (1279) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1289) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1289) wifi_init: tcp mss: 1440[0m
+[0;32mI (1289) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1299) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1309) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (1389) wifi:mode : sta (d4:8a:fc:9a:2e:28)
+I (1389) wifi:enable tsf
+[0;32mI (1389) wifi station: wifi_init_sta finished.[0m
+[0;32mI (3809) wifi station: retry to connect to the AP[0m
+[0;32mI (3809) wifi station: connect to the AP fail[0m
+[0;32mI (6219) wifi station: retry to connect to the AP[0m
+[0;32mI (6229) wifi station: connect to the AP fail[0m
+[0;32mI (8639) wifi station: retry to connect to the AP[0m
+[0;32mI (8639) wifi station: connect to the AP fail[0m
+[0;32mI (11049) wifi station: retry to connect to the AP[0m
+[0;32mI (11049) wifi station: connect to the AP fail[0m
+[0;32mI (13459) wifi station: retry to connect to the AP[0m
+[0;32mI (13459) wifi station: connect to the AP fail[0m
+[0;32mI (15869) wifi station: connect to the AP fail[0m
+[0;32mI (15889) wifi station: Failed to connect to SSID:ESP32, password:hesloNeni[0m
+Enabling timer wakeup, 20s
+Enabling EXT1 wakeup on pins GPIO33
+Entering deep sleep
+ets Jul 29 2019 12:21:46
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7140
+load:0x40078000,len:15780
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-3065-g272b4091f1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 26 2024 16:19:17[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=3a56ch (238956) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0004a594 vaddr=3ff80063 size=00008h (     8) [0m
+[0;32mI (156) esp_image: segment 2: paddr=0004a5a4 vaddr=3ffb0000 size=0426ch ( 17004) load[0m
+[0;32mI (165) esp_image: segment 3: paddr=0004e818 vaddr=40080000 size=01800h (  6144) load[0m
+[0;32mI (171) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=ad904h (710916) map[0m
+[0;32mI (324) esp_image: segment 5: paddr=000fd92c vaddr=40081800 size=16470h ( 91248) load[0m
+[0;32mI (348) esp_image: segment 6: paddr=00113da4 vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (360) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (360) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (372) cpu_start: Pro cpu up.[0m
+[0;32mI (372) cpu_start: Starting app cpu, entry point is 0x40081460[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (390) cpu_start: Pro cpu start user code[0m
+[0;32mI (390) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (390) cpu_start: Application information:[0m
+[0;32mI (395) cpu_start: Project name:     low-power-dashboard[0m
+[0;32mI (401) cpu_start: App version:      2cff38f-dirty[0m
+[0;32mI (406) cpu_start: Compile time:     Mar 27 2024 16:08:44[0m
+[0;32mI (413) cpu_start: ELF file SHA256:  1e6a7c79a...[0m
+[0;32mI (418) cpu_start: ESP-IDF:          v5.2-dev-3065-g272b4091f1[0m
+[0;32mI (424) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (429) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (434) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (439) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (446) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB9D20 len 000262E0 (152 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (471) heap_init: At 40097C70 len 00008390 (32 KiB): IRAM[0m
+[0;32mI (479) spi_flash: detected chip: gd[0m
+[0;32mI (481) spi_flash: flash io: dio[0m
+[0;33mW (486) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (494) app_start: Starting scheduler on CPU0[0m
+[0;32mI (499) app_start: Starting scheduler on CPU1[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (509) main_task: Calling app_main()[0m
+Ini NVS: 0
+Load data: 0
+WIFI SSID:ESP32
+ PASS:hesloNeni TIME:20
+Wake up from timer.
+ESP_WIFI_MODE_STA
+
+Displaying data from structures GROUP:
+ID grupy:0
+Nazev rupy:Francouska Grupa:0
+Pocet senzoru:0
+ID senzoru:
+ID grupy:1
+Nazev rupy:Francouska Grupa:1
+Pocet senzoru:1
+ID senzoru:0,
+ID grupy:2
+Nazev rupy:Francouska Grupa:2
+Pocet senzoru:2
+ID senzoru:0,1,
+ID grupy:3
+Nazev rupy:Francouska Grupa:3
+Pocet senzoru:3
+ID senzoru:0,1,2,
+ID grupy:4
+Nazev rupy:Francouska Grupa:4
+Pocet senzoru:4
+ID senzoru:0,1,2,3,
+ID grupy:5
+Nazev rupy:Francouska Grupa:5
+Pocet senzoru:5
+ID senzoru:0,1,2,3,4,
+ID grupy:6
+Nazev rupy:Francouska Grupa:6
+Pocet senzoru:6
+ID senzoru:0,1,2,3,4,5,
+ID grupy:7
+Nazev rupy:Francouska Grupa:7
+Pocet senzoru:7
+ID senzoru:0,1,2,3,4,5,6,
+ID grupy:8
+Nazev rupy:Francouska Grupa:8
+Pocet senzoru:8
+ID senzoru:0,1,2,3,4,5,6,7,
+ID grupy:9
+Nazev rupy:Francouska Grupa:9
+Pocet senzoru:9
+ID senzoru:0,1,2,3,4,5,6,7,8,
+
+Displaying data from structures SENSOR:
+ID senzoru:0
+Nazev senzoru:Super Sensor:0
+Pocet parametru:0
+Data z cidel:
+ID senzoru:1
+Nazev senzoru:Super Sensor:1
+Pocet parametru:1
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:1, Hodnota: 0, Jednotka: lahvace
+ID senzoru:2
+Nazev senzoru:Super Sensor:2
+Pocet parametru:2
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:2, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:2, Hodnota: 10, Jednotka: lahvace
+ID senzoru:3
+Nazev senzoru:Super Sensor:3
+Pocet parametru:3
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:3, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:3, Hodnota: 15, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:3, Hodnota: 30, Jednotka: lahvace
+ID senzoru:4
+Nazev senzoru:Super Sensor:4
+Pocet parametru:4
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:4, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:4, Hodnota: 20, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:4, Hodnota: 40, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:4, Hodnota: 60, Jednotka: lahvace
+ID senzoru:5
+Nazev senzoru:Super Sensor:5
+Pocet parametru:5
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:5, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:5, Hodnota: 25, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:5, Hodnota: 50, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:5, Hodnota: 75, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:5, Hodnota: 100, Jednotka: lahvace
+ID senzoru:6
+Nazev senzoru:Super Sensor:6
+Pocet parametru:6
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:6, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:6, Hodnota: 30, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:6, Hodnota: 60, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:6, Hodnota: 90, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:6, Hodnota: 120, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:6, Hodnota: 150, Jednotka: lahvace
+ID senzoru:7
+Nazev senzoru:Super Sensor:7
+Pocet parametru:7
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:7, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:7, Hodnota: 35, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:7, Hodnota: 70, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:7, Hodnota: 105, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:7, Hodnota: 140, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:7, Hodnota: 175, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:7, Hodnota: 210, Jednotka: lahvace
+ID senzoru:8
+Nazev senzoru:Super Sensor:8
+Pocet parametru:8
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:8, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:8, Hodnota: 40, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:8, Hodnota: 80, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:8, Hodnota: 120, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:8, Hodnota: 160, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:8, Hodnota: 200, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:8, Hodnota: 240, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:8, Hodnota: 280, Jednotka: lahvace
+ID senzoru:9
+Nazev senzoru:Super Sensor:9
+Pocet parametru:9
+Data z cidel:
+Parametr:0, Nazev veliciny: Alkohol:9, Hodnota: 0, Jednotka: lahvace
+Parametr:1, Nazev veliciny: Alkohol:9, Hodnota: 45, Jednotka: lahvace
+Parametr:2, Nazev veliciny: Alkohol:9, Hodnota: 90, Jednotka: lahvace
+Parametr:3, Nazev veliciny: Alkohol:9, Hodnota: 135, Jednotka: lahvace
+Parametr:4, Nazev veliciny: Alkohol:9, Hodnota: 180, Jednotka: lahvace
+Parametr:5, Nazev veliciny: Alkohol:9, Hodnota: 225, Jednotka: lahvace
+Parametr:6, Nazev veliciny: Alkohol:9, Hodnota: 270, Jednotka: lahvace
+Parametr:7, Nazev veliciny: Alkohol:9, Hodnota: 315, Jednotka: lahvace
+Parametr:8, Nazev veliciny: Alkohol:9, Hodnota: 360, Jednotka: lahvace
+
+Displaying data from structures HISTORY:
+ID senzoru:0
+Delka zaznamu:0
+Data zaznam dat c.:0
+ID senzoru:1
+Delka zaznamu:1
+Data zaznam dat c.:1
+Cas:0, Hodnota: 0.000000
+Nazev veliciny: Teplota c.:1, Jednotka: ˚C
+ID senzoru:2
+Delka zaznamu:2
+Data zaznam dat c.:2
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 4.000000
+Nazev veliciny: Teplota c.:2, Jednotka: ˚C
+ID senzoru:3
+Delka zaznamu:3
+Data zaznam dat c.:3
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 6.000000
+Cas:2, Hodnota: 12.000000
+Nazev veliciny: Teplota c.:3, Jednotka: ˚C
+ID senzoru:4
+Delka zaznamu:4
+Data zaznam dat c.:4
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 8.000000
+Cas:2, Hodnota: 16.000000
+Cas:3, Hodnota: 24.000000
+Nazev veliciny: Teplota c.:4, Jednotka: ˚C
+ID senzoru:5
+Delka zaznamu:5
+Data zaznam dat c.:5
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 10.000000
+Cas:2, Hodnota: 20.000000
+Cas:3, Hodnota: 30.000000
+Cas:4, Hodnota: 40.000000
+Nazev veliciny: Teplota c.:5, Jednotka: ˚C
+ID senzoru:6
+Delka zaznamu:6
+Data zaznam dat c.:6
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 12.000000
+Cas:2, Hodnota: 24.000000
+Cas:3, Hodnota: 36.000000
+Cas:4, Hodnota: 48.000000
+Cas:5, Hodnota: 60.000000
+Nazev veliciny: Teplota c.:6, Jednotka: ˚C
+ID senzoru:7
+Delka zaznamu:7
+Data zaznam dat c.:7
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 14.000000
+Cas:2, Hodnota: 28.000000
+Cas:3, Hodnota: 42.000000
+Cas:4, Hodnota: 56.000000
+Cas:5, Hodnota: 70.000000
+Cas:6, Hodnota: 84.000000
+Nazev veliciny: Teplota c.:7, Jednotka: ˚C
+ID senzoru:8
+Delka zaznamu:8
+Data zaznam dat c.:8
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 16.000000
+Cas:2, Hodnota: 32.000000
+Cas:3, Hodnota: 48.000000
+Cas:4, Hodnota: 64.000000
+Cas:5, Hodnota: 80.000000
+Cas:6, Hodnota: 96.000000
+Cas:7, Hodnota: 112.000000
+Nazev veliciny: Teplota c.:8, Jednotka: ˚C
+ID senzoru:9
+Delka zaznamu:9
+Data zaznam dat c.:9
+Cas:0, Hodnota: 0.000000
+Cas:1, Hodnota: 18.000000
+Cas:2, Hodnota: 36.000000
+Cas:3, Hodnota: 54.000000
+Cas:4, Hodnota: 72.000000
+Cas:5, Hodnota: 90.000000
+Cas:6, Hodnota: 108.000000
+Cas:7, Hodnota: 126.000000
+Cas:8, Hodnota: 144.000000
+Nazev veliciny: Teplota c.:9, Jednotka: ˚C
+I (1209) wifi:wifi driver task: 3ffce1bc, prio:23, stack:6656, core=0
+I (1229) wifi:wifi firmware version: cb43ccc
+I (1229) wifi:wifi certification version: v7.0
+I (1229) wifi:config NVS flash: enabled
+I (1229) wifi:config nano formating: disabled
+I (1239) wifi:Init data frame dynamic rx buffer num: 32
+I (1239) wifi:Init static rx mgmt buffer num: 5
+I (1239) wifi:Init management short buffer num: 32
+I (1249) wifi:Init dynamic tx buffer num: 32
+I (1249) wifi:Init static rx buffer size: 1600
+I (1259) wifi:Init static rx buffer num: 10
+I (1259) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1269) wifi_init: rx ba win: 6[0m
+[0;32mI (1269) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1269) wifi_init: udp mbox: 6[0m
+[0;32mI (1279) wifi_init: tcp mbox: 6[0m
+[0;32mI (1279) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1289) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1289) wifi_init: tcp mss: 1440[0m
+[0;32mI (1289) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1299) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1309) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (1329) wifi:mode : sta (d4:8a:fc:9a:2e:28)
+I (1329) wifi:enable tsf
+[0;32mI (1329) wifi station: wifi_init_sta finished.[0m
+[0;32mI (3749) wifi station: retry to connect to the AP[0m
+[0;32mI (3749) wifi station: connect to the AP fail[0m

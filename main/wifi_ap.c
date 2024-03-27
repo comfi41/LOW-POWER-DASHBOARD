@@ -22,7 +22,9 @@
 #include "wifi_ap.h"
 #include "epd.h"
 #include "visual.h"
+#include "data_processing.h"
 
+char picker_body[3000]; //nahovno, chtelo by to dynamicky
 
 /*content of web page*/
 char html_page[] = "<!DOCTYPE HTML><html>\n"
@@ -39,15 +41,7 @@ char html_page[] = "<!DOCTYPE HTML><html>\n"
                    "    .card { background-color: white; box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5); }\n"
                    "    .cards { max-width: 700px; margin: 0 auto; display: grid; grid-gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }\n"
                    "    .reading { font-size: 2.8rem; }\n"
-                   "    .card.wifi { color: #0e7c7b; }\n"
-                   "    .dropdown-check-list {display: inline-block; margin-bottom: 10px;}\n"        
-                   "    .dropdown-check-list .anchor {position: relative; cursor: pointer; display: inline-block; padding: 5px 50px 5px 10px; border: 1px solid #ccc;}\n"        
-                   "    .dropdown-check-list .anchor:after {position: absolute; content: ""; border-left: 2px solid black; border-top: 2px solid black; padding: 5px; right: 10px; top: 20%; -moz-transform: rotate(-135deg); -ms-transform: rotate(-135deg); -o-transform: rotate(-135deg); -webkit-transform: rotate(-135deg); transform: rotate(-135deg);}\n"
-                   "    .dropdown-check-list .anchor:active:after {right: 8px; top: 21%;}\n"        
-                   "    .dropdown-check-list ul.items {padding: 2px; display: none; margin: 0; border: 1px solid #ccc; border-top: none;}\n"        
-                   "    .dropdown-check-list ul.items li {list-style: none;}\n"        
-                   "    .dropdown-check-list.visible .anchor {color: #0094ff;}\n"        
-                   "    .dropdown-check-list.visible .items {display: block;}\n"   
+                   "    .card.wifi { color: #0e7c7b; }\n"   
                    "  </style>\n"
                    "</head>\n"
                    "<body>\n"
@@ -82,23 +76,10 @@ char html_page[] = "<!DOCTYPE HTML><html>\n"
                    "      </div>\n"
                    "      <div class=\"card\">\n"
                    "        <h4>CHOOSE SENSORS</h4>\n"
-                   "        <div id=\"list1\" class=\"dropdown-check-list\">\n"
-                   "          <span class=\"anchor\">Browse</span>\n"
-                   "          <ul class=\"items\">\n"
-                   "            <li><input name=\"input12\" type=\"checkbox\" value=\"12\" />Senzor 1</li>\n"
-                   "            <li><input name=\"input13\" type=\"checkbox\" value=\"13\" />Senzor 2</li>\n"
-                   "          </ul>\n"
+                   "        <div>\n"
+                   "        %s\n"
                    "        </div>\n"
                    "      </div>\n"
-                   "      <script>\n"
-                   "        var checkList = document.getElementById('list1');\n"
-                   "        checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {\n"
-                   "        if (checkList.classList.contains('visible'))\n"
-                   "          checkList.classList.remove('visible');\n"
-                   "        else\n"
-                   "          checkList.classList.add('visible');\n"
-                   "        }\n"
-                   "      </script>\n"
                    "      <a href=\"/mem\"><button>SAVE SETTINGS</button></a><br><p></p>\n"
                    "    </div>\n"
                    "  </form>\n"
@@ -172,7 +153,7 @@ httpd_uri_t uri_get_param = {
 httpd_handle_t setup_server(void)
 {
     httpd_config_t config = HTTPD_DEFAULT_CONFIG(); //default configuration of webserver
-    config.stack_size = 8192;
+    config.stack_size = 16384;
     config.max_resp_headers=50;
     httpd_handle_t server = NULL;
 
@@ -193,9 +174,9 @@ httpd_handle_t setup_server(void)
 esp_err_t send_web_page(httpd_req_t *req,char alert[])
 {
     int response;
-    char response_data[sizeof(html_page) + 500]; //create array for webpage and variables
+    char response_data[sizeof(html_page) + 500 + sizeof(picker_body)]; //create array for webpage and variables
     memset(response_data, 0, sizeof(response_data)); //allocate of memory
-    
+    memset(picker_body, 0, sizeof(picker_body));   
     char option_1[10] = "";
     char option_2[10] = "";
     char option_3[10] = "";
@@ -217,7 +198,17 @@ esp_err_t send_web_page(httpd_req_t *req,char alert[])
       strcpy(option_1, " selected");
     }
     
-    sprintf(response_data, html_page,nvs_struct.wifi_ssid,nvs_struct.wifi_pass,nvs_struct.auth_grant_type,nvs_struct.auth_client_id,nvs_struct.auth_client_secret,nvs_struct.auth_scope,nvs_struct.auth_url,nvs_struct.cloud_url,nvs_struct.systemID,nvs_struct.refresh_time,option_1,option_2,option_3,alert); //join webpage and variables
+    for (int i = 1; i < 11; i++)
+    {
+     sprintf(picker_body + strlen(picker_body), "<h4>Group %d</h4>\n", i);
+     for (int j = 1; j < 3; j++)
+     {
+      sprintf(picker_body + strlen(picker_body),"<label>Sensor %d</label><input type=\"radio\" name=\"input15\" value=\"GroupID:%d;GroupName;DeviceID:%d\" /><br>\n", j*i, i, j*i);
+     }
+    }
+    sprintf(picker_body + strlen(picker_body),"<br><br>\n");
+    
+    sprintf(response_data, html_page,nvs_struct.wifi_ssid,nvs_struct.wifi_pass,nvs_struct.auth_grant_type,nvs_struct.auth_client_id,nvs_struct.auth_client_secret,nvs_struct.auth_scope,nvs_struct.auth_url,nvs_struct.cloud_url,nvs_struct.systemID,nvs_struct.refresh_time,option_1,option_2,option_3,picker_body); //join webpage and variables
     response = httpd_resp_send(req, response_data, HTTPD_RESP_USE_STRLEN); //send to client
 
     return response;
